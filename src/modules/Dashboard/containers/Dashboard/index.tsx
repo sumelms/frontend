@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Header } from "./styles";
 
-import Layout from "../../components/Layout";
+import Layout from "../../../../components/Layout";
 
 const Dashboard: React.FC = () => {
   return (

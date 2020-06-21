@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Separator, ResumeIcon, NotificationIcon, LogoutIcon, Actions } from "./styles";
 
-import UserInfo from "../UserInfo";
+import UserInfo from "./UserInfo";
 
 const Header: React.FC = () => {
   return (

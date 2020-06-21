@@ -1,12 +1,25 @@
-import React from "react";
+import React, { FunctionComponent, ComponentClass } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "../modules/Dashboard/routes";
 
-const Routes: React.FC = () => (
-  <Switch>
-    <Route path="/" exact component={Dashboard} />
-  </Switch>
-);
+export interface RouteItem {
+  path: string;
+  name: string;
+  component: ComponentClass | FunctionComponent;
+  exact?: boolean;
+}
+
+const routes = [...Dashboard];
+
+const Routes: React.FC = () => {
+  return (
+    <Switch>
+      {routes.map((route) => (
+        <Route path={route.path} component={route.component} exact={route.exact} />
+      ))}
+    </Switch>
+  );
+};
 
 export default Routes;

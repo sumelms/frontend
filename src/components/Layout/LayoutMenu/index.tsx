@@ -1,11 +1,11 @@
 import React from "react";
 import { Folder, Trello } from "styled-icons/feather";
 
-import Logo from "../../assets/sume-icon.svg";
+import Logo from "../../../assets/sume-icon.svg";
 
 import { Container, Brand } from "./styles";
 
-import MenuButton from "../MenuButton";
+import MenuButton from "./MenuButton";
 
 const Menu: React.FC = () => {
   return (
