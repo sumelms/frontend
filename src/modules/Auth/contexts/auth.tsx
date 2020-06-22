@@ -4,14 +4,14 @@ import { User, SignIn } from "../services/auth";
 
 interface AuthContextProps {
   signed: boolean;
-  user: User | {};
+  user: User | null;
   signIn(): Promise<any>;
 }
 
 const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
 const AuthProvider: React.FC = (props) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   async function signIn(): Promise<void> {
     const response = await SignIn();

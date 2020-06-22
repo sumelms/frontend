@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
 import { Redirect, Route } from "react-router-dom";
 
@@ -12,7 +10,7 @@ export interface Props {
   name: string;
   component: any;
   isPrivate?: boolean;
-  [x: string]: any; // dealing with ...rest
+  [x: string]: unknown; // dealing with ...rest
 }
 
 const RouteWrapper: React.FC<Props> = ({

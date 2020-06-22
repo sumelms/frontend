@@ -1,5 +1,5 @@
 import React from "react";
-import { Folder, Trello } from "styled-icons/feather";
+import { FiFolder, FiTrello } from "react-icons/fi";
 
 import logoImg from "../../../assets/sume-icon.svg";
 
@@ -14,8 +14,8 @@ const Menu: React.FC = () => {
         <img src={logoImg} alt="Sumé" />
       </Brand>
 
-      <MenuButton icon={<Trello />} />
-      <MenuButton icon={<Folder />} />
+      <MenuButton icon={FiTrello} />
+      <MenuButton icon={FiFolder} />
     </Container>
   );
 };

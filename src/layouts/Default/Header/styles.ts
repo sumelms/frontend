@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { PlayCircle, Bell, LogOut } from "styled-icons/feather";
+import { FiPlayCircle, FiBell, FiLogOut } from "react-icons/fi";
 
 export const Container = styled.div`
   grid-area: TN;
@@ -35,7 +35,7 @@ export const Separator = styled.div`
   margin: 0 20px;
 `;
 
-export const ResumeIcon = styled(PlayCircle)`
+export const ResumeIcon = styled(FiPlayCircle)`
   width: 24px;
   height: 24px;
 
@@ -47,7 +47,7 @@ export const ResumeIcon = styled(PlayCircle)`
   }
 `;
 
-export const NotificationIcon = styled(Bell)`
+export const NotificationIcon = styled(FiBell)`
   width: 24px;
   height: 24px;
 
@@ -59,7 +59,7 @@ export const NotificationIcon = styled(Bell)`
   }
 `;
 
-export const LogoutIcon = styled(LogOut)`
+export const LogoutIcon = styled(FiLogOut)`
   width: 24px;
   height: 24px;
 

@@ -5,12 +5,15 @@ import "./services/i18n";
 
 import GlobalStyle from "./styles/global";
 
+import AuthProvider from "./modules/Auth/contexts/auth";
 import Routes from "./routes";
 
 const App: React.FC = () => (
   <>
     <BrowserRouter>
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </BrowserRouter>
     <GlobalStyle />
   </>
