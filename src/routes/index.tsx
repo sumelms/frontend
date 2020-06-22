@@ -5,8 +5,9 @@ import { Switch } from "react-router-dom";
 import RouteWrapper, { Props as Route } from "../components/RouteWrapper";
 
 import Dashboard from "../modules/Dashboard/routes";
+import Auth from "../modules/Auth/routes";
 
-const routes: Route[] = [...Dashboard];
+const routes: Route[] = [...Dashboard, ...Auth];
 
 const Routes: React.FC = () => {
   return (
