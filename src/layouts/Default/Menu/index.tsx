@@ -1,7 +1,7 @@
 import React from "react";
 import { Folder, Trello } from "styled-icons/feather";
 
-import Logo from "../../../assets/sume-icon.svg";
+import logoImg from "../../../assets/sume-icon.svg";
 
 import { Container, Brand } from "./styles";
 
@@ -11,7 +11,7 @@ const Menu: React.FC = () => {
   return (
     <Container>
       <Brand>
-        <img src={Logo} alt="Sumé" />
+        <img src={logoImg} alt="Sumé" />
       </Brand>
 
       <MenuButton icon={<Trello />} />
