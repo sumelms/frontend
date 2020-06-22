@@ -1,12 +1,14 @@
 import Dashboard from "../containers/Dashboard";
-import { RouteItem } from "../../../routes";
 
-const routes: RouteItem[] = [
+import { Props as Route } from "../../../components/RouteWrapper";
+
+const routes: Route[] = [
   {
     path: "/",
     name: "Dashboard",
     component: Dashboard,
     exact: true,
+    isPrivate: true,
   },
 ];
 

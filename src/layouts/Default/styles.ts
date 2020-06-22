@@ -8,7 +8,7 @@ import styled from "styled-components";
  * MC : Main Content
  */
 
-export const Grid = styled.div`
+export const Container = styled.div`
   display: grid;
 
   grid-template-columns: 80px auto;

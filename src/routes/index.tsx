@@ -1,22 +1,18 @@
-import React, { FunctionComponent, ComponentClass } from "react";
-import { Switch, Route } from "react-router-dom";
+/* eslint-disable react/jsx-props-no-spreading */
+import React from "react";
+import { Switch } from "react-router-dom";
+
+import RouteWrapper, { Props as Route } from "../components/RouteWrapper";
 
 import Dashboard from "../modules/Dashboard/routes";
 
-export interface RouteItem {
-  path: string;
-  name: string;
-  component: ComponentClass | FunctionComponent;
-  exact?: boolean;
-}
-
-const routes = [...Dashboard];
+const routes: Route[] = [...Dashboard];
 
 const Routes: React.FC = () => {
   return (
     <Switch>
-      {routes.map((route) => (
-        <Route path={route.path} component={route.component} exact={route.exact} />
+      {routes.map(({ path, component: Component, ...rest }) => (
+        <RouteWrapper key={path} path={path} component={Component} {...rest} />
       ))}
     </Switch>
   );
