@@ -5,6 +5,7 @@ import { Redirect, Route } from "react-router-dom";
 
 import AuthLayout from "../../layouts/Auth";
 import DefaultLayout from "../../layouts/Default";
+import { useAuth } from "../../modules/Auth/contexts/auth";
 
 export interface Props {
   path: string;
@@ -14,9 +15,12 @@ export interface Props {
   [x: string]: any; // dealing with ...rest
 }
 
-const RouteWrapper: React.FC<Props> = ({ component: Component, isPrivate, ...rest }: Props) => {
-  // @TODO Get it from AuthContext with useAuth hook
-  const signed = true;
+const RouteWrapper: React.FC<Props> = ({
+  component: Component,
+  isPrivate,
+  ...rest
+}: Props) => {
+  const { signed } = useAuth();
 
   if (isPrivate && !signed) {
     return <Redirect to="/login" />;
