@@ -7,11 +7,11 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   background: var(--ligh-grey);
-  padding: 16px;
+  padding: 13px;
   width: 100%;
 
   color: var(--black);
-  border: 2px solid var(--grey);
+  border: 1px solid var(--grey);
 
   display: flex;
   align-items: center;
@@ -46,5 +46,6 @@ export const Container = styled.div<ContainerProps>`
 
   svg {
     margin-right: 16px;
+    color: var(--grey);
   }
 `;

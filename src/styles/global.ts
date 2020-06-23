@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
   html, body, #root {
     height: 100%;
-    background-color: var(--light-grey);
+    background-color: var(--light);
   }
 
   *, button, input {
@@ -17,6 +17,7 @@ export default createGlobalStyle`
     outline: 0;
 
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
   }
 
   :root {
@@ -25,8 +26,15 @@ export default createGlobalStyle`
     --white: #fff;
     --black: #232323;
 
-    --grey: #C9CED6;
-    --light-grey: #F8F8FB;
-    --dark-grey: #A6ACBE;    
+    --light: #F8F8FB;
+
+    --light-grey: #C9CED6;
+    --grey: #A6ACBE;
+    --dark-grey: #423F3F; 
+    
+    --danger: #FF4A31;
+    --warning: #FFDE31;
+    --info: #32B5ED;
+    --success: #56C676;
   }
 `;

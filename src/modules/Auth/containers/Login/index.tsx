@@ -1,20 +1,26 @@
 import React from "react";
 import { FiMail, FiLock } from "react-icons/fi";
 
-import { Container } from "./styles";
+import { Link } from "react-router-dom";
+import { Container, Form } from "./styles";
 
 import Input from "../../../../components/Input";
+import Button from "../../../../components/Button";
 
 const Login: React.FC = () => {
   return (
     <Container>
       <h1>Login</h1>
-      <span>Something to login</span>
+      <span>Access your account</span>
 
-      <form>
+      <Form>
         <Input name="email" icon={FiMail} placeholder="Your email address" />
         <Input name="password" icon={FiLock} placeholder="Your password" />
-      </form>
+        <Button>Login</Button>
+      </Form>
+      <p>
+        Did you <Link to="/forgot-password">forgot your password?</Link>
+      </p>
     </Container>
   );
 };
