@@ -16,11 +16,13 @@ export default createGlobalStyle`
     border: 0;
     outline: 0;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family-sans-serif);
     font-size: 14px;
   }
 
   :root {
+    --font-family-sans-serif: 'Roboto', sans-serif;
+
     --primary: #D72D35;
         
     --white: #fff;

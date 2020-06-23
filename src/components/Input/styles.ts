@@ -70,9 +70,9 @@ export const Error = styled(Tooltip)`
     margin: 0;
   }
 
-  span {
+  > span {
     background: var(--danger);
-    color: #fff;
+    color: var(--white);
 
     &::before {
       border-color: var(--danger) transparent;
