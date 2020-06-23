@@ -1,11 +1,18 @@
 import React, { ButtonHTMLAttributes } from "react";
 import { Container } from "./styles";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: string;
+}
 
-const Button: React.FC<ButtonProps> = ({ children, ...rest }) => (
-  <Container type="button" {...rest}>
+const Button: React.FC<ButtonProps> = ({
+  variant,
+  children,
+  ...rest
+}: ButtonProps) => (
+  <Container variant={variant} {...rest}>
     {children}
   </Container>
 );
+
 export default Button;

@@ -36,15 +36,15 @@ export const Container = styled.div`
     font-family: Roboto;
     font-weight: 300;
     font-size: 12px;
-    line-height: 14px;
 
     a {
       color: var(--primary);
       text-decoration: none;
+      font-size: 12px;
     }
   }
-`;
 
-export const Form = styled.form`
-  padding: 20px;
+  > form {
+    padding: 20px;
+  }
 `;

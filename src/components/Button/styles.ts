@@ -1,14 +1,50 @@
-import styled from "styled-components";
-import { shade, cssVar } from "polished";
+import styled, { css } from "styled-components";
+import { shade } from "polished";
 
-export const Container = styled.button`
+interface ButtonProps {
+  variant?: string;
+}
+
+export const Container = styled.button<ButtonProps>`
   height: 50px;
   width: 100%;
 
   border: 0;
 
-  background: var(--success);
-  color: var(--white);
+  ${(props) =>
+    !props.variant &&
+    css`
+      color: var(--black);
+      background-color: var(--light);
+    `}
+
+  ${(props) =>
+    props.variant === "primary" &&
+    css`
+      color: var(--white);
+      background-color: var(--primary);
+    `}
+
+  ${(props) =>
+    props.variant === "success" &&
+    css`
+      color: var(--white);
+      background-color: var(--success);
+    `}
+
+  ${(props) =>
+    props.variant === "info" &&
+    css`
+      color: var(--white);
+      background-color: var(--info);
+    `}
+
+  ${(props) =>
+    props.variant === "danger" &&
+    css`
+      color: var(--white);
+      background-color: var(--danger);
+    `}
 
   padding: 0 16px;
   margin-top: 16px;
