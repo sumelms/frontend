@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from "react";
-import { FiMail, FiLock } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { FormHandles } from "@unform/core";
 import { Form } from "@unform/web";
@@ -41,7 +41,7 @@ const Login: React.FC = () => {
 
       <Form ref={formRef} onSubmit={handleSubmit}>
         <Input name="email" icon={FiMail} placeholder="Your email address" />
-        <Button variant="success">SEND</Button>
+        <Button variant="success">Send</Button>
       </Form>
       <p>
         Did you remember the password? <Link to="/login">Login</Link>.
