@@ -19,18 +19,17 @@ export const Content = styled.div`
     height: 60px;
     width: auto;
 
-    margin-bottom: 10px;
+    margin-bottom: 24px;
   }
 `;
 
 export const Card = styled.div`
-  border: 1px solid var(--grey);
-  padding: 20px;
+  border: 1px solid var(--light-grey);
+  padding: 40px 20px;
 
   background-color: var(--white);
 
   box-shadow: 0px 4px 4px rgba(229, 229, 229, 0.6);
 
   min-width: 388px;
-  min-height: 430px;
 `;

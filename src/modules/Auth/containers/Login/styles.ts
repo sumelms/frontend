@@ -11,7 +11,6 @@ export const Container = styled.div`
   width: 100%;
 
   h1 {
-    font-family: Roboto;
     font-weight: 500;
     font-size: 30px;
 
@@ -23,7 +22,6 @@ export const Container = styled.div`
   }
 
   span {
-    font-family: Roboto;
     font-weight: 300;
     font-size: 14px;
 
@@ -33,7 +31,6 @@ export const Container = styled.div`
   }
 
   p {
-    font-family: Roboto;
     font-weight: 300;
     font-size: 12px;
 

@@ -50,6 +50,7 @@ export const Container = styled.button<ButtonProps>`
   margin-top: 16px;
 
   font-weight: 500;
+  text-transform: uppercase;
 
   transition: background-color 0.2s;
 

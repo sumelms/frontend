@@ -44,9 +44,9 @@ const Login: React.FC = () => {
         <Input name="email" icon={FiMail} placeholder="Your email address" />
         <Input name="password" icon={FiLock} placeholder="Your password" />
         <Button variant="success">Login</Button>
-      </Form>
+      </Form>      
       <p>
-        Did you <Link to="/forgot-password">forgot your password?</Link>
+        <Link to="/forgot-password">Forgot your password?</Link> Don't have an account? <Link to="/register">Sign up</Link>
       </p>
     </Container>
   );

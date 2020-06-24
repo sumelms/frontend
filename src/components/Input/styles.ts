@@ -14,7 +14,8 @@ export const Container = styled.div<ContainerProps>`
   background: var(--white);
   color: var(--black);
 
-  border-radius: 10px;
+  font-weight: 300;
+
   border: 1px solid var(--grey);
 
   padding: 16px;
@@ -52,6 +53,8 @@ export const Container = styled.div<ContainerProps>`
     color: var(--black);
     
     border: 0;
+
+    font-weight: 300;
 
     &::placeholder {
       color: var(--light-grey);
