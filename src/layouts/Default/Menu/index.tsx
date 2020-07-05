@@ -1,7 +1,7 @@
 import React from "react";
 import { FiFolder, FiTrello } from "react-icons/fi";
 
-import logoImg from "../../../assets/sume-icon.svg";
+import logoImg from "../../../assets/svg/sume-icon.svg";
 
 import { Container, Brand } from "./styles";
 

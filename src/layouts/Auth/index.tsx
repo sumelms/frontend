@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import logoImg from "../../assets/sume-logo.svg";
+import logoImg from "../../assets/svg/sume-logo.svg";
 
 import { Container, Content, Card } from "./styles";
 
