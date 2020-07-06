@@ -1,0 +1,9 @@
+{
+  "title": "Login",
+  "subtitle": "Access your account",
+  "form": {
+    "email-input-placeholder-text": "Your email address",
+    "password-input-placeholder-text": "Your password",
+    "login-button-text": "Login"
+  }
+}

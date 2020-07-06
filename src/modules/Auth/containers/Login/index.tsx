@@ -3,6 +3,7 @@ import { FiMail, FiLock } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { FormHandles } from "@unform/core";
 import { Form } from "@unform/web";
+import { useTranslation } from "react-i18next";
 import * as Yup from "yup";
 
 import { Container } from "./styles";
@@ -14,6 +15,7 @@ import Button from "../../../../components/Button";
 
 const Login: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const { t } = useTranslation(['auth']);
 
   const handleSubmit = useCallback(async (data: object) => {
     try {
@@ -37,13 +39,13 @@ const Login: React.FC = () => {
 
   return (
     <Container>
-      <h1>Login</h1>
-      <span>Access your account</span>
+      <h1>{t("login.title")}</h1>
+      <span>{t("login.subtitle")}</span>
 
       <Form ref={formRef} onSubmit={handleSubmit}>
-        <Input name="email" icon={FiMail} placeholder="Your email address" />
-        <Input name="password" icon={FiLock} placeholder="Your password" />
-        <Button variant="success">Login</Button>
+        <Input name="email" icon={FiMail} placeholder={t("login.form.email-input-placeholder-text")} />
+        <Input name="password" icon={FiLock} placeholder={t("login.form.password-input-placeholder-text")} />
+        <Button variant="success">{t("login.form.login-button-text")}</Button>
       </Form>      
       <p>
         <Link to="/forgot-password">Forgot your password?</Link> Don't have an account? <Link to="/register">Sign up</Link>
