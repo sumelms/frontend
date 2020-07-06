@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Redirect, Route } from "react-router-dom";
 
 import AuthLayout from "../../layouts/Auth";
@@ -35,7 +35,9 @@ const RouteWrapper: React.FC<Props> = ({
       {...rest}
       render={(routeProps) => (
         <Layout>
-          <Component {...routeProps} />
+          <Suspense fallback="Loading...">
+            <Component {...routeProps} />
+          </Suspense>
         </Layout>
       )}
     />
