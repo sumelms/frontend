@@ -9,5 +9,5 @@ env:
 script:
   - npm lint
   - npm test --passWithNoTests
-  - npm run test:coverage
+  - npm run test --coverage
   - npm run build
