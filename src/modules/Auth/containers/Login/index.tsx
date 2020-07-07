@@ -3,7 +3,7 @@ import { FiMail, FiLock } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { FormHandles } from "@unform/core";
 import { Form } from "@unform/web";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import * as Yup from "yup";
 
 import { Container } from "./styles";
@@ -46,9 +46,11 @@ const Login: React.FC = () => {
         <Input name="email" icon={FiMail} placeholder={t("login.form.email-input-placeholder-text")} />
         <Input name="password" icon={FiLock} placeholder={t("login.form.password-input-placeholder-text")} />
         <Button variant="success">{t("login.form.login-button-text")}</Button>
-      </Form>      
+      </Form>
       <p>
-        <Link to="/forgot-password">Forgot your password?</Link> Don't have an account? <Link to="/register">Sign up</Link>
+        <Trans i18nKey="login.form.extra-line-text">
+          <Link to="/forgot-password">Forgot your password?</Link> Don't have an account? <Link to="/register">Sign up</Link>
+        </Trans>
       </p>
     </Container>
   );
