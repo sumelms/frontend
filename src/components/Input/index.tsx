@@ -56,6 +56,7 @@ const Input: React.FC<InputProps> = ({
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
         ref={inputRef}
+        data-testid="input-container"
         {...rest}
       />
       {error && (
