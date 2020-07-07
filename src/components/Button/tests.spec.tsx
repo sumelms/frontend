@@ -7,8 +7,9 @@ import colors from "../../styles/colors";
 describe("Button component", () => {
   afterEach(cleanup);
 
-  it("renders without crashing", () => {
-    render(<Button>Default button</Button>);
+  it("should be able to render an button", () => {
+    const { getByTestId } = render(<Button />);
+    expect(getByTestId("button-container")).toBeTruthy();
   });
 
   it("should render correctly", () => {
