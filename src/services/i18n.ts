@@ -22,10 +22,8 @@ i18n
       escapeValue: false, // not needed for react as it escapes by default
     },
 
-    ns: [
-      'app',
-      'auth'
-    ],
+    // the application namespace should be always loaded
+    defaultNS: 'app',
 
     backend: {
       loadPath: '/lang/{{lng}}/{{ns}}.json',
