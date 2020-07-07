@@ -15,7 +15,7 @@ describe("Button component", () => {
     expect(getByTestId("button-container")).toHaveTextContent("Default button");
   });
 
-  it("shold accept variant", () => {
+  it("should accept variant", () => {
     const { getByTestId } = render(
       <Button variant="primary">Primary button</Button>,
     );
