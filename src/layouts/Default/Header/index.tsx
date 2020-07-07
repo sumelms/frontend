@@ -1,6 +1,13 @@
 import React from "react";
 
-import { Container, Separator, ResumeIcon, NotificationIcon, LogoutIcon, Actions } from "./styles";
+import {
+  Container,
+  Separator,
+  ResumeIcon,
+  NotificationIcon,
+  LogoutIcon,
+  Actions,
+} from "./styles";
 
 import UserInfo from "./UserInfo";
 

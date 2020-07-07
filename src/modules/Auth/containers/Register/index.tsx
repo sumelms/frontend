@@ -25,8 +25,8 @@ const Register: React.FC = () => {
           .email("Type a valid email"),
         password: Yup.string().required("Password is required"),
         passwordConfirm: Yup.string()
-          .oneOf([Yup.ref('password'), undefined])
-          .required('Password confirm is required')
+          .oneOf([Yup.ref("password"), undefined])
+          .required("Password confirm is required"),
       });
 
       await schema.validate(data, {
@@ -46,7 +46,11 @@ const Register: React.FC = () => {
       <Form ref={formRef} onSubmit={handleSubmit}>
         <Input name="email" icon={FiMail} placeholder="Your email address" />
         <Input name="password" icon={FiLock} placeholder="Your password" />
-        <Input name="passwordConfirm" icon={FiLock} placeholder="Repeat your password" />
+        <Input
+          name="passwordConfirm"
+          icon={FiLock}
+          placeholder="Repeat your password"
+        />
         <Button variant="success">Register</Button>
       </Form>
       <p>

@@ -22,7 +22,7 @@ const Login: React.FC = () => {
       const schema = Yup.object().shape({
         email: Yup.string()
           .required("Email is required")
-          .email("Type a valid email")
+          .email("Type a valid email"),
       });
 
       await schema.validate(data, {

@@ -15,7 +15,7 @@ import Button from "../../../../components/Button";
 
 const Login: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-  const { t } = useTranslation(['auth']);
+  const { t } = useTranslation(["auth"]);
 
   const handleSubmit = useCallback(async (data: object) => {
     try {
@@ -43,13 +43,22 @@ const Login: React.FC = () => {
       <span>{t("login.subtitle")}</span>
 
       <Form ref={formRef} onSubmit={handleSubmit}>
-        <Input name="email" icon={FiMail} placeholder={t("login.form.email-input-placeholder-text")} />
-        <Input name="password" icon={FiLock} placeholder={t("login.form.password-input-placeholder-text")} />
+        <Input
+          name="email"
+          icon={FiMail}
+          placeholder={t("login.form.email-input-placeholder-text")}
+        />
+        <Input
+          name="password"
+          icon={FiLock}
+          placeholder={t("login.form.password-input-placeholder-text")}
+        />
         <Button variant="success">{t("login.form.login-button-text")}</Button>
       </Form>
       <p>
         <Trans i18nKey="login.form.extra-line-text">
-          <Link to="/forgot-password">Forgot your password?</Link> Don't have an account? <Link to="/register">Sign up</Link>
+          <Link to="/forgot-password">Forgot your password?</Link> Don't have an
+          account? <Link to="/register">Sign up</Link>
         </Trans>
       </p>
     </Container>

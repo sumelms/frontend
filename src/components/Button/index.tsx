@@ -10,7 +10,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   ...rest
 }: ButtonProps) => (
-  <Container variant={variant} {...rest}>
+  <Container variant={variant} data-testid="button-container" {...rest}>
     {children}
   </Container>
 );

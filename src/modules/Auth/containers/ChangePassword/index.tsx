@@ -25,8 +25,8 @@ const Login: React.FC = () => {
           .email("Type a valid email"),
         password: Yup.string().required("Password is required"),
         passwordConfirm: Yup.string()
-          .oneOf([Yup.ref('password'), undefined])
-          .required('Password confirm is required')
+          .oneOf([Yup.ref("password"), undefined])
+          .required("Password confirm is required"),
       });
 
       await schema.validate(data, {
@@ -44,8 +44,12 @@ const Login: React.FC = () => {
       <span>Enter your new password</span>
 
       <Form ref={formRef} onSubmit={handleSubmit}>
-      <Input name="password" icon={FiLock} placeholder="Your password" />
-        <Input name="passwordConfirm" icon={FiLock} placeholder="Repeat your password" />
+        <Input name="password" icon={FiLock} placeholder="Your password" />
+        <Input
+          name="passwordConfirm"
+          icon={FiLock}
+          placeholder="Repeat your password"
+        />
         <Button variant="success">Confirm</Button>
       </Form>
       <p>
