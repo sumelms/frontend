@@ -16,7 +16,9 @@ describe("Button component", () => {
   });
 
   it("shold accept variant", () => {
-    const { getByTestId } = render(<Button variant="primary">Primary button</Button>);
+    const { getByTestId } = render(
+      <Button variant="primary">Primary button</Button>,
+    );
     // @TODO Test button color
     expect(getByTestId("button-container")).toHaveTextContent("Primary button");
   });
