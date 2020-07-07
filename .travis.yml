@@ -7,7 +7,7 @@ cache:
 env:
   - CI=true
 script:
-  - npm lint
-  - npm test --passWithNoTests
+  - npm run lint
+  - npm run test --passWithNoTests
   - npm run test --coverage
   - npm run build
