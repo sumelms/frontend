@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { shade } from "polished";
+import colors from "../../styles/colors";
 
 interface ButtonProps {
   variant?: string;
@@ -14,36 +15,36 @@ export const Container = styled.button<ButtonProps>`
   ${(props) =>
     !props.variant &&
     css`
-      color: var(--black);
-      background-color: var(--light);
+      color: ${colors.black};
+      background-color: ${colors.light};
     `}
 
   ${(props) =>
     props.variant === "primary" &&
     css`
-      color: var(--white);
-      background-color: var(--primary);
+      color: ${colors.white};
+      background-color: ${colors.primary};
     `}
 
   ${(props) =>
     props.variant === "success" &&
     css`
-      color: var(--white);
-      background-color: var(--success);
+      color: ${colors.white};
+      background-color: ${colors.success};
     `}
 
   ${(props) =>
     props.variant === "info" &&
     css`
-      color: var(--white);
-      background-color: var(--info);
+      color: ${colors.white};
+      background-color: ${colors.info};
     `}
 
   ${(props) =>
     props.variant === "danger" &&
     css`
-      color: var(--white);
-      background-color: var(--danger);
+      color: ${colors.white};
+      background-color: ${colors.danger};
     `}
 
   padding: 0 16px;
@@ -56,6 +57,6 @@ export const Container = styled.button<ButtonProps>`
 
   &:hover {
     /* @FIXME Use --success instead hex value */
-    background: ${shade(0.2, "#56C676")};
+    background: ${shade(0.2, colors.success)};
   }
 `;

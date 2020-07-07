@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import colors from "./colors";
 
 export default createGlobalStyle`
   * {
@@ -23,20 +24,20 @@ export default createGlobalStyle`
   :root {
     --font-family-sans-serif: 'Roboto', sans-serif;
 
-    --primary: #D72D35;
+    --primary: ${colors.primary};
         
-    --white: #fff;
-    --black: #232323;
+    --white: ${colors.white};
+    --black: ${colors.black};
 
-    --light: #F8F8FB;
+    --light: ${colors.light};
 
-    --light-grey: #C9CED6;
-    --grey: #A6ACBE;
-    --dark-grey: #423F3F; 
+    --light-grey: ${colors.lightGrey};
+    --grey: ${colors.grey};
+    --dark-grey: ${colors.darkGrey}; 
     
-    --danger: #FF4A31;
-    --warning: #FFDE31;
-    --info: #32B5ED;
-    --success: #56C676;
+    --danger: ${colors.danger};
+    --warning: ${colors.warning};
+    --info: ${colors.info};
+    --success: ${colors.success};
   }
 `;

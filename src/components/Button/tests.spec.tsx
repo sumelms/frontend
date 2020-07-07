@@ -2,6 +2,7 @@ import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 
 import Button from "./index";
+import colors from "../../styles/colors";
 
 describe("Button component", () => {
   afterEach(cleanup);
@@ -19,8 +20,12 @@ describe("Button component", () => {
     const { getByTestId } = render(
       <Button variant="primary">Primary button</Button>,
     );
-    // @TODO Test button color
+
     expect(getByTestId("button-container")).toHaveTextContent("Primary button");
+    expect(getByTestId("button-container")).toHaveStyle(`
+      color: ${colors.white};
+      background-color: ${colors.primary};
+    `);
   });
 
   it("should be clickable", (done) => {
