@@ -1,2 +1,38 @@
-# frontend
-The Sumé LMS Front-end repository.
+<p align="center">
+  <img src=".github/sumelms.png" />
+</p>
+
+<p align="center">
+  <a href="https://travis-ci.org/sumelms/frontend">
+    <img alt="Travis (.org)" src="https://img.shields.io/travis/sumelms/frontend">
+  </a>
+  <a href="https://codecov.io/gh/sumelms/frontend">
+    <img src="https://codecov.io/gh/sumelms/frontend/branch/main/graph/badge.svg?token=OIC51X2RE2" />
+  </a>
+  <img alt="GitHub" src="https://img.shields.io/github/license/sumelms/frontend">
+  <a href="https://discord.gg/Yh9q9cd">
+    <img alt="Discord" src="https://img.shields.io/discord/726500188021063682">
+  </a>
+</p>
+
+## About Sumé LMS
+
+> Note: This repository contains the web application of the Sumé LMS. If you are looking for more information about the application, we strongly recommend you to [check the documentation](#).
+
+Sumé LMS is a modern and open-source learning management system that uses modern technologies to deliver performance and scalability to your learning environment.
+
+  * Compatible with SCORM and xAPI (TinCan)
+  * Flexible and modular
+  * Open-source and Free
+  * Fast and modern
+  * Easy to install and run
+  * Designed for microservices
+  * REST API based application
+  * and more.
+
+## Contributing
+Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Code of Conduct](#) and our [Contributor Guideline](#) in our documentation.
+
+## License
+This project is licensed by the Apache License 2.0. For more information check the LICENSE file.
+
