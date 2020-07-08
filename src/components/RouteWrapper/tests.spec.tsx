@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import RouteWrapper from "./index";
 import { MemoryRouter } from "react-router-dom";
+import RouteWrapper from "./index";
 
 describe("RouteWrapper component", () => {
   it("renders without crashing", () => {

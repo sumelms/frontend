@@ -30,7 +30,7 @@
     "prettier"
   ],
   "rules": {
-    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "no-unused-expressions": "off",
     "prettier/prettier": "error",
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",

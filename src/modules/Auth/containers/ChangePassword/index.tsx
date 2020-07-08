@@ -17,7 +17,7 @@ const Login: React.FC = () => {
 
   const handleSubmit = useCallback(async (data: object) => {
     try {
-      formRef.current?.setErrors({});
+      formRef?.current.setErrors({});
 
       const schema = Yup.object().shape({
         email: Yup.string()
@@ -34,7 +34,7 @@ const Login: React.FC = () => {
       });
     } catch (err) {
       const errors = getValidationErrors(err);
-      formRef.current?.setErrors(errors);
+      formRef?.current.setErrors(errors);
     }
   }, []);
 

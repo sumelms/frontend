@@ -57,7 +57,7 @@ const Login: React.FC = () => {
       </Form>
       <p>
         <Trans i18nKey="login.form.extra-line-text">
-          <Link to="/forgot-password">Forgot your password?</Link> Don't have an
+          <Link to="/forgot-password">Forgot your password?</Link> Don`t have an
           account? <Link to="/register">Sign up</Link>
         </Trans>
       </p>
