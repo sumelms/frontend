@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Actions,
@@ -7,8 +7,8 @@ import {
   NotificationIcon,
   ResumeIcon,
   Separator,
-} from './styles';
-import UserInfo from './UserInfo';
+} from "./styles";
+import UserInfo from "./UserInfo";
 
 const Header: React.FC = () => {
   return (

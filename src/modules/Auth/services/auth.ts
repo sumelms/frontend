@@ -8,8 +8,8 @@ export function SignIn(): Promise<any> {
     setTimeout(
       () =>
         resolve({
-          token: 'fake-token',
-          user: { name: 'Ricardo Lüders', email: 'my@email.com' },
+          token: "fake-token",
+          user: { name: "Ricardo Lüders", email: "my@email.com" },
         }),
       1000,
     ),

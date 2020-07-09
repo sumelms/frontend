@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
@@ -28,7 +28,7 @@ export const Container = styled.div`
     transform: translateX(-50%);
 
     &::before {
-      content: '';
+      content: "";
       border-style: solid;
       border-color: #ff9000 transparent;
       border-width: 6px 6px 0 6px;

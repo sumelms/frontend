@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
-import logoImg from '../../assets/svg/sume-logo.svg';
-import { Card, Container, Content } from './styles';
+import logoImg from "../../assets/svg/sume-logo.svg";
+import { Card, Container, Content } from "./styles";
 
 interface Props {
   children: ReactNode;

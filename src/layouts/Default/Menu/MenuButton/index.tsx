@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
-import { Button } from './styles';
+import { Button } from "./styles";
 
 export interface Props {
   icon: ReactNode;

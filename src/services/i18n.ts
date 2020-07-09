@@ -1,7 +1,7 @@
-import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import Backend from 'i18next-http-backend';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import Backend from "i18next-http-backend";
+import { initReactI18next } from "react-i18next";
 
 i18n
   // load language files in another request
@@ -14,7 +14,7 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: 'en',
+    fallbackLng: "en",
     debug: true,
 
     interpolation: {
@@ -22,11 +22,11 @@ i18n
     },
 
     // the application namespace should be always loaded
-    defaultNS: 'app',
+    defaultNS: "app",
 
     backend: {
-      loadPath: '/lang/{{lng}}/{{ns}}.json',
-      addPath: '/lang/{{lng}}/{{ns}}.json',
+      loadPath: "/lang/{{lng}}/{{ns}}.json",
+      addPath: "/lang/{{lng}}/{{ns}}.json",
     },
   });
 

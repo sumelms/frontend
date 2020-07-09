@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Container, Header } from './styles';
+import { Container, Header } from "./styles";
 
 const Dashboard: React.FC = () => {
   return (
