@@ -1,6 +1,7 @@
-import styled, { css } from "styled-components";
-import { shade } from "polished";
-import colors from "../../styles/colors";
+import { shade } from 'polished';
+import styled, { css } from 'styled-components';
+
+import colors from '../../styles/colors';
 
 interface ButtonProps {
   variant?: string;
@@ -20,28 +21,28 @@ export const Container = styled.button<ButtonProps>`
     `}
 
   ${(props) =>
-    props.variant === "primary" &&
+    props.variant === 'primary' &&
     css`
       color: ${colors.white};
       background-color: ${colors.primary};
     `}
 
   ${(props) =>
-    props.variant === "success" &&
+    props.variant === 'success' &&
     css`
       color: ${colors.white};
       background-color: ${colors.success};
     `}
 
   ${(props) =>
-    props.variant === "info" &&
+    props.variant === 'info' &&
     css`
       color: ${colors.white};
       background-color: ${colors.info};
     `}
 
   ${(props) =>
-    props.variant === "danger" &&
+    props.variant === 'danger' &&
     css`
       color: ${colors.white};
       background-color: ${colors.danger};

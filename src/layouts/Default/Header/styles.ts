@@ -1,6 +1,5 @@
-import styled from "styled-components";
-
-import { FiPlayCircle, FiBell, FiLogOut } from "react-icons/fi";
+import { FiBell, FiLogOut, FiPlayCircle } from 'react-icons/fi';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   grid-area: TN;

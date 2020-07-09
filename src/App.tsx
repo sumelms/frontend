@@ -1,12 +1,11 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import './services/i18n';
 
-import "./services/i18n";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import GlobalStyle from "./styles/global";
-
-import AuthProvider from "./modules/Auth/contexts/auth";
-import Routes from "./routes";
+import AuthProvider from './modules/Auth/contexts/auth';
+import Routes from './routes';
+import GlobalStyle from './styles/global';
 
 const App: React.FC = () => (
   <>

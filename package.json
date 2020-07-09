@@ -1,12 +1,11 @@
 {
-  "name": "sume-frontend",
+  "name": "sumelms-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@unform/core": "^2.1.3",
     "@unform/web": "^2.1.3",
     "i18next": "^19.5.0",
@@ -53,7 +52,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint --fix"
+      "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
     ],
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
@@ -68,12 +67,12 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.0",
     "@types/yup": "^0.29.3",
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb": "^18.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-typescript": "^2.0.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
     "prettier": "^2.0.5"
   }
 }

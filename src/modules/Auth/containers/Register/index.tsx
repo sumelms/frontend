@@ -1,32 +1,36 @@
-import React, { useCallback, useRef } from "react";
-import { FiMail, FiLock } from "react-icons/fi";
-import { Link } from "react-router-dom";
-import { FormHandles } from "@unform/core";
-import { Form } from "@unform/web";
-import * as Yup from "yup";
+import { FormHandles } from '@unform/core';
+import { Form } from '@unform/web';
+import React, { useCallback, useRef } from 'react';
+import { FiLock, FiMail } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import * as Yup from 'yup';
 
-import { Container } from "./styles";
+import Button from '../../../../components/Button';
+import Input from '../../../../components/Input';
+import getValidationErrors from '../../../../utils/getValidationErrors';
+import { Container } from './styles';
 
-import getValidationErrors from "../../../../utils/getValidationErrors";
-
-import Input from "../../../../components/Input";
-import Button from "../../../../components/Button";
+interface RegisterPayload {
+  email: string;
+  password: string;
+  passwordConfirm: string;
+}
 
 const Register: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = useCallback(async (data: object) => {
+  const handleSubmit = useCallback(async (data: RegisterPayload) => {
     try {
       formRef.current?.setErrors({});
 
       const schema = Yup.object().shape({
         email: Yup.string()
-          .required("Email is required")
-          .email("Type a valid email"),
-        password: Yup.string().required("Password is required"),
+          .required('Email is required')
+          .email('Type a valid email'),
+        password: Yup.string().required('Password is required'),
         passwordConfirm: Yup.string()
-          .oneOf([Yup.ref("password"), undefined])
-          .required("Password confirm is required"),
+          .oneOf([Yup.ref('password'), undefined])
+          .required('Password confirm is required'),
       });
 
       await schema.validate(data, {

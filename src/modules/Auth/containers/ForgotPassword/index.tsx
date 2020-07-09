@@ -1,28 +1,30 @@
-import React, { useCallback, useRef } from "react";
-import { FiMail } from "react-icons/fi";
-import { Link } from "react-router-dom";
-import { FormHandles } from "@unform/core";
-import { Form } from "@unform/web";
-import * as Yup from "yup";
+import { FormHandles } from '@unform/core';
+import { Form } from '@unform/web';
+import React, { useCallback, useRef } from 'react';
+import { FiMail } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import * as Yup from 'yup';
 
-import { Container } from "./styles";
+import Button from '../../../../components/Button';
+import Input from '../../../../components/Input';
+import getValidationErrors from '../../../../utils/getValidationErrors';
+import { Container } from './styles';
 
-import getValidationErrors from "../../../../utils/getValidationErrors";
+interface ForgotPasswordPayload {
+  email: string;
+}
 
-import Input from "../../../../components/Input";
-import Button from "../../../../components/Button";
-
-const Login: React.FC = () => {
+const ForgotPassword: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = useCallback(async (data: object) => {
+  const handleSubmit = useCallback(async (data: ForgotPasswordPayload) => {
     try {
       formRef.current?.setErrors({});
 
       const schema = Yup.object().shape({
         email: Yup.string()
-          .required("Email is required")
-          .email("Type a valid email"),
+          .required('Email is required')
+          .email('Type a valid email'),
       });
 
       await schema.validate(data, {
@@ -50,4 +52,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;

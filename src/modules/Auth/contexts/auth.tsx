@@ -1,6 +1,6 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useContext, useState } from 'react';
 
-import { User, SignIn } from "../services/auth";
+import { SignIn, User } from '../services/auth';
 
 interface AuthContextProps {
   signed: boolean;
