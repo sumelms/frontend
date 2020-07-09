@@ -1,21 +1,19 @@
 import React from "react";
-import { Folder, Trello } from "styled-icons/feather";
+import { FiFolder, FiTrello } from "react-icons/fi";
 
-import Logo from "../../../assets/sume-icon.svg";
-
-import { Container, Brand } from "./styles";
-
+import logoImg from "../../../assets/svg/sume-icon.svg";
 import MenuButton from "./MenuButton";
+import { Brand, Container } from "./styles";
 
 const Menu: React.FC = () => {
   return (
     <Container>
       <Brand>
-        <img src={Logo} alt="Sumé" />
+        <img src={logoImg} alt="Sumé" />
       </Brand>
 
-      <MenuButton icon={<Trello />} />
-      <MenuButton icon={<Folder />} />
+      <MenuButton icon={FiTrello} />
+      <MenuButton icon={FiFolder} />
     </Container>
   );
 };

@@ -1,0 +1,11 @@
+{
+  "title": "Registrar-se",
+  "subtitle": "Cria sua conta",
+  "form": {
+    "email-input-placeholder-text": "Seu endereço e-mail",
+    "password-input-placeholder-text": "Sua senha",
+    "confirm-password-input-placeholder-text": "Repita sua senha",
+    "register-button-text": "Registrar",
+    "extra-line-text": "ou <1>login</1> se você já possuír uma conta."
+  }
+}

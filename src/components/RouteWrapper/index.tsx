@@ -1,22 +1,24 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
+import React, { Suspense } from "react";
 import { Redirect, Route } from "react-router-dom";
 
 import AuthLayout from "../../layouts/Auth";
 import DefaultLayout from "../../layouts/Default";
+import { useAuth } from "../../modules/Auth/contexts/auth";
 
 export interface Props {
   path: string;
   name: string;
   component: any;
   isPrivate?: boolean;
-  [x: string]: any; // dealing with ...rest
+  [x: string]: unknown; // dealing with ...rest
 }
 
-const RouteWrapper: React.FC<Props> = ({ component: Component, isPrivate, ...rest }: Props) => {
-  // @TODO Get it from AuthContext with useAuth hook
-  const signed = true;
+const RouteWrapper: React.FC<Props> = ({
+  component: Component,
+  isPrivate,
+  ...rest
+}: Props) => {
+  const { signed } = useAuth();
 
   if (isPrivate && !signed) {
     return <Redirect to="/login" />;
@@ -33,7 +35,9 @@ const RouteWrapper: React.FC<Props> = ({ component: Component, isPrivate, ...res
       {...rest}
       render={(routeProps) => (
         <Layout>
-          <Component {...routeProps} />
+          <Suspense fallback="Loading...">
+            <Component {...routeProps} />
+          </Suspense>
         </Layout>
       )}
     />
