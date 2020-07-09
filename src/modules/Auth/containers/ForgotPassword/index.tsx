@@ -1,14 +1,15 @@
-import { FormHandles } from '@unform/core';
-import { Form } from '@unform/web';
-import React, { useCallback, useRef } from 'react';
-import { FiMail } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
-import * as Yup from 'yup';
+import { FormHandles } from "@unform/core";
+import { Form } from "@unform/web";
+import React, { useCallback, useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
+import { FiMail } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import * as Yup from "yup";
 
-import Button from '../../../../components/Button';
-import Input from '../../../../components/Input';
-import getValidationErrors from '../../../../utils/getValidationErrors';
-import { Container } from './styles';
+import Button from "../../../../components/Button";
+import Input from "../../../../components/Input";
+import getValidationErrors from "../../../../utils/getValidationErrors";
+import { Container } from "./styles";
 
 interface ForgotPasswordPayload {
   email: string;
@@ -16,6 +17,7 @@ interface ForgotPasswordPayload {
 
 const ForgotPassword: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const { t } = useTranslation(["auth"]);
 
   const handleSubmit = useCallback(async (data: ForgotPasswordPayload) => {
     try {
@@ -23,8 +25,8 @@ const ForgotPassword: React.FC = () => {
 
       const schema = Yup.object().shape({
         email: Yup.string()
-          .required('Email is required')
-          .email('Type a valid email'),
+          .required("Email is required")
+          .email("Type a valid email"),
       });
 
       await schema.validate(data, {
@@ -38,15 +40,23 @@ const ForgotPassword: React.FC = () => {
 
   return (
     <Container>
-      <h1>Recover your password</h1>
-      <span>We will send you an message to help you out</span>
+      <h1>{t("forgot_password.title")}</h1>
+      <span>{t("forgot_password.subtitle")}</span>
 
       <Form ref={formRef} onSubmit={handleSubmit}>
-        <Input name="email" icon={FiMail} placeholder="Your email address" />
-        <Button variant="success">Send</Button>
+        <Input
+          name="email"
+          icon={FiMail}
+          placeholder={t("forgot_password.form.email-input-placeholder-text")}
+        />
+        <Button variant="success">
+          {t("forgot_password.form.send-button-text")}
+        </Button>
       </Form>
       <p>
-        Did you remember the password? <Link to="/login">Login</Link>.
+        <Trans i18nKey="forgot_password.form.extra-line-text">
+          Did you remember the password? <Link to="/login">Login</Link>.
+        </Trans>
       </p>
     </Container>
   );
