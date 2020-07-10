@@ -55,7 +55,7 @@ def generate_files():
 
         for module in languages[lang]:
             # src module means that the files exists in src/translations
-            module_path = os.path.join(lang_path, "app.json") if module == 'src' else os.path.join(lang_path, module + ".json")
+            module_path = os.path.join(lang_path, "translation.json") if module == 'src' else os.path.join(lang_path, module + ".json")
 
             with open(module_path, 'w+') as json_file:
                 json.dump(languages[lang][module], json_file)

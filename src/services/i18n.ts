@@ -2,6 +2,7 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
+import { setLocale } from "yup";
 
 i18n
   // load language files in another request
@@ -15,6 +16,7 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     fallbackLng: "en",
+    returnObjects: true,
     debug: true,
 
     interpolation: {
@@ -22,12 +24,17 @@ i18n
     },
 
     // the application namespace should be always loaded
-    defaultNS: "app",
+    defaultNS: "translation",
 
     backend: {
       loadPath: "/lang/{{lng}}/{{ns}}.json",
       addPath: "/lang/{{lng}}/{{ns}}.json",
     },
   });
+
+i18n.on("initialized", () => {
+  // Set locale to Yup
+  setLocale(i18n.t("validation"));
+});
 
 export default i18n;

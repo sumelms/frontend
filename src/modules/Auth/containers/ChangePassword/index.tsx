@@ -25,10 +25,10 @@ const ChangePassword: React.FC = () => {
       formRef.current?.setErrors({});
 
       const schema = Yup.object().shape({
-        password: Yup.string().required("Password is required"),
+        password: Yup.string().required(),
         passwordConfirm: Yup.string()
           .oneOf([Yup.ref("password"), undefined])
-          .required("Password confirm is required"),
+          .required(),
       });
 
       await schema.validate(data, {
