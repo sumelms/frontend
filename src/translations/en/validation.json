@@ -1,0 +1,36 @@
+{
+  "mixed": {
+    "default": "${path} is invalid",
+    "required": "${path} is a required field",
+    "oneOf": "${path} must be one of the following values: ${values}",
+    "notOneOf": "${path} cannot be one of the following values: ${values}"
+  },
+  "string": {
+    "length": "${path} must have exactly ${length} characters",
+    "min": "${path} must have at least ${min} characters",
+    "max": "${path} must have at most ${max} characters",
+    "email": "${path} has an invalid email format",
+    "url": "${path} must have a valid URL format",
+    "trim": "${path} must not contain spaces at the beginning or at the end.",
+    "lowercase": "${path} must be capitalized",
+    "uppercase": "${path} must be in lowercase"
+  },
+  "number": {
+    "min": "${path} must be at least ${min}",
+    "max": "${path} at most ${max}",
+    "lessThan": "${path} must be less than ${less}",
+    "moreThan": "${path} must be greater than ${more}",
+    "notEqual": "${path} cannot be the same as ${notEqual}",
+    "positive": "${path} must be a positive number",
+    "negative": "${path} must be a negative number",
+    "integer": "${path} must be an integer"
+  },
+  "date": {
+    "min": "${path} must be greater than a data ${min}",
+    "max": "${path} must be less than a data ${max}"
+  },
+  "array": {
+    "min": "${path} must have at least ${min} itens",
+    "max": "${path} must have at most ${max} itens"
+  }
+}
