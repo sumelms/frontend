@@ -1,5 +1,7 @@
 <p align="center">
-  <img src=".github/sumelms.png" />
+  <a href="http://www.sumelms.com">
+    <img src=".github/sumelms.png" />
+  </a>
 </p>
 
 <p align="center">
@@ -17,7 +19,7 @@
 
 ## About Sumé LMS
 
-> Note: This repository contains the web application of the Sumé LMS. If you are looking for more information about the application, we strongly recommend you to [check the documentation](#).
+> Note: This repository contains the web application of the Sumé LMS. If you are looking for more information about the application, we strongly recommend you to [check the documentation](https://www.sumelms.com/docs).
 
 Sumé LMS is a modern and open-source learning management system that uses modern technologies to deliver performance and scalability to your learning environment.
 
@@ -31,8 +33,10 @@ Sumé LMS is a modern and open-source learning management system that uses moder
   * and more.
 
 ## Contributing
-Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Code of Conduct](#) and our [Contributor Guideline](#) in our documentation.
+
+Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Contributor Guideline](https://www.sumelms.com/docs/contributing).
 
 ## License
+
 This project is licensed by the Apache License 2.0. For more information check the LICENSE file.
 
