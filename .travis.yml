@@ -7,6 +7,7 @@ addons:
       - libgconf-2-4
 cache:
   directories:
+    - node_modules
     - ~/.npm
     - ~/.cache
 env:
@@ -15,10 +16,7 @@ env:
 script:
   - npm run lint
   - npm run test --passWithNoTests
-  - npm run test --coverage
+  - npm run test --coverage --watchAll=false
   - npm run test:e2e:ci
-    # after all tests finish running we need
-    # to kill all background jobs (like "npm start &")
-  - kill $(jobs -p) || true
   - npm run build
 
