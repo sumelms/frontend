@@ -205,3 +205,5 @@ $RECYCLE.BIN/
 
 cypress/screenshots
 cypress/videos
+
+public/lang

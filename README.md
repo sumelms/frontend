@@ -41,8 +41,8 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 - [Commands](#commands)
 - [Tests E2E](#tests-e2e)
 - [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
 - [Team](#team)
-- [FAQ](#faq)
 - [Support](#support)
 - [License](#license)
 
@@ -126,15 +126,19 @@ $ yarn test:e2e:ci
 
 ## Contributing
 
-Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Contributor Guideline](https://www.sumelms.com/docs/contributing).
+Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Contributor Guideline](https://www.sumelms.com/docs/ontributing).
+
+## Code of Conduct
+
+@TODO
 
 ## Team
 
-TODO
+@TODO
 
 ## Support
 
-TODO
+@TODO
 
 ## License
 
