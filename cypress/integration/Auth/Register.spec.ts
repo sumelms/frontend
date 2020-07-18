@@ -4,7 +4,7 @@ context('Register ', () => {
   beforeEach(() => {
     cy.visit('/register');
 
-    cy.get('[data-testid=button-container]').as('submit');
+    cy.get('button').as('submit');
   });
 
   it('should be redirected to register page', () => {

@@ -7,7 +7,7 @@ context('Login ', () => {
   beforeEach(() => {
     cy.visit('/');
 
-    cy.get('[data-testid=button-container]').as('submit');
+    cy.get('button').as('submit');
   });
 
   it('should be redirected to login when not authenticated', () => {
