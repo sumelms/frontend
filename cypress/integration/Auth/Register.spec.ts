@@ -3,8 +3,6 @@ import { last } from "cypress/types/lodash";
 context('Register ', () => {
   beforeEach(() => {
     cy.visit('/register');
-
-    cy.get('button').as('submit');
   });
 
   it('should be redirected to register page', () => {
@@ -21,7 +19,7 @@ context('Register ', () => {
   });
 
   it('should validate required fields on submit', () => {
-    cy.get('@submit').click();
+    cy.get('button').click();
 
     cy.get('form').within(() => {
       cy.get('div:first')

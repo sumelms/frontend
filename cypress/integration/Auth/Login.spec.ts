@@ -6,8 +6,6 @@ context('Login ', () => {
 
   beforeEach(() => {
     cy.visit('/');
-
-    cy.get('button').as('submit');
   });
 
   it('should be redirected to login when not authenticated', () => {
@@ -26,7 +24,7 @@ context('Login ', () => {
   });
 
   it('should validate required fields on submit', () => {
-    cy.get('@submit').click();
+    cy.get('button').click();
 
     cy.get('form').within(() => {
       cy.get('div:first')
@@ -47,7 +45,7 @@ context('Login ', () => {
       cy.get('input:last').type('123');
     });
 
-    cy.get('@submit').click();
+    cy.get('button').click();
 
     cy.get('@emailDiv')
       .find('span')
@@ -82,7 +80,7 @@ context('Login ', () => {
         .type(user.password);
     });
 
-    cy.get('@submit').click();
+    cy.get('button').click();
 
     cy.location('pathname').should('eq', '/');
     cy.contains('h1', 'Dashboard');
