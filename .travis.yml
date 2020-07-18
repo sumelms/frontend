@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 10.8
+  - "stable"
 addons:
   apt:
     packages:
@@ -16,9 +16,7 @@ script:
   - npm run lint
   - npm run test --passWithNoTests
   - npm run test --coverage
-    #   ## print all Travis environment variables for debugging
-  - $(npm bin)/print-env TRAVIS
-  - npm run test:e2e:ci -- --parallel
+  - npm run test:e2e:ci
     # after all tests finish running we need
     # to kill all background jobs (like "npm start &")
   - kill $(jobs -p) || true
