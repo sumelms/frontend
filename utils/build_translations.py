@@ -53,7 +53,7 @@ def generate_files():
         lang_path = os.path.join(LANG_DIR, lang)
 
         if not os.path.exists(lang_path):
-            os.mkdir(lang_path)
+            os.makedirs(lang_path, exist_ok=True)
 
         for module in languages[lang]:
             # src module means that the files exists in src/translations
