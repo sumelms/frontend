@@ -26,27 +26,30 @@ const Login: React.FC = () => {
 
   const from: any = location.state || { from: { pathname: '/' } };
 
-  const handleSubmit = useCallback(async (data: LoginPayload) => {
-    try {
-      formRef.current?.setErrors({});
+  const handleSubmit = useCallback(
+    async (data: LoginPayload) => {
+      try {
+        formRef.current?.setErrors({});
 
-      const schema = Yup.object().shape({
-        email: Yup.string().required().email(),
-        password: Yup.string().required(),
-      });
+        const schema = Yup.object().shape({
+          email: Yup.string().required().email(),
+          password: Yup.string().required(),
+        });
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
-      await signIn();
+        await signIn();
 
-      history.replace(from);
-    } catch (err) {
-      const errors = getValidationErrors(err);
-      formRef.current?.setErrors(errors);
-    }
-  }, []);
+        history.replace(from);
+      } catch (err) {
+        const errors = getValidationErrors(err);
+        formRef.current?.setErrors(errors);
+      }
+    },
+    [signIn, from, history],
+  );
 
   return (
     <Container>
