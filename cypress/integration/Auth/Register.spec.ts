@@ -1,8 +1,9 @@
-import { last } from "cypress/types/lodash";
+import { last } from 'cypress/types/lodash';
 
 context('Register ', () => {
   beforeEach(() => {
     cy.visit('/register');
+    console.log(last);
   });
 
   it('should be redirected to register page', () => {
@@ -12,9 +13,19 @@ context('Register ', () => {
 
   it('should have a form with email, password and confirm password fields', () => {
     cy.get('form').within(() => {
-      cy.get('input:first').should('have.attr', 'placeholder', 'Your email address');
-      cy.get(':nth-child(2)').find('input').should('have.attr', 'placeholder', 'Your password');
-      cy.get('input:last').should('have.attr', 'placeholder', 'Repeat your password');
+      cy.get('input:first').should(
+        'have.attr',
+        'placeholder',
+        'Your email address',
+      );
+      cy.get(':nth-child(2)')
+        .find('input')
+        .should('have.attr', 'placeholder', 'Your password');
+      cy.get('input:last').should(
+        'have.attr',
+        'placeholder',
+        'Repeat your password',
+      );
     });
   });
 
@@ -37,9 +48,7 @@ context('Register ', () => {
   });
 
   it('should redirect to the login page', () => {
-    cy.get('a')
-      .as('login')
-      .should('have.text', 'login');
+    cy.get('a').as('login').should('have.text', 'login');
 
     cy.get('@login').click();
 
