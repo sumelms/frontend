@@ -38,7 +38,7 @@ declare global {
 /**
  * Navigates to page with pageName
  */
-Cypress.Commands.add("navigate", (pageName) => {
+Cypress.Commands.add('navigate', (pageName) => {
   // Find navigation menu item
   // Click on it
   cy.visit(`/${pageName}`);

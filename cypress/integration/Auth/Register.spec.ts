@@ -1,9 +1,6 @@
-import { last } from 'cypress/types/lodash';
-
 context('Register ', () => {
   beforeEach(() => {
     cy.visit('/register');
-    console.log(last);
   });
 
   it('should be redirected to register page', () => {

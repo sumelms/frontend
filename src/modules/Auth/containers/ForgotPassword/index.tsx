@@ -1,15 +1,15 @@
-import { FormHandles } from "@unform/core";
-import { Form } from "@unform/web";
-import React, { useCallback, useRef } from "react";
-import { Trans, useTranslation } from "react-i18next";
-import { FiMail } from "react-icons/fi";
-import { Link } from "react-router-dom";
-import * as Yup from "yup";
+import { FormHandles } from '@unform/core';
+import { Form } from '@unform/web';
+import React, { useCallback, useRef } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
+import { FiMail } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import * as Yup from 'yup';
 
-import Button from "../../../../components/Button";
-import Input from "../../../../components/Input";
-import getValidationErrors from "../../../../utils/getValidationErrors";
-import { Container } from "./styles";
+import Button from '../../../../components/Button';
+import Input from '../../../../components/Input';
+import getValidationErrors from '../../../../utils/getValidationErrors';
+import { Container } from './styles';
 
 interface ForgotPasswordPayload {
   email: string;
@@ -17,7 +17,7 @@ interface ForgotPasswordPayload {
 
 const ForgotPassword: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-  const { t } = useTranslation(["auth"]);
+  const { t } = useTranslation(['auth']);
 
   const handleSubmit = useCallback(async (data: ForgotPasswordPayload) => {
     try {
@@ -38,17 +38,17 @@ const ForgotPassword: React.FC = () => {
 
   return (
     <Container>
-      <h1>{t("forgot_password.title")}</h1>
-      <span>{t("forgot_password.subtitle")}</span>
+      <h1>{t('forgot_password.title')}</h1>
+      <span>{t('forgot_password.subtitle')}</span>
 
       <Form ref={formRef} onSubmit={handleSubmit}>
         <Input
           name="email"
           icon={FiMail}
-          placeholder={t("forgot_password.form.email-input-placeholder-text")}
+          placeholder={t('forgot_password.form.email-input-placeholder-text')}
         />
         <Button variant="success">
-          {t("forgot_password.form.send-button-text")}
+          {t('forgot_password.form.send-button-text')}
         </Button>
       </Form>
       <p>
