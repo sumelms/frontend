@@ -70,7 +70,7 @@ const generateFiles = () => {
 try {
   searchLanguageFiles();
 
-  if (languages) {
+  if (languages !== {}) {
     generateFiles();
     console.log("✔ All translation files successfully generated.");
   } else {
