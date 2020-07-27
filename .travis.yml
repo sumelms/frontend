@@ -1,13 +1,22 @@
 language: node_js
 node_js:
   - "stable"
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
 cache:
   directories:
     - node_modules
+    - ~/.npm
+    - ~/.cache
 env:
   - CI=true
+
 script:
   - npm run lint
   - npm run test --passWithNoTests
-  - npm run test --coverage
+  - npm run test --coverage --watchAll=false
+  - npm run test:e2e:ci
   - npm run build
+

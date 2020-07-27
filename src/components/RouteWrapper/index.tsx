@@ -1,9 +1,9 @@
-import React, { Suspense } from "react";
-import { Redirect, Route } from "react-router-dom";
+import React, { Suspense } from 'react';
+import { Redirect, Route } from 'react-router-dom';
 
-import AuthLayout from "../../layouts/Auth";
-import DefaultLayout from "../../layouts/Default";
-import { useAuth } from "../../modules/Auth/contexts/auth";
+import AuthLayout from '../../layouts/Auth';
+import DefaultLayout from '../../layouts/Default';
+import { useAuth } from '../../modules/Auth/contexts/auth';
 
 export interface Props {
   path: string;

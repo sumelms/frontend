@@ -32,9 +32,113 @@ Sumé LMS is a modern and open-source learning management system that uses moder
   * REST API based application
   * and more.
 
+----
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [Commands](#commands)
+- [Tests E2E](#tests-e2e)
+- [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
+- [Team](#team)
+- [Support](#support)
+- [License](#license)
+
+## Prerequisites
+
+[node v12.16.3](https://nodejs.org/en/download/releases/)
+
+## Setup
+
+Install the dependencies
+
+```.sh
+$ yarn install
+```
+
+Compile all translations
+
+```.sh
+$ yarn generate:translations
+```
+
+Running the app
+```.sh
+$ yarn start
+```
+
+## Commands
+
+
+Build the app
+
+```.sh
+$ yarn build
+```
+
+## Tests E2E
+ - [Cypress](https://www.cypress.io/)
+ - [Cypress Examples](https://example.cypress.io/)
+ - [Cypress Recipes](https://github.com/cypress-io/cypress-example-recipes#fundamentals)
+ - [Cypress TypeScript](https://docs.cypress.io/guides/tooling/typescript-support.html#Configure-tsconfig-json)
+
+
+### Tests E2E commands
+
+Verify that Cypress is installed correctly and is executable.
+
+```.sh
+$ npm run cy:verify
+
+# or
+
+$ yarn cy:verify
+```
+
+Runs Cypress tests to completion.
+```.sh
+$ npm run test:e2e:run
+
+# or
+
+$ yarn test:e2e:run
+```
+
+Opens the Cypress Test Runner.
+```.sh
+$ npm run test:e2e:open
+
+# or
+
+$ yarn test:e2e:open
+```
+
+Runs tests E2E to CI.
+```.sh
+$ npm run test:e2e:ci
+
+# or
+
+$ yarn test:e2e:ci
+```
+
 ## Contributing
 
-Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Contributor Guideline](https://www.sumelms.com/docs/contributing).
+Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Contributor Guideline](https://www.sumelms.com/docs/ontributing).
+
+## Code of Conduct
+
+@TODO
+
+## Team
+
+@TODO
+
+## Support
+
+@TODO
 
 ## License
 

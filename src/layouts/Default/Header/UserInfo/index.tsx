@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Avatar, Container, Profile } from "./styles";
+import { Avatar, Container, Profile } from './styles';
 
 const UserInfo: React.FC = () => {
   return (
