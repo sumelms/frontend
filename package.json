@@ -36,7 +36,7 @@
     "test:e2e:ci": "npm run generate:translations && start-server-and-test start http-get://localhost:3000 cy:run",
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "generate:translations": "python3 ./utils/build_translations.py"
+    "generate:translations": "python3 ./scripts/build_translations.py"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -62,7 +62,7 @@
     "*.{js,ts,tsx}": [
       "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
     ],
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "{src,cypress}/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
   },
