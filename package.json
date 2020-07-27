@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "generate:translations": "python3 ./utils/build_translations.py"
+    "generate:translations": "node utils/translations.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -73,6 +73,7 @@
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-simple-import-sort": "^5.0.3",
+    "glob": "^7.1.6",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
