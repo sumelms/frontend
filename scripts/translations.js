@@ -13,7 +13,7 @@ const searchLanguageFiles = () => {
 
     const file = paths[0].toLowerCase().replace('.json', '');
     const lang = paths[1].toLowerCase();
-    const module = paths[3] == 'src' ? '__DEFAULT__' : paths[3].toLowerCase();
+    const module = paths[3] === 'src' ? '__DEFAULT__' : paths[3].toLowerCase();
 
     const data = fs.readFileSync(globFilePath, 'utf8');
 
@@ -29,7 +29,7 @@ const searchLanguageFiles = () => {
       languages[lang] = obj;
     }
 
-    if (languages[lang][module] == undefined) {
+    if (languages[lang][module] === undefined) {
       languages[lang][module] = {};
     }
 
@@ -48,12 +48,12 @@ const generateFiles = () => {
     const langPath = path.join(LANG_DIR, lang);
 
     if (!fs.existsSync(langPath)) {
-      fs.mkdirSync(langPath);
+      fs.mkdirSync(langPath, { recursive: true });
     }
 
     Object.keys(languages[lang]).map((module) => {
       const modulePath =
-        module == '__DEFAULT__'
+        module === '__DEFAULT__'
           ? path.join(langPath, 'translation.json')
           : path.join(langPath, `${module}.json`);
 
