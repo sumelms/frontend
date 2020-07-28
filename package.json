@@ -36,7 +36,7 @@
     "test:e2e:ci": "npm run generate:translations && start-server-and-test start http-get://localhost:3000 cy:run",
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "generate:translations": "python3 ./scripts/build_translations.py"
+    "generate:translations": "node scripts/translations.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -83,6 +83,7 @@
     "eslint-plugin-cypress": "^2.11.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-simple-import-sort": "^5.0.3",
+    "glob": "^7.1.6",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",

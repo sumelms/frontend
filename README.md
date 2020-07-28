@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/sumelms/frontend">
-    <img alt="Travis (.org)" src="https://travis-ci.org/sumelms/frontend.svg?branch=main">
+  <a href="https://travis-ci.com/github/sumelms/frontend">
+    <img alt="Travis (.org)" src="https://travis-ci.com/sumelms/frontend.svg?branch=main">
   </a>
   <a href="https://codecov.io/gh/sumelms/frontend">
     <img src="https://codecov.io/gh/sumelms/frontend/branch/main/graph/badge.svg?token=OIC51X2RE2" />
@@ -23,16 +23,16 @@
 
 Sumé LMS is a modern and open-source learning management system that uses modern technologies to deliver performance and scalability to your learning environment.
 
-  * Compatible with SCORM and xAPI (TinCan)
-  * Flexible and modular
-  * Open-source and Free
-  * Fast and modern
-  * Easy to install and run
-  * Designed for microservices
-  * REST API based application
-  * and more.
+- Compatible with SCORM and xAPI (TinCan)
+- Flexible and modular
+- Open-source and Free
+- Fast and modern
+- Easy to install and run
+- Designed for microservices
+- REST API based application
+- and more.
 
-----
+---
 
 ## Table of Contents
 
@@ -65,12 +65,12 @@ $ yarn generate:translations
 ```
 
 Running the app
+
 ```.sh
 $ yarn start
 ```
 
 ## Commands
-
 
 Build the app
 
@@ -79,11 +79,11 @@ $ yarn build
 ```
 
 ## Tests E2E
- - [Cypress](https://www.cypress.io/)
- - [Cypress Examples](https://example.cypress.io/)
- - [Cypress Recipes](https://github.com/cypress-io/cypress-example-recipes#fundamentals)
- - [Cypress TypeScript](https://docs.cypress.io/guides/tooling/typescript-support.html#Configure-tsconfig-json)
 
+- [Cypress](https://www.cypress.io/)
+- [Cypress Examples](https://example.cypress.io/)
+- [Cypress Recipes](https://github.com/cypress-io/cypress-example-recipes#fundamentals)
+- [Cypress TypeScript](https://docs.cypress.io/guides/tooling/typescript-support.html#Configure-tsconfig-json)
 
 ### Tests E2E commands
 
@@ -98,6 +98,7 @@ $ yarn cy:verify
 ```
 
 Runs Cypress tests to completion.
+
 ```.sh
 $ npm run test:e2e:run
 
@@ -107,6 +108,7 @@ $ yarn test:e2e:run
 ```
 
 Opens the Cypress Test Runner.
+
 ```.sh
 $ npm run test:e2e:open
 
@@ -116,6 +118,7 @@ $ yarn test:e2e:open
 ```
 
 Runs tests E2E to CI.
+
 ```.sh
 $ npm run test:e2e:ci
 
@@ -143,4 +146,3 @@ Thank you for considering contributing to the project. In order to ensure that t
 ## License
 
 This project is licensed by the Apache License 2.0. For more information check the LICENSE file.
-

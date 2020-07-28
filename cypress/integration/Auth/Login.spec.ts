@@ -16,10 +16,12 @@ context('Login ', () => {
 
   it('should have a login form with email and password fields', () => {
     cy.get('form').within(() => {
-      cy.get('input:first')
-        .should('have.attr', 'placeholder', 'Your email address');
-      cy.get('input:last')
-        .should('have.attr', 'placeholder', 'Your password');
+      cy.get('input:first').should(
+        'have.attr',
+        'placeholder',
+        'Your email address',
+      );
+      cy.get('input:last').should('have.attr', 'placeholder', 'Your password');
     });
   });
 
@@ -39,9 +41,7 @@ context('Login ', () => {
 
   it('should validate the email format on submit', () => {
     cy.get('form').within(() => {
-      cy.get('div:first')
-        .as('emailDiv')
-        .find('input').type('test@test');
+      cy.get('div:first').as('emailDiv').find('input').type('test@test');
       cy.get('input:last').type('123');
     });
 
@@ -53,9 +53,7 @@ context('Login ', () => {
   });
 
   it('should redirect to the register page ', () => {
-    cy.get('[href="/register"]')
-      .as('register')
-      .should('have.text', 'Sign up');
+    cy.get('[href="/register"]').as('register').should('have.text', 'Sign up');
 
     cy.get('@register').click();
 
@@ -74,10 +72,8 @@ context('Login ', () => {
 
   it('should sign in successfully', () => {
     cy.get('form').within(() => {
-      cy.get('input:first')
-        .type(user.email);
-      cy.get('input:last')
-        .type(user.password);
+      cy.get('input:first').type(user.email);
+      cy.get('input:last').type(user.password);
     });
 
     cy.get('button').click();
