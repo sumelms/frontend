@@ -1,21 +1,21 @@
-const fs = require("fs");
-const glob = require("glob");
-const path = require("path");
+const fs = require('fs');
+const glob = require('glob');
+const path = require('path');
 
-const SRC_DIR = "./src";
-const LANG_DIR = "./public/lang";
+const SRC_DIR = './src';
+const LANG_DIR = './public/lang';
 
 let languages = {};
 
 const searchLanguageFiles = () => {
   glob.sync(`${SRC_DIR}/**/translations/**/*.json`).map((globFilePath) => {
-    const paths = globFilePath.split("/").reverse();
+    const paths = globFilePath.split('/').reverse();
 
-    const file = paths[0].toLowerCase().replace(".json", "");
+    const file = paths[0].toLowerCase().replace('.json', '');
     const lang = paths[1].toLowerCase();
-    const module = paths[3] == "src" ? "__DEFAULT__" : paths[3].toLowerCase();
+    const module = paths[3] == 'src' ? '__DEFAULT__' : paths[3].toLowerCase();
 
-    const data = fs.readFileSync(globFilePath, "utf8");
+    const data = fs.readFileSync(globFilePath, 'utf8');
 
     const jsonData = JSON.parse(data);
     if (jsonData === {}) {
@@ -53,15 +53,15 @@ const generateFiles = () => {
 
     Object.keys(languages[lang]).map((module) => {
       const modulePath =
-        module == "__DEFAULT__"
-          ? path.join(langPath, "translation.json")
+        module == '__DEFAULT__'
+          ? path.join(langPath, 'translation.json')
           : path.join(langPath, `${module}.json`);
 
       const data = JSON.stringify(languages[lang][module]);
 
       fs.writeFileSync(modulePath, data, {
-        encoding: "utf8",
-        flag: "w+",
+        encoding: 'utf8',
+        flag: 'w+',
       });
     });
   });
@@ -72,10 +72,10 @@ try {
 
   if (languages !== {}) {
     generateFiles();
-    console.log("✔ All translation files successfully generated.");
+    console.log('✔ All translation files successfully generated.');
   } else {
-    console.log("❌ Unable to generate translation files.");
+    console.log('❌ Unable to generate translation files.');
   }
 } catch (err) {
-  console.log("⚠ Something went terrible wrong.", err);
+  console.log('⚠ Something went terrible wrong.', err);
 }

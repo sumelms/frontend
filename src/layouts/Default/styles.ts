@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 /**
  * Grid Areas
@@ -15,8 +15,8 @@ export const Container = styled.div`
   grid-template-rows: 80px auto;
 
   grid-template-areas:
-    "LS TN"
-    "LS MC";
+    'LS TN'
+    'LS MC';
 
   height: 100vh;
 `;
