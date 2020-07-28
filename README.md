@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/sumelms/frontend">
-    <img alt="Travis (.org)" src="https://travis-ci.org/sumelms/frontend.svg?branch=main">
+  <a href="https://travis-ci.com/github/sumelms/frontend">
+    <img alt="Travis (.org)" src="https://travis-ci.com/sumelms/frontend.svg?branch=main">
   </a>
   <a href="https://codecov.io/gh/sumelms/frontend">
     <img src="https://codecov.io/gh/sumelms/frontend/branch/main/graph/badge.svg?token=OIC51X2RE2" />
