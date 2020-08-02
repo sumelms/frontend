@@ -48,7 +48,7 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 
 ## Prerequisites
 
-[node v12.16.3](https://nodejs.org/en/download/releases/)
+- [NodeJS >= v12.16.3](https://nodejs.org/en/download/releases/)
 
 ## Setup
 
