@@ -1,6 +1,6 @@
 ---
 name: Epic
-about: Create a epic task
+about: Create an epic task
 title: ''
 labels: 'epic'
 assignees: ''

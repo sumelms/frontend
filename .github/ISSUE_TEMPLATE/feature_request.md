@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: ''
+labels: 'new feature 🌟'
 assignees: ''
 ---
 
@@ -14,7 +14,7 @@ I want to ...
 
 ### UI Resource
 
-If applicable, add the screenshot or link to UI resource.
+If applicable, add the screenshot or link to the UI resources.
 
 ### API
 
@@ -22,7 +22,7 @@ If applicable, add the API endpoint(s).
 
 ### Aditional information
 
-Any other aditional information.
+Any other additional information.
 
 ### Scenarios
 

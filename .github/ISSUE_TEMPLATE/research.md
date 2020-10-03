@@ -2,7 +2,7 @@
 name: Research
 about: Create a research task
 title: ''
-labels: ''
+labels: 'research 🔍'
 assignees: ''
 ---
 
@@ -16,7 +16,7 @@ Describe the research goals.
 
 ### Desired artfacts
 
-List the artfacts that the research should generate (report, demo, etc).
+List the artifacts that the research should generate (report, demo, etc).
 
 ### Possible next steps
 
