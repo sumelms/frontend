@@ -4,18 +4,9 @@ DOCKERHUB_NAMESPACE ?= sumelms
 IMAGE := ${DOCKERHUB_NAMESPACE}/swagger-api:${VERSION}
 API := account-api
 
-all: bash translations
-
-bash:
-	@docker-compose exec frontend /bin/sh
-
 mock-build:
-	@docker build . -t ${IMAGE} -f ./docker/Dockerfile_swagger
+	@docker build . -t ${IMAGE} -f ./docker/Dockerfile.swagger
 
-mock-dev:
-	$(MAKE) mock-build
-	@docker run --rm -p ${PORT}:${PORT} --name=${API} -d -v ${PWD}/fake-api/swagger:/swagger danielgtaylor/apisprout /swagger/${API}.yaml -p ${PORT} --watch
-	
 mock-up:
 	@docker-compose -f docker/docker-compose-swagger.yml up -d
 
