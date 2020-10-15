@@ -21,7 +21,7 @@ services:
     container_name: "account-api"
     build:
       context: ..
-      dockerfile: docker/Dockerfile_fakeapi
+      dockerfile: docker/Dockerfile.fakeapi
     ports:
       - 8000:8000
     command: /swagger/account-api.yaml
@@ -30,7 +30,7 @@ services:
     container_name: "catalog-api"
     build:
       context: ..
-      dockerfile: docker/Dockerfile_fakeapi
+      dockerfile: docker/Dockerfile.fakeapi
     environment:
       - SPROUT_VALIDATE_REQUEST=true
     ports:

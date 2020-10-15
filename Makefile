@@ -4,10 +4,10 @@ DOCKERHUB_NAMESPACE ?= sumelms
 IMAGE := ${DOCKERHUB_NAMESPACE}/swagger-api:${VERSION}
 API := account-api
 
-all: bash
+all: bash translations
 
 bash:
-	@docker-compose exec swagger-api /bin/sh
+	@docker-compose exec frontend /bin/sh
 
 mock-build:
 	@docker build . -t ${IMAGE} -f ./docker/Dockerfile_swagger
@@ -33,3 +33,4 @@ swagger-editor:
 
 swagger-editor-down:
 	@docker-compose -f docker/docker-compose-swagger.yml stop swagger-editor
+

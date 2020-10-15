@@ -40,6 +40,7 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 - [Setup](#setup)
 - [Commands](#commands)
 - [Tests E2E](#tests-e2e)
+- [Mocks and Docs](#tests-e2e)
 - [Contributing](#contributing)
 - [Code of Conduct](#code-of-conduct)
 - [Team](#team)
@@ -77,6 +78,10 @@ Build the app
 ```.sh
 $ yarn build
 ```
+
+## Mocks and Docs
+
+- [More about...](./fake-api/README.md)
 
 ## Tests E2E
 

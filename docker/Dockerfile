@@ -1,22 +1,16 @@
-FROM node:12.16.3
-
-# RUN apt install curl
-
-# RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-# RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-
-# RUN apt update
-RUN mkdir app
+FROM node:alpine
 
 WORKDIR /app
 
 COPY package.json /app
 COPY yarn.lock /app
 
-COPY . /app
+RUN yarn install -s
 
-RUN yarn install
+COPY . /app
 
 EXPOSE 3000
 
-CMD [ "yarn", "run", "start" ]
+RUN yarn run generate:translations
+
+CMD [ "yarn", "start" ]
