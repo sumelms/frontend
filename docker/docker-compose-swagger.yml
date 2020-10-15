@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    container_name: "swagger-editor"
+    ports:
+      - 8081:8080
+
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: "swagger-ui"
+    ports:
+      - 8082:8080
+    volumes:
+      - ../fake-api/swagger/:/swagger
+    environment:
+      SWAGGER_JSON: /swagger/account-api.yaml
+
+  account-api:
+    container_name: "account-api"
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile_fakeapi
+    ports:
+      - 8000:8000
+    command: /swagger/account-api.yaml
+
+  catalog-api:
+    container_name: "catalog-api"
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile_fakeapi
+    environment:
+      - SPROUT_VALIDATE_REQUEST=true
+    ports:
+      - 8001:8000
+    command: /swagger/catalog-api.yaml
+    
