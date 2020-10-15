@@ -20,7 +20,7 @@ tags:
     description: Everything about user
     externalDocs:
       description: Find out more
-      url: 'http://swagger.io'
+      url: 'https://github.com/sumelms/microservice-account'
 paths:
   /users:
     get:
@@ -47,10 +47,14 @@ paths:
           content:
             application/xml:
               schema:
-                type: string
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
             application/json:
               schema:
-                type: string
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
         '404':
           description: Invalid username/password supplied
           content: {}
@@ -68,15 +72,18 @@ paths:
               $ref: '#/components/schemas/User'
         required: true
       responses:
-        default:
+        '200':
           description: successful operation
           content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/User'
             application/json:
-              examples:
-                user-create:
-                  value: |-
-                    {
-                    }
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid User
+          content: {}
       x-codegen-request-body-name: body
   '/users/{userId}':
     get:
@@ -135,9 +142,6 @@ paths:
         '400':
           description: Invalid user supplied
           content: {}
-        '404':
-          description: User not found
-          content: {}
       x-codegen-request-body-name: body
     delete:
       tags:
@@ -189,6 +193,26 @@ components:
           format: date-time
       xml:
         name: User
+    Profile:
+      type: object
+      properties:
+        id:
+          type: string
+        firstname:
+          type: string
+        lastname:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        deletedAt:
+          type: string
+          format: date-time
+      xml:
+        name: Profile
     ApiResponse:
       type: object
       properties:
