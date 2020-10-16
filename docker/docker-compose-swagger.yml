@@ -1,0 +1,41 @@
+version: '3.3'
+
+services:
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    container_name: "swagger-editor"
+    ports:
+      - 8081:8080
+
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: "swagger-ui"
+    ports:
+      - 8082:8080
+    volumes:
+      - ../fake-api/swagger/account-api.yaml:/account-api.yaml
+    environment:
+      SWAGGER_JSON: /account-api.yaml
+
+  account-api:
+    container_name: "account-api"
+    image: muonsoft/openapi-mock
+    environment:
+      OPENAPI_MOCK_SPECIFICATION_URL: '/swagger/account-api.yaml'
+      OPENAPI_MOCK_PORT: 8000
+    volumes:
+      - ../fake-api/swagger/account-api.yaml:/swagger/account-api.yaml
+    ports:
+      - 8000:8000
+
+  catalog-api:
+    container_name: "catalog-api"
+    image: muonsoft/openapi-mock
+    environment:
+      OPENAPI_MOCK_SPECIFICATION_URL: '/swagger/catalog-api.yaml'
+      OPENAPI_MOCK_PORT: 8001
+    volumes:
+      - ../fake-api/swagger/catalog-api.yaml:/swagger/catalog-api.yaml
+    ports:
+      - 8001:8001
+    

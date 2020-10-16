@@ -1,0 +1,89 @@
+openapi: 3.0.1
+info:
+  title: Sumé Catalog API
+  version: 1.0.0
+  description: Catalog API ...
+  contact:
+    email: hi@sumelms.com
+  license:
+    name: Apache 2.0
+    url: 'https://github.com/sumelms/frontend/blob/main/LICENSE'
+externalDocs:
+  description: Find out more about Sumé
+  url: 'https://www.sumelms.com/'
+servers:
+  - url: 'http://localhost:8000/'
+    description: Mock server
+tags:
+  - name: category
+    description: Everything about Category
+    externalDocs:
+      description: Find out more
+      url: 'http://swagger.io'
+paths:
+  /categories:
+    get:
+      tags:
+        - category
+      summary: List all categories into the system
+      operationId: listCategories
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Category'
+        '404':
+          description: Invalid category supplied
+          content: {}
+    post:
+      tags:
+        - category
+      summary: Create category
+      description: Create a new category.
+      operationId: createCategory
+      requestBody:
+        description: Created category object
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/Category'
+        required: true
+      responses:
+        default:
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                user-create:
+                  value: |-
+                    {
+                    }
+      x-codegen-request-body-name: body
+components:
+  schemas:
+    Category:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
