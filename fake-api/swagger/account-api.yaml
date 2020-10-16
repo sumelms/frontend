@@ -45,11 +45,6 @@ paths:
                 type: string
                 format: date-time
           content:
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/User'
             application/json:
               schema:
                 type: array
@@ -75,9 +70,6 @@ paths:
         '200':
           description: successful operation
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/User'
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
@@ -104,9 +96,6 @@ paths:
         '200':
           description: successful operation
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/User'
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
@@ -191,8 +180,6 @@ components:
         activatedAt:
           type: string
           format: date-time
-      xml:
-        name: User
     Profile:
       type: object
       properties:
@@ -211,8 +198,6 @@ components:
         deletedAt:
           type: string
           format: date-time
-      xml:
-        name: Profile
     ApiResponse:
       type: object
       properties:

@@ -31,12 +31,11 @@ paths:
         '200':
           description: successful operation
           content:
-            application/xml:
-              schema:
-                type: string
             application/json:
               schema:
-                type: string
+                type: array
+                items:
+                  $ref: '#/components/schemas/Category'
         '404':
           description: Invalid category supplied
           content: {}
@@ -73,8 +72,6 @@ components:
           type: string
         name:
           type: string
-      xml:
-        name: Category
     ApiResponse:
       type: object
       properties:

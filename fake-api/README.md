@@ -2,6 +2,8 @@
 
 All the REST API must use the OpenAPI Specification version 3 and the documentation will be centralized in this repository using swagger to build the mocks server.
 
+To mock server, we are using [openapi-mock](https://github.com/muonsoft/openapi-mock)
+
 ---
 
 ## Table of Contents

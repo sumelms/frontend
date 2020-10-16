@@ -1,8 +1,0 @@
-FROM danielgtaylor/apisprout
-
-RUN mkdir swagger
-
-COPY ./fake-api/swagger/ swagger
-
-WORKDIR /swagger
-

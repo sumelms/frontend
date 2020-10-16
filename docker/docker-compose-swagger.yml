@@ -13,27 +13,29 @@ services:
     ports:
       - 8082:8080
     volumes:
-      - ../fake-api/swagger/:/swagger
+      - ../fake-api/swagger/account-api.yaml:/account-api.yaml
     environment:
-      SWAGGER_JSON: /swagger/account-api.yaml
+      SWAGGER_JSON: /account-api.yaml
 
   account-api:
     container_name: "account-api"
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile.fakeapi
+    image: muonsoft/openapi-mock
+    environment:
+      OPENAPI_MOCK_SPECIFICATION_URL: '/swagger/account-api.yaml'
+      OPENAPI_MOCK_PORT: 8000
+    volumes:
+      - ../fake-api/swagger/account-api.yaml:/swagger/account-api.yaml
     ports:
       - 8000:8000
-    command: /swagger/account-api.yaml
 
   catalog-api:
     container_name: "catalog-api"
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile.fakeapi
+    image: muonsoft/openapi-mock
     environment:
-      - SPROUT_VALIDATE_REQUEST=true
+      OPENAPI_MOCK_SPECIFICATION_URL: '/swagger/catalog-api.yaml'
+      OPENAPI_MOCK_PORT: 8001
+    volumes:
+      - ../fake-api/swagger/catalog-api.yaml:/swagger/catalog-api.yaml
     ports:
-      - 8001:8000
-    command: /swagger/catalog-api.yaml
+      - 8001:8001
     
