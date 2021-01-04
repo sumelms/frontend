@@ -138,7 +138,7 @@ Thank you for considering contributing to the project. In order to ensure that t
 
 ## Code of Conduct
 
-@TODO
+Would you like to contribute and participate in our communities? Please read our [Code of Conduct](https://www.sumelms.com/docs/conduct).
 
 ## Team
 
