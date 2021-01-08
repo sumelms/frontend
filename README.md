@@ -159,6 +159,11 @@ Would you like to contribute and participate in our communities? Please read our
 You can reach us or get community support in our [Discord server](https://discord.gg/Yh9q9cd). This is the best way to
 find help and get in touch with the community.
 
+### Bugs or feature requests
+
+If you found a bug or have a feature request, the best way to do
+it is [opening an issue](https://github.com/sumelms/frontend/issues).
+
 ## License
 
 This project is licensed by the Apache License 2.0. For more information check the LICENSE file.
