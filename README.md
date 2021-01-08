@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://www.sumelms.com">
-    <img src=".github/sumelms.png" />
+    <img src=".github/sumelms.svg" />
   </a>
 </p>
 
