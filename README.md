@@ -156,7 +156,7 @@ Would you like to contribute and participate in our communities? Please read our
 
 ### Discussion
 
-You can reach us or get community support in our [Discord server](https://discord.gg/2VmHkr2Vqy). This is the best way to
+You can reach us or get community support in our [Discord server](https://discord.gg/Yh9q9cd). This is the best way to
 find help and get in touch with the community.
 
 ## License
