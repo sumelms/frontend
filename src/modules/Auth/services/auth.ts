@@ -1,31 +1,81 @@
-import UserService from '../../../services/user_service';
+import Keycloak, { KeycloakConfig } from 'keycloak-js';
 
-export interface User {
-  name: string;
-  email: string;
-  password?: string;
+const onLoad: Keycloak.KeycloakOnLoad = 'login-required';
+
+class Config implements KeycloakConfig {
+  url: string = process.env.AUTH_URL || 'auth';
+  realm: string = process.env.AUTH_REALM || 'sume';
+  clientId: string = process.env.AUTH_CLIENT_ID || 'sume-app';
 }
 
-export function SignIn(): Promise<any> {
-  return new Promise((resolve) =>
-    setTimeout(
-      () =>
-        resolve({
-          token: UserService.GetToken(),
-          user: {
-            name: UserService.GetUserName(),
-            email: UserService.GetEmail(),
-          },
-        }),
-      1000,
-    ),
-  );
+const _kc = Keycloak(new Config());
+
+function Init(appEntrypoint: () => void): void {
+  _kc
+    .init({
+      onLoad,
+    })
+    .then((auth) => {
+      if (!auth) {
+        window.location.reload();
+      } else {
+        _kc
+          .loadUserProfile()
+          .then(() => {
+            appEntrypoint();
+          })
+          .catch((err) => {
+            console.error('Cannot get user profile: ', err);
+          });
+      }
+    })
+    .catch(() => {
+      console.error('Authentication Failed!');
+    });
 }
 
-export function SignUp(): Promise<any> {
-  return new Promise((resolve) => setTimeout(() => resolve({}), 1000));
+const DoLogin = _kc.login;
+
+const DoLogOut = _kc.logout;
+
+const GetSigned = () => _kc.authenticated;
+
+const GetToken = () => _kc.token;
+
+const GetProfile = () => _kc.profile;
+
+const GetEmail = () => _kc.profile?.email;
+
+const GetFirstName = () => _kc.profile?.firstName;
+
+const GetLastName = () => _kc.profile?.lastName;
+
+const GetUserName = () => _kc.profile?.username;
+
+function HasRole(roles: Array<string>): boolean {
+  return roles.some(function (role: string): boolean {
+    return _kc.hasRealmRole(role);
+  });
 }
 
-export function SignOut(): Promise<any> {
-  return new Promise((resolve) => setTimeout(() => resolve({}), 1000));
+function UpdateToken(onSuccess: (a: boolean) => void): void {
+  _kc
+    .updateToken(5)
+    .then((value: boolean) => onSuccess(value))
+    .catch(DoLogin);
 }
+
+export default {
+  Init,
+  DoLogin,
+  DoLogOut,
+  GetToken,
+  GetSigned,
+  GetUserName,
+  GetLastName,
+  GetEmail,
+  GetFirstName,
+  HasRole,
+  GetProfile,
+  UpdateToken,
+};

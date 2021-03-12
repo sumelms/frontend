@@ -1,25 +1,23 @@
-import React, { createContext, useContext, useState } from 'react';
+import { KeycloakProfile } from 'keycloak-js';
+import React, { createContext, useContext } from 'react';
 
-import { SignIn, User } from '../services/auth';
+import AuthService from '../services/auth';
 
 interface AuthContextProps {
-  signed: boolean;
-  user: User | null;
-  signIn(): Promise<any>;
+  profile: KeycloakProfile | undefined;
+  doLogout: () => void;
 }
 
 const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
 const AuthProvider: React.FC = (props) => {
-  const [user, setUser] = useState(null);
-
-  async function signIn(): Promise<void> {
-    const response = await SignIn();
-    setUser(response.user);
-  }
-
   return (
-    <AuthContext.Provider value={{ signed: !!user, user, signIn }}>
+    <AuthContext.Provider
+      value={{
+        profile: AuthService.GetProfile(),
+        doLogout: AuthService.DoLogOut,
+      }}
+    >
       {props?.children}
     </AuthContext.Provider>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UserService from '../../../services/user_service';
+import { useAuth } from '../../../modules/Auth/contexts/auth';
 import {
   Actions,
   Container,
@@ -12,7 +12,7 @@ import {
 import UserInfo from './UserInfo';
 
 const Header: React.FC = () => {
-  const onLogoutClick = () => UserService.DoLogOut();
+  const { doLogout } = useAuth();
 
   return (
     <Container>
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
       <Actions>
         <ResumeIcon />
         <NotificationIcon />
-        <LogoutIcon onClick={onLogoutClick} />
+        <LogoutIcon onClick={doLogout} />
       </Actions>
     </Container>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import UserService from './services/user_service';
+import AuthService from './modules/Auth/services/auth';
 
 const entrypoint = () => {
   ReactDOM.render(
@@ -13,4 +13,4 @@ const entrypoint = () => {
   );
 };
 
-UserService.InitKeycloak(entrypoint);
+AuthService.Init(entrypoint);

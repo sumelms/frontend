@@ -1,13 +1,15 @@
 import React from 'react';
 
-import UserService from '../../../../services/user_service';
+import { useAuth } from '../../../../modules/Auth/contexts/auth';
 import { Avatar, Container, Profile } from './styles';
 
 const UserInfo: React.FC = () => {
+  const { profile } = useAuth();
+
   return (
     <Container>
       <Profile>
-        <strong>{UserService.GetUserName()}</strong>
+        <strong>{profile?.username}</strong>
         <span>Student</span>
       </Profile>
       <Avatar />
