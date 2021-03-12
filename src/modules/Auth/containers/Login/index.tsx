@@ -18,7 +18,7 @@ interface LoginPayload {
 }
 
 const Login: React.FC = () => {
-  const { signIn } = useAuth();
+  // const { signIn } = useAuth();
   const history = useHistory();
   const location = useLocation();
   const formRef = useRef<FormHandles>(null);
@@ -40,7 +40,7 @@ const Login: React.FC = () => {
           abortEarly: false,
         });
 
-        await signIn();
+        // await signIn();
 
         history.replace(from);
       } catch (err) {
@@ -48,7 +48,8 @@ const Login: React.FC = () => {
         formRef.current?.setErrors(errors);
       }
     },
-    [signIn, from, history],
+    // [signIn, from, history],
+    [from, history],
   );
 
   return (
