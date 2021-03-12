@@ -1,5 +1,6 @@
 import React from 'react';
 
+import UserService from '../../../../services/user_service';
 import { Container, Header } from './styles';
 
 const Dashboard: React.FC = () => {
@@ -8,7 +9,7 @@ const Dashboard: React.FC = () => {
       <Header>
         <div>
           <h1>Dashboard</h1>
-          <span>Welcome back, Ricardo!</span>
+          <span>Welcome back, {UserService.GetFirstName()}!</span>
         </div>
       </Header>
     </Container>

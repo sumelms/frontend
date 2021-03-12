@@ -1,3 +1,5 @@
+import UserService from '../../../services/user_service';
+
 export interface User {
   name: string;
   email: string;
@@ -9,8 +11,11 @@ export function SignIn(): Promise<any> {
     setTimeout(
       () =>
         resolve({
-          token: 'fake-token',
-          user: { name: 'Ricardo Lüders', email: 'my@email.com' },
+          token: UserService.GetToken(),
+          user: {
+            name: UserService.GetUserName(),
+            email: UserService.GetEmail(),
+          },
         }),
       1000,
     ),
