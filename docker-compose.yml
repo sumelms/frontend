@@ -12,4 +12,14 @@ services:
       - "./:/app"
     ports:
       - "3000:3000"
-    
+  sume-auth:
+    image: jboss/keycloak
+    ports: 
+      - 8080:8080
+      - 8443:8443
+    environment: 
+      - KEYCLOAK_USER=admin 
+      - KEYCLOAK_PASSWORD=admin 
+      - KEYCLOAK_IMPORT=/realm/sume.json
+    volumes:
+      - ./realm:/realm

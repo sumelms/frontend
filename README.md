@@ -65,6 +65,12 @@ Compile all translations
 $ yarn generate:translations
 ```
 
+Running authentication server (Keycloak)
+
+```.sh
+$ docker-compose up sume-auth
+```
+
 Running the app
 
 ```.sh

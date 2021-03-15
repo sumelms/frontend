@@ -38,19 +38,7 @@ const DoLogin = _kc.login;
 
 const DoLogOut = _kc.logout;
 
-const GetSigned = () => _kc.authenticated;
-
-const GetToken = () => _kc.token;
-
 const GetProfile = () => _kc.profile;
-
-const GetEmail = () => _kc.profile?.email;
-
-const GetFirstName = () => _kc.profile?.firstName;
-
-const GetLastName = () => _kc.profile?.lastName;
-
-const GetUserName = () => _kc.profile?.username;
 
 function HasRole(roles: Array<string>): boolean {
   return roles.some(function (role: string): boolean {
@@ -69,12 +57,6 @@ export default {
   Init,
   DoLogin,
   DoLogOut,
-  GetToken,
-  GetSigned,
-  GetUserName,
-  GetLastName,
-  GetEmail,
-  GetFirstName,
   HasRole,
   GetProfile,
   UpdateToken,
