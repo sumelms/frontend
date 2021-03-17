@@ -5,6 +5,10 @@ addons:
   apt:
     packages:
       - libgconf-2-4
+
+services:
+  - docker
+
 cache:
   directories:
     - node_modules
@@ -15,6 +19,9 @@ env:
 before_install:
   # Fixes an issue where the max file watch count is exceeded, triggering ENOSPC
   # https://stackoverflow.com/questions/22475849/node-js-error-enospc#32600959
+  
+  - docker pull jboss/keycloak
+  - docker run -d -p 8080:8080 -v $(pwd)/realm:/realm -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/realm/sume.json jboss/keycloak
   - echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 script:

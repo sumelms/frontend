@@ -23,7 +23,7 @@ const Header: React.FC = () => {
       <Actions>
         <ResumeIcon />
         <NotificationIcon />
-        <LogoutIcon onClick={doLogout} />
+        <LogoutIcon id="app-logout" onClick={doLogout} />
       </Actions>
     </Container>
   );
