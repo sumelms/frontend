@@ -31,6 +31,8 @@ declare global {
   namespace Cypress {
     interface Chainable<Subject> {
       navigate(pageName: string): void;
+      login(user: string): void;
+      logout(): void;
     }
   }
 }
@@ -42,6 +44,19 @@ Cypress.Commands.add('navigate', (pageName) => {
   // Find navigation menu item
   // Click on it
   cy.visit(`/${pageName}`);
+});
+
+Cypress.Commands.add('logout', () => {
+  cy.get('#app-logout').click();
+});
+
+Cypress.Commands.add('login', (user) => {
+  cy.visit('/');
+  cy.fixture(`users/${user}.json`).then((user) => {
+    cy.get('#username').type(user.username);
+    cy.get('#password').type(user.password);
+  });
+  cy.get('#kc-login').click();
 });
 
 // Convert this to a module instead of script (allows import/export)

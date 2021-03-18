@@ -10,7 +10,7 @@ class Config implements KeycloakConfig {
 
 const _kc = Keycloak(new Config());
 
-function Init(appEntrypoint: () => void): void {
+function init(appEntrypoint: () => void): void {
   _kc
     .init({
       onLoad,
@@ -34,30 +34,35 @@ function Init(appEntrypoint: () => void): void {
     });
 }
 
-const DoLogin = _kc.login;
+const doLogin = _kc.login;
 
-const DoLogOut = _kc.logout;
+const doLogOut = _kc.logout;
 
-const GetProfile = () => _kc.profile;
+const getProfile = () => _kc.profile;
 
-function HasRole(roles: Array<string>): boolean {
+function hasRole(role: string): boolean {
+  return _kc.hasRealmRole(role);
+}
+
+function hasRoles(roles: Array<string>): boolean {
   return roles.some(function (role: string): boolean {
-    return _kc.hasRealmRole(role);
+    return hasRole(role);
   });
 }
 
-function UpdateToken(onSuccess: (a: boolean) => void): void {
+function updateToken(onSuccess: (a: boolean) => void): void {
   _kc
     .updateToken(5)
     .then((value: boolean) => onSuccess(value))
-    .catch(DoLogin);
+    .catch(doLogin);
 }
 
 export default {
-  Init,
-  DoLogin,
-  DoLogOut,
-  HasRole,
-  GetProfile,
-  UpdateToken,
+  init,
+  doLogin,
+  doLogOut,
+  hasRoles,
+  hasRole,
+  getProfile,
+  updateToken,
 };

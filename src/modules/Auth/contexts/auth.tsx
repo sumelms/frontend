@@ -6,6 +6,8 @@ import AuthService from '../services/auth';
 interface AuthContextProps {
   profile: KeycloakProfile | undefined;
   doLogout: () => void;
+  hasRole: (roles: string) => boolean;
+  hasRoles: (roles: Array<string>) => boolean;
 }
 
 const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
@@ -14,8 +16,10 @@ const AuthProvider: React.FC = (props) => {
   return (
     <AuthContext.Provider
       value={{
-        profile: AuthService.GetProfile(),
-        doLogout: AuthService.DoLogOut,
+        profile: AuthService.getProfile(),
+        doLogout: AuthService.doLogOut,
+        hasRole: AuthService.hasRole,
+        hasRoles: AuthService.hasRoles,
       }}
     >
       {props?.children}

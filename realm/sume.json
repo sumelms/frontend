@@ -61,6 +61,33 @@
         "clientRole": false,
         "containerId": "sume",
         "attributes": {}
+      },
+      {
+        "id": "ddaed203-4fa4-4563-aab0-17d80b5d4d23",
+        "name": "admin",
+        "description": "${role_admin}",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "sume",
+        "attributes": {}
+      },
+      {
+        "id": "e350253d-00a7-4803-832b-5f09583274a1",
+        "name": "teacher",
+        "description": "${role_teacher}",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "sume",
+        "attributes": {}
+      },
+      {
+        "id": "b463a447-0265-4c50-854e-63f054bfaeef",
+        "name": "student",
+        "description": "${role_student}",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "sume",
+        "attributes": {}
       }
     ],
     "client": {
@@ -415,7 +442,13 @@
       ],
       "disableableCredentialTypes": [],
       "requiredActions": [],
-      "realmRoles": ["offline_access", "uma_authorization"],
+      "realmRoles": [
+        "offline_access",
+        "uma_authorization",
+        "admin",
+        "teacher",
+        "student"
+      ],
       "clientRoles": {
         "account": ["manage-account", "view-profile"]
       },
@@ -443,7 +476,7 @@
       ],
       "disableableCredentialTypes": [],
       "requiredActions": [],
-      "realmRoles": ["offline_access", "uma_authorization"],
+      "realmRoles": ["offline_access", "uma_authorization", "student"],
       "clientRoles": {
         "account": ["manage-account", "view-profile"]
       },
@@ -471,7 +504,7 @@
       ],
       "disableableCredentialTypes": [],
       "requiredActions": [],
-      "realmRoles": ["offline_access", "uma_authorization"],
+      "realmRoles": ["offline_access", "uma_authorization", "teacher"],
       "clientRoles": {
         "account": ["manage-account", "view-profile"]
       },

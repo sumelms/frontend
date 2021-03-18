@@ -13,4 +13,4 @@ const entrypoint = () => {
   );
 };
 
-AuthService.Init(entrypoint);
+AuthService.init(entrypoint);
