@@ -1,0 +1,8 @@
+{
+  "realm": "sume",
+  "auth-server-url": "/auth/",
+  "ssl-required": "external",
+  "resource": "sume-app",
+  "public-client": true,
+  "confidential-port": 0
+}

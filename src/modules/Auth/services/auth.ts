@@ -1,14 +1,9 @@
-import Keycloak, { KeycloakConfig } from 'keycloak-js';
+import Keycloak from 'keycloak-js';
 
+const isProduction = process.env.NODE_ENV === 'production';
+const configUrl = isProduction ? 'keycloak.json' : 'keycloak.dev.json';
 const onLoad: Keycloak.KeycloakOnLoad = 'login-required';
-
-class Config implements KeycloakConfig {
-  url: string = process.env.AUTH_URL || 'auth';
-  realm: string = process.env.AUTH_REALM || 'sume';
-  clientId: string = process.env.AUTH_CLIENT_ID || 'sume-app';
-}
-
-const _kc = Keycloak(new Config());
+const _kc = Keycloak(configUrl);
 
 function init(appEntrypoint: () => void): void {
   _kc
