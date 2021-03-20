@@ -6,8 +6,8 @@ import { Body, Container, Header } from './styles';
 const Dashboard: React.FC = () => {
   const { profile, hasRole } = useAuth();
 
-  const all_roles: Array<string> = ['admin', 'teacher', 'student'];
-  const valid_roles: Array<string> = all_roles.filter(hasRole);
+  const allRoles: Array<string> = ['admin', 'teacher', 'student'];
+  const validRoles: Array<string> = allRoles.filter(hasRole);
 
   return (
     <Container>
@@ -21,7 +21,7 @@ const Dashboard: React.FC = () => {
         <div>
           <h2>{profile?.firstName} you have the folowing roles:</h2>
           <ul>
-            {valid_roles.map((role, key) => {
+            {validRoles.map((role, key) => {
               return <li key={key}>{role}</li>;
             })}
           </ul>

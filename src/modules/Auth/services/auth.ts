@@ -5,28 +5,24 @@ const configUrl = isProduction ? 'keycloak.json' : 'keycloak.dev.json';
 const onLoad: Keycloak.KeycloakOnLoad = 'login-required';
 const _kc = Keycloak(configUrl);
 
-function init(appEntrypoint: () => void): void {
-  _kc
-    .init({
-      onLoad,
-    })
-    .then((auth) => {
-      if (!auth) {
-        window.location.reload();
-      } else {
-        _kc
-          .loadUserProfile()
-          .then(() => {
-            appEntrypoint();
-          })
-          .catch((err) => {
-            console.error('Cannot get user profile: ', err);
-          });
-      }
-    })
-    .catch(() => {
-      console.error('Authentication Failed!');
-    });
+async function init(appEntrypoint: () => void): Promise<void> {
+  let auth = null;
+  try {
+    auth = await _kc.init({ onLoad });
+  } catch (error) {
+    console.error('Authentication Failed!');
+  }
+
+  if (!auth) {
+    window.location.reload();
+  } else {
+    try {
+      await _kc.loadUserProfile();
+      appEntrypoint();
+    } catch (error) {
+      console.error('Cannot get user profile: ', error);
+    }
+  }
 }
 
 const doLogin = _kc.login;
@@ -45,11 +41,12 @@ function hasRoles(roles: Array<string>): boolean {
   });
 }
 
-function updateToken(onSuccess: (a: boolean) => void): void {
-  _kc
-    .updateToken(5)
-    .then((value: boolean) => onSuccess(value))
-    .catch(doLogin);
+async function updateToken(onSuccess: (a: boolean) => void): Promise<void> {
+  try {
+    onSuccess(await _kc.updateToken(5));
+  } catch (error) {
+    doLogin();
+  }
 }
 
 export default {
