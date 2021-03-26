@@ -1,9 +1,7 @@
 import React, { Suspense } from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
-import AuthLayout from '../../layouts/Auth';
 import DefaultLayout from '../../layouts/Default';
-import { useAuth } from '../../modules/Auth/contexts/auth';
 
 export interface Props {
   path: string;
@@ -18,27 +16,15 @@ const RouteWrapper: React.FC<Props> = ({
   isPrivate,
   ...rest
 }: Props) => {
-  const { signed } = useAuth();
-
-  if (isPrivate && !signed) {
-    return <Redirect to="/login" />;
-  }
-
-  if (!isPrivate && signed) {
-    return <Redirect to="/" />;
-  }
-
-  const Layout = signed ? DefaultLayout : AuthLayout;
-
   return (
     <Route
       {...rest}
       render={(routeProps) => (
-        <Layout>
+        <DefaultLayout>
           <Suspense fallback="Loading...">
             <Component {...routeProps} />
           </Suspense>
-        </Layout>
+        </DefaultLayout>
       )}
     />
   );

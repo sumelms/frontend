@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
+import AuthService from './modules/Auth/services/auth';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+const entrypoint = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root'),
+  );
+};
+
+AuthService.init(entrypoint);

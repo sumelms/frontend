@@ -38,6 +38,7 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
+  - [Running on Podman](#running-on-podman)
 - [Commands](#commands)
 - [Tests E2E](#tests-e2e)
 - [Mocks and Docs](#tests-e2e)
@@ -65,10 +66,30 @@ Compile all translations
 $ yarn generate:translations
 ```
 
+Running authentication server (Keycloak)
+
+```sh
+$ docker-compose up sume-auth
+```
+
 Running the app
 
 ```.sh
 $ yarn start
+```
+
+### Running on Podman
+
+Install `podman-compose` with
+
+```sh
+$ pip3 install git+https://github.com/containers/podman-compose.git
+```
+
+Then
+
+```sh
+$ podman-compose up sume-auth
 ```
 
 ## Commands

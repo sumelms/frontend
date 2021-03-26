@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useAuth } from '../../../modules/Auth/contexts/auth';
 import {
   Actions,
   Container,
@@ -11,6 +12,8 @@ import {
 import UserInfo from './UserInfo';
 
 const Header: React.FC = () => {
+  const { doLogout } = useAuth();
+
   return (
     <Container>
       <UserInfo />
@@ -20,7 +23,7 @@ const Header: React.FC = () => {
       <Actions>
         <ResumeIcon />
         <NotificationIcon />
-        <LogoutIcon />
+        <LogoutIcon id="app-logout" onClick={doLogout} />
       </Actions>
     </Container>
   );

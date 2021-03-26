@@ -2,14 +2,25 @@ version: '3.3'
 
 services:
   frontend:
-    container_name: "frontend"
+    container_name: frontend
     stdin_open: true
     build: 
       context: .
       dockerfile: docker/Dockerfile
     volumes:
-      - "/app/node_modules"
-      - "./:/app"
+      - /app/node_modules
+      - ./:/app
     ports:
-      - "3000:3000"
-    
+      - 3000:3000
+    environment:
+      - AUTH_ENDPOINT=http://sume-auth:8080
+  sume-auth:
+    image: jboss/keycloak
+    ports: 
+      - 8080:8080
+    environment: 
+      - KEYCLOAK_USER=admin 
+      - KEYCLOAK_PASSWORD=admin 
+      - KEYCLOAK_IMPORT=/realm/sume.json
+    volumes:
+      - ./realm:/realm
