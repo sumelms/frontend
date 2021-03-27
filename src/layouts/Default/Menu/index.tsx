@@ -12,8 +12,8 @@ const Menu: React.FC = () => {
         <img src={logoImg} alt="Sumé" />
       </Brand>
 
-      <MenuButton icon={FiTrello} />
-      <MenuButton icon={FiFolder} />
+      <MenuButton icon={<FiTrello />} />
+      <MenuButton icon={<FiFolder />} />
     </Container>
   );
 };
