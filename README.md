@@ -38,7 +38,6 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-  - [Running on Podman](#running-on-podman)
 - [Commands](#commands)
 - [Tests E2E](#tests-e2e)
 - [Mocks and Docs](#tests-e2e)
@@ -51,6 +50,10 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 ## Prerequisites
 
 - [NodeJS >= v12.16.3](https://nodejs.org/en/download/releases/)
+- [Yarn](https://yarnpkg.com/)\* or npm for dependency install
+- [Podman](https://podman.io/)\* or Docker to run the [Keycloack](https://www.keycloak.org/) or [Swagger](https://swagger.io/)
+
+> \* we do recommend this option 😉
 
 ## Setup
 
@@ -69,27 +72,19 @@ $ yarn generate:translations
 Running authentication server (Keycloak)
 
 ```sh
-$ docker-compose up sume-auth
+$ podman run \
+  -v ./keycloack:/realm \
+  -p 8080:8080 \
+  -e KEYCLOAK_USER=admin \
+  -e KEYCLOAK_PASSWORD=admin \
+  -e KEYCLOAK_IMPORT=/realm/sume.json \
+  jboss/keycloak
 ```
 
 Running the app
 
 ```.sh
 $ yarn start
-```
-
-### Running on Podman
-
-Install `podman-compose` with
-
-```sh
-$ pip3 install git+https://github.com/containers/podman-compose.git
-```
-
-Then
-
-```sh
-$ podman-compose up sume-auth
 ```
 
 ## Commands
@@ -102,7 +97,7 @@ $ yarn build
 
 ## Mocks and Docs
 
-- [More about...](./fake-api/README.md)
+- [More about...](./swagger/README.md)
 
 ## Tests E2E
 
@@ -116,40 +111,24 @@ $ yarn build
 Verify that Cypress is installed correctly and is executable.
 
 ```.sh
-$ npm run cy:verify
-
-# or
-
 $ yarn cy:verify
 ```
 
 Runs Cypress tests to completion.
 
 ```.sh
-$ npm run test:e2e:run
-
-# or
-
 $ yarn test:e2e:run
 ```
 
 Opens the Cypress Test Runner.
 
 ```.sh
-$ npm run test:e2e:open
-
-# or
-
 $ yarn test:e2e:open
 ```
 
 Runs tests E2E to CI.
 
 ```.sh
-$ npm run test:e2e:ci
-
-# or
-
 $ yarn test:e2e:ci
 ```
 
@@ -177,8 +156,8 @@ Would you like to contribute and participate in our communities? Please read our
 
 ### Discussion
 
-You can reach us or get community support in our [Discord server](https://discord.gg/Yh9q9cd). This is the best way to
-find help and get in touch with the community.
+You can reach us or get community support in our [Discord server](https://discord.gg/Yh9q9cd).
+This is the best way to find help and get in touch with the community.
 
 ### Bugs or feature requests
 
