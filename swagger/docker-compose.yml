@@ -2,32 +2,22 @@ version: '3.3'
 
 services:
 
-  swagger-editor:
-    image: swaggerapi/swagger-editor
-    container_name: "swagger-editor"
+  gateway:
+    image: nginx:alpine
     ports:
-      - 8081:8080
-
-  swagger-ui:
-    image: swaggerapi/swagger-ui
-    container_name: "swagger-ui"
-    ports:
-      - 8082:8080
+      - 8888:80
     volumes:
-      - ./data/account-api.yaml:/account-api.yaml
-    environment:
-      SWAGGER_JSON: /account-api.yaml
+      - ./nginx:/etc/nginx:ro
+    links:
+      - account:account.sumelms.local
 
   # Fake APIs
 
-  catalog-api:
-    container_name: "catalog-api"
+  account:
     image: muonsoft/openapi-mock
     environment:
-      OPENAPI_MOCK_SPECIFICATION_URL: '/swagger/catalog-api.yaml'
+      OPENAPI_MOCK_SPECIFICATION_URL: 'https://raw.githubusercontent.com/sumelms/microservice-account/main/swagger/account-api.yaml'
       OPENAPI_MOCK_PORT: 8001
-    volumes:
-      - ./data/catalog-api.yaml:/swagger/catalog-api.yaml
     ports:
       - 8001:8001
     
