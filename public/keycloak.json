@@ -2,7 +2,7 @@
   "realm": "sume",
   "auth-server-url": "https://sso.sumelms.com/auth/",
   "ssl-required": "external",
-  "resource": "sumelms",
+  "resource": "sume-app",
   "public-client": true,
   "confidential-port": 0
 }

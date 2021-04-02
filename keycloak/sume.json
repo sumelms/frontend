@@ -301,7 +301,7 @@
       "security-admin-console": [],
       "admin-cli": [],
       "account-console": [],
-      "sumelms": [],
+      "sume-app": [],
       "broker": [
         {
           "id": "df269e60-5ce7-4b34-a752-0d3e22c98465",
@@ -801,7 +801,7 @@
     },
     {
       "id": "30f96315-4a29-47ac-a9a7-72442372c975",
-      "clientId": "sumelms",
+      "clientId": "sume-app",
       "rootUrl": "http://127.0.0.1:3000/",
       "adminUrl": "http://127.0.0.1:3000/",
       "surrogateAuthRequired": false,
