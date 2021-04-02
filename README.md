@@ -51,7 +51,7 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 
 - [NodeJS >= v12.16.3](https://nodejs.org/en/download/releases/)
 - [Yarn](https://yarnpkg.com/)\* or npm for dependency install
-- [Podman](https://podman.io/)\* or Docker to run the [Keycloack](https://www.keycloak.org/) or [Swagger](https://swagger.io/)
+- [Podman](https://podman.io/)\* or Docker to run the [Keycloak](https://www.keycloak.org/) or [Swagger](https://swagger.io/)
 
 > \* we do recommend this option 😉
 
@@ -73,7 +73,7 @@ Running authentication server (Keycloak)
 
 ```sh
 $ podman run \
-  -v ./keycloack:/realm \
+  -v ./keycloak:/realm \
   -p 8080:8080 \
   -e KEYCLOAK_USER=admin \
   -e KEYCLOAK_PASSWORD=admin \

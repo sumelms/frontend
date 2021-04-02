@@ -24,4 +24,4 @@ services:
       - KEYCLOAK_PASSWORD=admin 
       - KEYCLOAK_IMPORT=/realm/sume.json
     volumes:
-      - ./keycloack:/realm
+      - ./keycloak:/realm
