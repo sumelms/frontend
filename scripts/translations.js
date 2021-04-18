@@ -72,10 +72,12 @@ try {
 
   if (languages !== {}) {
     generateFiles();
-    console.log('✔ All translation files successfully generated.');
+    console.log(
+      '\x1b[32m✔\x1b[0m All translation files successfully generated.',
+    );
   } else {
-    console.log('❌ Unable to generate translation files.');
+    console.warn('\x1b[31m✘\x1b[0m Unable to generate translation files.');
   }
 } catch (err) {
-  console.log('⚠ Something went terrible wrong.', err);
+  console.error('\x1b[33m⚠\x1b[0m Something went terrible wrong.', err);
 }

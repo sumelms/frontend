@@ -1,0 +1,16 @@
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json .
+COPY yarn.lock .
+
+RUN yarn install -s
+
+COPY . .
+
+EXPOSE 3000
+
+RUN yarn run generate:translations
+
+CMD [ "yarn", "start" ]

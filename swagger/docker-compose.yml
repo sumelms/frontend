@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+
+  gateway:
+    image: nginx:alpine
+    ports:
+      - 8888:80
+    volumes:
+      - ./nginx:/etc/nginx:ro
+    links:
+      - account:account.sumelms.local
+
+  # Fake APIs
+
+  account:
+    image: muonsoft/openapi-mock
+    environment:
+      OPENAPI_MOCK_SPECIFICATION_URL: 'https://raw.githubusercontent.com/sumelms/microservice-account/main/swagger/account-api.yaml'
+      OPENAPI_MOCK_PORT: 8001
+    ports:
+      - 8001:8001
+    
