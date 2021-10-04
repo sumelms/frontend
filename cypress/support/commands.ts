@@ -44,6 +44,7 @@ Cypress.Commands.add('navigate', (pageName) => {
   // Find navigation menu item
   // Click on it
   cy.visit(`/${pageName}`);
+  cy.injectAxe();
 });
 
 Cypress.Commands.add('logout', () => {
@@ -52,6 +53,7 @@ Cypress.Commands.add('logout', () => {
 
 Cypress.Commands.add('login', (user) => {
   cy.visit('/');
+  cy.injectAxe();
   cy.fixture(`users/${user}.json`).then((user) => {
     cy.get('#username').type(user.username);
     cy.get('#password').type(user.password);
