@@ -10,7 +10,7 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   display: flex;
-  
+
   background: var(--white);
   color: var(--black);
 
@@ -51,7 +51,7 @@ export const Container = styled.div<ContainerProps>`
 
     background: transparent;
     color: var(--black);
-    
+
     border: 0;
 
     font-weight: 300;

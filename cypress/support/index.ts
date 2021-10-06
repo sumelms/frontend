@@ -13,6 +13,8 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+// Test accessibility with axe-core in Cypress
+import 'cypress-axe';
 // Import commands.js using ES2015 syntax:
 import './commands';
 

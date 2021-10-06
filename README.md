@@ -47,6 +47,8 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 - [Support](#support)
 - [License](#license)
 
+---
+
 ## Prerequisites
 
 - [NodeJS >= v12.16.3](https://nodejs.org/en/download/releases/)
@@ -56,6 +58,12 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 > \* we do recommend this option 😉
 
 ## Setup
+
+Create an **.env** file on root directory
+
+```.sh
+SKIP_PREFLIGHT_CHECK=true
+```
 
 Install the dependencies
 
@@ -95,6 +103,18 @@ Build the app
 $ yarn build
 ```
 
+Run code linter
+
+```.sh
+$ yarn lint
+```
+
+Run Storybook components
+
+```.sh
+$ yarn storybook
+```
+
 ## Mocks and Docs
 
 - [More about...](./swagger/README.md)
@@ -117,7 +137,7 @@ $ yarn cy:verify
 Runs Cypress tests to completion.
 
 ```.sh
-$ yarn test:e2e:run
+$ yarn test:e2e
 ```
 
 Opens the Cypress Test Runner.

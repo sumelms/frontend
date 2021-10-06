@@ -18,7 +18,7 @@
     "react-i18next": "^11.7.0",
     "react-icons": "^3.10.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "4.0.3",
     "styled-components": "^5.1.1",
     "typescript": "~3.7.2",
     "yup": "^0.29.1"
@@ -37,10 +37,22 @@
     "test:e2e:ci": "npm run generate:translations && start-server-and-test start http-get://localhost:3000 cy:run",
     "eject": "react-scripts eject",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "generate:translations": "node scripts/translations.js"
+    "generate:translations": "node scripts/translations.js",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   },
   "browserslist": {
     "production": [
@@ -68,6 +80,12 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "6.3.9",
+    "@storybook/addon-essentials": "6.3.9",
+    "@storybook/addon-links": "6.3.9",
+    "@storybook/node-logger": "6.3.9",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "6.3.9",
     "@types/i18next": "^13.0.0",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
@@ -78,7 +96,9 @@
     "@types/yup": "^0.29.3",
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "@typescript-eslint/parser": "^3.6.0",
-    "cypress": "^4.10.0",
+    "axe-core": "^4.3.3",
+    "cypress": "^8.5.0",
+    "cypress-axe": "^0.13.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-cypress": "^2.11.1",
