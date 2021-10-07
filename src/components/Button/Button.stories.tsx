@@ -6,18 +6,14 @@ import Button, { ButtonProps } from './index';
 export default {
   title: 'Example/Button',
   component: Button,
-  parameters: {
-    actions: { argTypesRegex: '^on.*' },
-  },
   args: {
     variant: 'primary',
-    children: 'Button',
     disabled: false,
   },
-} as Meta<typeof Button>;
+} as Meta;
 
 const Template: Story<ButtonProps> = (args: ButtonProps) => (
-  <Button {...args} />
+  <Button {...args}>Button</Button>
 );
 
 export const ButtonComponent = Template.bind({});
