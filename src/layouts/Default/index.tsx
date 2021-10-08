@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 
-import Content from './Content';
+import Header from './Header';
+import Main from './Main';
+import Sidebar from './Sidebar';
 
 interface Props {
   children: ReactNode;
@@ -9,7 +11,11 @@ interface Props {
 const Default: React.FC<Props> = ({ children }: Props) => {
   return (
     <>
-      <Content>{children}</Content>
+      <Sidebar />
+      <Main>
+        <Header />
+        <div>{children}</div>
+      </Main>
     </>
   );
 };
