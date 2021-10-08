@@ -8,11 +8,6 @@ interface ButtonProps {
 }
 
 export const Container = styled.button<ButtonProps>`
-  height: 50px;
-  width: 100%;
-
-  border: 0;
-
   ${(props) =>
     !props.variant &&
     css`
@@ -47,12 +42,6 @@ export const Container = styled.button<ButtonProps>`
       color: ${colors.white};
       background-color: ${colors.danger};
     `}
-
-  padding: 0 16px;
-  margin-top: 16px;
-
-  font-weight: 500;
-  text-transform: uppercase;
 
   transition: background-color 0.2s;
 

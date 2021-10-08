@@ -1,3 +1,5 @@
+import '../assets/css/tailwind.css';
+
 import { createGlobalStyle } from 'styled-components';
 
 import colors from './colors';

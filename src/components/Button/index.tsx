@@ -16,6 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }: ButtonProps) => (
   <Container
+    className="py-2 px-0 w-full uppercase font-medium border-0"
     variant={variant}
     disabled={disabled}
     data-testid="button-container"

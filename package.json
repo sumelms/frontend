@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.3.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -24,14 +25,14 @@
     "yup": "^0.29.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "craco start",
+    "build": "craco build",
     "cy:info": "cypress info",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:verify": "cypress verify",
     "cy:version": "cypress version",
-    "test": "react-scripts test",
+    "test": "craco test",
     "test:e2e": "start-server-and-test start 3000 cy:run",
     "test:e2e:open": "start-server-and-test start 3000 cy:open",
     "test:e2e:ci": "npm run generate:translations && start-server-and-test start http-get://localhost:3000 cy:run",
@@ -83,9 +84,11 @@
     "@storybook/addon-actions": "6.3.9",
     "@storybook/addon-essentials": "6.3.9",
     "@storybook/addon-links": "6.3.9",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/node-logger": "6.3.9",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "6.3.9",
+    "@tailwindcss/postcss7-compat": "^2.2.16",
     "@types/i18next": "^13.0.0",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
@@ -96,6 +99,7 @@
     "@types/yup": "^0.29.3",
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "@typescript-eslint/parser": "^3.6.0",
+    "autoprefixer": "^9",
     "axe-core": "^4.3.3",
     "cypress": "^8.5.0",
     "cypress-axe": "^0.13.0",
@@ -108,7 +112,9 @@
     "http-proxy-middleware": "^1.0.6",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
+    "postcss": "^7",
     "prettier": "^2.0.5",
-    "start-server-and-test": "^1.11.2"
+    "start-server-and-test": "^1.11.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

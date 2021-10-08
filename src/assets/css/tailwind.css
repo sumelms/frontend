@@ -1,0 +1,4 @@
+/* Global Style */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
