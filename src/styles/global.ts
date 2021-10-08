@@ -1,46 +1,9 @@
 import '../assets/css/tailwind.css';
 
-import { createGlobalStyle } from 'styled-components';
+import React from 'react';
 
-import colors from './colors';
+const GlobalStyle: React.FC = () => {
+  return null;
+};
 
-export default createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html, body, #root {
-    height: 100%;
-    background-color: var(--light);
-  }
-
-  *, button, input {
-    border: 0;
-    outline: 0;
-
-    font-family: var(--font-family-sans-serif);
-    font-size: 14px;
-  }
-
-  :root {
-    --font-family-sans-serif: 'Roboto', sans-serif;
-
-    --primary: ${colors.primary};
-        
-    --white: ${colors.white};
-    --black: ${colors.black};
-
-    --light: ${colors.light};
-
-    --light-grey: ${colors.lightGrey};
-    --grey: ${colors.grey};
-    --dark-grey: ${colors.darkGrey}; 
-    
-    --danger: ${colors.danger};
-    --warning: ${colors.warning};
-    --info: ${colors.info};
-    --success: ${colors.success};
-  }
-`;
+export default GlobalStyle;

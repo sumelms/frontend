@@ -1,7 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react';
 
-import { Container } from './styles';
-
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'success' | 'info' | 'danger';
   disabled?: boolean;
@@ -11,19 +9,17 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({
   children,
   variant,
-
   disabled = false,
   ...rest
 }: ButtonProps) => (
-  <Container
-    className="py-2 px-0 w-full uppercase font-medium border-0"
-    variant={variant}
+  <button
+    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
     disabled={disabled}
     data-testid="button-container"
     {...rest}
   >
     {children}
-  </Container>
+  </button>
 );
 
 export default Button;
