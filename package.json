@@ -116,6 +116,7 @@
     "postcss": "^7",
     "prettier": "^2.0.5",
     "start-server-and-test": "^1.11.2",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "tsconfig-paths-webpack-plugin": "^3.5.1"
   }
 }
