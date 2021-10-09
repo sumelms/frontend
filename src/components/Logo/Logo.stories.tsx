@@ -4,7 +4,7 @@ import React from 'react';
 import Logo from './index';
 
 export default {
-  title: 'Components/Logo',
+  title: 'Common/Logo',
   component: Logo,
 } as Meta;
 
