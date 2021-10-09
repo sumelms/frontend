@@ -4,11 +4,11 @@ import Header from './Header';
 import Main from './Main';
 import Sidebar from './Sidebar';
 
-interface Props {
+export interface DefaultProps {
   children: ReactNode;
 }
 
-const Default: React.FC<Props> = ({ children }: Props) => {
+const Default: React.FC<DefaultProps> = ({ children }: DefaultProps) => {
   return (
     <>
       <Sidebar />

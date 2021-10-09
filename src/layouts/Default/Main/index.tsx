@@ -1,14 +1,14 @@
 import React, { ReactNode } from 'react';
 
-interface Props {
+export interface MainProps {
   children: ReactNode;
 }
 
-const Main: React.FC<Props> = ({ children }: Props) => {
+const Main: React.FC<MainProps> = ({ children }: MainProps) => {
   return (
-    <div className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
+    <main className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
       {children}
-    </div>
+    </main>
   );
 };
 
