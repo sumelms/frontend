@@ -5,7 +5,9 @@ const Sidebar: React.FC = () => {
   return (
     <aside className="sidebar w-16 transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-gray-900">
       <div className="sidebar-header flex items-center justify-center bg-white py-4">
-        <Logo />
+        <div className="flex h-8">
+          <Logo />
+        </div>
       </div>
       <div className="sidebar-content px-4 py-6">
         <ul className="flex flex-col w-full">
