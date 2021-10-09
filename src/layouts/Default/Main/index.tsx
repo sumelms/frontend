@@ -1,13 +1,15 @@
 import React, { ReactNode } from 'react';
 
-import { Container } from './styles';
-
-interface Props {
+export interface MainProps {
   children: ReactNode;
 }
 
-const Main: React.FC<Props> = ({ children }: Props) => {
-  return <Container>{children}</Container>;
+const Main: React.FC<MainProps> = ({ children }: MainProps) => {
+  return (
+    <main className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
+      {children}
+    </main>
+  );
 };
 
 export default Main;

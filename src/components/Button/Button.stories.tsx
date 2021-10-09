@@ -4,7 +4,7 @@ import React from 'react';
 import Button, { ButtonProps } from './index';
 
 export default {
-  title: 'Example/Button',
+  title: 'Common/Button',
   component: Button,
   args: {
     variant: 'primary',

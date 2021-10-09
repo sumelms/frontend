@@ -1,4 +1,5 @@
-import { Props as Route } from '../../../components/RouteWrapper';
+import { Props as Route } from '@app/routes/RouteWrapper';
+
 import Dashboard from '../containers/Dashboard';
 
 const routes: Route[] = [

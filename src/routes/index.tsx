@@ -2,8 +2,8 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 
-import RouteWrapper, { Props as Route } from '../components/RouteWrapper';
 import Dashboard from '../modules/Dashboard/routes';
+import RouteWrapper, { Props as Route } from './RouteWrapper';
 
 const routes: Route[] = [...Dashboard];
 

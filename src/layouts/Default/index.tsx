@@ -2,20 +2,21 @@ import React, { ReactNode } from 'react';
 
 import Header from './Header';
 import Main from './Main';
-import Menu from './Menu';
-import { Container } from './styles';
+import Sidebar from './Sidebar';
 
-interface Props {
+export interface DefaultProps {
   children: ReactNode;
 }
 
-const Default: React.FC<Props> = ({ children }: Props) => {
+const Default: React.FC<DefaultProps> = ({ children }: DefaultProps) => {
   return (
-    <Container>
-      <Menu />
-      <Header />
-      <Main>{children}</Main>
-    </Container>
+    <>
+      <Sidebar />
+      <Main>
+        <Header />
+        <div>{children}</div>
+      </Main>
+    </>
   );
 };
 
