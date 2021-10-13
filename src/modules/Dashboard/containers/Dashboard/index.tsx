@@ -1,4 +1,5 @@
 import Button from '@app/components/Button';
+import ThemeSwitcher from '@app/components/ThemeSwitcher';
 import { useAuth } from '@app/modules/Auth/contexts/auth';
 import React from 'react';
 
@@ -27,6 +28,7 @@ const Dashboard: React.FC = () => {
           <Button id="app-logout" onClick={() => doLogout()}>
             Logout
           </Button>
+          <ThemeSwitcher />
         </div>
       </div>
     </>
