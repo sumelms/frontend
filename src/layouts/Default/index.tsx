@@ -14,7 +14,7 @@ const Default: React.FC<DefaultProps> = ({ children }: DefaultProps) => {
       <Sidebar />
       <Main>
         <Header />
-        <div>{children}</div>
+        {children}
       </Main>
     </>
   );
