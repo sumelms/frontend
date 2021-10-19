@@ -1,7 +1,7 @@
 import Keycloak from 'keycloak-js';
 
 const isProduction = process.env.NODE_ENV === 'production';
-const configUrl = isProduction ? 'keycloak.json' : 'keycloak.dev.json';
+const configUrl = `/${isProduction ? 'keycloak.json' : 'keycloak.dev.json'}`;
 const onLoad: Keycloak.KeycloakOnLoad = 'login-required';
 const _kc = Keycloak(configUrl);
 
