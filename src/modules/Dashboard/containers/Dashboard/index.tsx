@@ -1,4 +1,5 @@
 import Button from '@app/components/Button';
+import Container from '@app/components/Container';
 import ThemeSwitcher from '@app/components/ThemeSwitcher';
 import { useAuth } from '@app/modules/Auth/contexts/auth';
 import React from 'react';
@@ -10,7 +11,7 @@ const Dashboard: React.FC = () => {
   const validRoles: Array<string> = allRoles.filter(hasRole);
 
   return (
-    <>
+    <Container spaced>
       <div>
         <div>
           <h1>Dashboard</h1>
@@ -31,7 +32,7 @@ const Dashboard: React.FC = () => {
           <ThemeSwitcher />
         </div>
       </div>
-    </>
+    </Container>
   );
 };
 
