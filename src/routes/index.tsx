@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import Course from '@app/modules/Course/routes';
+import Dashboard from '@app/modules/Dashboard/routes';
 import React from 'react';
 import { Switch } from 'react-router-dom';
 
-import Dashboard from '../modules/Dashboard/routes';
 import RouteWrapper, { Props as Route } from './RouteWrapper';
 
-const routes: Route[] = [...Dashboard];
+const routes: Route[] = [...Dashboard, ...Course];
 
 const Routes: React.FC = () => {
   return (
