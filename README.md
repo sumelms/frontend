@@ -154,7 +154,7 @@ $ yarn test:e2e:ci
 
 ## Contributing
 
-Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Contributor Guideline](https://www.sumelms.com/docs/development/contribute).
+Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to all make sure to read our [Contributor Guideline](https://sumelms.com/docs/contributing).
 
 ## Code of Conduct
 
@@ -165,12 +165,13 @@ Would you like to contribute and participate in our communities? Please read our
 ### Core
 
 - Ariane Rocha (@arianerocha)
-- Camila Moura (@mouracamila)
 - Ricardo Lüders (@rluders)
+- Mariany Ferreira da Silva (@marianyfs)
 
-### Contributors
+### Active
 
-...
+- Rafael Basask (@basask)
+- Camila Moura (@mouracamila)
 
 ## Support
 
