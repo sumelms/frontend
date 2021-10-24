@@ -8,7 +8,7 @@ const Sidebar: React.FC = () => {
       data-testid="sidebar-element"
     >
       <div className="sidebar-header flex items-center justify-center bg-white py-4">
-        <div className="flex h-8">
+        <div className="flex h-8 dark:text-primary">
           <Logo />
         </div>
       </div>
