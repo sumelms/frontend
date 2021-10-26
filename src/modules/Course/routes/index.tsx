@@ -1,5 +1,6 @@
 import { Props as Route } from '@app/routes/RouteWrapper';
 
+import CourseActivity from '../containers/CourseActivity';
 import CourseCommunity from '../containers/CourseCommunity';
 import CourseContents from '../containers/CourseContents';
 import CourseOverview from '../containers/CourseOverview';
@@ -47,6 +48,13 @@ const routes: Route[] = [
     path: '/courses/:course/students',
     name: 'Course Students',
     component: CourseStudents,
+    exact: true,
+    isPrivate: true,
+  },
+  {
+    path: '/courses/:course/activity/:activity',
+    name: 'Course Activity',
+    component: CourseActivity,
     exact: true,
     isPrivate: true,
   },

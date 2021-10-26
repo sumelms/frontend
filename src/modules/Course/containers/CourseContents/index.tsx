@@ -1,7 +1,14 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+
+type RouteParams = {
+  course: string;
+};
 
 const CourseContents: React.FC = () => {
-  return <>THIS IS THE COURSE CONTENTS PAGE</>;
+  const { course } = useParams<RouteParams>();
+
+  return <>THIS IS THE COURSE ({course}) CONTENTS PAGE</>;
 };
 
 export default CourseContents;
