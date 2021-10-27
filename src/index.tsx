@@ -8,20 +8,10 @@ import keycloak from './keycloak';
 import * as serviceWorker from './serviceWorker';
 import GlobalStyle from './styles/global';
 
-const eventLogger = (event: unknown, error: unknown) => {
-  console.log('onKeycloakEvent', event, error);
-};
-
-const tokenLogger = (tokens: unknown) => {
-  console.log('onKeycloakTokens', tokens);
-};
-
 ReactDOM.render(
   <React.StrictMode>
     <ReactKeycloakProvider
       authClient={keycloak}
-      onEvent={eventLogger}
-      onTokens={tokenLogger}
       initOptions={{ onLoad: 'login-required' }}
     >
       <ThemeProvider>
