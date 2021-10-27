@@ -9,7 +9,7 @@
       "@app/contexts/*": ["./contexts/*"],
       "@app/services/*": ["./services/*"],
       "@app/utils/*": ["./utils/*"],
-      "@app/routes/*": ["./routes/*"]
+      "@app/router": ["./router"]
     }
   }
 }

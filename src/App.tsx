@@ -1,19 +1,13 @@
 import './services/i18n';
 
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 
-import AuthProvider from './modules/Auth/contexts/auth';
-import Routes from './routes';
+import Router from './router';
 
 const App: React.FC = () => {
   return (
-    <div className="flex flex-row min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
-      <BrowserRouter>
-        <AuthProvider>
-          <Routes />
-        </AuthProvider>
-      </BrowserRouter>
+    <div className="flex flex-row min-h-screen text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-white">
+      <Router />
     </div>
   );
 };

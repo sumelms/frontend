@@ -63,7 +63,13 @@ Create an **.env** file on root directory
 
 ```.sh
 SKIP_PREFLIGHT_CHECK=true
+
+REACT_APP_KEYCLOAK_URL=http://sso.sumelms.sol/auth
+REACT_APP_KEYCLOAK_REALM=sume
+REACT_APP_KEYCLOAK_CLIENT_ID=sume-app
 ```
+
+> Note: Alternatively, you could also duplicate and rename the existing `.env.example` file.
 
 Install the dependencies
 

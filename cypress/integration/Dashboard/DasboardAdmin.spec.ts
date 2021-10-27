@@ -9,11 +9,5 @@ context("Admin's Dashboard", () => {
     cy.contains('span', 'Welcome back, Admin!');
   });
 
-  it("should have content customized to the user's roles", () => {
-    cy.contains('li', 'student');
-    cy.contains('li', 'teacher');
-    cy.contains('li', 'admin');
-  });
-
   afterEach(cy.logout);
 });

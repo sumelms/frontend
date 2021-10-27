@@ -4,11 +4,11 @@ import Header from './Header';
 import Main from './Main';
 import Sidebar from './Sidebar';
 
-export interface DefaultProps {
+export interface LayoutProps {
   children: ReactNode;
 }
 
-const Default: React.FC<DefaultProps> = ({ children }: DefaultProps) => {
+const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
     <>
       <Sidebar />
@@ -20,4 +20,4 @@ const Default: React.FC<DefaultProps> = ({ children }: DefaultProps) => {
   );
 };
 
-export default Default;
+export default Layout;
