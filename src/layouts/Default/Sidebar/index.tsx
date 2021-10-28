@@ -33,7 +33,7 @@ const Sidebar: React.FC = () => {
             <Logo />
           </div>
         </div>
-        <div>
+        <div className="mt-2">
           <MenuList items={mainMenuItems} />
         </div>
       </div>
@@ -62,10 +62,10 @@ interface MenuListItemProps {
 }
 
 const MenuListItem = ({ route, icon: IconComponent }: MenuListItemProps) => (
-  <li>
+  <li className=" flex justify-center">
     <Link
       to={route}
-      className="flex-row items-center justify-center h-12 w-12 px-2 mt-2 mb-2 
+      className=" flex flex-row items-center justify-center h-12 w-12 mt-2 mb-2 
     rounded-lg group hover:bg-gray-100 hover:shadow-lg transition-transform duration-150 "
     >
       <div className="text-white group-hover:text-red-600 h-6 w-6 m-auto ">
