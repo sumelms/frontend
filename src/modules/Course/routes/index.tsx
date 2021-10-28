@@ -1,4 +1,5 @@
-import { Props as Route } from '@app/routes/RouteWrapper';
+import DefaultLayout from '@app/layouts/Default';
+import { RouteProps as Route } from 'router';
 
 import CourseActivity from '../containers/CourseActivity';
 import CourseCommunity from '../containers/CourseCommunity';
@@ -13,50 +14,50 @@ const routes: Route[] = [
     path: '/courses/my',
     name: 'My Courses',
     component: MyCourses,
+    layout: DefaultLayout,
     exact: true,
-    isPrivate: true,
   },
   {
     path: '/courses/:course',
     name: 'Course Overview',
     component: CourseOverview,
+    layout: DefaultLayout,
     exact: true,
-    isPrivate: true,
   },
   {
     path: '/courses/:course/contents',
     name: 'Course Content',
     component: CourseContents,
+    layout: DefaultLayout,
     exact: true,
-    isPrivate: true,
   },
   {
     path: '/courses/:course/community',
     name: 'Course Community',
     component: CourseCommunity,
+    layout: DefaultLayout,
     exact: true,
-    isPrivate: true,
   },
   {
     path: '/courses/:course/projects',
     name: 'Course Projects',
     component: CourseProjects,
+    layout: DefaultLayout,
     exact: true,
-    isPrivate: true,
   },
   {
     path: '/courses/:course/students',
     name: 'Course Students',
     component: CourseStudents,
+    layout: DefaultLayout,
     exact: true,
-    isPrivate: true,
   },
   {
     path: '/courses/:course/activity/:activity',
     name: 'Course Activity',
     component: CourseActivity,
+    layout: DefaultLayout,
     exact: true,
-    isPrivate: true,
   },
 ];
 

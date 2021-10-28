@@ -10,6 +10,7 @@ describe('RouteWrapper component', () => {
       component: () => <h1>Component</h1>,
       name: 'test',
       path: '/',
+      layout: (props: any) => <div>{props?.children}</div>,
     };
     render(
       <MemoryRouter>

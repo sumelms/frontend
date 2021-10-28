@@ -9,11 +9,5 @@ context("Teacher's Dashboard", () => {
     cy.contains('span', 'Welcome back, Teacher!');
   });
 
-  it("should have content customized to the user's roles", () => {
-    cy.contains('li', 'student').should('not.exist');
-    cy.contains('li', 'teacher');
-    cy.contains('li', 'admin').should('not.exist');
-  });
-
   afterEach(cy.logout);
 });

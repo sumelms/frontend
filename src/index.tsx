@@ -1,21 +1,29 @@
+import { ReactKeycloakProvider } from '@react-keycloak/web';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
 import ThemeProvider from './contexts/ThemeProvider';
-import AuthService from './modules/Auth/services/auth';
+import keycloak from './keycloak';
+import * as serviceWorker from './serviceWorker';
 import GlobalStyle from './styles/global';
 
-const entrypoint = () => {
-  ReactDOM.render(
-    <React.StrictMode>
+ReactDOM.render(
+  <React.StrictMode>
+    <ReactKeycloakProvider
+      authClient={keycloak}
+      initOptions={{ onLoad: 'login-required' }}
+    >
       <ThemeProvider>
         <App />
       </ThemeProvider>
       <GlobalStyle />
-    </React.StrictMode>,
-    document.getElementById('root'),
-  );
-};
+    </ReactKeycloakProvider>
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
 
-AuthService.init(entrypoint);
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
