@@ -6,6 +6,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-postcss',
+    'aria-live-storybook-addon',
   ],
   webpackFinal: async (config) => {
     config.resolve.plugins = [
