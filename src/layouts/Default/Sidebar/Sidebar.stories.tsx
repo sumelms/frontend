@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import Sidebar from './index';
 
@@ -10,7 +11,9 @@ export default {
 
 const Template: Story = () => (
   <div className="flex flex-row min-h-screen">
-    <Sidebar />
+    <BrowserRouter>
+      <Sidebar />
+    </BrowserRouter>
   </div>
 );
 

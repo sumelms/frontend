@@ -28,7 +28,7 @@ const Sidebar: React.FC = () => {
     >
       <div>
         <div className="items-center justify-center py-4 bg-white sidebar-header">
-          <div className="flex h-8 dark:text-primary">
+          <div className="flex h-12 dark:text-primary">
             <Logo />
           </div>
         </div>
