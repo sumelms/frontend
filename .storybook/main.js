@@ -9,6 +9,9 @@ module.exports = {
     'aria-live-storybook-addon',
   ],
   webpackFinal: async (config) => {
+    config.resolve.alias['@react-keycloak/web'] = require.resolve(
+      '../src/__mocks__/@react-keycloak/web.js',
+    );
     config.resolve.plugins = [
       new TsconfigPathsPlugin({ extensions: config.resolve.extensions }),
     ];

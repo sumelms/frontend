@@ -17,10 +17,10 @@ export function useKeycloak() {
 
   const authClient = {
     authenticated,
-    hasRealmRole(role: string) {
+    hasRealmRole(role) {
       return true;
     },
-    hasResourceRole(role: string) {
+    hasResourceRole(role) {
       return true;
     },
     idToken: token,
