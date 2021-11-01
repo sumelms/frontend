@@ -23,12 +23,11 @@ const Sidebar: React.FC = () => {
 
   return (
     <aside
-      className="sidebar fixed flex flex-col h-screen justify-center w-24 m-0 
-      bg-primary justify-between divide divide-y"
+      className="fixed flex flex-col justify-between w-20 h-screen m-0 divide-y sidebar bg-primary divide"
       data-testid="sidebar-element"
     >
       <div>
-        <div className="sidebar-header items-center justify-center bg-white py-4">
+        <div className="items-center justify-center py-4 bg-white sidebar-header">
           <div className="flex h-8 dark:text-primary">
             <Logo />
           </div>
@@ -50,8 +49,8 @@ interface MenuListProps {
 
 const MenuList = ({ items }: MenuListProps) => (
   <ul className="flex flex-col w-full">
-    {items.map((item) => (
-      <MenuListItem key={item.route} route={item.route} icon={item.icon} />
+    {items.map((item, key) => (
+      <MenuListItem key={key} route={item.route} icon={item.icon} />
     ))}
   </ul>
 );
@@ -62,13 +61,12 @@ interface MenuListItemProps {
 }
 
 const MenuListItem = ({ route, icon: IconComponent }: MenuListItemProps) => (
-  <li className=" flex justify-center">
+  <li className="flex justify-center ">
     <Link
       to={route}
-      className=" flex flex-row items-center justify-center h-12 w-12 mt-2 mb-2 
-    rounded-lg group hover:bg-gray-100 hover:shadow-lg transition-transform duration-150 "
+      className="flex flex-row items-center justify-center w-12 h-12 mt-2 mb-2 transition-transform duration-150 rounded-lg group hover:bg-gray-100 hover:shadow-lg "
     >
-      <div className="text-white group-hover:text-red-600 h-6 w-6 m-auto ">
+      <div className="w-6 h-6 m-auto text-white group-hover:text-red-600 ">
         <IconComponent />
       </div>
     </Link>
