@@ -83,7 +83,7 @@ const UserDropdown: React.FC<UserDropdownProps> = ({
           <span className="font-semibold text-md">{user.name}</span>
           <span className="text-sm text-gray-400">{user.role}</span>
         </div>
-        <div className="mx-2">
+        <div className="flex content-center mx-2">
           <Avatar
             name={user.name}
             url={user.avatar}
