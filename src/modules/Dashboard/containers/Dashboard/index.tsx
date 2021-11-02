@@ -1,6 +1,4 @@
-import Button from '@app/components/Button';
 import Container from '@app/components/Container';
-import ThemeSwitcher from '@app/components/ThemeSwitcher';
 import { useKeycloak } from '@react-keycloak/web';
 import React from 'react';
 
@@ -65,7 +63,7 @@ const Dashboard: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 gap-2">
               {[1, 2].map((i) => (
-                <div key="i" className="flex w-full p-4 bg-white rounded-l-lg">
+                <div key={i} className="flex w-full p-4 bg-white rounded-l-lg">
                   <span className="m-auto">TASK {i}</span>
                 </div>
               ))}
@@ -138,13 +136,6 @@ const Dashboard: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div>
-            <Button id="app-logout" onClick={() => keycloak.logout()}>
-              Logout
-            </Button>
-            <ThemeSwitcher />
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
+
 import Avatar, { AvatarProps } from './index';
 
 export default {
