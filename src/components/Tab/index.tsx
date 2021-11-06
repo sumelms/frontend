@@ -20,7 +20,7 @@ const TabItem: React.FC<TabItemProps> = ({
         }
         {...rest}
         data-toggle="tab"
-        href="#link1"
+        href={`#${name}`}
         role="tablist"
       >
         <i className="flex-auto mb-px text-center"></i>
@@ -31,8 +31,9 @@ const TabItem: React.FC<TabItemProps> = ({
 };
 
 export interface TabContentProps {
-  active: boolean;
-  children: ReactNode;
+  name: string;
+  active?: boolean;
+  children?: ReactNode;
 }
 
 export const TabContent: React.FC<TabContentProps> = ({
@@ -47,37 +48,36 @@ export const TabContent: React.FC<TabContentProps> = ({
 };
 
 export interface TabProps {
+  active: string;
   children: ReactNode;
 }
 
-const Tab: React.FC<TabProps> = ({ children }: TabProps) => {
-  const [openTab, setOpenTab] = React.useState('tab1');
-
-  const tabItems = [
-    { id: 'tab1', name: 'Tab 1' },
-    { id: 'tab2', name: 'Tab 2' },
-    { id: 'tab3', name: 'Tab 3' },
-  ];
+const Tab: React.FC<TabProps> = ({ active, children }: TabProps) => {
+  const [activeTab, setActiveTab] = React.useState(active);
 
   return (
     <div className="flex flex-wrap">
       <div className="w-full">
         <ul className="flex flex-row flex-wrap mb-0 list-none" role="tablist">
-          {tabItems.map(({ id, name }) => (
+          {React.Children.map<ReactNode, any>(children, ({ props }) => (
             <TabItem
-              key={id}
-              name={name}
-              active={openTab === id}
+              key={props.name}
+              name={props.name}
+              active={activeTab === props.name}
               onClick={(e) => {
                 e.preventDefault();
-                setOpenTab(id);
+                setActiveTab(props.name);
               }}
             />
           ))}
         </ul>
         <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded shadow-lg">
           <div className="flex-auto px-4 py-5">
-            <div className="flex-auto tab-content">{children}</div>
+            <div className="flex-auto">
+              {React.Children.map<ReactNode, any>(children, ({ props }) => (
+                <TabContent {...props} active={activeTab === props.name} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
