@@ -1,43 +1,57 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export interface LinkProps {
-  label?: string;
+export interface CardProps {
+  title?: string;
+  description?: string;
+  image?: string;
+  isLink?: boolean;
   url?: string;
-}
-
-const Link: React.FC<LinkProps> = ({ label, url }: LinkProps) => {
-  return (
-    <a
-      href={url}
-      className="text-lg no-underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-    >
-      {label}
-    </a>
-  );
-};
-export interface CardProps extends LinkProps {
-  title: string;
-  description: string;
-  isLink: boolean;
+  isExternal?: boolean;
+  children?: ReactNode;
 }
 
 const Card: React.FC<CardProps> = ({
   title,
   description,
+  image,
   isLink,
   url,
-  label,
+  isExternal,
+  children,
 }: CardProps) => {
-  return (
+  const content = (
+    <>
+      {image && <img src={image} className="w-full" />}
+      <div className="px-6 py-4">
+        {title && (
+          <h3 className="text-gray-800 text-3xl font-semibold">{title}</h3>
+        )}
+        {description && <div className="mt-2 text-gray-600">{description}</div>}
+      </div>
+      {children}
+    </>
+  );
+
+  return isLink ? (
     <div
       data-testid="card-element"
-      className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20"
+      className="max-w-sm rounded overflow-hidden shadow-lg"
     >
-      <div className="text-gray-800 text-3xl font-semibold">{title}</div>
-      <div className="mt-2 text-gray-600">{description}</div>
-      <div className="flex justify-start mt-4">
-        {isLink ? <Link url={url} label={label} /> : ''}
-      </div>
+      <a
+        href={url}
+        target={isExternal ? '_blank' : ''}
+        className="max-w-md"
+        rel="noreferrer"
+      >
+        {content}
+      </a>
+    </div>
+  ) : (
+    <div
+      data-testid="card-element"
+      className="max-w-sm rounded overflow-hidden shadow-lg"
+    >
+      {content}
     </div>
   );
 };
