@@ -24,14 +24,14 @@ const Header: React.FC = () => {
           </div>
           <div className="flex items-center h-16">
             <nav className="inline-grid items-center grid-cols-3 mx-4 gap-x-4">
-              <button className="hover:text-red-400">
+              <button className="hover:text-red-600">
                 <PlayIcon className="w-6 h-6" />
               </button>
-              <button className="hover:text-red-400">
+              <button className="hover:text-red-600">
                 <BellIcon className="w-6 h-6" />
               </button>
               <button
-                className="hover:text-red-400"
+                className="hover:text-red-600"
                 id="app-logout"
                 onClick={() => keycloak.logout()}
               >
