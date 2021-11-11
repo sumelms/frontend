@@ -1,0 +1,27 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7.0
+
+jobs:
+  lint:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      CHOKIDAR_USEPOLLING: 1
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: yarn install
+      - run:
+          name: Executing lint
+          command: yarn lint
+
+workflows:
+  version: 2
+  lint_and_test:
+    jobs:
+      - lint
