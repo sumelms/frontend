@@ -20,8 +20,6 @@ jobs:
   test-unit:
     docker:
       - image: cimg/base:stable
-    environment:
-      SKIP_PREFLIGHT_CHECK: 1
     steps:
       - checkout
       - node/install:
@@ -29,6 +27,9 @@ jobs:
       - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: yarn install
+      - run:
+          name: "Creating .env"
+          command: echo "SKIP_PREFLIGHT_CHECK=true" > .env
       - run:
           name: "Executing unit tests"
           command: yarn test --collectCoverage=true --watchAll=false
