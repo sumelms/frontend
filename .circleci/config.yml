@@ -20,6 +20,8 @@ jobs:
   test-unit:
     docker:
       - image: cimg/base:stable
+    environment:
+      SKIP_PREFLIGHT_CHECK: 1
     steps:
       - checkout
       - node/install:
