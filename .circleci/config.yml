@@ -7,8 +7,6 @@ jobs:
   lint:
     docker:
       - image: cimg/base:stable
-    environment:
-      CHOKIDAR_USEPOLLING: 1
     steps:
       - checkout
       - node/install:
@@ -19,9 +17,27 @@ jobs:
       - run:
           name: Executing lint
           command: yarn lint
+  test-unit:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: yarn install
+      - run:
+          name: "Executing unit tests"
+          command: yarn test --collectCoverage=true --watchAll=false
+      - store_artifacts:
+          path: coverage
 
 workflows:
   version: 2
   lint_and_test:
     jobs:
       - lint
+      - test-unit:
+          requires:
+            - lint
