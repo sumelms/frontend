@@ -65,7 +65,7 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
-      - node/install-yarn-packages:
+      - node/install-packages:
           cache-path: ~/project/node_modules
           override-ci-command: yarn install
       - run:
