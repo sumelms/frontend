@@ -38,6 +38,10 @@ jobs:
   test-e2e:
     docker:
       - image: cimg/base:stable
+    environment:
+      REACT_APP_KEYCLOAK_URL: http://localhost:8080/auth
+      REACT_APP_KEYCLOAK_REALM: sume
+      REACT_APP_KEYCLOAK_CLIENT_ID: sume-app
     steps:
       - checkout
       - setup_remote_docker
