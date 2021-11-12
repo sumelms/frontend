@@ -7,7 +7,7 @@ type RouteParams = {
 
 const CourseStudents: React.FC = () => {
   const { course } = useParams<RouteParams>();
-  return <>THIS IS THE COURSE STUDENT PAGE</>;
+  return <>THIS IS THE COURSE ({course}) STUDENT PAGE</>;
 };
 
 export default CourseStudents;

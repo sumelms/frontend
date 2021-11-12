@@ -13,6 +13,7 @@ interface UserDropdownItemProps {
   to: string;
   title: string;
   text: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: React.ComponentType<any>;
 }
 

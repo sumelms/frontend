@@ -2,7 +2,7 @@ import React, { createContext, ReactNode, useContext, useState } from 'react';
 
 interface ThemeContextProps {
   theme: string;
-  setTheme: (v: any) => void;
+  setTheme: (v: string) => void;
 }
 
 const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);

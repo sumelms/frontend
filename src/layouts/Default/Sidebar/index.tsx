@@ -57,7 +57,7 @@ const MenuList = ({ items }: MenuListProps) => (
 
 interface MenuListItemProps {
   route: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<unknown>;
 }
 
 const MenuListItem = ({ route, icon: IconComponent }: MenuListItemProps) => (

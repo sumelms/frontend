@@ -4,12 +4,10 @@ import { Route, RouteComponentProps } from 'react-router-dom';
 export interface RouteProps {
   path: string;
   name: string;
-  component:
-    | React.ComponentType<RouteComponentProps<any>>
-    | React.ComponentType<any>;
-  layout:
-    | React.ComponentType<RouteComponentProps<any>>
-    | React.ComponentType<any>;
+  component: // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
+  layout: // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
   [x: string]: unknown; // dealing with ...rest
 }
 
