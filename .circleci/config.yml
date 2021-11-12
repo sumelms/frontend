@@ -35,6 +35,47 @@ jobs:
           command: yarn test --collectCoverage=true --watchAll=false
       - store_artifacts:
           path: coverage
+  test-e2e:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: yarn install
+      - run:
+          name: "Creating .env"
+          command: echo "SKIP_PREFLIGHT_CHECK=true" > .env
+      - run:
+          name: "Creating keycloak"
+          command: |
+            docker pull jboss/keycloak
+            docker run -d -p 8080:8080 -v $(pwd)/keycloak:/realm -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/realm/sume.json jboss/keycloak
+      - run:
+          name: "Executing unit tests"
+          command: yarn test:e2e:ci
+      - store_artifacts:
+          path: coverage
+  build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - node/install-yarn-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: yarn install
+      - run:
+          name: "Creating .env"
+          command: echo "SKIP_PREFLIGHT_CHECK=true" > .env
+      - run:
+          name: "Building..."
+          command: yarn build
+      - store_artifacts:
+          path: build
 
 workflows:
   version: 2
@@ -44,3 +85,10 @@ workflows:
       - test-unit:
           requires:
             - lint
+      - test-e2e:
+          requires:
+            - lint
+      - build:
+          requires:
+            - test-unit
+            - test-e2e
