@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { string } from 'yup';
 
 export type RouteParams = {
   course: string;

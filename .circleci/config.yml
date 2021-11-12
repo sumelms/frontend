@@ -1,0 +1,112 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7.0
+
+jobs:
+  lint:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - node/install-packages:
+          cache-path: ~/.cache
+          cache-version: v1-deps-{{ checksum "yarn.lock" }}
+          override-ci-command: yarn install --frozen-lockfile
+      - run:
+          name: Executing lint
+          command: yarn lint
+  test-unit:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - node/install-packages:
+          cache-path: ~/.cache
+          cache-version: v1-deps-{{ checksum "yarn.lock" }}
+          override-ci-command: yarn install --frozen-lockfile
+      - run:
+          name: "Creating .env"
+          command: echo "SKIP_PREFLIGHT_CHECK=true" > .env
+      - run:
+          name: "Executing unit tests"
+          command: yarn test --collectCoverage=true --watchAll=false
+      - store_artifacts:
+          path: coverage
+  test-e2e:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      REACT_APP_KEYCLOAK_URL: http://localhost:8080/auth
+      REACT_APP_KEYCLOAK_REALM: sume
+      REACT_APP_KEYCLOAK_CLIENT_ID: sume-app
+      NODE_OPTIONS: --openssl-legacy-provider
+      CHOKIDAR_USEPOLLING: 1
+      ELECTRON_RUN_AS_NODE: 1
+    steps:
+      - checkout
+      - setup_remote_docker
+      - node/install:
+          install-yarn: true
+      - node/install-packages:
+          cache-path: ~/.cache
+          cache-version: v1-deps-{{ checksum "yarn.lock" }}
+          override-ci-command: yarn install --frozen-lockfile
+      - run:
+          name: "Creating .env"
+          command: echo "SKIP_PREFLIGHT_CHECK=true" > .env
+      - run:
+          name: "Creating keycloak"
+          command: |
+            docker pull jboss/keycloak
+            docker run -d -p 8080:8080 -v $(pwd)/keycloak:/realm -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/realm/sume.json jboss/keycloak
+      - run:
+          name: "Executing e2e tests"
+          command: yarn test:e2e:ci
+      - store_artifacts:
+          path: coverage
+  build:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      REACT_APP_KEYCLOAK_URL: http://localhost:8080/auth
+      REACT_APP_KEYCLOAK_REALM: sume
+      REACT_APP_KEYCLOAK_CLIENT_ID: sume-app
+      NODE_OPTIONS: --openssl-legacy-provider
+      CHOKIDAR_USEPOLLING: 1
+      ELECTRON_RUN_AS_NODE: 1
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - node/install-packages:
+          cache-path: ~/.cache
+          override-ci-command: yarn install --frozen-lockfile
+      - run:
+          name: "Creating .env"
+          command: echo "SKIP_PREFLIGHT_CHECK=true" > .env
+      - run:
+          name: "Building..."
+          command: yarn build
+      - store_artifacts:
+          path: build
+
+workflows:
+  version: 2
+  lint_and_test:
+    jobs:
+      - lint
+      - test-unit:
+          requires:
+            - lint
+      # - test-e2e:
+      #     requires:
+      #       - lint
+      - build:
+          requires:
+            - test-unit
+            # - test-e2e
