@@ -96,10 +96,10 @@ workflows:
       - test-unit:
           requires:
             - lint
-      - test-e2e:
-          requires:
-            - lint
+      # - test-e2e:
+      #     requires:
+      #       - lint
       - build:
           requires:
             - test-unit
-            - test-e2e
+            # - test-e2e
