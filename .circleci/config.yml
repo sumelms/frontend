@@ -61,6 +61,9 @@ jobs:
             docker pull jboss/keycloak
             docker run -d -p 8080:8080 -v $(pwd)/keycloak:/realm -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/realm/sume.json jboss/keycloak
       - run:
+          name: "Download Cypress..."
+          command: cypress install
+      - run:
           name: "Executing unit tests"
           command: yarn test:e2e:ci
       - store_artifacts:
