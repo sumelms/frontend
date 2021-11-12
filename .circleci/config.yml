@@ -13,6 +13,7 @@ jobs:
           install-yarn: true
       - node/install-packages:
           cache-path: ~/.cache
+          cache-version: v1-deps-{{ checksum "yarn.lock" }}
           override-ci-command: yarn install --frozen-lockfile
       - run:
           name: Executing lint
@@ -26,6 +27,7 @@ jobs:
           install-yarn: true
       - node/install-packages:
           cache-path: ~/.cache
+          cache-version: v1-deps-{{ checksum "yarn.lock" }}
           override-ci-command: yarn install --frozen-lockfile
       - run:
           name: "Creating .env"
@@ -51,6 +53,7 @@ jobs:
           install-yarn: true
       - node/install-packages:
           cache-path: ~/.cache
+          cache-version: v1-deps-{{ checksum "yarn.lock" }}
           override-ci-command: yarn install --frozen-lockfile
       - run:
           name: "Creating .env"
@@ -61,7 +64,7 @@ jobs:
             docker pull jboss/keycloak
             docker run -d -p 8080:8080 -v $(pwd)/keycloak:/realm -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/realm/sume.json jboss/keycloak
       - run:
-          name: "Executing unit tests"
+          name: "Executing e2e tests"
           command: yarn test:e2e:ci
       - store_artifacts:
           path: coverage
