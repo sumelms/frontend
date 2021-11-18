@@ -1,3 +1,4 @@
+import { CheckIcon } from '@heroicons/react/outline';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
@@ -6,13 +7,15 @@ import Tab, { TabContent } from './index';
 export default {
   title: 'Common/Tab',
   component: Tab,
-  args: {},
+  args: {
+    onlyIcons: false,
+  },
 } as Meta;
 
-const Template: Story = () => (
-  <div>
-    <Tab active="tab2">
-      <TabContent name="tab1">
+const Template: Story = (args) => (
+  <div className="w-3/4">
+    <Tab active="Tab1" onlyIcons={args.onlyIcons}>
+      <TabContent name="Apresentação" icon={CheckIcon}>
         <h1>Tab 1</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur,
@@ -21,7 +24,7 @@ const Template: Story = () => (
           Quidem totam autem repellat.
         </p>
       </TabContent>
-      <TabContent name="tab2">
+      <TabContent name="Disciplina">
         <h1>Tab 2</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur,
@@ -29,8 +32,14 @@ const Template: Story = () => (
           laboriosam aut eveniet fugit perspiciatis consequatur voluptatibus ea?
           Quidem totam autem repellat.
         </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur,
+          repellendus quae quam quis quisquam molestias provident atque, eum
+          laboriosam aut eveniet fugit perspiciatis consequatur voluptatibus ea?
+          Quidem totam autem repellat.
+        </p>
       </TabContent>
-      <TabContent name="tab3">
+      <TabContent name="Comunidade">
         <h1>Tab 3</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur,
