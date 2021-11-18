@@ -2,19 +2,21 @@ import { CheckIcon } from '@heroicons/react/outline';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import Tab, { TabContent } from './index';
+import Tab from './index';
+import TabContent from './TabContent';
 
 export default {
   title: 'Common/Tab',
   component: Tab,
   args: {
     onlyIcons: false,
+    activeTab: 'Comunidade',
   },
 } as Meta;
 
 const Template: Story = (args) => (
   <div className="w-3/4">
-    <Tab active="Tab1" onlyIcons={args.onlyIcons}>
+    <Tab active={args.activeTab} onlyIcons={args.onlyIcons}>
       <TabContent name="Apresentação" icon={CheckIcon}>
         <h1>Tab 1</h1>
         <p>
