@@ -1,9 +1,9 @@
-import Course from '@app/modules/Course/routes';
-import Dashboard from '@app/modules/Dashboard/routes';
 import { useKeycloak } from '@react-keycloak/web';
 import React from 'react';
 import { BrowserRouter, Switch } from 'react-router-dom';
 
+import Course from '../modules/Course/routes';
+import Dashboard from '../modules/Dashboard/routes';
 import RouteWrapper, { RouteProps as Route } from './RouteWrapper';
 
 export const routes: Route[] = [...Dashboard, ...Course];

@@ -1,29 +1,32 @@
 import { ReactKeycloakProvider } from '@react-keycloak/web';
+import { Flowbite } from 'flowbite-react';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import App from './App';
-import ThemeProvider from './contexts/ThemeProvider';
 import keycloak from './keycloak';
-import * as serviceWorker from './serviceWorker';
+import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './styles/global';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <ReactKeycloakProvider
-      authClient={keycloak}
-      initOptions={{ onLoad: 'login-required' }}
-    >
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-      <GlobalStyle />
-    </ReactKeycloakProvider>
-  </React.StrictMode>,
-  document.getElementById('root'),
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement,
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+root.render(
+  <ReactKeycloakProvider
+    authClient={keycloak}
+    initOptions={{ onLoad: 'login-required' }}
+  >
+    <React.StrictMode>
+      <Flowbite>
+        <App />
+      </Flowbite>
+      <GlobalStyle />
+    </React.StrictMode>
+  </ReactKeycloakProvider>,
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

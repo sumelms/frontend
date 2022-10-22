@@ -1,13 +1,14 @@
-import Avatar from '@app/components/Avatar';
-import {
-  ChevronDownIcon,
-  CogIcon,
-  FolderOpenIcon,
-  InboxIcon,
-  UserIcon,
-} from '@heroicons/react/solid';
 import React, { useState } from 'react';
+import {
+  HiChevronDown,
+  HiCog,
+  HiFolderOpen,
+  HiInbox,
+  HiUser,
+} from 'react-icons/hi';
 import { Link } from 'react-router-dom';
+
+import Avatar from '../../../../components/Avatar';
 
 interface UserDropdownItemProps {
   to: string;
@@ -55,25 +56,25 @@ const UserDropdown: React.FC<UserDropdownProps> = ({
       to: '/',
       title: 'Profile',
       text: 'Manage your account profile',
-      icon: UserIcon,
+      icon: HiUser,
     },
     {
       to: '/',
       title: 'Messages',
       text: 'Check your latest comments',
-      icon: InboxIcon,
+      icon: HiInbox,
     },
     {
       to: '/',
       title: 'My Courses',
       text: 'Browse to the subscribed courses',
-      icon: FolderOpenIcon,
+      icon: HiFolderOpen,
     },
     {
       to: '',
       title: 'Settings',
       text: 'Configure your preferences',
-      icon: CogIcon,
+      icon: HiCog,
     },
   ];
 
@@ -94,7 +95,7 @@ const UserDropdown: React.FC<UserDropdownProps> = ({
         </div>
         <div>
           <button onClick={() => setIsOpen(!isOpen)}>
-            <ChevronDownIcon className="w-3 h-3" />
+            <HiChevronDown className="w-3 h-3" />
           </button>
         </div>
       </div>
