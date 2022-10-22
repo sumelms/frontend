@@ -8097,10 +8097,10 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
-flowbite-react@^0.1.0:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/flowbite-react/-/flowbite-react-0.1.13.tgz#c12af20f24ef6c14d90d7eb3b4707829307dfdfd"
-  integrity sha512-SnqVva0ZeLxuckDhm8aJ8W3yOqgMhRRyNI2zcu+R43fD9EsjzsZV2TZPlQTUYuIfFq8WGncESq+qY1zjcavb0A==
+flowbite-react@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/flowbite-react/-/flowbite-react-0.2.1.tgz#73d9cb531015f577ee9b0956eb8a5d0ea0a7cd20"
+  integrity sha512-cCId7etCjNNAa56Hvt3cyEoZ/bq2rcCDvAuuvMQLS516ViwujHuSLy7VAJAGCtvJfxmMYmO8eVzLJsEtctwiiA==
   dependencies:
     "@floating-ui/react-dom" "^1.0.0"
     "@floating-ui/react-dom-interactions" "^0.9.1"
