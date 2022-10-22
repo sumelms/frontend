@@ -5690,7 +5690,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6, classnames@^2.3.1:
+classnames@^2.2.6, classnames@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
   integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
@@ -8097,19 +8097,19 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
-flowbite-react@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/flowbite-react/-/flowbite-react-0.2.1.tgz#73d9cb531015f577ee9b0956eb8a5d0ea0a7cd20"
-  integrity sha512-cCId7etCjNNAa56Hvt3cyEoZ/bq2rcCDvAuuvMQLS516ViwujHuSLy7VAJAGCtvJfxmMYmO8eVzLJsEtctwiiA==
+flowbite-react@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/flowbite-react/-/flowbite-react-0.3.0.tgz#9fa73f32693481f84255f04dc5f3ea2d09093c00"
+  integrity sha512-ar0n0zNRdvvM2jk+BR6pyhI7ogjvesZ3gkA5iE1In/fHnUD1IZ1Bj5bxcYokW2+pS9/HX7I0amXtrc8BzH+K5Q==
   dependencies:
     "@floating-ui/react-dom" "^1.0.0"
     "@floating-ui/react-dom-interactions" "^0.9.1"
-    classnames "^2.3.1"
+    classnames "^2.3.2"
     commitizen "^4.2.5"
-    react-icons "^4.4.0"
+    react-icons "^4.6.0"
     react-indiana-drag-scroll "^2.2.0"
 
-flowbite@^1.4.7:
+flowbite@^1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/flowbite/-/flowbite-1.5.3.tgz#99f0ba31b6d9a6fa8a1c25fb9aefa575a2a5efe6"
   integrity sha512-e2OHfndxTHtGMqcPqvqwg3gGLg57hmIDVgE/BazMDccgirQ0JEtirKnbZZ4WSOIEhNDgO9pJZuyC8rRlcMm6pQ==
@@ -13427,7 +13427,7 @@ react-i18next@^11.17.3:
     "@babel/runtime" "^7.14.5"
     html-parse-stringify "^3.0.1"
 
-react-icons@*, react-icons@^4.4.0:
+react-icons@*, react-icons@^4.4.0, react-icons@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.6.0.tgz#f83eda179af5d02c047449a20b702c858653d397"
   integrity sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g==
