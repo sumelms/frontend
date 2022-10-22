@@ -12,12 +12,12 @@ const Notification: React.FC<NotificationProps> = ({
   return (
     <span
       className={`absolute inline-block bottom-0 right-0 
-      ${size == 'sm' ? 'w-3 h-3 border-2' : ''}
-      ${size == 'md' ? 'w-6 h-6 border-4' : ''}
-      ${size == 'lg' ? 'w-8 h-8 border-4' : ''}
-      ${size == 'xl' ? 'w-12 h-12 border-4' : ''}
-      ${status == 'online' ? 'bg-green-400' : ''}
-      ${status == 'offline' ? 'bg-red-400' : ''}
+      ${size === 'sm' ? 'w-3 h-3 border-2' : ''}
+      ${size === 'md' ? 'w-6 h-6 border-4' : ''}
+      ${size === 'lg' ? 'w-8 h-8 border-4' : ''}
+      ${size === 'xl' ? 'w-12 h-12 border-4' : ''}
+      ${status === 'online' ? 'bg-green-400' : ''}
+      ${status === 'offline' ? 'bg-red-400' : ''}
       border-white rounded-full z-2`}
     />
   );
@@ -42,10 +42,10 @@ const Avatar: React.FC<AvatarProps> = ({
         status ? `Use is ${status} right now.` : ''
       }`}
       className={`relative inline-block
-      ${size == 'sm' ? 'w-12 h-12' : ''} 
-      ${size == 'md' ? 'w-24 h-24' : ''}
-      ${size == 'lg' ? 'w-36 h-36' : ''}
-      ${size == 'xl' ? 'w-52 h-52' : ''}
+      ${size === 'sm' ? 'w-12 h-12' : ''} 
+      ${size === 'md' ? 'w-24 h-24' : ''}
+      ${size === 'lg' ? 'w-36 h-36' : ''}
+      ${size === 'xl' ? 'w-52 h-52' : ''}
     `}
     >
       <img

@@ -1,8 +1,6 @@
-import { BellIcon, LogoutIcon, PlayIcon } from '@heroicons/react/outline';
 import { useKeycloak } from '@react-keycloak/web';
+import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import React from 'react';
-
-import UserDropdown from './UserDropdown';
 
 const Header: React.FC = () => {
   const { keycloak } = useKeycloak();
@@ -14,34 +12,55 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-white header" data-testid="header-element">
-      <div className="flex items-center justify-between h-20">
-        <div></div>
-        <div></div>
-        <div className="flex items-center divide-x divide-gray-200 divide">
-          <div className="mx-4">
-            <UserDropdown user={user} />
-          </div>
-          <div className="flex items-center h-16">
-            <nav className="inline-grid items-center grid-cols-3 mx-4 gap-x-4">
-              <button className="hover:text-red-600">
-                <PlayIcon className="w-6 h-6" />
-              </button>
-              <button className="hover:text-red-600">
-                <BellIcon className="w-6 h-6" />
-              </button>
-              <button
-                className="hover:text-red-600"
-                id="app-logout"
-                onClick={() => keycloak.logout()}
-              >
-                <LogoutIcon className="w-6 h-6" />
-              </button>
-            </nav>
-          </div>
-        </div>
+    <Navbar fluid={true} rounded={true}>
+      <Navbar.Brand href="https://flowbite.com/">
+        <img
+          src="https://flowbite.com/docs/images/logo.svg"
+          className="h-6 mr-3 sm:h-9"
+          alt="Flowbite Logo"
+        />
+        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+          Flowbite
+        </span>
+      </Navbar.Brand>
+      <div className="flex md:order-2">
+        <Dropdown
+          arrowIcon={false}
+          inline={true}
+          label={
+            <Avatar
+              alt="User settings"
+              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              rounded={true}
+            />
+          }
+        >
+          <Dropdown.Header>
+            <span className="block text-sm">Bonnie Green</span>
+            <span className="block text-sm font-medium truncate">
+              name@flowbite.com
+            </span>
+          </Dropdown.Header>
+          <Dropdown.Item>Dashboard</Dropdown.Item>
+          <Dropdown.Item>Settings</Dropdown.Item>
+          <Dropdown.Item>Earnings</Dropdown.Item>
+          <Dropdown.Divider />
+          <Dropdown.Item onClick={() => keycloak.logout()}>
+            Sign out
+          </Dropdown.Item>
+        </Dropdown>
+        <Navbar.Toggle />
       </div>
-    </header>
+      <Navbar.Collapse>
+        <Navbar.Link href="/navbars" active={true}>
+          Home
+        </Navbar.Link>
+        <Navbar.Link href="/navbars">About</Navbar.Link>
+        <Navbar.Link href="/navbars">Services</Navbar.Link>
+        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
+        <Navbar.Link href="/navbars">Contact</Navbar.Link>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 

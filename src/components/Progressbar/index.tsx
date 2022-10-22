@@ -13,8 +13,8 @@ const Progressbar: React.FC<ProgressProps> = ({
     <div
       role="progressbar"
       aria-valuenow={amount}
-      aria-valuemin="0"
-      aria-valuemax="100"
+      aria-valuemin={0}
+      aria-valuemax={100}
       data-testid="progressbar-element"
       className="w-full h-4 mt-3 bg-gray-400 rounded-full"
     >

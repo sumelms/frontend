@@ -11,11 +11,11 @@ export interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
     <>
-      <Sidebar />
-      <Main>
-        <Header />
-        {children}
-      </Main>
+      <Header />
+      <div className="flex h-screen">
+        <Sidebar />
+        <Main>{children}</Main>
+      </div>
     </>
   );
 };

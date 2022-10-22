@@ -1,25 +1,11 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  // mode: "jit", // enabling Jist In Time Compiler engine
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-
-  darkMode: 'class', // or 'media' or 'class'
-
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
-    extend: {
-      colors: {
-        primary: '#3A3A3C'
-      },
-      textColor: {
-        primary: '#3A3A3C'
-      }
-    },    
+    extend: {},
   },
-  variants: {
-    extend: {
-      backgroundColor: ['checked'],
-      borderColor: ['checked'],
-      inset: ['checked'],
-    },
-  },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 };

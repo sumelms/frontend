@@ -1,6 +1,5 @@
-import DefaultLayout from '@app/layouts/Default';
-import { RouteProps as Route } from 'router';
-
+import DefaultLayout from '../../../layouts/Default';
+import { RouteProps as Route } from '../../../router/RouteWrapper';
 import Dashboard from '../containers/Dashboard';
 
 const routes: Route[] = [

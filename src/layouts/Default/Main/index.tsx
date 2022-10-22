@@ -6,7 +6,7 @@ export interface MainProps {
 
 const Main: React.FC<MainProps> = ({ children }: MainProps) => {
   return (
-    <main className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
+    <main className="flex flex-col flex-grow -ml-64 transition-all duration-150 ease-in main md:ml-0">
       {children}
     </main>
   );

@@ -6,7 +6,7 @@ import Router from './router';
 
 const App: React.FC = () => {
   return (
-    <div className="flex flex-row min-h-screen text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-white">
+    <div className="flex flex-col text-gray-800 bg-gray-100 dark:bg-gray-900 dark:text-white">
       <Router />
     </div>
   );

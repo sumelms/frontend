@@ -1,6 +1,5 @@
-import DefaultLayout from '@app/layouts/Default';
-import { RouteProps as Route } from 'router';
-
+import DefaultLayout from '../../../layouts/Default';
+import { RouteProps as Route } from '../../../router/RouteWrapper';
 import CourseActivity from '../containers/CourseActivity';
 import CourseCommunity from '../containers/CourseCommunity';
 import CourseContents from '../containers/CourseContents';

@@ -1,6 +1,8 @@
-import Container from '@app/components/Container';
 import { useKeycloak } from '@react-keycloak/web';
+import { Rating } from 'flowbite-react';
 import React from 'react';
+
+import Container from '../../../../components/Container';
 
 const Dashboard: React.FC = () => {
   const { keycloak } = useKeycloak();
