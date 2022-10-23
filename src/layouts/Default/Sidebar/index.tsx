@@ -7,11 +7,6 @@ import {
   HiHome,
   HiQuestionMarkCircle,
 } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
-
-interface MenuListProps {
-  items: MenuListItemProps[];
-}
 
 interface MenuListItemProps {
   label: string;
@@ -22,38 +17,40 @@ interface MenuListItemProps {
 const Sidebar: React.FC = () => {
   const mainMenuItems: MenuListItemProps[] = [
     { label: 'Dashboard', route: '/', icon: HiHome },
-    { label: 'Courses', route: '/', icon: HiFolderOpen },
-    { label: 'Progress', route: '/', icon: HiChat },
+    { label: 'Courses', route: '/courses', icon: HiFolderOpen },
+    { label: 'Progress', route: '/analytics/my-progress', icon: HiChat },
   ];
 
   const settingsMenuItems = [
-    { label: 'Help', route: '/', icon: HiQuestionMarkCircle },
-    { label: 'Settings', route: '/', icon: HiCog },
+    { label: 'Help', route: '/support', icon: HiQuestionMarkCircle },
+    { label: 'Settings', route: '/account/settings', icon: HiCog },
   ];
 
   return (
-    <div className="h-screen" data-testid="sidebar-element">
-      <FlowbiteSidebar collapsed={true} aria-label="Sidebar navigation">
-        <FlowbiteSidebar.Items>
-          <FlowbiteSidebar.ItemGroup>
-            {mainMenuItems.map(({ label, route, icon }: MenuListItemProps) => (
+    <FlowbiteSidebar
+      collapsed={true}
+      data-testid="sidebar-element"
+      aria-label="Sidebar navigation"
+    >
+      <FlowbiteSidebar.Items className="flex flex-col justify-between h-full -margin-[60px]">
+        <FlowbiteSidebar.ItemGroup>
+          {mainMenuItems.map(({ label, route, icon }: MenuListItemProps) => (
+            <FlowbiteSidebar.Item key={route} href={route} icon={icon}>
+              {label}
+            </FlowbiteSidebar.Item>
+          ))}
+        </FlowbiteSidebar.ItemGroup>
+        <FlowbiteSidebar.ItemGroup>
+          {settingsMenuItems.map(
+            ({ label, route, icon }: MenuListItemProps) => (
               <FlowbiteSidebar.Item key={route} href="#" icon={icon}>
                 {label}
               </FlowbiteSidebar.Item>
-            ))}
-          </FlowbiteSidebar.ItemGroup>
-          <FlowbiteSidebar.ItemGroup>
-            {settingsMenuItems.map(
-              ({ label, route, icon }: MenuListItemProps) => (
-                <FlowbiteSidebar.Item key={route} href="#" icon={icon}>
-                  {label}
-                </FlowbiteSidebar.Item>
-              ),
-            )}
-          </FlowbiteSidebar.ItemGroup>
-        </FlowbiteSidebar.Items>
-      </FlowbiteSidebar>
-    </div>
+            ),
+          )}
+        </FlowbiteSidebar.ItemGroup>
+      </FlowbiteSidebar.Items>
+    </FlowbiteSidebar>
   );
 };
 

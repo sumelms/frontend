@@ -45,8 +45,7 @@ const theme: Partial<FlowbiteTheme> = {
   },
   sidebar: {
     base: 'h-full',
-    inner:
-      'h-full overflow-y-auto overflow-x-hidden bg-white py-4 px-3 dark:bg-zinc-900',
+    inner: 'h-full overflow-y-auto overflow-x-hidden py-4 px-3 bg-zinc-900',
     collapsed: {
       on: 'w-16',
       off: 'w-64',
@@ -84,8 +83,8 @@ const theme: Partial<FlowbiteTheme> = {
       },
     },
     item: {
-      base: 'flex items-center justify-center rounded-lg p-2 text-base font-normal text-zinc-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
-      active: 'bg-gray-100 dark:bg-gray-700',
+      base: 'group flex items-center justify-center rounded-lg p-2 text-base font-normal text-zinc-900 hover:bg-white',
+      active: 'bg-white',
       collapsed: {
         insideCollapse: 'group w-full pl-8 transition duration-75',
         noIcon: 'font-bold',
@@ -94,8 +93,8 @@ const theme: Partial<FlowbiteTheme> = {
         base: 'px-3 flex-1 whitespace-nowrap',
       },
       icon: {
-        base: 'h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white',
-        active: 'text-gray-700 dark:text-gray-100',
+        base: 'h-6 w-6 flex-shrink-0 text-gray-300 transition duration-75 hover:text-red-600 group-hover:text-red-600',
+        active: 'text-red-600',
       },
     },
     items: '',
