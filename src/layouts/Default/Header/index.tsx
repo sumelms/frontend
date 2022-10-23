@@ -12,18 +12,15 @@ const Header: React.FC = () => {
   };
 
   return (
-    <Navbar fluid={true} rounded={true}>
-      <Navbar.Brand href="https://flowbite.com/">
+    <Navbar fluid={true} rounded={false}>
+      <Navbar.Brand href="https://sumelms.com/">
         <img
-          src="https://flowbite.com/docs/images/logo.svg"
+          src="../../../assets/svg/sume-icon-dark.svg"
           className="h-6 mr-3 sm:h-9"
-          alt="Flowbite Logo"
+          alt="Sume Logo"
         />
-        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-          Flowbite
-        </span>
       </Navbar.Brand>
-      <div className="flex md:order-2">
+      <div className="flex md:order-2 bg-white">
         <Dropdown
           arrowIcon={false}
           inline={true}
