@@ -52,7 +52,7 @@ const Header: React.FC = () => {
         <Navbar.Link href="/navbars" active={true}>
           Home
         </Navbar.Link>
-        <Navbar.Link href="/navbars">About</Navbar.Link>
+        <Navbar.Link href="/courses">Courses</Navbar.Link>
         <Navbar.Link href="/navbars">Services</Navbar.Link>
         <Navbar.Link href="/navbars">Pricing</Navbar.Link>
         <Navbar.Link href="/navbars">Contact</Navbar.Link>
