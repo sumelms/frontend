@@ -87,7 +87,6 @@ Running authentication server (Keycloak)
 
 ```sh
 $ podman run \
-  -v ./keycloak:/realm \
   -p 8080:8080 \
   -e KEYCLOAK_USER=admin \
   -e KEYCLOAK_PASSWORD=admin \
@@ -173,6 +172,10 @@ Runs tests E2E to CI.
 ```.sh
 $ yarn test:e2e:ci
 ```
+
+## Troubleshooting
+
+* In case of problems in starting the keycloak, check the step-by-step in: [Configure Keycloak using file import](docs/keycloak-configuration.md).
 
 ## Contributing
 
