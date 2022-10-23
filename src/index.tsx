@@ -7,6 +7,7 @@ import App from './App';
 import keycloak from './keycloak';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './styles/global';
+import theme from './styles/theme';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -18,7 +19,7 @@ root.render(
     initOptions={{ onLoad: 'login-required' }}
   >
     <React.StrictMode>
-      <Flowbite>
+      <Flowbite theme={{ theme }}>
         <App />
       </Flowbite>
       <GlobalStyle />

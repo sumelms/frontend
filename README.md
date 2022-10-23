@@ -64,7 +64,7 @@ Create an **.env** file on root directory
 ```.sh
 SKIP_PREFLIGHT_CHECK=true
 
-REACT_APP_KEYCLOAK_URL=http://sso.sumelms.sol/auth
+REACT_APP_KEYCLOAK_URL=http://sso.sumelms.sol
 REACT_APP_KEYCLOAK_REALM=sume
 REACT_APP_KEYCLOAK_CLIENT_ID=sume-app
 ```
@@ -92,8 +92,24 @@ $ podman run \
   -e KEYCLOAK_USER=admin \
   -e KEYCLOAK_PASSWORD=admin \
   -e KEYCLOAK_IMPORT=/realm/sume.json \
-  jboss/keycloak
+  quay.io/keycloak/keycloak:18.0.2 \
+  start-dev
 ```
+
+You should be able to visit the URL:
+
+```
+  ➜  Keycloak Admin Configured:   http://sso.sumelms.sol/admin
+  ➜  Keycloak Admin:   http://localhost:8080/admin
+```
+
+Access data:
+
+|Role |User  | Password|
+|--- | --- | ---|
+|**Admin**| `admin`| `admin`|
+|**Student User**| `student`| `sume123`|
+
 
 Running the app
 
