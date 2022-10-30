@@ -42,6 +42,7 @@ Sumé LMS is a modern and open-source learning management system that uses moder
 - [Tests E2E](#tests-e2e)
 - [Mocks and Docs](#tests-e2e)
 - [Contributing](#contributing)
+- [Troubleshooting](#troubleshooting)
 - [Code of Conduct](#code-of-conduct)
 - [Team](#team)
 - [Support](#support)
@@ -87,7 +88,6 @@ Running authentication server (Keycloak)
 
 ```sh
 $ podman run \
-  -v ./keycloak:/realm \
   -p 8080:8080 \
   -e KEYCLOAK_USER=admin \
   -e KEYCLOAK_PASSWORD=admin \
@@ -173,6 +173,10 @@ Runs tests E2E to CI.
 ```.sh
 $ yarn test:e2e:ci
 ```
+
+## Troubleshooting
+
+* In case of problems in starting the keycloak, check the step-by-step in: [Configure Keycloak using file import](docs/keycloak-configuration.md).
 
 ## Contributing
 
