@@ -11,6 +11,16 @@ const Header: React.FC = () => {
     avatar: 'https://avatars.githubusercontent.com/u/191027?v=4',
   };
 
+  const UserDetails = () => {
+    return (
+      <Avatar
+        alt="User settings"
+        img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+        rounded={true}
+      />
+    );
+  };
+
   return (
     <Navbar fluid={true} rounded={false}>
       <Navbar.Brand href="https://sumelms.com/">
@@ -20,18 +30,8 @@ const Header: React.FC = () => {
           alt="Sume Logo"
         />
       </Navbar.Brand>
-      <div className="flex md:order-2 bg-white">
-        <Dropdown
-          arrowIcon={false}
-          inline={true}
-          label={
-            <Avatar
-              alt="User settings"
-              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              rounded={true}
-            />
-          }
-        >
+      <div className="flex bg-white md:order-2">
+        <Dropdown arrowIcon={false} inline={true} label={<UserDetails />}>
           <Dropdown.Header>
             <span className="block text-sm">Bonnie Green</span>
             <span className="block text-sm font-medium truncate">
@@ -46,17 +46,7 @@ const Header: React.FC = () => {
             Sign out
           </Dropdown.Item>
         </Dropdown>
-        <Navbar.Toggle />
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link href="/navbars" active={true}>
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="/navbars">About</Navbar.Link>
-        <Navbar.Link href="/navbars">Services</Navbar.Link>
-        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-        <Navbar.Link href="/navbars">Contact</Navbar.Link>
-      </Navbar.Collapse>
     </Navbar>
   );
 };
