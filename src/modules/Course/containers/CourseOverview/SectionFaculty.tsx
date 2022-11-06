@@ -12,7 +12,7 @@ const SectionFaculty: React.FC<ComponentProps<'div'>> = ({
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-5">
         Corpo Docente
       </h3>
-      <div className="flex h-full flex flex-wrap gap-x-2 md:gap-x-6 lg:gap-x-16 gap-y-2.5 lg:gap-y-20 md:gap-y-8">
+      <div className="flex h-full flex-wrap gap-x-2 md:gap-x-6 lg:gap-x-16 gap-y-2.5 lg:gap-y-20 md:gap-y-8">
         <CardEducator
           educator={{
             avatar:
