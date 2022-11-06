@@ -1,6 +1,6 @@
-import { FlowbiteTheme } from 'flowbite-react';
+import { DeepPartial, FlowbiteTheme } from 'flowbite-react';
 
-const theme: Partial<FlowbiteTheme> = {
+const theme: DeepPartial<FlowbiteTheme> = {
   navbar: {
     base: 'border-gray-50 bg-white px-2 py-2.5 sm:px-4',
     rounded: {
@@ -44,69 +44,18 @@ const theme: Partial<FlowbiteTheme> = {
     },
   },
   sidebar: {
-    base: 'h-full',
     inner: 'h-full overflow-y-auto overflow-x-hidden py-4 px-3 bg-zinc-900',
     collapsed: {
       on: 'w-16',
       off: 'w-64',
     },
-    collapse: {
-      button:
-        'group flex w-full items-center rounded-lg p-2 text-base font-normal text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700',
-      icon: {
-        base: 'h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white',
-        open: {
-          off: '',
-          on: 'text-gray-900',
-        },
-      },
-      label: {
-        base: 'ml-3 flex-1 whitespace-nowrap text-left',
-        icon: 'h-6 w-6',
-      },
-      list: 'space-y-2 py-2',
-    },
-    cta: {
-      base: 'mt-6 rounded-lg p-4',
-      color: {
-        blue: 'bg-blue-50 dark:bg-blue-900',
-        dark: 'bg-dark-50 dark:bg-dark-900',
-        failure: 'bg-red-50 dark:bg-red-900',
-        gray: 'bg-alternative-50 dark:bg-alternative-900',
-        green: 'bg-green-50 dark:bg-green-900',
-        light: 'bg-light-50 dark:bg-light-900',
-        red: 'bg-red-50 dark:bg-red-900',
-        purple: 'bg-purple-50 dark:bg-purple-900',
-        success: 'bg-green-50 dark:bg-green-900',
-        yellow: 'bg-yellow-50 dark:bg-yellow-900',
-        warning: 'bg-yellow-50 dark:bg-yellow-900',
-      },
-    },
     item: {
       base: 'group flex items-center justify-center rounded-lg p-2 text-base font-normal text-zinc-900 hover:bg-white',
       active: 'bg-white',
-      collapsed: {
-        insideCollapse: 'group w-full pl-8 transition duration-75',
-        noIcon: 'font-bold',
-      },
-      content: {
-        base: 'px-3 flex-1 whitespace-nowrap',
-      },
       icon: {
         base: 'h-6 w-6 flex-shrink-0 text-gray-300 transition duration-75 hover:text-red-600 group-hover:text-red-600',
         active: 'text-red-600',
       },
-    },
-    items: '',
-    itemGroup:
-      'mt-4 space-y-2 border-t border-gray-200 pt-4 first:mt-0 first:border-t-0 first:pt-0 dark:border-gray-700',
-    logo: {
-      base: 'mb-5 flex items-center pl-2.5',
-      collapsed: {
-        on: 'hidden',
-        off: 'self-center whitespace-nowrap text-xl font-semibold dark:text-white',
-      },
-      img: 'mr-3 h-6 sm:h-7',
     },
   },
   tooltip: {
