@@ -11,6 +11,8 @@ import { BreadcrumbProps } from '../../../../components/Breadcrumb';
 import ContainerLayout from '../../components/ContainerLayout';
 import { PresentationHeaderItemProps } from '../../components/PresentationHeader/PresentationHeaderItem';
 import CourseOverviewService, { overviewInfo } from './overview';
+import SectionFaculty from './SectionFaculty';
+import SectionPresentation from './SectionPresentation';
 
 type RouteParams = {
   course: string;
@@ -68,9 +70,10 @@ const CourseOverview: React.FC = () => {
       breadcrumb={breadcrumb}
     >
       <div className="flex flex-col gap-2 my-2">
-        {overview.course_presentation.description}
-        <br />
-        {course}
+        <SectionPresentation>
+          {overview.course_presentation.description}
+        </SectionPresentation>
+        <SectionFaculty />
       </div>
     </ContainerLayout>
   );

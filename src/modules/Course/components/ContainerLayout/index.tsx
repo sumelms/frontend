@@ -19,7 +19,7 @@ const ContainerLayout: React.FC<ContainerLayoutProps> = ({
   return (
     <>
       {presentationHeader && <PresentationHeader {...presentationHeader} />}
-      <div className="bg-gray-200 flex-auto h-screen mx-16 p-3">
+      <div className="bg-zinc-200 flex-auto h-min mx-14 py-3 px-4">
         <div className="w-full my-3">
           {breadcrumb && <Breadcrumb {...breadcrumb} />}
         </div>

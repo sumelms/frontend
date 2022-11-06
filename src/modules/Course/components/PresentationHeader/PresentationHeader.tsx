@@ -19,7 +19,7 @@ const PresentationHeader: React.FC<PresentationHeaderProps> = ({
   return (
     <header {...props}>
       <div className="w-full bg-zinc-900 text-white min-h-fit h-80">
-        <div className="flex-col pl-24 pt-14">
+        <div className="flex-col px-16 py-14">
           <h1>{title}</h1>
           <br></br>
           <h3>{subtitle}</h3>
