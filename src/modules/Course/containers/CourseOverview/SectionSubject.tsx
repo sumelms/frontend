@@ -19,8 +19,8 @@ const SectionClassroom: React.FC<ComponentProps<'div'>> = ({
           }}
           info={[
             { icon: HiCalendar, name: '28 Agosto' },
-            { icon: HiClock, name: '19h' },
-            { icon: HiTable, name: 'Verão' },
+            { icon: HiClock, name: '19h - 22h' },
+            { icon: HiTable, name: 'Término 12 Dezembro' },
             { icon: HiInbox, name: 'Presencial' },
             { icon: HiUser, name: 'Dr. John' },
           ]}
