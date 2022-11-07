@@ -1,12 +1,16 @@
 import { Avatar, Card } from 'flowbite-react';
 import React from 'react';
-import { HiArrowUp, HiOutlineChatAlt2 } from 'react-icons/hi';
 import { IconType } from 'react-icons/lib';
 
 interface Educator {
   avatar?: string;
   name: string;
   title: string;
+}
+
+interface Action {
+  icon: IconType;
+  name: string;
 }
 
 interface Info {
@@ -18,9 +22,14 @@ interface Info {
 interface CardEducatorProps {
   educator: Educator;
   info: Info[];
+  action: Action[];
 }
 
-const CardEducator: React.FC<CardEducatorProps> = ({ educator, info }) => {
+const CardEducator: React.FC<CardEducatorProps> = ({
+  educator,
+  info,
+  action,
+}) => {
   return (
     <Card className="lg:w-72">
       <div className="flex flex-col my-2">
@@ -35,28 +44,19 @@ const CardEducator: React.FC<CardEducatorProps> = ({ educator, info }) => {
         </div>
 
         <div className="my-6">
-          <div className="h-12 flex">
-            <a
-              href="/"
-              className="flex items-center gap-x-5 hover:text-blue-500 hover:delay-150"
-            >
-              <HiArrowUp className="w-5 h-5" />
-              <p className="text-sm font-semibold text-gray-600 dark:text-white hover:text-blue-500 hover:underline hover:underline-offset-4">
-                Conferir Currículo Lattes
-              </p>
-            </a>
-          </div>
-          <div className="h-12 flex">
-            <a
-              href="/"
-              className="flex items-center gap-x-5 hover:text-blue-500 hover:delay-150"
-            >
-              <HiOutlineChatAlt2 className="w-5 h-5" />
-              <p className="text-sm font-semibold text-gray-600 dark:text-white hover:text-blue-500 hover:underline hover:underline-offset-4">
-                Enviar uma mensagem
-              </p>
-            </a>
-          </div>
+          {action.map(({ icon: Icon, name }, key) => (
+            <div key={key} className="h-12 flex">
+              <a
+                href="/"
+                className="flex items-center gap-x-5 hover:text-blue-500 hover:delay-150"
+              >
+                <Icon className="w-5 h-5" />
+                <p className="text-sm font-semibold text-gray-600 dark:text-white hover:text-blue-500 hover:underline hover:underline-offset-4">
+                  {name}
+                </p>
+              </a>
+            </div>
+          ))}
         </div>
 
         <div className="space-y-2">
