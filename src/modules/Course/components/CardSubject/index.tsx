@@ -9,7 +9,8 @@ interface Subject {
 
 interface Info {
   icon: IconType;
-  name: string;
+  name?: string;
+  text?: string;
 }
 
 interface CardSubjectProps {
@@ -21,26 +22,36 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
   return (
     <div>
       <Card className="lg:w-96">
-        <div className="py-2">
-          <p className="text-lg	font-semibold text-gray-900 dark:text-white">
+        <div className="p-2 space-y-5">
+          <p className="text-lg	font-bold text-gray-900 dark:text-white">
             {subject.title}
           </p>
-          <div className="grid gap-x-3 gap-y-2 grid-cols-2 my-5">
-            {info.map(({ icon: Icon, name }, key) => (
+          <div className="grid gap-x-3 gap-y-2 grid-cols-2">
+            {info.map(({ icon: Icon, name, text }, key) => (
               <div
                 key={key}
                 className="flex text-center items-center h-5 gap-x-2"
               >
                 <Icon className="w-4 h-4 text-gray-300 " />
-                <p className="text-xs text-gray-900 dark:text-white">{name}</p>
+                <div className="flex">
+                  <p className="text-xs font-semibold text-stone-700 dark:text-white">
+                    {name}
+                  </p>
+                  <p className="text-xs text-stone-700 dark:text-white">
+                    {text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="mb-8">
+          <div>
+            <p className="text-xs font-semibold text-stone-700 dark:text-white">
+              {subject.subtitle}
+            </p>
             <Progress
               progress={80}
-              label="todo: delet this label"
+              label="todo: delet this label<"
               labelPosition="outside"
               labelProgress={true}
               color="red"
@@ -48,8 +59,8 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
             />
           </div>
 
-          <div className="flex justify-center">
-            <Button outline={true} color="failure">
+          <div>
+            <Button outline fullSized color="light">
               Acessar minha Turma
             </Button>
           </div>

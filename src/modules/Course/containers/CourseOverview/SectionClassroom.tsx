@@ -17,6 +17,8 @@ const SectionClassroom: React.FC<ComponentProps<'div'>> = ({
           classroom={{
             title: 'Calculo - Sistemas de Informação',
             subtitle: 'Students',
+            number: 25,
+            smalltext: 'pelople joined the class',
           }}
           info={[
             { icon: HiCalendar, name: '28 Agosto' },
@@ -24,11 +26,20 @@ const SectionClassroom: React.FC<ComponentProps<'div'>> = ({
             { icon: HiVideoCamera, name: 'Remoto' },
             { icon: HiUser, name: 'Dra Izadora Perk' },
           ]}
-          students={{
-            avatar:
-              'https://flowbite.com/docs/images/people/profile-picture-1.jpg',
-            text: '+25 peolple joined the classroom',
-          }}
+          students={[
+            {
+              avatar:
+                'https://flowbite.com/docs/images/people/profile-picture-1.jpg',
+            },
+            {
+              avatar:
+                'https://flowbite.com/docs/images/people/profile-picture-2.jpg',
+            },
+            {
+              avatar:
+                'https://flowbite.com/docs/images/people/profile-picture-3.jpg',
+            },
+          ]}
         />
       </div>
     </div>

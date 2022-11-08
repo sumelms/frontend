@@ -1,10 +1,13 @@
 import { Avatar, Button, Card } from 'flowbite-react';
+import AvatarGroup from 'flowbite-react/lib/esm/components/Avatar/AvatarGroup';
 import React from 'react';
 import { IconType } from 'react-icons/lib';
 
 interface Classroom {
   title: string;
   subtitle?: string;
+  number?: number;
+  smalltext?: string;
 }
 
 interface Info {
@@ -14,13 +17,12 @@ interface Info {
 
 interface Students {
   avatar: string;
-  text?: string;
 }
 
 interface CardClassroomProps {
   classroom: Classroom;
   info: Info[];
-  students: Students;
+  students: Students[];
 }
 
 const CardClassroom: React.FC<CardClassroomProps> = ({
@@ -31,38 +33,42 @@ const CardClassroom: React.FC<CardClassroomProps> = ({
   return (
     <div>
       <Card className="lg:w-96">
-        <div className="py-2">
-          <p className="text-lg	font-semibold text-gray-900 dark:text-white">
+        <div className="p-2">
+          <p className="text-lg	font-bold text-gray-900 dark:text-white">
             {classroom.title}
           </p>
-          <div className="grid gap-x-6 gap-y-4 grid-cols-2 my-5">
+          <div className="grid gap-x-3 gap-y-2 grid-cols-2 my-5">
             {info.map(({ icon: Icon, name }, key) => (
               <div
                 key={key}
                 className="flex text-center items-center h-5 gap-x-2"
               >
                 <Icon className="w-4 h-4 text-gray-300" />
-                <p className="text-xs text-gray-900 dark:text-white">{name}</p>
+                <p className="text-xs text-stone-700 dark:text-white">{name}</p>
               </div>
             ))}
           </div>
 
-          <p className="text-sm	font-medium text-gray-900 dark:text-white">
+          <p className="text-sm font-semibold text-stone-700 dark:text-white">
             {classroom.subtitle}
           </p>
 
           <div className="flex my-2 items-center gap-x-2">
-            <div className="flex">
-              <Avatar img={students.avatar} rounded={true} />
-            </div>
+            <AvatarGroup>
+              {students.map(({ avatar }, key) => (
+                <Avatar key={key} img={avatar} rounded={true} />
+              ))}
+            </AvatarGroup>
+
             <p className="text-xs text-gray-500 dark:text-white">
-              {students.text}
+              +{classroom.number}&nbsp;
+              {classroom.smalltext}
             </p>
           </div>
 
-          <div className="flex justify-center mt-6">
-            <Button outline={true} color="failure">
-              Acessar minha Turma
+          <div className="mt-6">
+            <Button outline fullSized color="light">
+              Solicitar inscrição na Turma
             </Button>
           </div>
         </div>

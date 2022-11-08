@@ -1,6 +1,18 @@
 import { DeepPartial, FlowbiteTheme } from 'flowbite-react';
 
 const theme: DeepPartial<FlowbiteTheme> = {
+  avatarGroup: {
+    base: 'flex -space-x-1',
+  },
+  button: {
+    outline: {
+      color: {
+        light:
+          'text-red-700 hover:text-white font-bold bg-transparent border border-slate-600/75 hover:bg-red-700/75 hover:border-transparent',
+      },
+      on: 'bg-white text-red-700 group-hover:bg-opacity-0 group-hover:text-inherit dark:bg-white-900 dark:text-red-700',
+    },
+  },
   navbar: {
     base: 'border-gray-50 bg-white px-2 py-2.5 sm:px-4',
     rounded: {
@@ -77,6 +89,16 @@ const theme: DeepPartial<FlowbiteTheme> = {
         auto: 'bg-white dark:bg-zinc-700',
       },
       placement: '-4px',
+    },
+  },
+  progress: {
+    base: 'w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700',
+    label:
+      'mb-1 flex justify-end font-medium text-xs text-gray-500 dark:text-white',
+    bar: 'flex items-center justify-center rounded-full text-center font-medium leading-none text-blue-100',
+    color: {
+      dark: 'bg-gray-600/75 dark:bg-gray-300/75',
+      red: 'bg-red-700/75 dark:bg-red-600/75',
     },
   },
 };
