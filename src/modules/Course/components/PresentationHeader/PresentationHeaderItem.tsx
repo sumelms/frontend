@@ -17,10 +17,10 @@ const PresentationHeaderItem: React.FC<PresentationHeaderItemProps> = ({
   itemText,
 }: PresentationHeaderItemProps): JSX.Element => {
   return (
-    <div className={className ?? 'inline-flex mr-2 mt-10 text-base'}>
-      {Icon && <Icon />}
-      <span className="text-base px-1">{item}</span>
-      <span className="text-base px-1">{itemText}</span>
+    <div className={className ?? 'inline-flex items-center h-9 -ml-3'}>
+      {Icon && <Icon className="mx-2" />}
+      <span className="mx-1">{item}</span>
+      <span className="">{itemText}</span>
     </div>
   );
 };
