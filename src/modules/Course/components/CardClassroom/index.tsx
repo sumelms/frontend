@@ -1,28 +1,28 @@
 import { Avatar, Button, Card } from 'flowbite-react';
+import AvatarGroup from 'flowbite-react/lib/esm/components/Avatar/AvatarGroup';
 import React from 'react';
-import { HiCalendar, HiClock, HiInbox, HiUser } from 'react-icons/hi';
+import { IconType } from 'react-icons/lib';
 
 interface Classroom {
   title: string;
+  subtitle?: string;
+  number?: number;
+  smalltext?: string;
 }
 
 interface Info {
-  data: string;
-  time: string;
-  educator: string;
-  modality: string;
+  icon: IconType;
+  name: string;
 }
 
 interface Students {
-  avatar?: string;
-  title: string;
-  text?: string;
+  avatar: string;
 }
 
 interface CardClassroomProps {
   classroom: Classroom;
-  info: Info;
-  students: Students;
+  info: Info[];
+  students: Students[];
 }
 
 const CardClassroom: React.FC<CardClassroomProps> = ({
@@ -32,61 +32,43 @@ const CardClassroom: React.FC<CardClassroomProps> = ({
 }) => {
   return (
     <div>
-      <Card>
-        <div className="">
+      <Card className="lg:w-96">
+        <div className="p-2">
           <p className="text-lg	font-bold text-gray-900 dark:text-white">
             {classroom.title}
           </p>
-          <div className="grid gap-x-6 gap-y-4 grid-cols-2 my-5">
-            <div className="flex text-center items-center">
-              <HiCalendar className="w-4 h-4 text-gray-300 mr-1" />
-              <p className="text-sm text-gray-900 dark:text-white">
-                {info.data}
-              </p>
-            </div>
-            <div className="flex text-center items-center">
-              <HiUser className="w-4 h-4 text-gray-300 mr-1" />
-              <p className="text-sm text-gray-900 dark:text-white">
-                {info.educator}
-              </p>
-            </div>
-            <div className="flex text-center items-center">
-              <HiClock className="w-4 h-4 text-gray-300 mr-1" />
-              <p className="text-sm text-gray-900 dark:text-white">
-                {info.time}
-              </p>
-            </div>
-            <div className="flex text-center items-center">
-              <HiInbox className="w-4 h-4 text-gray-300 mr-1" />
-              <p className="text-sm text-gray-900 dark:text-white">
-                {info.modality}
-              </p>
-            </div>
+          <div className="grid gap-x-3 gap-y-2 grid-cols-2 my-5">
+            {info.map(({ icon: Icon, name }, key) => (
+              <div
+                key={key}
+                className="flex text-center items-center h-5 gap-x-2"
+              >
+                <Icon className="w-4 h-4 text-gray-300" />
+                <p className="text-xs text-stone-700 dark:text-white">{name}</p>
+              </div>
+            ))}
           </div>
 
-          <p className="text-sm	font-semibold text-gray-900 dark:text-white">
-            {students.title}
+          <p className="text-sm font-semibold text-stone-700 dark:text-white">
+            {classroom.subtitle}
           </p>
 
-          <div className="flex mt-2 mb-6 items-center">
-            <div className="flex">
-              <Avatar
-                img="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
-                rounded={true}
-              />
-              <Avatar
-                img="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
-                rounded={true}
-              />
-            </div>
-            <p className="text-xs ml-2 text-gray-500 dark:text-white">
-              {students.text}
+          <div className="flex my-2 items-center gap-x-2">
+            <AvatarGroup>
+              {students.map(({ avatar }, key) => (
+                <Avatar key={key} img={avatar} rounded={true} />
+              ))}
+            </AvatarGroup>
+
+            <p className="text-xs text-gray-500 dark:text-white">
+              +{classroom.number}&nbsp;
+              {classroom.smalltext}
             </p>
           </div>
 
-          <div className="flex justify-center">
-            <Button outline={true} color="failure">
-              Acessar minha Turma
+          <div className="mt-6">
+            <Button outline fullSized color="light">
+              Solicitar inscrição na Turma
             </Button>
           </div>
         </div>

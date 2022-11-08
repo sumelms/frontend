@@ -3,7 +3,7 @@ import { HiCalendar, HiClock, HiInbox, HiTable, HiUser } from 'react-icons/hi';
 
 import CardSubject from '../../components/CardSubject';
 
-const SectionClassroom: React.FC<ComponentProps<'div'>> = ({
+const SectionSubject: React.FC<ComponentProps<'div'>> = ({
   children,
   ...props
 }) => {
@@ -16,13 +16,14 @@ const SectionClassroom: React.FC<ComponentProps<'div'>> = ({
         <CardSubject
           subject={{
             title: 'Calculo - Sistemas de Informação',
+            subtitle: 'Meu progresso na turma:',
           }}
           info={[
-            { icon: HiCalendar, name: '28 Agosto' },
-            { icon: HiClock, name: '19h' },
-            { icon: HiTable, name: 'Verão' },
-            { icon: HiInbox, name: 'Presencial' },
-            { icon: HiUser, name: 'Dr. John' },
+            { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
+            { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+            { icon: HiClock, text: '19h - 22h' },
+            { icon: HiInbox, text: 'Presencial' },
+            { icon: HiUser, text: 'Dr. John' },
           ]}
         />
       </div>
@@ -30,4 +31,4 @@ const SectionClassroom: React.FC<ComponentProps<'div'>> = ({
   );
 };
 
-export default SectionClassroom;
+export default SectionSubject;
