@@ -1,4 +1,5 @@
 import React, { ComponentProps } from 'react';
+import { HiCalendar, HiClock, HiUser, HiVideoCamera } from 'react-icons/hi';
 
 import CardClassroom from '../../components/CardClassroom';
 
@@ -15,32 +16,30 @@ const SectionClassroom: React.FC<ComponentProps<'div'>> = ({
         <CardClassroom
           classroom={{
             title: 'Calculo - Sistemas de Informação',
+            subtitle: 'Students',
+            number: 25,
+            smalltext: 'pelople joined the class',
           }}
-          info={{
-            data: 'Segunda, 28 Agosto',
-            time: '19',
-            educator: 'Dra. Izadora Perk',
-            modality: 'Remoto',
-          }}
-          students={{
-            title: 'Estudantes',
-            text: '+25 peolple joined the classroom',
-          }}
-        />
-        <CardClassroom
-          classroom={{
-            title: 'Calculo - Engenharia',
-          }}
-          info={{
-            data: 'Segunda, 28 Agosto',
-            time: '19',
-            educator: 'Dra. Izadora Perk',
-            modality: 'Remoto',
-          }}
-          students={{
-            title: 'Estudantes',
-            text: '+25 peolple joined the classroom',
-          }}
+          info={[
+            { icon: HiCalendar, name: '28 Agosto' },
+            { icon: HiClock, name: '19h to 22h' },
+            { icon: HiVideoCamera, name: 'Remoto' },
+            { icon: HiUser, name: 'Dra Izadora Perk' },
+          ]}
+          students={[
+            {
+              avatar:
+                'https://flowbite.com/docs/images/people/profile-picture-1.jpg',
+            },
+            {
+              avatar:
+                'https://flowbite.com/docs/images/people/profile-picture-2.jpg',
+            },
+            {
+              avatar:
+                'https://flowbite.com/docs/images/people/profile-picture-3.jpg',
+            },
+          ]}
         />
       </div>
     </div>

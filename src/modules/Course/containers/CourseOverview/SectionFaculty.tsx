@@ -1,5 +1,11 @@
 import React, { ComponentProps } from 'react';
-import { HiOutlinePlay, HiOutlineStar, HiOutlineUsers } from 'react-icons/hi';
+import {
+  HiArrowNarrowUp,
+  HiOutlineChatAlt2,
+  HiOutlinePlay,
+  HiOutlineStar,
+  HiOutlineUsers,
+} from 'react-icons/hi';
 
 import CardEducator from '../../components/CardEducator';
 
@@ -20,6 +26,10 @@ const SectionFaculty: React.FC<ComponentProps<'div'>> = ({
             name: 'Prof. Dr. Jack Crawford',
             title: 'Vice-Coordenador',
           }}
+          action={[
+            { icon: HiArrowNarrowUp, name: 'Conferir Currículo Lattes' },
+            { icon: HiOutlineChatAlt2, name: 'Enviar uma mensagem' },
+          ]}
           info={[
             { icon: HiOutlinePlay, name: 'Subjects', value: 7 },
             { icon: HiOutlineUsers, name: 'Estudantes', value: 7 },
@@ -33,6 +43,10 @@ const SectionFaculty: React.FC<ComponentProps<'div'>> = ({
             name: 'Prof. Dr. Jack Crawford',
             title: 'Vice-Coordenador',
           }}
+          action={[
+            { icon: HiArrowNarrowUp, name: 'Conferir Currículo Lattes' },
+            { icon: HiOutlineChatAlt2, name: 'Enviar uma mensagem' },
+          ]}
           info={[
             { icon: HiOutlinePlay, name: 'Subjects', value: 7 },
             { icon: HiOutlineUsers, name: 'Estudantes', value: 7 },
@@ -46,19 +60,10 @@ const SectionFaculty: React.FC<ComponentProps<'div'>> = ({
             name: 'Prof. Dr. Jack Crawford',
             title: 'Vice-Coordenador',
           }}
-          info={[
-            { icon: HiOutlinePlay, name: 'Subjects', value: 7 },
-            { icon: HiOutlineUsers, name: 'Estudantes', value: 7 },
-            { icon: HiOutlineStar, name: 'Avaliação', value: 7 },
+          action={[
+            { icon: HiArrowNarrowUp, name: 'Conferir Currículo Lattes' },
+            { icon: HiOutlineChatAlt2, name: 'Enviar uma mensagem' },
           ]}
-        />
-        <CardEducator
-          educator={{
-            avatar:
-              'https://flowbite.com/docs/images/people/profile-picture-5.jpg',
-            name: 'Prof. Dr. Jack Crawford',
-            title: 'Vice-Coordenador',
-          }}
           info={[
             { icon: HiOutlinePlay, name: 'Subjects', value: 7 },
             { icon: HiOutlineUsers, name: 'Estudantes', value: 7 },
