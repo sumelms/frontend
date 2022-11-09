@@ -1,21 +1,18 @@
 import React, { ComponentProps, PropsWithChildren } from 'react';
 
-export type PresentationHeaderItemProps = PropsWithChildren<
-  ComponentProps<'li'>
-> & {
+export type PageHeaderItemProps = PropsWithChildren<ComponentProps<'li'>> & {
   icon?: React.FC<ComponentProps<'svg'>>;
   item: string;
   itemText: string;
   className?: string;
 };
 
-//@TODO MOVE TO COURSE/COMPONENTS
-const PresentationHeaderItem: React.FC<PresentationHeaderItemProps> = ({
+const PageHeaderItem: React.FC<PageHeaderItemProps> = ({
   icon: Icon,
   className,
   item,
   itemText,
-}: PresentationHeaderItemProps): JSX.Element => {
+}: PageHeaderItemProps): JSX.Element => {
   return (
     <div
       className={
@@ -29,4 +26,4 @@ const PresentationHeaderItem: React.FC<PresentationHeaderItemProps> = ({
   );
 };
 
-export default PresentationHeaderItem;
+export default PageHeaderItem;
