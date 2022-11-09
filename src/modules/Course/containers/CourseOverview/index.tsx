@@ -18,23 +18,23 @@ type RouteParams = {
   course: string;
 };
 
-const presentationIcons: { [key: string]: React.FC<ComponentProps<'svg'>> } = {
+const headerItemsIcons: { [key: string]: React.FC<ComponentProps<'svg'>> } = {
   grade: RiTimer2Line,
   modality: RiQuestionnaireLine,
   lessons: RiBarChartBoxLine,
 };
 
 const getIcons = (items: Array<overviewInfo>): PageHeaderItemProps[] => {
-  const presentationItems: PageHeaderItemProps[] = [];
+  const headerItems: PageHeaderItemProps[] = [];
 
   items.map((item) => {
-    presentationItems.push({
-      icon: presentationIcons[item.key],
+    headerItems.push({
+      icon: headerItemsIcons[item.key],
       ...item,
     });
   });
 
-  return presentationItems;
+  return headerItems;
 };
 
 const breadcrumb: BreadcrumbProps = {
@@ -57,14 +57,14 @@ const CourseOverview: React.FC = () => {
 
   // @TODO: Refactor to use a Service HTTP request.
   const overview = CourseOverviewService();
-  const presentationItems: PageHeaderItemProps[] = getIcons(
+  const headerItems: PageHeaderItemProps[] = getIcons(
     overview.course_presentation.info,
   );
   const { title, subtitle } = overview;
 
   return (
     <ContainerLayout
-      presentationHeader={{ title, subtitle, presentationItems }}
+      header={{ title, subtitle, items: headerItems }}
       breadcrumb={breadcrumb}
     >
       <div className="flex flex-col gap-2 my-2">

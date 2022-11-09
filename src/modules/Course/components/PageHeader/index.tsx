@@ -1,5 +1,5 @@
-import PresentationHeader, { PresentationHeaderProps } from './PageHeader';
-import { PresentationHeaderItemProps } from './PageHeaderItem';
+import PageHeader, { PageHeaderProps } from './PageHeader';
+import { PageHeaderItemProps } from './PageHeaderItem';
 
-export type { PresentationHeaderProps, PresentationHeaderItemProps };
-export default PresentationHeader;
+export type { PageHeaderProps, PageHeaderItemProps };
+export default PageHeader;

@@ -1,25 +1,23 @@
 import React from 'react';
 
 import Breadcrumb, { BreadcrumbProps } from '../../../../components/Breadcrumb';
-import PresentationHeader, {
-  PresentationHeaderProps,
-} from '../PageHeader/PageHeader';
+import PageHeader, { PageHeaderProps } from '../PageHeader/PageHeader';
 
 export type ContainerLayoutProps = {
-  presentationHeader?: PresentationHeaderProps;
+  header?: PageHeaderProps;
   breadcrumb?: BreadcrumbProps;
   children: React.ReactNode;
 };
 
 const ContainerLayout: React.FC<ContainerLayoutProps> = ({
-  presentationHeader,
+  header,
   breadcrumb,
   children,
 }: ContainerLayoutProps) => {
   return (
     <>
-      {presentationHeader && <PresentationHeader {...presentationHeader} />}
-      <div className="bg-zinc-200 flex-auto h-min mx-14 py-3 px-4">
+      {header && <PageHeader {...header} />}
+      <div className="flex-auto px-4 py-3 bg-zinc-200 h-min mx-14">
         <div className="w-full my-3">
           {breadcrumb && <Breadcrumb {...breadcrumb} />}
         </div>

@@ -6,13 +6,13 @@ import PageHeaderItem, { PageHeaderItemProps } from './PageHeaderItem';
 export type PageHeaderProps = {
   title: string;
   subtitle: string;
-  presentationItems: PageHeaderItemProps[];
+  items: PageHeaderItemProps[];
 };
 
 const PageHeader: React.FC<PageHeaderProps> = ({
   title,
   subtitle,
-  presentationItems,
+  items,
   ...props
 }: PageHeaderProps) => {
   return (
@@ -23,7 +23,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
             <p className="text-4xl font-bold">{title}</p>
             <p className="text-xl font-semibold">{subtitle}</p>
             <div className="space-x-2 divide-x">
-              {presentationItems.map((elementProps, index) => (
+              {items.map((elementProps, index) => (
                 <PageHeaderItem {...elementProps} key={index.toString()} />
               ))}
             </div>
