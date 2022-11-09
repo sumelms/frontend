@@ -3,7 +3,7 @@ import React from 'react';
 import Breadcrumb, { BreadcrumbProps } from '../../../../components/Breadcrumb';
 import PresentationHeader, {
   PresentationHeaderProps,
-} from '../PresentationHeader/PresentationHeader';
+} from '../PageHeader/PageHeader';
 
 export type ContainerLayoutProps = {
   presentationHeader?: PresentationHeaderProps;

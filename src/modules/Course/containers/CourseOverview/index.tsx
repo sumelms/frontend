@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 
 import { BreadcrumbProps } from '../../../../components/Breadcrumb';
 import ContainerLayout from '../../components/ContainerLayout';
-import { PresentationHeaderItemProps } from '../../components/PresentationHeader/PresentationHeaderItem';
+import { PageHeaderItemProps } from '../../components/PageHeader/PageHeaderItem';
 import CourseOverviewService, { overviewInfo } from './overview';
 import SectionFaculty from './SectionFaculty';
 import SectionPresentation from './SectionPresentation';
@@ -24,10 +24,8 @@ const presentationIcons: { [key: string]: React.FC<ComponentProps<'svg'>> } = {
   lessons: RiBarChartBoxLine,
 };
 
-const getIcons = (
-  items: Array<overviewInfo>,
-): PresentationHeaderItemProps[] => {
-  const presentationItems: PresentationHeaderItemProps[] = [];
+const getIcons = (items: Array<overviewInfo>): PageHeaderItemProps[] => {
+  const presentationItems: PageHeaderItemProps[] = [];
 
   items.map((item) => {
     presentationItems.push({
@@ -59,7 +57,7 @@ const CourseOverview: React.FC = () => {
 
   // @TODO: Refactor to use a Service HTTP request.
   const overview = CourseOverviewService();
-  const presentationItems: PresentationHeaderItemProps[] = getIcons(
+  const presentationItems: PageHeaderItemProps[] = getIcons(
     overview.course_presentation.info,
   );
   const { title, subtitle } = overview;

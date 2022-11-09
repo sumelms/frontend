@@ -25,8 +25,8 @@ const CourseOverviewService = function () {
         },
         {
           key: 'lessons',
-          item: '25',
-          itemText: 'Lições',
+          item: 'Lições',
+          itemText: '25',
           order: 3,
         },
       ],
