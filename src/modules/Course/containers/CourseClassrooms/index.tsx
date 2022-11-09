@@ -5,10 +5,10 @@ type RouteParams = {
   course: string;
 };
 
-const CourseContents: React.FC = () => {
+const CourseClassrooms: React.FC = () => {
   const { course } = useParams<RouteParams>();
 
-  return <>THIS IS THE COURSE ({course}) CONTENTS PAGE</>;
+  return <>THIS IS THE COURSE ({course}) CLASSROOMS PAGE</>;
 };
 
-export default CourseContents;
+export default CourseClassrooms;

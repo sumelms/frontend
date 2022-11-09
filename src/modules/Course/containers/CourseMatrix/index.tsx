@@ -5,10 +5,10 @@ type RouteParams = {
   course: string;
 };
 
-const CourseProjects: React.FC = () => {
+const CourseMatrix: React.FC = () => {
   const { course } = useParams<RouteParams>();
 
-  return <>THIS IS THE COURSE {course} PROJECTS PAGE</>;
+  return <>THIS IS THE COURSE {course} MATRIX PAGE</>;
 };
 
-export default CourseProjects;
+export default CourseMatrix;
