@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: [
@@ -10,19 +10,18 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['open-sans', 'sans-serif'],
+      roboto: ['Roboto', 'sans-serif'],
     },
-    extend: {
-
-    },
+    extend: {},
   },
   plugins: [
     require('flowbite/plugin'),
-    plugin(function({ addBase, theme }) {
+    plugin(function ({ addBase, theme }) {
       addBase({
-        'h1': { fontSize: theme('fontSize.3xl') },
-        'h2': { fontSize: theme('fontSize.2xl') },
-        'h3': { fontSize: theme('fontSize.xl') },
-      })
-    })
+        h1: { fontSize: theme('fontSize.3xl') },
+        h2: { fontSize: theme('fontSize.2xl') },
+        h3: { fontSize: theme('fontSize.xl') },
+      });
+    }),
   ],
 };

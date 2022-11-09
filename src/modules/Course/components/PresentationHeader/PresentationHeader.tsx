@@ -33,9 +33,12 @@ const PresentationHeader: React.FC<PresentationHeaderProps> = ({
               ))}
             </div>
           </div>
-          <a href="/" className="flex content-center space-x-3">
-            <HiDownload className="w-5 h-5" />
-            <p className="flex items-center text-sm">
+          <a
+            href="/"
+            className="flex content-center space-x-3 hover:text-blue-500 hover:underline hover:underline-offset-4"
+          >
+            <HiDownload className="w-6 h-6" />
+            <p className="flex items-center font-roboto font-semibold tracking-wider">
               Baixar matriz curricular
             </p>
           </a>
