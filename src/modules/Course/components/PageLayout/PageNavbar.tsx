@@ -1,8 +1,6 @@
-import { Breadcrumb, Tabs } from 'flowbite-react';
+import { Breadcrumb } from 'flowbite-react';
 import React from 'react';
 import { HiHome } from 'react-icons/hi';
-
-// interface PageHeaderProps {}
 
 interface PageHeaderTheme {
   navbar: {

@@ -73,6 +73,7 @@
     "aria-live-storybook-addon": "^0.0.6",
     "autoprefixer": "^10.4.7",
     "axe-core": "^4.3.3",
+    "classnames": "^2.3.2",
     "cypress": "^8.5.0",
     "cypress-axe": "^0.13.0",
     "eslint-config-prettier": "^8.3.0",
