@@ -21,10 +21,8 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   return (
     <>
       <PageHeader title={title} subtitle={subtitle} items={items} />
-      <div className="flex-auto px-4 py-3 bg-zinc-200 h-min mx-14">
-        <div className="w-full my-3">
-          {breadcrumb && <Breadcrumb {...breadcrumb} />}
-        </div>
+      <div className="container flex-col px-5 mx-auto py-7 lg:py-14 lg:px-10 bg-neutral-100">
+        <div>{breadcrumb && <Breadcrumb {...breadcrumb} />}</div>
         <div className="flex flex-col gap-2">{children}</div>
       </div>
     </>
