@@ -3,7 +3,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,windows,macos,code,node,react
 
 ### Code ###
-.vscode/*
+.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json

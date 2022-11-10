@@ -1,14 +1,21 @@
+import React from 'react';
+import { RouteObject } from 'react-router-dom';
+
 import DefaultLayout from '../../../layouts/Default';
-import { RouteProps as Route } from '../../../router/RouteWrapper';
 import Dashboard from '../containers/Dashboard';
 
-const routes: Route[] = [
+const routes: RouteObject[] = [
   {
-    path: '/',
-    name: 'Dashboard',
-    component: Dashboard,
-    layout: DefaultLayout,
-    exact: true,
+    id: 'dashboard-module',
+    element: <DefaultLayout />,
+    children: [
+      {
+        id: 'dashboard',
+        path: '/',
+        element: <Dashboard />,
+        index: true,
+      },
+    ],
   },
 ];
 

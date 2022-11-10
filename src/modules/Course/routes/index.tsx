@@ -1,38 +1,40 @@
+import React from 'react';
+import { RouteObject } from 'react-router-dom';
+
 import DefaultLayout from '../../../layouts/Default';
-import { RouteProps as Route } from '../../../router/RouteWrapper';
 import CourseClassrooms from '../containers/CourseClassrooms';
 import CourseClassroomsSubscription from '../containers/CourseClassroomsSubscription';
 import CourseMatrix from '../containers/CourseMatrix';
 import CourseOverview from '../containers/CourseOverview';
 
-const routes: Route[] = [
+const routes: RouteObject[] = [
   {
-    path: '/course/:course',
-    name: 'Course Overview',
-    component: CourseOverview,
-    layout: DefaultLayout,
-    exact: true,
-  },
-  {
-    path: '/course/:course/classrooms',
-    name: 'Course Classrooms',
-    component: CourseClassrooms,
-    layout: DefaultLayout,
-    exact: true,
-  },
-  {
-    path: '/course/:course/classrooms/subscription',
-    name: 'Course Classrooms Subscription',
-    component: CourseClassroomsSubscription,
-    layout: DefaultLayout,
-    exact: true,
-  },
-  {
-    path: '/course/:course/matrix',
-    name: 'Course Matrix',
-    component: CourseMatrix,
-    layout: DefaultLayout,
-    exact: true,
+    id: 'courses-module',
+    element: <DefaultLayout />,
+    children: [
+      {
+        path: '/courses',
+        children: [
+          {
+            path: ':course',
+            element: <CourseOverview />,
+            index: true,
+          },
+          {
+            path: ':course/classrooms',
+            element: <CourseClassrooms />,
+          },
+          {
+            path: ':course/classrooms/subscription',
+            element: <CourseClassroomsSubscription />,
+          },
+          {
+            path: ':course/matrix',
+            element: <CourseMatrix />,
+          },
+        ],
+      },
+    ],
   },
 ];
 
