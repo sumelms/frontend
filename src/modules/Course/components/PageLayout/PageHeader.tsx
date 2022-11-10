@@ -18,7 +18,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
   return (
     <header {...props}>
       <div className="flex text-white bg-zinc-800 min-h-fit h-80">
-        <div className="flex flex-col self-end pl-40 pb-9 space-y-11">
+        <div className="container flex flex-col self-end mx-auto pb-9 space-y-11 lg:px-6 md:px-0">
           <div className="space-y-6">
             <p className="text-4xl font-bold">{title}</p>
             <p className="text-xl font-semibold">{subtitle}</p>
@@ -34,7 +34,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
             className="flex content-center space-x-3 hover:text-blue-500 hover:underline hover:underline-offset-4"
           >
             <HiDownload className="w-6 h-6" />
-            <span className="flex items-center font-semibold tracking-wider font-roboto">
+            <span className="flex items-center font-medium tracking-wider font-roboto">
               Baixar matriz curricular
             </span>
           </a>
