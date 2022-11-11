@@ -2,7 +2,7 @@ import { Breadcrumb } from 'flowbite-react';
 import React from 'react';
 import { HiHome } from 'react-icons/hi';
 
-interface PageHeaderTheme {
+interface PageNavbarTheme {
   navbar: {
     base: string;
     item: {
@@ -11,8 +11,8 @@ interface PageHeaderTheme {
   };
 }
 
-const PageHeader: React.FC = () => {
-  const theme: PageHeaderTheme = {
+const PageNavbar: React.FC = () => {
+  const theme: PageNavbarTheme = {
     navbar: {
       base: 'flex gap-2',
       item: {
@@ -57,4 +57,4 @@ const PageHeader: React.FC = () => {
   );
 };
 
-export default PageHeader;
+export default PageNavbar;
