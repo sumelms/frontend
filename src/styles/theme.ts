@@ -13,6 +13,17 @@ const theme: DeepPartial<FlowbiteTheme> = {
       on: 'bg-white text-red-700 group-hover:bg-opacity-0 group-hover:text-inherit dark:bg-white-900 dark:text-red-700',
     },
   },
+  breadcrumb: {
+    item: {
+      chevron: 'mx-2 h-4 w-4 text-gray-400 group-first:hidden md:mx-4',
+      href: {
+        off: 'flex items-center text-sm font-medium text-gray-500 dark:text-gray-400',
+        on: 'flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:flex-none hover:underline hover:underline-offset-4',
+      },
+      icon: 'mr-4 h-4 w-4',
+    },
+    list: 'flex items-center',
+  },
   navbar: {
     base: 'border-gray-50 bg-white px-2 py-2.5 sm:px-4',
     rounded: {
