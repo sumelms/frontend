@@ -3,6 +3,7 @@ import React, { PropsWithChildren } from 'react';
 import Breadcrumb, { BreadcrumbProps } from '../../../../components/Breadcrumb';
 import PageHeader from './PageHeader';
 import { PageHeaderItemProps } from './PageHeaderItem';
+import PageNavbar from './PageNavbar';
 
 export interface PageLayoutProps extends PropsWithChildren {
   title: string;
@@ -23,6 +24,9 @@ const PageLayout: React.FC<PageLayoutProps> = ({
       <PageHeader title={title} subtitle={subtitle} items={items} />
       <div className="container flex-col px-5 mx-auto py-7 lg:py-14 lg:px-10 bg-neutral-100">
         <div>{breadcrumb && <Breadcrumb {...breadcrumb} />}</div>
+        <div className="mt-9 mb-11">
+          <PageNavbar />
+        </div>
         <div className="flex flex-col gap-2">{children}</div>
       </div>
     </>
