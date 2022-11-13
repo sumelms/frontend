@@ -18,7 +18,7 @@ const Section: React.FC<SectionProps> = ({
       <TitleTag
         className={
           titleClassName ??
-          'mb-5 text-2xl font-bold text-gray-900 dark:text-white'
+          'mb-5 text-3xl font-bold text-gray-900 dark:text-white'
         }
       >
         {title}
