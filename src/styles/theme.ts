@@ -1,6 +1,35 @@
 import { DeepPartial, FlowbiteTheme } from 'flowbite-react';
 
 const theme: DeepPartial<FlowbiteTheme> = {
+  accordion: {
+    base: 'divide-y divide-transparent border-transparent dark:divide-transparent dark:border-transparent',
+    content: {
+      base: 'py-2 px-2 last:rounded-b-sm dark:bg-gray-900 first:rounded-t-lg',
+    },
+    flush: {
+      off: 'rounded-sm border-0',
+      on: 'border-0',
+    },
+    title: {
+      arrow: {
+        base: 'h-5 w-5 shrink-0',
+        open: {
+          off: '',
+          on: 'rotate-180',
+        },
+      },
+      base: 'flex w-full items-center justify-between first:rounded-t-sm last:rounded-b-sm py-4 px-4 text-left  font-semibold text-gray-500 dark:text-gray-400',
+      flush: {
+        off: 'hover:bg-red-100 focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800',
+        on: '!bg-transparent dark:!bg-transparent',
+      },
+      heading: 'text-base',
+      open: {
+        off: 'bg-gray-200',
+        on: 'text-gray-900 bg-red-100 dark:bg-gray-800 dark:text-white',
+      },
+    },
+  },
   avatarGroup: {
     base: 'flex -space-x-1',
   },
