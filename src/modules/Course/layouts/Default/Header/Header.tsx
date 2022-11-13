@@ -1,20 +1,20 @@
 import React from 'react';
 import { HiDownload } from 'react-icons/hi';
 
-import PageHeaderItem, { PageHeaderItemProps } from './PageHeaderItem';
+import HeaderItem, { HeaderItemProps } from './HeaderItem';
 
-export interface PageHeaderProps {
+export interface HeaderProps {
   title: string;
   subtitle?: string;
-  items?: PageHeaderItemProps[];
+  items?: HeaderItemProps[];
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({
+const Header: React.FC<HeaderProps> = ({
   title,
   subtitle,
   items,
   ...props
-}: PageHeaderProps) => {
+}: HeaderProps) => {
   return (
     <header {...props}>
       <div className="flex text-white bg-zinc-800 min-h-fit h-80">
@@ -25,7 +25,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
             <div className="space-x-2 divide-x">
               {items &&
                 items.map((itemProps, index) => (
-                  <PageHeaderItem {...itemProps} key={index.toString()} />
+                  <HeaderItem {...itemProps} key={index.toString()} />
                 ))}
             </div>
           </div>
@@ -46,4 +46,4 @@ const PageHeader: React.FC<PageHeaderProps> = ({
   );
 };
 
-export default PageHeader;
+export default Header;

@@ -3,9 +3,8 @@ import { RiHome2Fill } from 'react-icons/ri';
 import { useParams } from 'react-router-dom';
 
 import { BreadcrumbProps } from '../../../../components/Breadcrumb';
-import PageLayout from '../../components/PageLayout';
-import { getIcons } from '../../helpers';
-import getMenuItems from '../../helpers/getMenuItems';
+import PageLayout from '../../layouts/Default';
+import { getIcons, getMenuItems } from '../../layouts/Default/helpers';
 import CourseService from '../../services/CourseService';
 
 type RouteParams = {

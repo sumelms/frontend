@@ -1,18 +1,18 @@
 import React, { ComponentProps, PropsWithChildren } from 'react';
 
-export type PageHeaderItemProps = PropsWithChildren<ComponentProps<'li'>> & {
+export type HeaderItemProps = PropsWithChildren<ComponentProps<'li'>> & {
   icon?: React.FC<ComponentProps<'svg'>>;
   item: string;
   itemText: string;
   className?: string;
 };
 
-const PageHeaderItem: React.FC<PageHeaderItemProps> = ({
+const HeaderItem: React.FC<HeaderItemProps> = ({
   icon: Icon,
   className,
   item,
   itemText,
-}: PageHeaderItemProps): JSX.Element => {
+}: HeaderItemProps): JSX.Element => {
   return (
     <div
       className={
@@ -26,4 +26,4 @@ const PageHeaderItem: React.FC<PageHeaderItemProps> = ({
   );
 };
 
-export default PageHeaderItem;
+export default HeaderItem;

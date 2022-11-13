@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface PageNavbarTheme {
+export interface NavbarTheme {
   navbar: {
     base: string;
     item: {
@@ -9,17 +9,17 @@ interface PageNavbarTheme {
   };
 }
 
-export interface PageNavbarItemsProps {
+export interface NavbarItemsProps {
   label: string;
   route: string;
 }
 
-interface PageNavbarProps {
-  items: PageNavbarItemsProps[];
+export interface NavbarProps {
+  items: NavbarItemsProps[];
 }
 
-const PageNavbar: React.FC<PageNavbarProps> = ({ items }) => {
-  const theme: PageNavbarTheme = {
+const Navbar: React.FC<NavbarProps> = ({ items }) => {
+  const theme: NavbarTheme = {
     navbar: {
       base: 'flex gap-x-8 gap-y-4 flex-wrap',
       item: {
@@ -45,4 +45,4 @@ const PageNavbar: React.FC<PageNavbarProps> = ({ items }) => {
   );
 };
 
-export default PageNavbar;
+export default Navbar;
