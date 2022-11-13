@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { BreadcrumbProps } from '../../../../components/Breadcrumb';
 import PageLayout from '../../components/PageLayout';
 import { getIcons } from '../../helpers';
+import getMenuItems from '../../helpers/getMenuItems';
 import CourseService from '../../services/CourseService';
 
 type RouteParams = {
@@ -39,6 +40,7 @@ const CourseClassroomsSubscription: React.FC = () => {
       subtitle={subtitle}
       items={getIcons(course.overview.info)}
       breadcrumb={breadcrumb}
+      menuItems={getMenuItems(params.course)}
     >
       <div>
         THIS IS THE COURSE ({course.title}) CLASSROOMS SUBSCRIPTION PAGE

@@ -9,7 +9,16 @@ interface PageNavbarTheme {
   };
 }
 
-const PageNavbar: React.FC = () => {
+export interface PageNavbarItemsProps {
+  label: string;
+  route: string;
+}
+
+interface PageNavbarProps {
+  items: PageNavbarItemsProps[];
+}
+
+const PageNavbar: React.FC<PageNavbarProps> = ({ items }) => {
   const theme: PageNavbarTheme = {
     navbar: {
       base: 'flex gap-x-8 gap-y-4 flex-wrap',
@@ -22,27 +31,15 @@ const PageNavbar: React.FC = () => {
   return (
     <div className="my-8 space-y-8">
       <div className={theme.navbar.base}>
-        <a className={theme.navbar.item.base} href="/">
-          Apresentação
-        </a>
-        <a className={theme.navbar.item.base} href="/">
-          Matriz Curricular
-        </a>
-        <a className={theme.navbar.item.base} href="/">
-          Instrição nas turmas
-        </a>
-        <a className={theme.navbar.item.base} href="/">
-          Minhas turmas
-        </a>
-        <a className={theme.navbar.item.base} href="/">
-          Projetos
-        </a>
-        <a className={theme.navbar.item.base} href="/">
-          Fórum de discussão
-        </a>
-        <a className={theme.navbar.item.base} href="/">
-          Alunos do curso
-        </a>
+        {items.map((item, key) => (
+          <a
+            className={theme.navbar.item.base}
+            href={item.route}
+            key={key.toString()}
+          >
+            {item.label}
+          </a>
+        ))}
       </div>
     </div>
   );

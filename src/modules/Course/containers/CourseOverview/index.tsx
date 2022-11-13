@@ -14,6 +14,7 @@ import CardEducator from '../../components/CardEducator';
 import PageLayout from '../../components/PageLayout';
 import Section from '../../components/Section';
 import { getIcons } from '../../helpers';
+import getMenuItems from '../../helpers/getMenuItems';
 import CourseService from '../../services/CourseService';
 
 type RouteParams = {
@@ -48,6 +49,7 @@ const CourseOverview: React.FC = () => {
       subtitle={subtitle}
       items={getIcons(course.overview.info)}
       breadcrumb={breadcrumb}
+      menuItems={getMenuItems(params.course)}
     >
       <div className="flex flex-col gap-2 my-2">
         <Section
