@@ -51,32 +51,40 @@ const CourseOverview: React.FC = () => {
       breadcrumb={breadcrumb}
       menuItems={getMenuItems(params.course)}
     >
-      <div className="flex flex-col gap-2 my-2">
+      <div>
         <Section
           title="Apresentação do Curso"
           titleAs="h2"
-          titleClassName="text-xl text-gray-900 dark:text-white"
+          titleClassName="text-3xl font-bold text-gray-700 dark:text-white"
         >
-          <div className="my-6 space-y-2">{course.description}</div>
+          <div className="my-6 space-y-6 text-lg font-semibold leading-8 text-gray-600 dark:text-white ">
+            <div>{course.description}</div>
+            <div>{course.description}</div>
+          </div>
           <div>
-            <div className="grid grid-flow-col gap-4">
+            <div className="space-y-9 lg:space-y-0 lg:flex lg:gap-x-14">
               {[1, 2, 3].map((i) => (
-                <div key={i.toString()}>
+                <div className="w-4/5 lg:w-1/3" key={i.toString()}>
                   <img
-                    className="object-cover w-full rounded-t-lg h-96"
-                    src="https://via.placeholder.com/450"
+                    className="object-cover rounded-[28px] w-full	"
+                    src="https://www.placecage.com/c/500/300"
                     alt=""
                   />
-                  <em className="text-xs text-gray-900 dark:text-white">
-                    Image subtitle {i}
-                  </em>
+                  <div className="m-6 mt-3">
+                    <em className="text-xs text-center text-gray-600 dark:text-white">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugiat cumque error maiores commodi ipsum, temporibus
+                      similique at facere deleniti suscipit nulla culpa iste,
+                      distinctio. {i}
+                    </em>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </Section>
 
-        <Section title="Corpo Docente">
+        <Section title="Corpo Docente" className="mt-7">
           {educators.map((educator, key) => (
             <CardEducator
               key={key.toString()}
