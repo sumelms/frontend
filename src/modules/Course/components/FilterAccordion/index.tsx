@@ -47,10 +47,7 @@ const FilterAccordion: React.FC<FilterAccordionProps> = ({
             className="px-2 py-2 last:rounded-none dark:bg-gray-900 first:rounded-none"
             key={key}
           >
-            <Accordion.Title
-              className="flex items-center justify-between w-full px-4 py-4 text-left text-gray-600 capitalize dark:text-white first:rounded-t-none last:rounded-b-none dark:text-gray-400"
-              id={id}
-            >
+            <Accordion.Title className="capitalize" id={id}>
               {name}
             </Accordion.Title>
             <Accordion.Content>

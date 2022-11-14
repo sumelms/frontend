@@ -4,19 +4,20 @@ const theme: DeepPartial<FlowbiteTheme> = {
   accordion: {
     flush: {
       off: 'rounded-none border-0',
-      on: 'border-b-2',
+      on: 'border-t-2',
     },
     title: {
+      base: 'flex w-full items-center justify-between first:rounded-t-none last:rounded-b-none py-4 px-4 text-left font-medium text-gray-500 dark:text-gray-400 border-transparent',
       arrow: {
         base: 'h-5 w-5 shrink-0',
       },
       flush: {
-        off: 'hover:bg-red-200/25 focus:ring-2 ring-inherit focus:ring-gray-500 dark:hover:bg-gray-800 dark:focus:ring-gray-800',
+        off: 'hover:bg-red-200/25 focus:ring-2 ring-inset focus:ring-gray-500 dark:hover:bg-gray-800 dark:focus:ring-gray-800',
         on: '!bg-transparent dark:!bg-transparent',
       },
       heading: 'text-base font-semibold',
       open: {
-        off: 'bg-gray-200',
+        off: 'bg-white/75',
         on: 'text-gray-900 bg-red-200/25 dark:bg-gray-800 dark:text-white',
       },
     },
