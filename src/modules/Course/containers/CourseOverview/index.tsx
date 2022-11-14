@@ -37,7 +37,7 @@ const breadcrumb: BreadcrumbProps = {
 };
 
 const CourseOverview: React.FC = () => {
-  const params = useParams<RouteParams>();
+  const params = useParams() as RouteParams;
 
   // @TODO: Refactor to use a Service HTTP request.
   const course = CourseService.getCourse(params.course);
