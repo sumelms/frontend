@@ -7,7 +7,7 @@ import { BreadcrumbProps } from '../../../../components/Breadcrumb';
 import CardSubject from '../../components/CardSubject';
 import FilterAccordion, {
   FilterSectionProps,
-} from '../../components/FilterAccordion/Section';
+} from '../../components/FilterAccordion';
 import PageLayout from '../../components/PageLayout';
 import Section from '../../components/Section';
 import { getIcons } from '../../helpers';
