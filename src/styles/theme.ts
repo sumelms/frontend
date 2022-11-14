@@ -2,31 +2,22 @@ import { DeepPartial, FlowbiteTheme } from 'flowbite-react';
 
 const theme: DeepPartial<FlowbiteTheme> = {
   accordion: {
-    base: 'divide-y divide-transparent border-transparent dark:divide-transparent dark:border-transparent',
-    content: {
-      base: 'py-2 px-2 last:rounded-b-sm dark:bg-gray-900 first:rounded-t-lg',
-    },
     flush: {
-      off: 'rounded-sm border-0',
-      on: 'border-0',
+      off: 'rounded-none border-0',
+      on: 'border-b-2',
     },
     title: {
       arrow: {
         base: 'h-5 w-5 shrink-0',
-        open: {
-          off: '',
-          on: 'rotate-180',
-        },
       },
-      base: 'flex w-full items-center justify-between first:rounded-t-sm last:rounded-b-sm py-4 px-4 text-left  font-semibold text-gray-500 dark:text-gray-400',
       flush: {
-        off: 'hover:bg-red-100 focus:ring-2 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800',
+        off: 'hover:bg-red-200/25 focus:ring-2 ring-inherit focus:ring-gray-500 dark:hover:bg-gray-800 dark:focus:ring-gray-800',
         on: '!bg-transparent dark:!bg-transparent',
       },
-      heading: 'text-base',
+      heading: 'text-base font-semibold',
       open: {
         off: 'bg-gray-200',
-        on: 'text-gray-900 bg-red-100 dark:bg-gray-800 dark:text-white',
+        on: 'text-gray-900 bg-red-200/25 dark:bg-gray-800 dark:text-white',
       },
     },
   },
@@ -36,8 +27,7 @@ const theme: DeepPartial<FlowbiteTheme> = {
   button: {
     outline: {
       color: {
-        light:
-          'text-red-700 hover:text-white font-bold bg-transparent border border-slate-600/75 hover:bg-red-700/75 hover:border-transparent',
+        red: 'text-red-700 hover:text-white font-bold bg-transparent border border-slate-600/75 hover:bg-red-800/75 hover:border-transparent dark:bg-white-900 dark:text-red-700',
       },
       on: 'bg-white text-red-700 group-hover:bg-opacity-0 group-hover:text-inherit dark:bg-white-900 dark:text-red-700',
     },

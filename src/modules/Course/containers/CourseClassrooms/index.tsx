@@ -1,22 +1,13 @@
-import { Accordion } from 'flowbite-react';
-import { Checkbox } from 'flowbite-react';
-import { Label } from 'flowbite-react';
-import { AccordionPanel } from 'flowbite-react/lib/esm/components/Accordion/AccordionPanel';
-import { AccordionTitle } from 'flowbite-react/lib/esm/components/Accordion/AccordionTitle';
 import React from 'react';
-import {
-  HiCalendar,
-  HiClock,
-  HiInbox,
-  HiTable,
-  HiUser,
-  HiX,
-} from 'react-icons/hi';
+import { HiCalendar, HiClock, HiInbox, HiTable, HiUser } from 'react-icons/hi';
 import { RiHome2Fill } from 'react-icons/ri';
 import { useParams } from 'react-router-dom';
 
 import { BreadcrumbProps } from '../../../../components/Breadcrumb';
 import CardSubject from '../../components/CardSubject';
+import FilterAccordion, {
+  FilterSectionProps,
+} from '../../components/FilterAccordion/Section';
 import PageLayout from '../../components/PageLayout';
 import Section from '../../components/Section';
 import { getIcons } from '../../helpers';
@@ -48,6 +39,27 @@ const CourseClassrooms: React.FC = () => {
   const course = CourseService.getCourse(params.course);
   const { title, subtitle } = course;
 
+  const filterSections: FilterSectionProps[] = [
+    {
+      id: 'category',
+      name: 'categoria',
+      options: [
+        { id: 'obrigatoria', name: 'obrigatória', value: '1' },
+        { id: 'optativa', name: 'optativa', value: '2' },
+        { id: 'eletiva', name: 'eletiva', value: '3' },
+        { id: 'livre', name: 'livre', value: '4' },
+      ],
+    },
+    {
+      id: 'modality',
+      name: 'modalidade',
+      options: [
+        { id: 'presencial', name: 'presencial', value: '1' },
+        { id: 'semipresencial', name: 'semipresencial', value: '2' },
+        { id: 'remoto', name: 'remoto', value: '3' },
+      ],
+    },
+  ];
   return (
     <PageLayout
       title={title}
@@ -61,45 +73,8 @@ const CourseClassrooms: React.FC = () => {
         titleAs="h2"
         titleClassName="text-3xl font-bold text-gray-700 dark:text-white"
       >
-        <div className="flex w-full mt-16 gap-x-5">
-          <div className="w-72">
-            <div className="flex items-center justify-between h-16 p-3 ">
-              <p className="text-2xl">Filtrar turmas</p>
-              <HiX className="w-5 h-5" />
-            </div>
-            <Accordion alwaysOpen={true}>
-              <AccordionPanel>
-                <AccordionTitle>Categoria</AccordionTitle>
-                <Accordion.Content>
-                  <div className="space-y-8">
-                    <div className="flex items-center gap-8">
-                      <Checkbox className="w-6 h-6" id="need" />
-                      <Label htmlFor="need">Obrigatórias</Label>
-                    </div>
-                  </div>
-                </Accordion.Content>
-              </AccordionPanel>
-              <AccordionPanel>
-                <AccordionTitle>Categorias</AccordionTitle>
-                <Accordion.Content>
-                  <div className="space-y-8">
-                    <div className="flex items-center gap-8">
-                      <Checkbox id="need" />
-                      <Label htmlFor="need">Obrigatórias</Label>
-                    </div>
-                    <div className="flex items-center gap-8">
-                      <Checkbox id="need" />
-                      <Label htmlFor="need">Obrigatórias</Label>
-                    </div>
-                    <div className="flex items-center gap-8">
-                      <Checkbox id="need" />
-                      <Label htmlFor="need">Obrigatórias</Label>
-                    </div>
-                  </div>
-                </Accordion.Content>
-              </AccordionPanel>
-            </Accordion>
-          </div>
+        <div className="flex mt-16 gap-x-2">
+          <FilterAccordion title="Filtrar Turmas" sections={filterSections} />
           <div className="w-full bg-blue-100">
             <div className="flex mb-8 text-2xl gap-x-2">
               <p>Turmas disponiveis</p>
