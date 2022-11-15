@@ -4,7 +4,7 @@ import { RiHome2Fill } from 'react-icons/ri';
 import { useParams } from 'react-router-dom';
 
 import { BreadcrumbProps } from '../../../../components/Breadcrumb';
-import CardSubject from '../../components/CardSubject';
+import CardSubject, { CardSubjectProps } from '../../components/CardSubject';
 import FilterAccordion, {
   FilterSectionProps,
 } from '../../components/FilterAccordion';
@@ -13,6 +13,7 @@ import Section from '../../components/Section';
 import { getIcons } from '../../helpers';
 import getMenuItems from '../../helpers/getMenuItems';
 import CourseService from '../../services/CourseService';
+
 type RouteParams = {
   course: string;
 };
@@ -60,6 +61,66 @@ const CourseClassrooms: React.FC = () => {
       ],
     },
   ];
+
+  const cardSubjects: CardSubjectProps[] = [
+    {
+      subject: {
+        title: 'Calculo - Sistemas de Informação',
+        subtitle: 'Meu progresso na turma:',
+      },
+
+      info: [
+        { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
+        { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+        { icon: HiClock, text: '19h - 22h' },
+        { icon: HiInbox, text: 'Presencial' },
+        { icon: HiUser, text: 'Dr. John' },
+      ],
+    },
+    {
+      subject: {
+        title: 'Calculo',
+        subtitle: 'Meu progresso na turma:',
+      },
+
+      info: [
+        { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
+        { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+        { icon: HiClock, text: '19h - 22h' },
+        { icon: HiInbox, text: 'Presencial' },
+        { icon: HiUser, text: 'Dr. John' },
+      ],
+    },
+    {
+      subject: {
+        title: 'Sistemas de Informação',
+        subtitle: 'Meu progresso na turma:',
+      },
+
+      info: [
+        { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
+        { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+        { icon: HiClock, text: '19h - 22h' },
+        { icon: HiInbox, text: 'Presencial' },
+        { icon: HiUser, text: 'Dr. John' },
+      ],
+    },
+    {
+      subject: {
+        title: 'Banco de Dados',
+        subtitle: 'Meu progresso na turma:',
+      },
+
+      info: [
+        { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
+        { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+        { icon: HiClock, text: '19h - 22h' },
+        { icon: HiInbox, text: 'Presencial' },
+        { icon: HiUser, text: 'Dr. John' },
+      ],
+    },
+  ];
+
   return (
     <PageLayout
       title={title}
@@ -69,57 +130,21 @@ const CourseClassrooms: React.FC = () => {
       menuItems={getMenuItems(params.course)}
     >
       <Section
-        title="Acessar turmas diponiveis para ({course.title})"
+        title="Acessar turmas diponiveis"
         titleAs="h2"
         titleClassName="text-3xl font-bold text-gray-700 dark:text-white"
       >
-        <div className="flex mt-16 gap-x-6">
+        <div className="flex w-full mt-16 gap-x-6">
           <FilterAccordion title="Filtrar Turmas" sections={filterSections} />
-          <div className="w-full bg-blue-100">
+          <div className="w-full">
             <div className="flex mb-8 text-2xl gap-x-2">
               <p>Turmas disponiveis</p>
               <p className="font-bold">obrigatórias</p>
             </div>
             <div className="flex h-full flex-wrap gap-x-4  gap-y-2.5">
-              <CardSubject
-                subject={{
-                  title: 'Calculo - Sistemas de Informação',
-                  subtitle: 'Meu progresso na turma:',
-                }}
-                info={[
-                  { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
-                  { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
-                  { icon: HiClock, text: '19h - 22h' },
-                  { icon: HiInbox, text: 'Presencial' },
-                  { icon: HiUser, text: 'Dr. John' },
-                ]}
-              />
-              <CardSubject
-                subject={{
-                  title: 'Calculo - Sistemas de Informação',
-                  subtitle: 'Meu progresso na turma:',
-                }}
-                info={[
-                  { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
-                  { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
-                  { icon: HiClock, text: '19h - 22h' },
-                  { icon: HiInbox, text: 'Presencial' },
-                  { icon: HiUser, text: 'Dr. John' },
-                ]}
-              />
-              <CardSubject
-                subject={{
-                  title: 'Calculo - Sistemas de Informação',
-                  subtitle: 'Meu progresso na turma:',
-                }}
-                info={[
-                  { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
-                  { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
-                  { icon: HiClock, text: '19h - 22h' },
-                  { icon: HiInbox, text: 'Presencial' },
-                  { icon: HiUser, text: 'Dr. John' },
-                ]}
-              />
+              {cardSubjects.map(({ subject, info }, key) => (
+                <CardSubject key={key} subject={subject} info={info} />
+              ))}
             </div>
           </div>
         </div>
