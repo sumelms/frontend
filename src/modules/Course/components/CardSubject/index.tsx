@@ -23,14 +23,14 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
     <div>
       <Card className="lg:w-96">
         <div className="p-2 space-y-5">
-          <p className="text-lg	font-bold text-gray-900 dark:text-white">
+          <p className="text-lg font-bold text-gray-900 dark:text-white">
             {subject.title}
           </p>
-          <div className="grid gap-x-3 gap-y-2 grid-cols-2">
+          <div className="grid grid-cols-2 gap-x-3 gap-y-2">
             {info.map(({ icon: Icon, name, text }, key) => (
               <div
                 key={key}
-                className="flex text-center items-center h-5 gap-x-2"
+                className="flex items-center h-5 text-center gap-x-2"
               >
                 <Icon className="w-4 h-4 text-gray-300 " />
                 <div className="flex">
@@ -60,7 +60,7 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
           </div>
 
           <div>
-            <Button outline fullSized color="light">
+            <Button outline fullSized color="red">
               Acessar minha Turma
             </Button>
           </div>

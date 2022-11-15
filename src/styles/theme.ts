@@ -1,14 +1,34 @@
 import { DeepPartial, FlowbiteTheme } from 'flowbite-react';
 
 const theme: DeepPartial<FlowbiteTheme> = {
+  accordion: {
+    flush: {
+      off: 'rounded-none border-0',
+      on: 'border-t-2',
+    },
+    title: {
+      base: 'flex w-full items-center justify-between first:rounded-t-none last:rounded-b-none py-4 px-4 text-left font-medium text-gray-500 dark:text-gray-400 border-transparent',
+      arrow: {
+        base: 'h-5 w-5 shrink-0',
+      },
+      flush: {
+        off: 'hover:bg-red-200/25 focus:ring-2 ring-inset focus:ring-gray-500 dark:hover:bg-gray-800 dark:focus:ring-gray-800',
+        on: '!bg-transparent dark:!bg-transparent',
+      },
+      heading: 'text-base font-semibold',
+      open: {
+        off: 'bg-white/75',
+        on: 'text-gray-900 bg-red-200/25 dark:bg-gray-800 dark:text-white',
+      },
+    },
+  },
   avatarGroup: {
     base: 'flex -space-x-1',
   },
   button: {
     outline: {
       color: {
-        light:
-          'text-red-700 hover:text-white font-bold bg-transparent border border-slate-600/75 hover:bg-red-700/75 hover:border-transparent',
+        red: 'text-red-700 hover:text-white font-bold bg-transparent border border-slate-600/75 hover:bg-red-800/75 hover:border-transparent dark:bg-white-900 dark:text-red-700',
       },
       on: 'bg-white text-red-700 group-hover:bg-opacity-0 group-hover:text-inherit dark:bg-white-900 dark:text-red-700',
     },
