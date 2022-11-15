@@ -73,7 +73,7 @@ const CourseClassrooms: React.FC = () => {
         titleAs="h2"
         titleClassName="text-3xl font-bold text-gray-700 dark:text-white"
       >
-        <div className="flex mt-16 gap-x-2">
+        <div className="flex mt-16 gap-x-6">
           <FilterAccordion title="Filtrar Turmas" sections={filterSections} />
           <div className="w-full bg-blue-100">
             <div className="flex mb-8 text-2xl gap-x-2">
