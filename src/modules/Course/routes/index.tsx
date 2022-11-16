@@ -6,20 +6,24 @@ import CourseClassrooms from '../containers/CourseClassrooms';
 import CourseClassroomsSubscription from '../containers/CourseClassroomsSubscription';
 import CourseMatrix from '../containers/CourseMatrix';
 import CourseOverview from '../containers/CourseOverview';
+import CoursesList from '../containers/CoursesList';
 import { pageLoader } from './loader';
 
 const routes: RouteObject[] = [
   {
-    element: <PageLayout />,
-    loader: pageLoader,
+    path: 'courses',
+    element: <CoursesList />,
+  },
+  {
+    path: 'courses',
     children: [
       {
-        path: '/courses',
+        element: <PageLayout />,
+        loader: pageLoader,
         children: [
           {
             path: ':course',
             element: <CourseOverview />,
-            index: true,
             handle: {
               crumb: (data: unknown) => <span>Overview</span>,
             },

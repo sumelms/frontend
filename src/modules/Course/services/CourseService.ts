@@ -24,15 +24,15 @@ const CourseService = {
         },
       ],
       navbarItems: [
-        { label: 'Apresentação', route: `/course/${uid}` },
-        { label: 'Acessar turmas', route: `/course/${uid}/classrooms` },
+        { label: 'Apresentação', route: `/courses/${uid}` },
+        { label: 'Acessar turmas', route: `/courses/${uid}/classrooms` },
         {
           label: 'Inscrição nas turmas',
-          route: `/course/${uid}/classrooms/subscription`,
+          route: `/courses/${uid}/classrooms/subscription`,
         },
         {
           label: 'Matriz Curricular',
-          route: `/course/${uid}/matrix`,
+          route: `/courses/${uid}/matrix`,
         },
       ],
     };

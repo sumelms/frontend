@@ -7,6 +7,7 @@ import {
   HiHome,
   HiQuestionMarkCircle,
 } from 'react-icons/hi';
+import { NavLink } from 'react-router-dom';
 
 interface MenuListItemProps {
   label: string;
@@ -42,8 +43,13 @@ const Sidebar: React.FC = () => {
         </FlowbiteSidebar.ItemGroup>
         <FlowbiteSidebar.ItemGroup>
           {settingsMenuItems.map(
-            ({ label, route, icon }: MenuListItemProps) => (
-              <FlowbiteSidebar.Item key={route} href="#" icon={icon}>
+            ({ label, route, icon }: MenuListItemProps, key) => (
+              <FlowbiteSidebar.Item
+                as={NavLink}
+                key={key}
+                href={route}
+                icon={icon}
+              >
                 {label}
               </FlowbiteSidebar.Item>
             ),

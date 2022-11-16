@@ -5,12 +5,8 @@ import Dashboard from '../containers/Dashboard';
 
 const routes: RouteObject[] = [
   {
-    path: '/',
     element: <Dashboard />,
     index: true,
-    handle: {
-      crumb: (data: unknown) => <span>Dashboard</span>,
-    },
   },
 ];
 

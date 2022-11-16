@@ -8,9 +8,15 @@ import Dashboard from '../modules/Dashboard/routes';
 // LOAD THE MODULE ROUTES HERE
 const routes: RouteObject[] = [
   {
+    path: '/',
     element: <DefaultLayout />,
+    handle: {
+      crumb: (data: unknown) => <span>Home</span>,
+    },
     children: [...Dashboard, ...Course],
   },
 ];
+
+console.log(routes);
 
 export default routes;

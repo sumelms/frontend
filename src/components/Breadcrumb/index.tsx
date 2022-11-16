@@ -1,5 +1,7 @@
 import { Breadcrumb as FlowbiteBreadcrumb } from 'flowbite-react';
+import { BreadcrumbItemProps } from 'flowbite-react/lib/esm/components/Breadcrumb/BreadcrumbItem';
 import React from 'react';
+import { HiHome } from 'react-icons/hi';
 import { Params, useMatches } from 'react-router-dom';
 
 type RouteWithBreadcrumbHandle = {
@@ -22,7 +24,7 @@ const hasBreadcrumbHandle = (
   return (
     !!route.handle &&
     typeof route.handle === 'object' &&
-    'breadcrumb' in route.handle
+    'crumb' in route.handle
   );
 };
 
@@ -31,14 +33,22 @@ const Breadcrumb: React.FC = () => {
   const crumbs = matches
     .filter<RouteWithBreadcrumbHandle>(hasBreadcrumbHandle)
     .map((match) => match.handle.crumb(match.data));
-
   return (
     <FlowbiteBreadcrumb aria-label="Breadcrumb">
-      {crumbs.map((crumb, index) => (
-        <FlowbiteBreadcrumb.Item href="#" key={index}>
-          {crumb}
-        </FlowbiteBreadcrumb.Item>
-      ))}
+      {crumbs.map((crumb, index) => {
+        const props: BreadcrumbItemProps = {
+          href: '#',
+        };
+
+        if (index === 0) {
+          props.icon = HiHome;
+        }
+        return (
+          <FlowbiteBreadcrumb.Item key={index} {...props}>
+            {crumb}
+          </FlowbiteBreadcrumb.Item>
+        );
+      })}
     </FlowbiteBreadcrumb>
   );
 };
