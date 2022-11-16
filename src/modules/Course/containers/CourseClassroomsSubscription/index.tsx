@@ -52,8 +52,8 @@ const CourseClassroomsSubscription: React.FC = () => {
         className=""
       >
         <div className="w-full mt-10 bg-white rounded-lg lg:p-4">
-          <div className="flex justify-between my-5">
-            <p className="ml-4 text-lg font-semibold text-gray-700">
+          <div className="flex justify-between m-5">
+            <p className="text-lg font-semibold text-gray-700">
               Tumas em andamento
             </p>
             <div className="flex items-center gap-x-5">
@@ -66,11 +66,17 @@ const CourseClassroomsSubscription: React.FC = () => {
                   name="search"
                 />
                 <span className="absolute inset-y-0 right-0 flex items-center pr-2">
-                  <HiSearch className="w-6 h-6 fill-gray-500" />
+                  <HiSearch className="w-6 h-6 fill-gray-500 dark:fill-white" />
                 </span>
               </label>
-              <span className="text-gray-700">Filtros</span>
-              <HiViewGrid className="w-6 h-6 fill-gray-500" />
+              <button>
+                <span className="text-gray-500 hover:text-blue-500 dark:text-white hover:underline hover:underline-offset-4">
+                  Filtros
+                </span>
+              </button>
+              <button>
+                <HiViewGrid className="w-6 h-6 fill-gray-500 hover:fill-blue-500 dark:fill-white" />
+              </button>
             </div>
           </div>
           <Table hoverable={true}>
@@ -101,18 +107,70 @@ const CourseClassroomsSubscription: React.FC = () => {
                 <Table.Cell>
                   <a
                     href="/tables"
-                    className="flex font-medium text-blue-600 hover:underline dark:text-blue-500"
+                    className="flex font-medium text-gray-500 dark:text-white hover:text-gray-800 hover:underline hover:underline-offset-4"
                   >
-                    <span>
-                      <HiDownload />
-                    </span>
-                    <span>Baixar Plano</span>
+                    <HiDownload className="w-5 h-5 mr-2" />
+                    <span className="font-semibold">Baixar Plano</span>
                   </a>
                 </Table.Cell>
                 <Table.Cell>
                   <Button outline fullSized color="red">
                     Solicitar dispensa
                   </Button>
+                </Table.Cell>
+              </Table.Row>
+            </Table.Body>
+            <Table.Body>
+              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Álgebra
+                </Table.Cell>
+                <Table.Cell>obrigatória</Table.Cell>
+                <Table.Cell>90</Table.Cell>
+                <Table.Cell>Remoto</Table.Cell>
+                <Table.Cell>19:00</Table.Cell>
+                <Table.Cell>andamento</Table.Cell>
+                <Table.Cell>Prof. Dra. Marie Curie</Table.Cell>
+                <Table.Cell>Sistemas de Informação</Table.Cell>
+                <Table.Cell>
+                  <a
+                    href="/tables"
+                    className="flex font-medium text-gray-500 dark:text-white hover:text-gray-800 hover:underline hover:underline-offset-4"
+                  >
+                    <HiDownload className="w-5 h-5 mr-2" />
+                    <span className="font-semibold">Baixar Plano</span>
+                  </a>
+                </Table.Cell>
+                <Table.Cell>
+                  <Button outline fullSized color="red">
+                    Solicitar dispensa
+                  </Button>
+                </Table.Cell>
+              </Table.Row>
+            </Table.Body>
+            <Table.Body>
+              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Geometria
+                </Table.Cell>
+                <Table.Cell>obrigatória</Table.Cell>
+                <Table.Cell>90</Table.Cell>
+                <Table.Cell>Remoto</Table.Cell>
+                <Table.Cell>19:00</Table.Cell>
+                <Table.Cell>andamento</Table.Cell>
+                <Table.Cell>Prof. Dra. Marie Curie</Table.Cell>
+                <Table.Cell>Sistemas de Informação</Table.Cell>
+                <Table.Cell>
+                  <a
+                    href="/tables"
+                    className="flex font-medium text-gray-500 dark:text-white hover:text-gray-800 hover:underline hover:underline-offset-4"
+                  >
+                    <HiDownload className="w-5 h-5 mr-2" />
+                    <span className="font-semibold">Baixar Plano</span>
+                  </a>
+                </Table.Cell>
+                <Table.Cell>
+                  <Button fullSized>Solicitar Inscrição</Button>
                 </Table.Cell>
               </Table.Row>
             </Table.Body>
