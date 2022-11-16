@@ -1,18 +1,26 @@
-import React from 'react';
-import { HiDownload } from 'react-icons/hi';
+import React, { ComponentProps } from 'react';
 
 import HeaderItem, { HeaderItemProps } from './HeaderItem';
+import HeaderLink from './HeaderLink';
+
+export interface HeaderLinksProps {
+  icon?: React.FC<ComponentProps<'svg'>>;
+  label: string;
+  href: string;
+}
 
 export interface HeaderProps {
   title: string;
   subtitle?: string;
   items?: HeaderItemProps[];
+  links?: HeaderLinksProps[];
 }
 
 const Header: React.FC<HeaderProps> = ({
   title,
   subtitle,
   items,
+  links,
   ...props
 }: HeaderProps) => {
   return (
@@ -22,24 +30,21 @@ const Header: React.FC<HeaderProps> = ({
           <div className="space-y-6">
             <p className="text-4xl font-bold">{title}</p>
             <p className="text-xl font-semibold">{subtitle}</p>
-            <div className="space-x-2 divide-x">
-              {items &&
-                items.map((itemProps, index) => (
+            {items && (
+              <div className="space-x-2 divide-x">
+                {items.map((itemProps, index) => (
                   <HeaderItem {...itemProps} key={index.toString()} />
                 ))}
+              </div>
+            )}
+          </div>
+          {links && (
+            <div className="w-60">
+              {links.map((link, key) => (
+                <HeaderLink key={key} {...link} />
+              ))}
             </div>
-          </div>
-          <div className="w-60">
-            <a
-              href="/"
-              className="flex content-center space-x-3 hover:text-blue-500 hover:underline hover:underline-offset-4"
-            >
-              <HiDownload className="w-6 h-6" />
-              <span className="items-center font-medium tracking-wider font-roboto">
-                Baixar matriz curricular
-              </span>
-            </a>
-          </div>
+          )}
         </div>
       </div>
     </header>

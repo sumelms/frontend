@@ -1,44 +1,13 @@
 import React from 'react';
 import { HiCalendar, HiClock, HiInbox, HiTable, HiUser } from 'react-icons/hi';
-import { RiHome2Fill } from 'react-icons/ri';
-import { useParams } from 'react-router-dom';
 
-import { BreadcrumbProps } from '../../../../components/Breadcrumb';
 import CardSubject, { CardSubjectProps } from '../../components/CardSubject';
 import FilterAccordion, {
   FilterSectionProps,
 } from '../../components/FilterAccordion';
 import Section from '../../components/Section';
-import PageLayout from '../../layouts/Default';
-import { getIcons, getMenuItems } from '../../layouts/Default/helpers';
-import CourseService from '../../services/CourseService';
-
-type RouteParams = {
-  course: string;
-};
-
-const breadcrumb: BreadcrumbProps = {
-  ariaLabel: 'course-overview',
-  breadcrumbItems: [
-    {
-      icon: RiHome2Fill,
-      linkText: 'Home',
-      linkState: 'courses',
-    },
-    {
-      linkText: 'Courses',
-      linkState: 'courses',
-    },
-  ],
-};
 
 const CourseClassrooms: React.FC = () => {
-  const params = useParams() as RouteParams;
-
-  // @TODO: Refactor to use a Service HTTP request.
-  const course = CourseService.getCourse(params.course);
-  const { title, subtitle } = course;
-
   const filterSections: FilterSectionProps[] = [
     {
       id: 'category',
@@ -121,13 +90,7 @@ const CourseClassrooms: React.FC = () => {
   ];
 
   return (
-    <PageLayout
-      title={title}
-      subtitle={subtitle}
-      items={getIcons(course.overview.info)}
-      breadcrumb={breadcrumb}
-      menuItems={getMenuItems(params.course)}
-    >
+    <>
       <Section
         title="Acessar turmas diponiveis"
         titleAs="h2"
@@ -148,7 +111,7 @@ const CourseClassrooms: React.FC = () => {
           </div>
         </div>
       </Section>
-    </PageLayout>
+    </>
   );
 };
 
