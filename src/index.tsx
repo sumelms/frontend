@@ -2,7 +2,6 @@ import { ReactKeycloakProvider } from '@react-keycloak/web';
 import { Flowbite } from 'flowbite-react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 import keycloak from './keycloak';
@@ -21,9 +20,7 @@ root.render(
   >
     <React.StrictMode>
       <Flowbite theme={{ theme }}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <App />
       </Flowbite>
       <GlobalStyle />
     </React.StrictMode>

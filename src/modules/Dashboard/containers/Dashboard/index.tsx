@@ -1,11 +1,11 @@
 import { useKeycloak } from '@react-keycloak/web';
-import { Rating } from 'flowbite-react';
 import React from 'react';
 
 import Container from '../../../../components/Container';
 
 const Dashboard: React.FC = () => {
   const { keycloak } = useKeycloak();
+
   return (
     <Container spaced>
       <div className="grid grid-cols-3 gap-12">
