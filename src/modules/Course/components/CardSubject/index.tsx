@@ -61,7 +61,7 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
 
           <div>
             <Button outline fullSized color="red">
-              Acessar minha Turma
+              Acessar minha turma
             </Button>
           </div>
         </div>
