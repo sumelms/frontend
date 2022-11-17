@@ -1,5 +1,5 @@
+import type { BreadcrumbItemProps } from 'flowbite-react';
 import { Breadcrumb as FlowbiteBreadcrumb } from 'flowbite-react';
-import { BreadcrumbItemProps } from 'flowbite-react/lib/esm/components/Breadcrumb/BreadcrumbItem';
 import React from 'react';
 import { HiHome } from 'react-icons/hi';
 import { Params, useMatches } from 'react-router-dom';
