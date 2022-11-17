@@ -2,12 +2,8 @@ import { DeepPartial, FlowbiteTheme } from 'flowbite-react';
 
 const theme: DeepPartial<FlowbiteTheme> = {
   accordion: {
-    flush: {
-      off: 'rounded-none border-0',
-      on: 'border-t-2',
-    },
     title: {
-      base: 'flex w-full items-center justify-between first:rounded-t-none last:rounded-b-none py-4 px-4 text-left font-medium text-gray-500 dark:text-gray-400 border-transparent',
+      base: 'flex w-full items-center justify-between first:rounded-t-none last:rounded-b-none py-4 px-4 text-left text-gray-500 dark:text-gray-400 border-transparent',
       arrow: {
         base: 'h-5 w-5 shrink-0',
       },
