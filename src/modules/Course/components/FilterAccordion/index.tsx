@@ -39,7 +39,7 @@ const FilterAccordion: React.FC<FilterAccordionProps> = ({
         </Tooltip>
       </div>
       <Accordion
-        className="border-transparent divide-y divide-gray-300 dark:divide-gray-300 dark:border-transparent"
+        className="border-none divide-y divide-gray-300 dark:divide-gray-300 "
         alwaysOpen={true}
       >
         {sections.map(({ id, name, options }, key) => (
@@ -47,7 +47,7 @@ const FilterAccordion: React.FC<FilterAccordionProps> = ({
             className="px-2 py-2 last:rounded-none dark:bg-gray-900 first:rounded-none"
             key={key}
           >
-            <Accordion.Title className="capitalize" id={id}>
+            <Accordion.Title className="font-medium capitalize" id={id}>
               {name}
             </Accordion.Title>
             <Accordion.Content>

@@ -23,7 +23,7 @@ const Section: React.FC<SectionProps> = ({
       >
         {title}
       </TitleTag>
-      <div className="flex h-full flex-wrap gap-x-2 md:gap-x-6 lg:gap-x-16 gap-y-2.5 lg:gap-y-20 md:gap-y-8">
+      <div className="flex h-full flex-wrap gap-x-2 md:gap-x-6 lg:gap-x-16 gap-y-2.5 lg:gap-y-10 md:gap-y-5">
         {children}
       </div>
     </div>
