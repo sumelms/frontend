@@ -33,7 +33,7 @@ const CourseOverview: React.FC = () => {
         titleAs="h2"
         titleClassName="text-3xl font-bold text-gray-700 dark:text-white"
       >
-        <div className="my-6 space-y-6 text-lg font-semibold leading-8 text-gray-600 dark:text-white ">
+        <div className="my-6 space-y-6 text-lg leading-8 text-gray-600 dark:text-white ">
           {description}
         </div>
         <div>
@@ -62,8 +62,8 @@ const CourseOverview: React.FC = () => {
             key={key}
             educator={educator}
             action={[
-              { icon: HiArrowNarrowUp, name: 'Conferir Currículo Lattes' },
-              { icon: HiOutlineChatAlt2, name: 'Enviar uma mensagem' },
+              { icon: HiArrowNarrowUp, name: 'Conferir Currículo' },
+              { icon: HiOutlineChatAlt2, name: 'Enviar mensagem' },
             ]}
             info={[
               { icon: HiOutlinePlay, name: 'Subjects', value: 7 },
