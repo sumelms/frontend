@@ -22,7 +22,7 @@ const CourseOverview: React.FC = () => {
   const params = useParams() as RouteParams;
 
   // @TODO: Refactor to use a Service HTTP request.
-  const { description, educators } = CourseService.getCourseOverview(
+  const { description, educators, gallery } = CourseService.getCourseOverview(
     params.course,
   );
 
@@ -38,19 +38,16 @@ const CourseOverview: React.FC = () => {
         </div>
         <div>
           <div className="space-y-9 lg:space-y-0 lg:flex lg:gap-x-14">
-            {[1, 2, 3].map((i) => (
-              <div className="w-4/5 lg:w-1/3" key={i.toString()}>
+            {gallery.map(({ img, text }, key) => (
+              <div className="w-4/5 lg:w-1/3 " key={key}>
                 <img
-                  className="object-cover rounded-[28px] w-full	"
-                  src="https://www.placecage.com/c/500/300"
+                  className="object-cover rounded-[28px] w-full max-h-72"
+                  src={img}
                   alt=""
                 />
                 <div className="m-6 mt-3">
                   <em className="text-xs text-center text-gray-600 dark:text-white">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugiat cumque error maiores commodi ipsum, temporibus
-                    similique at facere deleniti suscipit nulla culpa iste,
-                    distinctio. {i}
+                    {text}
                   </em>
                 </div>
               </div>
@@ -62,7 +59,7 @@ const CourseOverview: React.FC = () => {
       <Section title="Corpo Docente" className="mt-7">
         {educators.map((educator, key) => (
           <CardEducator
-            key={key.toString()}
+            key={key}
             educator={educator}
             action={[
               { icon: HiArrowNarrowUp, name: 'Conferir Currículo Lattes' },
