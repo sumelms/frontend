@@ -1,5 +1,11 @@
 import { useKeycloak } from '@react-keycloak/web';
-import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
+import {
+  Avatar,
+  Button,
+  DarkThemeToggle,
+  Dropdown,
+  Navbar,
+} from 'flowbite-react';
 import React from 'react';
 import { HiLogout } from 'react-icons/hi';
 
@@ -14,7 +20,8 @@ const Header: React.FC = () => {
 
   const ActionButtons = () => {
     return (
-      <div className="pl-4 ml-4 border-l">
+      <div className="flex pl-4 ml-4 border-l">
+        <DarkThemeToggle />
         <Button
           onClick={() => keycloak.logout()}
           className="!bg-transparent !text-gray-600"

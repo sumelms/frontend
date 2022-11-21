@@ -8,7 +8,7 @@ export interface SectionProps extends PropsWithChildren<ComponentProps<'div'>> {
 
 const Section: React.FC<SectionProps> = ({
   title,
-  titleAs: TitleTag = 'h3',
+  titleAs: TitleTag = 'h2',
   titleClassName,
   children,
   ...props
@@ -23,7 +23,7 @@ const Section: React.FC<SectionProps> = ({
       >
         {title}
       </TitleTag>
-      <div className="flex flex-wrap h-full my-4 text-gray-800 gap-x-2 md:gap-x-8 lg:gap-x-16 gap-y-2 lg:gap-y-16 md:gap-y-8 dark:text-white">
+      <div className="flex flex-wrap h-full my-4 gap-x-2 md:gap-x-8 lg:gap-x-16 gap-y-2 lg:gap-y-16 md:gap-y-8 ">
         {children}
       </div>
     </div>

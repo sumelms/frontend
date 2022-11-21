@@ -6,10 +6,9 @@ import {
   HiOutlineStar,
   HiOutlineUsers,
 } from 'react-icons/hi';
-// import { RiHome2Fill } from 'react-icons/ri';
 import { useParams } from 'react-router-dom';
 
-// import { BreadcrumbProps } from '../../../../components/Breadcrumb';
+import Markdown from '../../../../components/Markdown';
 import CardEducator from '../../components/CardEducator';
 import Section from '../../components/Section';
 import CourseService, { ICourse } from '../../services/CourseService';
@@ -35,26 +34,29 @@ const CourseOverview: React.FC = () => {
     fetchCourse();
   }, []);
 
+  if (!course) {
+    return <>Course Not found</>;
+  }
+
   return (
     <>
       <Section title="Apresentação do Curso">
-        <div className="text-lg leading-8">{course && course.description}</div>
+        <Markdown content={course.description} />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-9">
-          {course &&
-            course.gallery.map(({ img, text }, key) => (
-              <div className="" key={key}>
-                <img
-                  className="object-cover rounded-[28px] w-full max-h-72"
-                  src={img}
-                  alt=""
-                />
-                <div className="px-6 mt-2">
-                  <em className="text-xs text-center text-gray-600 dark:text-white">
-                    {text}
-                  </em>
-                </div>
+          {course.gallery.map(({ img, text }, key) => (
+            <div key={key}>
+              <img
+                className="object-cover rounded-[28px] w-full max-h-72"
+                src={img}
+                alt=""
+              />
+              <div className="px-6 mt-2 leading-tight">
+                <em className="text-xs text-center text-gray-600 dark:text-white">
+                  {text}
+                </em>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
       </Section>
 
