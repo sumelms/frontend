@@ -91,19 +91,15 @@ const CourseClassrooms: React.FC = () => {
 
   return (
     <>
-      <Section
-        title="Acessar turmas diponiveis"
-        titleAs="h2"
-        titleClassName="text-3xl font-bold text-gray-700 dark:text-white"
-      >
-        <div className="flex w-full mt-16 gap-x-6">
+      <Section title="Acessar turmas diponiveis">
+        <div className="flex w-full space-x-6">
           <FilterAccordion title="Filtrar Turmas" sections={filterSections} />
           <div className="w-full">
             <div className="flex mb-8 text-2xl gap-x-2">
               <p>Turmas disponiveis</p>
               <p className="font-bold">obrigatórias</p>
             </div>
-            <div className="flex h-full flex-wrap gap-x-4  gap-y-2.5">
+            <div className="flex h-full flex-wrap gap-x-4 gap-y-2.5">
               {cardSubjects.map(({ subject, info }, key) => (
                 <CardSubject key={key} subject={subject} info={info} />
               ))}
