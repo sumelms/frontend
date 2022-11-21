@@ -15,7 +15,6 @@ const instance = axios.create({
 
 const onRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
   console.info(`[request] [${JSON.stringify(config)}]`);
-  console.log('ebv', process.env.BASE_SERVER_URL);
   return config;
 };
 

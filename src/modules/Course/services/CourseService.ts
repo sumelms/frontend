@@ -9,18 +9,39 @@ interface ICourseDetails {
 export interface ICourse {
   id: number;
   uuid: string;
-  name: string;
+  title: string;
   subtitle: string;
   slug: string;
   details: ICourseDetails[];
 }
 
 const CourseService = {
-  getCourses() {
-    return Axios.get<Array<ICourse>>('/courses');
+  fetchCourses(query: string) {
+    return Axios.get<Array<ICourse>>(`/courses?${query}`);
   },
 
-  getCoursePage(uid: string) {
+  async fetchCourse(slug: string) {
+    const response = await Axios.get<ICourse>(`/courses/${slug}`);
+    const data = {
+      navbarItems: [
+        { label: 'Apresentação', route: `/courses/${slug}` },
+        { label: 'Acessar turmas', route: `/courses/${slug}/classrooms` },
+        {
+          label: 'Inscrição nas turmas',
+          route: `/courses/${slug}/classrooms/subscription`,
+        },
+        {
+          label: 'Matriz Curricular',
+          route: `/courses/${slug}/matrix`,
+        },
+      ],
+      ...response.data,
+    };
+
+    return data;
+  },
+
+  getCoursePage(slug: string) {
     return {
       title: 'Sistemas de Informação',
       subtitle: 'O caminho para a sua formação profissional e pessoal. ',
@@ -45,15 +66,15 @@ const CourseService = {
         },
       ],
       navbarItems: [
-        { label: 'Apresentação', route: `/courses/${uid}` },
-        { label: 'Acessar turmas', route: `/courses/${uid}/classrooms` },
+        { label: 'Apresentação', route: `/courses/${slug}` },
+        { label: 'Acessar turmas', route: `/courses/${slug}/classrooms` },
         {
           label: 'Inscrição nas turmas',
-          route: `/courses/${uid}/classrooms/subscription`,
+          route: `/courses/${slug}/classrooms/subscription`,
         },
         {
           label: 'Matriz Curricular',
-          route: `/courses/${uid}/matrix`,
+          route: `/courses/${slug}/matrix`,
         },
       ],
     };

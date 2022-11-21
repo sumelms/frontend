@@ -8,7 +8,7 @@ const pageLoader = async ({
   params,
 }: LoaderFunctionArgs): Promise<LayoutProps> => {
   const { course } = params;
-  const { headerItems, ...rest } = CourseService.getCoursePage(
+  const { details: headerItems, ...rest } = await CourseService.fetchCourse(
     course as string,
   );
 

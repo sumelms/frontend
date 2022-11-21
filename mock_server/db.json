@@ -3,7 +3,7 @@
     {
       "id": 1,
       "uuid": "059a34d2-6154-4315-ad59-45f2797470ac",
-      "name": "Sistemas de Informação",
+      "title": "Sistemas de Informação",
       "subtitle": "O caminho para a sua formação profissional e pessoal.",
       "slug": "sistemas-de-informacao",
       "details": [
@@ -30,7 +30,7 @@
     {
       "id": 2,
       "uuid": "e64ba6f7-c915-4641-99bd-2a5754ca6839",
-      "name": "Comunicação e Artes",
+      "title": "Comunicação e Artes",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "slug": "comunicacao-e-artes",
       "details": [
@@ -57,7 +57,7 @@
     {
       "id": 3,
       "uuid": "143eb80f-d492-4de2-928c-c5d4a550eb5f",
-      "name": "Arquitetura e Urbanismo e Design",
+      "title": "Arquitetura e Urbanismo e Design",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "slug": "arquitetura-e-urbanismo-e-design",
       "details": [

@@ -7,7 +7,7 @@ const CoursesList: React.FC = () => {
   const [courses, setCourseList] = useState<Array<ICourse>>([]);
 
   const fetchCourses = (): void => {
-    CourseService.getCourses().then((response): void => {
+    CourseService.fetchCourses('fields=title,slug').then((response): void => {
       setCourseList(response.data);
     });
   };
@@ -23,7 +23,7 @@ const CoursesList: React.FC = () => {
           return (
             <li key={course.slug}>
               <Link key={course.slug} to={course.slug}>
-                {course.name}
+                {course.title}
               </Link>
             </li>
           );
