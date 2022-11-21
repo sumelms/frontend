@@ -41,45 +41,6 @@ const CourseService = {
     return data;
   },
 
-  getCoursePage(slug: string) {
-    return {
-      title: 'Sistemas de Informação',
-      subtitle: 'O caminho para a sua formação profissional e pessoal. ',
-      headerItems: [
-        {
-          key: 'grade',
-          label: 'Grade',
-          value: 'Bacharelado',
-          order: 1,
-        },
-        {
-          key: 'modality',
-          label: 'Modalidade do curso',
-          value: 'Híbrido',
-          order: 2,
-        },
-        {
-          key: 'lessons',
-          label: 'Lições',
-          value: '25',
-          order: 3,
-        },
-      ],
-      navbarItems: [
-        { label: 'Apresentação', route: `/courses/${slug}` },
-        { label: 'Acessar turmas', route: `/courses/${slug}/classrooms` },
-        {
-          label: 'Inscrição nas turmas',
-          route: `/courses/${slug}/classrooms/subscription`,
-        },
-        {
-          label: 'Matriz Curricular',
-          route: `/courses/${slug}/matrix`,
-        },
-      ],
-    };
-  },
-
   getCourseOverview(uid: string) {
     return {
       description:
