@@ -21,8 +21,8 @@ const HeaderItem: React.FC<HeaderItemProps> = ({
       }
     >
       {Icon && <Icon className="w-6 h-6 mx-2" />}
-      <span className="mx-1 font-roboto">{label}:</span>
-      <span className="font-semibold font-roboto">{value}</span>
+      <span className="mx-1">{label}:</span>
+      <span className="font-semibold">{value}</span>
     </div>
   );
 };
