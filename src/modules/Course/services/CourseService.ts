@@ -1,4 +1,25 @@
+import Axios from '../../../services/axios';
+
+interface ICourseDetails {
+  key: string;
+  label: string;
+  value: string;
+  order: number;
+}
+export interface ICourse {
+  id: number;
+  uuid: string;
+  name: string;
+  subtitle: string;
+  slug: string;
+  details: ICourseDetails[];
+}
+
 const CourseService = {
+  getCourses() {
+    return Axios.get<Array<ICourse>>('/courses');
+  },
+
   getCoursePage(uid: string) {
     return {
       title: 'Sistemas de Informação',
