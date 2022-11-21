@@ -7,11 +7,7 @@ import Section from '../../components/Section';
 const CourseMatrix: React.FC = () => {
   return (
     <>
-      <Section
-        title="Matriz Curricular"
-        titleAs="h2"
-        titleClassName="text-3xl mb-10 font-bold text-gray-700 dark:text-white"
-      >
+      <Section title="Matriz Curricular">
         <div className="space-y-6 break-words whitespace-pre-wrap">
           <p className="indent-8">
             Essa matriz curricular busca um equilíbrio que faça com que a
