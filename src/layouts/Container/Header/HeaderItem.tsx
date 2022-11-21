@@ -4,7 +4,7 @@ export type HeaderItemProps = PropsWithChildren<ComponentProps<'li'>> & {
   icon?: React.FC<ComponentProps<'svg'>>;
   key: string;
   label: string;
-  value: string;
+  value?: string;
   className?: string;
 };
 

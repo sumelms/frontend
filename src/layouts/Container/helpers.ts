@@ -1,4 +1,5 @@
 import { ComponentProps } from 'react';
+import { HiCalendar, HiClock, HiQuestionMarkCircle } from 'react-icons/hi';
 import {
   RiBarChartBoxLine,
   RiQuestionnaireLine,
@@ -11,6 +12,9 @@ const headerItemsIcons: { [key: string]: React.FC<ComponentProps<'svg'>> } = {
   grade: RiTimer2Line,
   modality: RiQuestionnaireLine,
   lessons: RiBarChartBoxLine,
+  load: HiClock,
+  exams: HiQuestionMarkCircle,
+  date: HiCalendar,
 };
 
 const getHeaderItemsWithIcons = (
