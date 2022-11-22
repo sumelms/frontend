@@ -126,5 +126,22 @@
         }
       ]
     }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "Cálculo I",
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "name": "Lorem ipsum ",
+      "courseId": 2
+    },
+    {
+      "id": 3,
+      "name": "Lorem ipsum ",
+      "courseId": 3
+    }
   ]
 }
