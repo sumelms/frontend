@@ -7,13 +7,8 @@ import Section from '../../components/Section';
 const CourseClassroomsSubscription: React.FC = () => {
   return (
     <>
-      <Section
-        title="Inscrição nas Turmas"
-        titleAs="h2"
-        titleClassName="text-3xl font-bold text-gray-700 dark:text-white"
-        className=""
-      >
-        <div className="w-full mt-10 bg-white rounded-lg lg:p-4">
+      <Section title="Inscrição nas Turmas">
+        <div className="w-full bg-white rounded-lg lg:p-4">
           <div className="flex justify-between m-5">
             <p className="text-lg font-semibold text-gray-700">
               Tumas em andamento

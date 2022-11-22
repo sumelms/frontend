@@ -37,36 +37,28 @@ const CourseOverview: React.FC = () => {
 
   return (
     <>
-      <Section
-        title="Apresentação do Curso"
-        titleAs="h2"
-        titleClassName="text-3xl font-bold text-gray-700 dark:text-white"
-      >
-        <div className="my-6 space-y-6 text-lg leading-8 text-gray-600 dark:text-white ">
-          {course && course.description}
-        </div>
-        <div>
-          <div className="space-y-9 lg:space-y-0 lg:flex lg:gap-x-14">
-            {course &&
-              course.gallery.map(({ img, text }, key) => (
-                <div className="w-4/5 lg:w-1/3 " key={key}>
-                  <img
-                    className="object-cover rounded-[28px] w-full max-h-72"
-                    src={img}
-                    alt=""
-                  />
-                  <div className="m-6 mt-3">
-                    <em className="text-xs text-center text-gray-600 dark:text-white">
-                      {text}
-                    </em>
-                  </div>
+      <Section title="Apresentação do Curso">
+        <div className="text-lg leading-8">{course && course.description}</div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-9">
+          {course &&
+            course.gallery.map(({ img, text }, key) => (
+              <div className="" key={key}>
+                <img
+                  className="object-cover rounded-[28px] w-full max-h-72"
+                  src={img}
+                  alt=""
+                />
+                <div className="px-6 mt-2">
+                  <em className="text-xs text-center text-gray-600 dark:text-white">
+                    {text}
+                  </em>
                 </div>
-              ))}
-          </div>
+              </div>
+            ))}
         </div>
       </Section>
 
-      <Section title="Corpo Docente" className="mt-7">
+      <Section title="Corpo Docente">
         {course &&
           course.educators.map((educator, key) => (
             <CardEducator

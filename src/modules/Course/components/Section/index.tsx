@@ -18,12 +18,12 @@ const Section: React.FC<SectionProps> = ({
       <TitleTag
         className={
           titleClassName ??
-          'mb-5 text-3xl font-bold text-gray-900 dark:text-white'
+          'lg:mb-10 mb-5 text-3xl font-bold text-gray-700 dark:text-white'
         }
       >
         {title}
       </TitleTag>
-      <div className="flex h-full flex-wrap gap-x-2 md:gap-x-6 lg:gap-x-16 gap-y-2.5 lg:gap-y-10 md:gap-y-5">
+      <div className="flex flex-wrap h-full my-4 text-gray-800 gap-x-2 md:gap-x-8 lg:gap-x-16 gap-y-2 lg:gap-y-16 md:gap-y-8 dark:text-white">
         {children}
       </div>
     </div>
