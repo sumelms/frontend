@@ -2,6 +2,7 @@ import React from 'react';
 import { RouteObject } from 'react-router-dom';
 
 import DefaultLayout from '../layouts/Default';
+import Classroom from '../modules/Classroom/routes';
 import Course from '../modules/Course/routes';
 import Dashboard from '../modules/Dashboard/routes';
 
@@ -13,7 +14,7 @@ const routes: RouteObject[] = [
     handle: {
       crumb: (data: unknown) => <span>Home</span>,
     },
-    children: [...Dashboard, ...Course],
+    children: [...Dashboard, ...Course, ...Classroom],
   },
 ];
 
