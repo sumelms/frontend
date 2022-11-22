@@ -14,7 +14,7 @@ const instance = axios.create({
 });
 
 const onRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
-  console.info(`[request] [${JSON.stringify(config)}]`);
+  console.debug(`[request] [${JSON.stringify(config)}]`);
   return config;
 };
 
@@ -24,7 +24,7 @@ const onRequestError = (error: AxiosError): Promise<AxiosError> => {
 };
 
 const onResponse = (response: AxiosResponse): AxiosResponse => {
-  console.info(`[response] [${JSON.stringify(response)}]`);
+  console.debug(`[response] [${JSON.stringify(response)}]`);
   return response;
 };
 

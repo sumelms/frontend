@@ -17,6 +17,4 @@ const routes: RouteObject[] = [
   },
 ];
 
-console.log(routes);
-
 export default routes;

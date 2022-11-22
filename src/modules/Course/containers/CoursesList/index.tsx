@@ -8,7 +8,7 @@ const CoursesList: React.FC = () => {
 
   const fetchCourses = (): void => {
     CourseService.fetchCourses('fields=title,slug').then((response): void => {
-      setCourseList(response.data);
+      setCourseList(response);
     });
   };
 

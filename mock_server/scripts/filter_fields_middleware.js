@@ -5,6 +5,8 @@ const _filterResponse = (data, fields) => {
 
   if (data instanceof Array) {
     return data.map((item) => {
+      value = {};
+
       fields.forEach((field) => {
         value[field] = item[field];
       });
@@ -13,8 +15,8 @@ const _filterResponse = (data, fields) => {
     });
   }
 
-  fields.forEach((field) => {
-    value[field] = item[field];
+  fields.forEach(field => {
+    value[field] = data[field];
   });
 
   return value;
@@ -42,7 +44,7 @@ const filterFieldMiddleware = (req, res, next) => {
 
   router.render = (req, res) => {
     const filterFields = fields.split(',');
-
+    
     res.locals.data = _filterResponse(res.locals.data, filterFields);
 
     router.render = oldRender;
