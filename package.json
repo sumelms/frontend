@@ -2,7 +2,6 @@
   "name": "sumelms-frontend",
   "version": "0.1.0",
   "private": true,
-       
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,6 +29,11 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)"
     ]
   },
   "dependencies": {
