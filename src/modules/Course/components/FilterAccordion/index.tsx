@@ -28,18 +28,20 @@ const FilterAccordion: React.FC<FilterAccordionProps> = ({
   ...props
 }) => {
   return (
-    <div {...props}>
-      <div className="flex items-center justify-between w-64 h-16 p-3 border-b border-gray-300 rounded-t-lg bg-red-200/25 dark:bg-gray-900 ">
-        <p className="text-2xl text-gray-600 dark:text-white">{title}</p>
+    <div {...props} className="w-64">
+      <div className="flex items-center justify-between h-16 p-3 bg-white border-b border-gray-100 rounded-t-lg dark:bg-gray-900 ">
+        <p className="text-lg font-semibold text-gray-600 dark:text-white">
+          {title}
+        </p>
 
-        <Tooltip content="Ocultar  filtros">
+        <Tooltip content="Ocultar filtros">
           <button className="flex items-center">
             <HiX className="w-5 h-5 text-gray-600 hover:text-blue-600" />
           </button>
         </Tooltip>
       </div>
       <Accordion
-        className="border-none divide-y divide-gray-300 dark:divide-gray-300 "
+        className="border-none divide-y divide-gray-100 dark:divide-gray-100"
         alwaysOpen={true}
       >
         {sections.map(({ id, name, options }, key) => (
@@ -47,7 +49,7 @@ const FilterAccordion: React.FC<FilterAccordionProps> = ({
             className="px-2 py-2 last:rounded-none dark:bg-gray-900 first:rounded-none"
             key={key}
           >
-            <Accordion.Title className="font-medium capitalize" id={id}>
+            <Accordion.Title className="capitalize" id={id}>
               {name}
             </Accordion.Title>
             <Accordion.Content>
@@ -55,12 +57,12 @@ const FilterAccordion: React.FC<FilterAccordionProps> = ({
                 {options.map((option, okey) => (
                   <div className="flex items-center" key={okey}>
                     <Checkbox
-                      className="w-6 h-6 mr-5 border-2 border-gray-500 dark:border-gray-100 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+                      className="w-5 h-5 mr-5 border-2 border-gray-500 dark:border-gray-100 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                       id={option.id}
                       value={option.value}
                     />
                     <Label
-                      className="text-2xl text-gray-600 capitalize"
+                      className="text-lg text-gray-600 capitalize"
                       htmlFor={option.id}
                     >
                       {option.name}

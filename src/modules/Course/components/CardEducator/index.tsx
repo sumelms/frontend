@@ -47,14 +47,10 @@ const CardEducator: React.FC<CardEducatorProps> = ({
         <div className="space-y-2">
           {info.map(({ icon: Icon, name, value }, key) => (
             <div key={key} className="flex">
-              <Icon className="h-4 text-red-700" />
-              <div className="flex justify-between w-full ml-4">
-                <p className="text-xs font-semibold text-gray-600 dark:text-white">
-                  {name}
-                </p>
-                <p className="text-xs font-semibold text-gray-600 dark:text-white">
-                  {value}
-                </p>
+              <Icon className="w-4 h-4 text-red-700 dark:text-red-400" />
+              <div className="flex justify-between w-full ml-4 text-xs font-semibold text-gray-600 dark:text-white">
+                <span>{name}</span>
+                <span>{value}</span>
               </div>
             </div>
           ))}
@@ -62,9 +58,9 @@ const CardEducator: React.FC<CardEducatorProps> = ({
 
         <div className="space-y-2">
           {action.map(({ icon: Icon, name }, key) => (
-            <Button key={key} fullSized color="light">
-              <Icon className="w-5 h-5 mr-3" />
-              <p className="text-sm font-semibold dark:text-white ">{name}</p>
+            <Button key={key} fullSized outline color="light">
+              <Icon className="w-5 h-5 mr-2" />
+              <span className="font-semibold">{name}</span>
             </Button>
           ))}
         </div>

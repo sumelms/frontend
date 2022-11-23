@@ -38,8 +38,8 @@ const CourseClassrooms: React.FC = () => {
       },
 
       info: [
-        { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
-        { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+        { icon: HiCalendar, name: 'Inicio:', text: '28 Ago' },
+        { icon: HiTable, name: 'Término:', text: '12 Dez' },
         { icon: HiClock, text: '19h - 22h' },
         { icon: HiInbox, text: 'Presencial' },
         { icon: HiUser, text: 'Dr. John' },
@@ -52,8 +52,8 @@ const CourseClassrooms: React.FC = () => {
       },
 
       info: [
-        { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
-        { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+        { icon: HiCalendar, name: 'Inicio:', text: '28 Ago' },
+        { icon: HiTable, name: 'Término:', text: '12 Dez' },
         { icon: HiClock, text: '19h - 22h' },
         { icon: HiInbox, text: 'Presencial' },
         { icon: HiUser, text: 'Dr. John' },
@@ -66,8 +66,8 @@ const CourseClassrooms: React.FC = () => {
       },
 
       info: [
-        { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
-        { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+        { icon: HiCalendar, name: 'Inicio:', text: '28 Ago' },
+        { icon: HiTable, name: 'Término:', text: '12 Dez' },
         { icon: HiClock, text: '19h - 22h' },
         { icon: HiInbox, text: 'Presencial' },
         { icon: HiUser, text: 'Dr. John' },
@@ -80,8 +80,8 @@ const CourseClassrooms: React.FC = () => {
       },
 
       info: [
-        { icon: HiCalendar, name: 'Inicio:', text: '28 Agosto' },
-        { icon: HiTable, name: 'Término:', text: '12 Dezembro' },
+        { icon: HiCalendar, name: 'Inicio:', text: '28 Ago' },
+        { icon: HiTable, name: 'Término:', text: '12 Dez' },
         { icon: HiClock, text: '19h - 22h' },
         { icon: HiInbox, text: 'Presencial' },
         { icon: HiUser, text: 'Dr. John' },
@@ -99,7 +99,7 @@ const CourseClassrooms: React.FC = () => {
               <p>Turmas disponiveis</p>
               <p className="font-bold">obrigatórias</p>
             </div>
-            <div className="flex h-full flex-wrap gap-x-4 gap-y-2.5">
+            <div className="flex flex-wrap h-full gap-x-4">
               {cardSubjects.map(({ subject, info }, key) => (
                 <CardSubject key={key} subject={subject} info={info} />
               ))}

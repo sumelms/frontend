@@ -8,13 +8,13 @@ const theme: DeepPartial<FlowbiteTheme> = {
         base: 'h-5 w-5 shrink-0',
       },
       flush: {
-        off: 'hover:bg-red-200/25 focus:ring-2 ring-inset focus:ring-gray-500 dark:hover:bg-gray-800 dark:focus:ring-gray-800',
+        off: 'hover:bg-blue-200/25 focus:ring-2 ring-inset focus:ring-blue-400 dark:hover:bg-gray-800 dark:focus:ring-blue-600',
         on: '!bg-transparent dark:!bg-transparent',
       },
       heading: 'text-base font-semibold',
       open: {
         off: 'bg-white/75',
-        on: 'text-gray-900 bg-red-200/25 dark:bg-gray-800 dark:text-white',
+        on: 'text-gray-900 bg-gray-200 dark:bg-gray-800 dark:text-white',
       },
     },
   },
@@ -24,9 +24,11 @@ const theme: DeepPartial<FlowbiteTheme> = {
   button: {
     outline: {
       color: {
-        red: 'text-red-700 hover:text-white font-bold bg-transparent border border-slate-600/75 hover:bg-red-800/75 hover:border-transparent dark:bg-white-900 dark:text-red-700',
+        light:
+          'border border-gray-200/75 bg-white hover:bg-gray-200/75 focus:ring-4 focus:ring-blue-300 disabled:hover:bg-white dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:hover:bg-gray-800 dark:hover:border-gray-800 dark:focus:ring-gray-700',
       },
-      on: 'bg-white text-red-700 group-hover:bg-opacity-0 group-hover:text-inherit dark:bg-white-900 dark:text-red-700',
+      off: '',
+      on: 'bg-white text-gray-600 transition-all duration-75 ease-in group-hover:bg-opacity-0 group-hover:text-inherit dark:bg-gray-900 dark:text-white',
     },
   },
   breadcrumb: {
@@ -39,6 +41,9 @@ const theme: DeepPartial<FlowbiteTheme> = {
       icon: 'mr-4 h-4 w-4',
     },
     list: 'flex items-center',
+  },
+  card: {
+    base: 'flex rounded-lg border border-gray-200/50 bg-white dark:border-gray-700 dark:bg-gray-800',
   },
   navbar: {
     base: 'border-gray-50 bg-white px-2 py-2.5 sm:px-4',
