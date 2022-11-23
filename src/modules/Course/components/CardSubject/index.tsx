@@ -21,32 +21,29 @@ export interface CardSubjectProps {
 const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
   return (
     <div>
-      <Card className="lg:w-96">
-        <div className="p-2 space-y-5">
-          <p className="text-lg font-bold text-gray-900 dark:text-white">
+      <Card className="w-96">
+        <div className="space-y-5 ">
+          <p className="text-lg font-bold text-gray-800 dark:text-white">
             {subject.title}
           </p>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-2">
+          <div className="grid grid-cols-2 gap-2">
             {info.map(({ icon: Icon, name, text }, key) => (
-              <div
-                key={key}
-                className="flex items-center h-5 text-center gap-x-2"
-              >
-                <Icon className="w-4 h-4 text-gray-300 " />
+              <div key={key} className="flex items-center text-center gap-x-2">
+                <Icon className="w-4 text-gray-300 " />
                 <div className="flex">
-                  <p className="text-xs font-semibold text-stone-700 dark:text-white">
-                    {name}
-                  </p>
-                  <p className="text-xs text-stone-700 dark:text-white">
-                    {text}
-                  </p>
+                  {name && (
+                    <p className="mr-1 font-semibold text-gray-700 dark:text-white">
+                      {name}
+                    </p>
+                  )}
+                  <p className="text-gray-700 dark:text-white">{text}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-stone-700 dark:text-white">
+            <p className="font-semibold text-gray-700 dark:text-white">
               {subject.subtitle}
             </p>
             <Progress
@@ -60,8 +57,8 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
           </div>
 
           <div>
-            <Button outline fullSized color="red">
-              Acessar minha turma
+            <Button outline fullSized color="light">
+              <span className="font-semibold">Acessar minha turma</span>
             </Button>
           </div>
         </div>

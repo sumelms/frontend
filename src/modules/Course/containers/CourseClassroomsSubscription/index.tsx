@@ -64,14 +64,14 @@ const CourseClassroomsSubscription: React.FC = () => {
                 <Table.Cell>
                   <a
                     href="/tables"
-                    className="flex font-medium text-gray-500 dark:text-white hover:text-gray-800 hover:underline hover:underline-offset-4"
+                    className="flex font-medium text-gray-500 dark:text-white hover:text-blue-500 hover:underline hover:underline-offset-4"
                   >
                     <HiDownload className="w-5 h-5 mr-2" />
                     <span className="font-semibold">Baixar Plano</span>
                   </a>
                 </Table.Cell>
                 <Table.Cell>
-                  <Button outline fullSized color="red">
+                  <Button outline color="failure">
                     Solicitar dispensa
                   </Button>
                 </Table.Cell>
@@ -92,14 +92,14 @@ const CourseClassroomsSubscription: React.FC = () => {
                 <Table.Cell>
                   <a
                     href="/tables"
-                    className="flex font-medium text-gray-500 dark:text-white hover:text-gray-800 hover:underline hover:underline-offset-4"
+                    className="flex font-medium text-gray-500 dark:text-white hover:text-blue-500 hover:underline hover:underline-offset-4"
                   >
                     <HiDownload className="w-5 h-5 mr-2" />
                     <span className="font-semibold">Baixar Plano</span>
                   </a>
                 </Table.Cell>
                 <Table.Cell>
-                  <Button outline fullSized color="red">
+                  <Button outline color="failure">
                     Solicitar dispensa
                   </Button>
                 </Table.Cell>
@@ -120,14 +120,16 @@ const CourseClassroomsSubscription: React.FC = () => {
                 <Table.Cell>
                   <a
                     href="/tables"
-                    className="flex font-medium text-gray-500 dark:text-white hover:text-gray-800 hover:underline hover:underline-offset-4"
+                    className="flex font-medium text-gray-500 dark:text-white hover:text-blue-500 hover:underline hover:underline-offset-4"
                   >
                     <HiDownload className="w-5 h-5 mr-2" />
                     <span className="font-semibold">Baixar Plano</span>
                   </a>
                 </Table.Cell>
                 <Table.Cell>
-                  <Button fullSized>Solicitar Inscrição</Button>
+                  <Button outline color="success">
+                    Solicitar Inscrição
+                  </Button>
                 </Table.Cell>
               </Table.Row>
             </Table.Body>

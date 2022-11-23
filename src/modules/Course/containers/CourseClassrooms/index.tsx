@@ -92,7 +92,7 @@ const CourseClassrooms: React.FC = () => {
               <p>Turmas disponiveis</p>
               <p className="font-bold">obrigatórias</p>
             </div>
-            <div className="flex h-full flex-wrap gap-x-4 gap-y-2.5">
+            <div className="flex flex-wrap h-full gap-x-4">
               {classrooms &&
                 classrooms.map(({ subject, info }, key) => (
                   <CardSubject key={key} subject={subject} info={info} />
