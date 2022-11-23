@@ -1,4 +1,24 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "uuid": "08b7880d-1ca6-48bc-9f7c-b474c6b2c06a",
+      "email": "student@sumelms.com",
+      "type": "student"
+    },
+    {
+      "id": 2,
+      "uuid": "c84b9d09-abe1-4ec8-9b4e-b23f47325df5",
+      "email": "janedoe@sumelms.com",
+      "type": "student"
+    },
+    {
+      "id": 3,
+      "uuid": "5adcc02a-4d5e-4f6c-ad3a-37cd4362b07d",
+      "email": "educator@sumelms.com",
+      "type": "educator"
+    }
+  ],
   "courses": [
     {
       "id": 1,
@@ -7,6 +27,7 @@
       "subtitle": "O caminho para a sua formação profissional e pessoal.",
       "description": "A área de **tecnologia da informação** está em constante crescimento, sempre com oportunidades para os profissionais do ramo. O curso de Sistemas de Informação da [USP](#) proporciona aos alunos uma formação sólida de desenvolvimento de software, com toda a estrutura necessária para o ensino. Como é uma área muito dinâmica, o curso também realiza palestras, cursos e demais eventos ao longo da graduação para manter os alunos atualizados com as novidades do mercado. A área de tecnologia da informação está em constante crescimento, sempre com oportunidades para os profissionais do ramo. \n\n O curso de Sistemas de Informação da USP proporciona aos alunos uma formação sólida de desenvolvimento de software, com toda a estrutura necessária para o ensino. Como é uma área muito dinâmica, o curso também realiza palestras, cursos e demais eventos ao longo da graduação para manter os alunos atualizados com as novidades do mercado. \n\n A região de _Ribeirão Preto_ é privilegiada porque abriga muitas empresas do ramo de TI, mas o profissional também pode atuar em praticamente todos os setores, oferecendo suporte e criando inovações digitais. A região de Ribeirão Preto é privilegiada porque abriga muitas empresas do ramo de TI, mas o profissional também pode atuar em praticamente todos os setores, oferecendo suporte e criando inovações digitais.",
       "slug": "sistemas-de-informacao",
+      "syllabiId": 1,
       "details": [
         {
           "key": "grade",
@@ -87,10 +108,11 @@
     {
       "id": 2,
       "uuid": "e64ba6f7-c915-4641-99bd-2a5754ca6839",
-      "title": "Comunicação e Artes",
+      "title": "Administração Empresarial",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
       "slug": "comunicacao-e-artes",
+      "syllabiId": 2,
       "details": [
         {
           "key": "grade",
@@ -175,6 +197,7 @@
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
       "slug": "arquitetura-e-urbanismo-e-design",
+      "syllabiId": 3,
       "details": [
         {
           "key": "grade",
@@ -253,6 +276,23 @@
       ]
     }
   ],
+  "syllabi": [
+    {
+      "id": 1,
+      "uuid": "e0172e2e-5cbe-485f-adb9-376a36d94468",
+      "introduction": "Essa matriz curricular busca um equilíbrio que faça com que a predominância do caráter formador do curso se harmonize com a necessária extensão de informação fundamental, sobretudo ação profissional do docente de Segundo Grau inclui-se de forma decisiva entre os objetivos do curso."
+    },
+    {
+      "id": 2,
+      "uuid": "890dde94-2478-4f37-b2b9-647773bcdd53",
+      "introduction": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 3,
+      "uuid": "0a9c4218-4dfc-4a54-92d4-832da3a66738",
+      "introduction": "Gravida arcu ac tortor dignissim convallis aenean et. Egestas diam in arcu cursus euismod quis viverra. In fermentum posuere urna nec tincidunt praesent semper. Sagittis vitae et leo duis ut. Scelerisque in dictum non consectetur a erat nam at lectus. Nullam ac tortor vitae purus faucibus ornare suspendisse sed. Quam id leo in vitae turpis massa sed. Sed risus ultricies tristique nulla aliquet enim tortor. Non arcu risus quis varius quam."
+    }
+  ],
   "subjects": [
     {
       "id": 1,
@@ -268,6 +308,199 @@
       "id": 3,
       "name": "Lorem ipsum ",
       "courseId": 3
+    }
+  ],
+
+  "categories": [
+    {
+      "id": 1,
+      "name": "Obrigatória",
+      "uuid": "cfd153aa-d9e0-4478-8ce0-7b3d20dbe677"
+    },
+    {
+      "id": 2,
+      "name": "Optativa",
+      "uuid": "090c83ad-5fcb-4f79-ad1c-1e3f80f396a5"
+    },
+    {
+      "id": 3,
+      "name": "Eletiva",
+      "uuid": "2ed6921f-94de-4cce-9b1c-38c3ad94e9ed"
+    },
+    {
+      "id": 4,
+      "name": "Livre",
+      "uuid": "9124f485-0657-44c2-9472-e0b0f3c77276"
+    }
+  ],
+  "modalities": [
+    {
+      "id": 1,
+      "uuid": "50661ceb-75c5-44ff-baa0-396e07d9d575",
+      "name": "Presencial"
+    },
+    {
+      "id": 2,
+      "uuid": "a7e105ed-6123-4e38-b86b-666117e1cc98",
+      "name": "Semipresencial"
+    },
+    {
+      "id": 3,
+      "uuid": "9ceff5f6-b15e-415a-b242-a3daa349cc1b",
+      "name": "Remoto"
+    }
+  ],
+
+  "classrooms": [
+    {
+      "id": 1,
+      "uuid": "5ba345b9-4dde-407a-a1f0-7103177f4986",
+      "name": "Fundamentos de Administração - Sistemas de Informação",
+      "categoryId": 3,
+      "courseId": 1,
+      "modalityId": 2,
+      "details": [
+        {
+          "key": "start",
+          "label": "Início",
+          "value": "28 Agosto"
+        },
+        {
+          "key": "end",
+          "label": "Término",
+          "value": "12 Dezembro"
+        },
+        {
+          "key": "period",
+          "label": "",
+          "value": "19h - 22h"
+        },
+        {
+          "key": "educator",
+          "label": "",
+          "value": "Dr. John"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "uuid": "6e6cf6d8-1be2-45e4-84ea-437b27432cff",
+      "name": "Fundamentos de Administração",
+      "categoryId": 1,
+      "modalityId": 1,
+      "courseId": 2,
+      "details": [
+        {
+          "key": "start",
+          "label": "Início",
+          "value": "28 Agosto"
+        },
+        {
+          "key": "end",
+          "label": "Término",
+          "value": "12 Dezembro"
+        },
+        {
+          "key": "period",
+          "label": "",
+          "value": "19h - 22h"
+        },
+        {
+          "key": "educator",
+          "label": "",
+          "value": "Dr. John"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "uuid": "a473cf28-ada9-4596-893b-a0df773d385d",
+      "name": "Calculo",
+      "categoryId": 1,
+      "modalityId": 1,
+      "courseId": 1,
+      "details": [
+        {
+          "key": "start",
+          "label": "Início",
+          "value": "28 Agosto"
+        },
+        {
+          "key": "end",
+          "label": "Término",
+          "value": "12 Dezembro"
+        },
+        {
+          "key": "period",
+          "label": "",
+          "value": "19h - 22h"
+        },
+        {
+          "key": "educator",
+          "label": "",
+          "value": "Dr. John"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "uuid": "13cba82f-fcd8-4011-88a8-9d7d36e3505c",
+      "name": "Banco de Dados",
+      "categoryId": 1,
+      "modalityId": 1,
+      "courseId": 1,
+      "details": [
+        {
+          "key": "start",
+          "label": "Início",
+          "value": "28 Agosto"
+        },
+        {
+          "key": "end",
+          "label": "Término",
+          "value": "12 Dezembro"
+        },
+        {
+          "key": "period",
+          "label": "",
+          "value": "19h - 22h"
+        },
+        {
+          "key": "educator",
+          "label": "",
+          "value": "Dr. John"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "uuid": "47294fdc-f8d8-4443-9f13-9b198a5b40fa",
+      "name": "Fundamentos de Engenharia de Software",
+      "categoryId": 1,
+      "modalityId": 1,
+      "courseId": 1,
+      "details": [
+        {
+          "key": "start",
+          "label": "Início",
+          "value": "28 Agosto"
+        },
+        {
+          "key": "end",
+          "label": "Término",
+          "value": "12 Dezembro"
+        },
+        {
+          "key": "period",
+          "label": "",
+          "value": "19h - 22h"
+        },
+        {
+          "key": "educator",
+          "label": "",
+          "value": "Dr. John"
+        }
+      ]
     }
   ]
 }

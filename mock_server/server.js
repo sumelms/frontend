@@ -1,4 +1,5 @@
 const FilterFieldMiddleware = require('./scripts/filter_fields_middleware');
+const CourseRouters = require('./scripts/course_routes');
 const path = require('path');
 const jsonServer = require('json-server');
 
@@ -10,13 +11,7 @@ const router = jsonServer.router(db_path);
 server.use(jsonServer.defaults());
 server.use(jsonServer.bodyParser);
 server.use(FilterFieldMiddleware(router));
-
-server.get('/api/courses/:slug', function (req, res, next) {
-  const { slug } = req.params;
-
-  res.locals.data = router.db.get('courses').find({ slug }).value();
-  next();
-});
+server.use(CourseRouters(router));
 
 server.use('/api', router);
 server.listen(9000, () => {

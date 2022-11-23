@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
+    "start:dev": "yarn run start:server & react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -33,7 +34,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "node_modules/(?!axios)"
+      "node_modules/?!(axios|react-markdown)"
     ]
   },
   "dependencies": {
