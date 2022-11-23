@@ -46,7 +46,7 @@ const CourseMatrix: React.FC = () => {
           </ol>
           <div className="flex content-center space-x-3">
             <HiDownload className="w-6 h-6" />
-            <span className="items-center font-semibold tracking-wider font-roboto">
+            <span className="items-center font-semibold tracking-wider">
               Clique no botão abaixo para download a Matriz Curricular do curso
             </span>
           </div>
@@ -60,7 +60,7 @@ const CourseMatrix: React.FC = () => {
             alwaysOpen={true}
           >
             <Accordion.Panel>
-              <Accordion.Title className="mb-2 text-gray-100 bg-gray-800 first:!rounded-t-lg rounded rounded-lg hover:bg-gray-900 hover:text-white capitalize">
+              <Accordion.Title className="mb-2 text-gray-100 bg-gray-800 first:!rounded-t-lg rounded-lg hover:bg-gray-900 hover:text-white capitalize">
                 Primeiro semestre
               </Accordion.Title>
               <Accordion.Content className="px-0 py-0 -mt-2 bg-white black:bg-gray-600">
@@ -154,7 +154,7 @@ const CourseMatrix: React.FC = () => {
               </Accordion.Content>
             </Accordion.Panel>
             <Accordion.Panel>
-              <Accordion.Title className="mb-2 text-gray-100 bg-gray-800 first:!rounded-t-lg rounded rounded-lg hover:bg-gray-900 hover:text-white">
+              <Accordion.Title className="mb-2 text-gray-100 bg-gray-800 first:!rounded-t-lg rounded-lg hover:bg-gray-900 hover:text-white">
                 Segundo Semestre
               </Accordion.Title>
               <Accordion.Content className="px-0 py-0 -mt-2 bg-white black:bg-gray-600">

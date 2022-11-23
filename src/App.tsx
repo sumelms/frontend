@@ -9,7 +9,7 @@ const router = createBrowserRouter(routes);
 
 const App: React.FC = () => {
   return (
-    <div className="flex flex-col font-sans text-gray-800 bg-white dark:bg-zinc-100 dark:text-gray-900">
+    <div className="flex flex-col text-gray-800 bg-white font-inter dark:bg-zinc-100 dark:text-gray-900">
       <RouterProvider router={router} />
     </div>
   );
