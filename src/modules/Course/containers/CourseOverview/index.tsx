@@ -1,3 +1,4 @@
+import { countReset } from 'console';
 import React, { useEffect, useState } from 'react';
 import {
   HiArrowNarrowUp,
@@ -42,41 +43,45 @@ const CourseOverview: React.FC = () => {
     <>
       <Section title="Apresentação do Curso">
         <Markdown content={course.description} />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-9">
-          {course.gallery.map(({ img, text }, key) => (
-            <div key={key}>
-              <img
-                className="object-cover rounded-[28px] w-full max-h-72"
-                src={img}
-                alt=""
-              />
-              <div className="px-6 mt-2 leading-tight">
-                <em className="text-xs text-center text-gray-600 dark:text-white">
-                  {text}
-                </em>
+        {course.gallery && (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-9">
+            {course.gallery.map(({ img, text }, key) => (
+              <div key={key}>
+                <img
+                  className="object-cover rounded-[28px] w-full h-64"
+                  src={img}
+                  alt=""
+                />
+                <div className="px-6 mt-2 leading-tight">
+                  <em className="text-xs text-center text-gray-600 dark:text-white">
+                    {text}
+                  </em>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </Section>
 
       <Section title="Corpo Docente">
-        {course &&
-          course.educators.map((educator, key) => (
-            <CardEducator
-              key={key}
-              educator={educator}
-              action={[
-                { icon: HiArrowNarrowUp, name: 'Conferir Currículo' },
-                { icon: HiOutlineChatAlt2, name: 'Enviar mensagem' },
-              ]}
-              info={[
-                { icon: HiOutlinePlay, name: 'Subjects', value: 7 },
-                { icon: HiOutlineUsers, name: 'Estudantes', value: 7 },
-                { icon: HiOutlineStar, name: 'Avaliação', value: 7 },
-              ]}
-            />
-          ))}
+        <div className="flex flex-wrap gap-x-8 2xl:gap-x-16 gap-y-8 md:gap-x-2">
+          {course &&
+            course.educators.map((educator, key) => (
+              <CardEducator
+                key={key}
+                educator={educator}
+                action={[
+                  { icon: HiArrowNarrowUp, name: 'Conferir Currículo' },
+                  { icon: HiOutlineChatAlt2, name: 'Enviar mensagem' },
+                ]}
+                info={[
+                  { icon: HiOutlinePlay, name: 'Subjects', value: 7 },
+                  { icon: HiOutlineUsers, name: 'Estudantes', value: 7 },
+                  { icon: HiOutlineStar, name: 'Avaliação', value: 7 },
+                ]}
+              />
+            ))}
+        </div>
       </Section>
     </>
   );
