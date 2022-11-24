@@ -1,4 +1,4 @@
-import { Accordion } from 'flowbite-react';
+import { Accordion, Button } from 'flowbite-react';
 import React from 'react';
 import {
   HiOutlineAnnotation,
@@ -7,12 +7,25 @@ import {
 } from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
 
+import CardReminder, { CardReminderProps } from '../components/CardReminder';
+
 type RouteParams = {
   classroom: string;
 };
 
 const ClassroomView: React.FC = () => {
   const params = useParams() as RouteParams;
+
+  const cardReminders: CardReminderProps[] = [
+    {
+      title: 'Exames finais',
+      data: '18/02/2022',
+    },
+    {
+      title: 'Exames',
+      data: '19/02/2022',
+    },
+  ];
 
   return (
     <div className="h-screen py-12">
@@ -52,10 +65,23 @@ const ClassroomView: React.FC = () => {
               consectetur.
             </span>
           </div>
+
           <div className="p-2 text-center bg-white rounded-lg h-72 w-72">
             calendar
           </div>
+
+          <div className="flex items-center justify-between text-xl">
+            <p>Atividades recentes</p>
+            <Button outline color="light">
+              Ver mais
+            </Button>
+          </div>
+          {cardReminders &&
+            cardReminders.map(({ title, data }, key) => (
+              <CardReminder key={key} title={title} data={data} />
+            ))}
         </div>
+
         <div className="w-full space-y-6">
           <p className="text-lg font-semibold">Aulas</p>
           <Accordion
