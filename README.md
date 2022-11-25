@@ -105,16 +105,21 @@ You should be able to visit the URL:
 
 Access data:
 
-|Role |User  | Password|
-|--- | --- | ---|
-|**Admin**| `admin`| `admin`|
-|**Student User**| `student`| `sume123`|
-
+| Role             | User      | Password  |
+| ---------------- | --------- | --------- |
+| **Admin**        | `admin`   | `admin`   |
+| **Student User** | `student` | `sume123` |
 
 Running the app
 
 ```.sh
 $ yarn start
+```
+
+Running the app with the Mock Server
+
+```.sh
+$ yarn start:dev
 ```
 
 ## Commands
@@ -135,6 +140,12 @@ Run Storybook components
 
 ```.sh
 $ yarn storybook
+```
+
+Run the Mock Server
+
+```.sh
+$ yarn start:server
 ```
 
 ## Mocks and Docs
@@ -176,7 +187,7 @@ $ yarn test:e2e:ci
 
 ## Troubleshooting
 
-* In case of problems in starting the keycloak, check the step-by-step in: [Configure Keycloak using file import](docs/keycloak-configuration.md).
+- In case of problems in starting the keycloak, check the step-by-step in: [Configure Keycloak using file import](docs/keycloak-configuration.md).
 
 ## Contributing
 

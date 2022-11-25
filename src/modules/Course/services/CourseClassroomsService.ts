@@ -19,18 +19,29 @@ export interface IFilterSection {
   options?: IFilterOptions[];
 }
 
-export interface IClassroomDetail {
-  key: string;
-  label: string;
-  value: string;
-}
-
 export interface IClassroom {
   name: string;
   uuid: string;
+  code: string;
+  starts_at: string;
+  ends_at: string;
   category: IFilter;
   modality: IFilter;
-  details: IClassroomDetail[];
+}
+
+export interface ISubscription {
+  status: string;
+}
+
+export interface IClassroomSubscriptions {
+  name: string;
+  uuid: string;
+  code: string;
+  starts_at: string;
+  ends_at: string;
+  category: IFilter;
+  modality: IFilter;
+  subscriptions: ISubscription[];
 }
 
 const CourseClassroomsService = {
@@ -70,6 +81,17 @@ const CourseClassroomsService = {
     const query = '_expand=modality&_expand=category';
     const { data } = await Axios.get<Array<IClassroom>>(
       `/courses/${slug}/classrooms?${query}`,
+    );
+
+    return data;
+  },
+
+  async fetchClassroomsSubscriptions(slug: string, email: string) {
+    const query = `_expand=modality&_expand=category&user.email=${email}`;
+
+    console.log('query ', query);
+    const { data } = await Axios.get<Array<IClassroomSubscriptions>>(
+      `/courses/${slug}/classrooms-subscriptions?${query}`,
     );
 
     return data;

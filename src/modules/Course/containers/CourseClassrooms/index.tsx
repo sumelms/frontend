@@ -1,4 +1,5 @@
 import React, { ComponentProps, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { HiCalendar, HiClock, HiInbox, HiTable, HiUser } from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
 
@@ -8,7 +9,6 @@ import FilterAccordion, {
 } from '../../components/FilterAccordion';
 import Section from '../../components/Section';
 import CourseClassroomsService, {
-  IClassroomDetail,
   IFilterSection,
 } from '../../services/CourseClassroomsService';
 
@@ -16,23 +16,21 @@ type RouteParams = {
   course: string;
 };
 
-const infoIcons: { [key: string]: React.FC<ComponentProps<'svg'>> } = {
-  start: HiCalendar,
-  end: HiTable,
-  lessons: HiClock,
-  period: HiClock,
-  modality: HiInbox,
-  educator: HiUser,
+const getDate = (t: any, _date: string) => {
+  return t('course.classrooms.class_date', {
+    val: new Date(_date),
+    formatParams: {
+      val: {
+        month: 'long',
+        day: 'numeric',
+      },
+    },
+  });
 };
-
-const getInfo = (detail: IClassroomDetail) => ({
-  icon: infoIcons[detail.key],
-  name: detail.label,
-  text: detail.value,
-});
 
 const CourseClassrooms: React.FC = () => {
   const params = useParams() as RouteParams;
+  const { t } = useTranslation('course');
   const [filterSections, setFilterSections] = useState<Array<IFilterSection>>();
   const [classrooms, setClassrooms] = useState<Array<CardSubjectProps>>();
 
@@ -51,20 +49,32 @@ const CourseClassrooms: React.FC = () => {
               ({
                 subject: {
                   title: item.name,
-                  subtitle: 'Meu progresso na turma:',
+                  subtitle: t('course.classrooms.subtitle'),
                 },
                 info: [
-                  ...item.details,
                   {
-                    key: 'modality',
-                    label: '',
-                    value: item.modality.name,
+                    name: t('course.classrooms.start'),
+                    text: getDate(t, item.starts_at),
+                    icon: HiCalendar,
                   },
-                ].map((detail: IClassroomDetail) => {
-                  const infos = getInfo(detail);
-
-                  return infos;
-                }),
+                  {
+                    icon: HiTable,
+                    name: t('course.classrooms.end'),
+                    text: getDate(t, item.ends_at),
+                  },
+                  {
+                    icon: HiClock,
+                    text: '19h - 22h',
+                  },
+                  {
+                    icon: HiUser,
+                    text: 'Dr. John',
+                  },
+                  {
+                    icon: HiInbox,
+                    text: item.modality.name,
+                  },
+                ],
               } as CardSubjectProps),
           ),
         );

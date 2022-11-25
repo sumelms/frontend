@@ -4,19 +4,37 @@
       "id": 1,
       "uuid": "08b7880d-1ca6-48bc-9f7c-b474c6b2c06a",
       "email": "student@sumelms.com",
-      "type": "student"
+      "title": "",
+      "name": "John Doe",
+      "full_name": "John Doe",
+      "role": "student"
     },
     {
       "id": 2,
       "uuid": "c84b9d09-abe1-4ec8-9b4e-b23f47325df5",
       "email": "janedoe@sumelms.com",
-      "type": "student"
+      "title": "",
+      "name": "Jane Doe",
+      "full_name": "Jane Doe",
+      "role": "student"
     },
     {
       "id": 3,
       "uuid": "5adcc02a-4d5e-4f6c-ad3a-37cd4362b07d",
       "email": "educator@sumelms.com",
-      "type": "educator"
+      "title": "Dr.",
+      "name": "John Constantine",
+      "full_name": "Dr. John Constantine",
+      "role": "educator"
+    },
+    {
+      "id": 4,
+      "uuid": "a7d0d334-216e-4318-a073-62e414320fae",
+      "email": "educator@sumelms.com",
+      "title": "Dra.",
+      "name": "Marie Curie",
+      "full_name": "Dra. Marie Curie",
+      "role": "educator"
     }
   ],
   "courses": [
@@ -193,10 +211,10 @@
     {
       "id": 3,
       "uuid": "143eb80f-d492-4de2-928c-c5d4a550eb5f",
-      "title": "Arquitetura e Urbanismo e Design",
+      "title": "Bacharelado Em Ciências Contábeis",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-      "slug": "arquitetura-e-urbanismo-e-design",
+      "slug": "bacharelado-em-ciências-contábeis",
       "syllabiId": 3,
       "details": [
         {
@@ -274,6 +292,91 @@
           "title": "Vice-Coordenador"
         }
       ]
+    },
+    {
+      "id": 4,
+      "uuid": "9960026f-b253-4416-91c2-4e6f20227e3a",
+      "title": "Licenciatura em Matemática",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "slug": "licenciatura-em-matemática",
+      "syllabiId": 4,
+      "details": [
+        {
+          "key": "grade",
+          "label": "Grade",
+          "value": "Bacharelado",
+          "order": 1
+        },
+        {
+          "key": "modality",
+          "label": "Modalidade do curso",
+          "value": "Híbrido",
+          "order": 2
+        },
+        {
+          "key": "lessons",
+          "label": "Lições",
+          "value": "30",
+          "order": 3
+        }
+      ],
+      "gallery": [
+        {
+          "img": "https://placeimg.com/640/480/tech",
+          "text": "Lorem ipsum dolor sit amet, consect"
+        },
+        {
+          "img": "https://placeimg.com/640/580/arch",
+          "text": "Lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet, consect ipsum dolor sit amet, consect"
+        },
+        {
+          "img": "https://placeimg.com/640/480/animals",
+          "text": "Lorem ipsum dolor sit amet, consect"
+        }
+      ],
+      "educators": [
+        {
+          "avatar": "https://flowbite.com/docs/images/people/profile-picture-1.jpg",
+          "name": "Prof. Dr. Jack Crawford",
+          "title": "Vice-Coordenador"
+        },
+        {
+          "avatar": "https://flowbite.com/docs/images/people/profile-picture-2.jpg",
+          "name": "Prof. Dr. Jack Crawford",
+          "title": "Vice-Coordenador"
+        },
+        {
+          "avatar": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
+          "name": "Prof. Dr. Jack Crawford",
+          "title": "Vice-Coordenador"
+        },
+        {
+          "avatar": "https://flowbite.com/docs/images/people/profile-picture-4.jpg",
+          "name": "Prof. Dr. Jack Crawford",
+          "title": "Vice-Coordenador"
+        },
+        {
+          "avatar": "https://flowbite.com/docs/images/people/profile-picture-5.jpg",
+          "name": "Prof. Dr. Jack Crawford",
+          "title": "Vice-Coordenador"
+        },
+        {
+          "avatar": "https://flowbite.com/docs/images/people/profile-picture-3.jpg",
+          "name": "Prof. Dr. Jack Crawford",
+          "title": "Vice-Coordenador"
+        },
+        {
+          "avatar": "https://flowbite.com/docs/images/people/profile-picture-4.jpg",
+          "name": "Prof. Dr. Jack Crawford",
+          "title": "Vice-Coordenador"
+        },
+        {
+          "avatar": "https://flowbite.com/docs/images/people/profile-picture-5.jpg",
+          "name": "Prof. Dr. Jack Crawford",
+          "title": "Vice-Coordenador"
+        }
+      ]
     }
   ],
   "syllabi": [
@@ -291,26 +394,13 @@
       "id": 3,
       "uuid": "0a9c4218-4dfc-4a54-92d4-832da3a66738",
       "introduction": "Gravida arcu ac tortor dignissim convallis aenean et. Egestas diam in arcu cursus euismod quis viverra. In fermentum posuere urna nec tincidunt praesent semper. Sagittis vitae et leo duis ut. Scelerisque in dictum non consectetur a erat nam at lectus. Nullam ac tortor vitae purus faucibus ornare suspendisse sed. Quam id leo in vitae turpis massa sed. Sed risus ultricies tristique nulla aliquet enim tortor. Non arcu risus quis varius quam."
-    }
-  ],
-  "subjects": [
-    {
-      "id": 1,
-      "name": "Cálculo I",
-      "courseId": 1
     },
     {
-      "id": 2,
-      "name": "Lorem ipsum ",
-      "courseId": 2
-    },
-    {
-      "id": 3,
-      "name": "Lorem ipsum ",
-      "courseId": 3
+      "id": 4,
+      "uuid": "0a9c4218-4dfc-4a54-92d4-832da3a66738",
+      "introduction": "Gravida arcu ac tortor dignissim convallis aenean et. Egestas diam in arcu cursus euismod quis viverra. In fermentum posuere urna nec tincidunt praesent semper. Sagittis vitae et leo duis ut. Scelerisque in dictum non consectetur a erat nam at lectus. Nullam ac tortor vitae purus faucibus ornare suspendisse sed. Quam id leo in vitae turpis massa sed. Sed risus ultricies tristique nulla aliquet enim tortor. Non arcu risus quis varius quam."
     }
   ],
-
   "categories": [
     {
       "id": 1,
@@ -350,157 +440,252 @@
       "name": "Remoto"
     }
   ],
-
   "classrooms": [
     {
       "id": 1,
       "uuid": "5ba345b9-4dde-407a-a1f0-7103177f4986",
+      "code": "101",
       "name": "Fundamentos de Administração - Sistemas de Informação",
-      "categoryId": 3,
+      "description": "Dictumst vestibulum rhoncus est pellentesque. Senectus et netus et malesuada fames ac turpis egestas. Tincidunt augue interdum velit euismod. Pellentesque dignissim enim sit amet venenatis urna. Id faucibus nisl tincidunt eget nullam non nisi. In eu mi bibendum neque egestas congue. Cras pulvinar mattis nunc sed blandit libero.",
       "courseId": 1,
+      "subjectId": 2,
+      "categoryId": 3,
       "modalityId": 2,
-      "details": [
-        {
-          "key": "start",
-          "label": "Início",
-          "value": "28 Agosto"
-        },
-        {
-          "key": "end",
-          "label": "Término",
-          "value": "12 Dezembro"
-        },
-        {
-          "key": "period",
-          "label": "",
-          "value": "19h - 22h"
-        },
-        {
-          "key": "educator",
-          "label": "",
-          "value": "Dr. John"
-        }
-      ]
+      "starts_at": "2022-08-28T00:00:00",
+      "ends_at": "2022-12-10T00:00:00",
+      "can_subscribe": true,
+      "vacancies": 90
     },
     {
       "id": 2,
-      "uuid": "6e6cf6d8-1be2-45e4-84ea-437b27432cff",
-      "name": "Fundamentos de Administração",
+      "uuid": "b8ffd837-da51-465d-9dc1-c3b4536c05ba",
+      "code": "102",
+      "name": "Calculo I",
+      "description": "Dictumst vestibulum rhoncus est pellentesque. Senectus et netus et malesuada fames ac turpis egestas. Tincidunt augue interdum velit euismod. Pellentesque dignissim enim sit amet venenatis urna. Id faucibus nisl tincidunt eget nullam non nisi. In eu mi bibendum neque egestas congue. Cras pulvinar mattis nunc sed blandit libero.",
+      "courseId": 1,
+      "subjectId": 1,
       "categoryId": 1,
       "modalityId": 1,
-      "courseId": 2,
-      "details": [
-        {
-          "key": "start",
-          "label": "Início",
-          "value": "28 Agosto"
-        },
-        {
-          "key": "end",
-          "label": "Término",
-          "value": "12 Dezembro"
-        },
-        {
-          "key": "period",
-          "label": "",
-          "value": "19h - 22h"
-        },
-        {
-          "key": "educator",
-          "label": "",
-          "value": "Dr. John"
-        }
-      ]
+      "starts_at": "2022-08-28T00:00:00",
+      "ends_at": "2022-12-10T00:00:00",
+      "can_subscribe": true,
+      "vacancies": 90
     },
     {
       "id": 3,
-      "uuid": "a473cf28-ada9-4596-893b-a0df773d385d",
-      "name": "Calculo",
+      "uuid": "0c62c52f-b5fa-482e-8b79-b0e9d7749353",
+      "code": "103",
+      "name": "Banco de Dados",
+      "description": "Dictumst vestibulum rhoncus est pellentesque. Senectus et netus et malesuada fames ac turpis egestas. Tincidunt augue interdum velit euismod. Pellentesque dignissim enim sit amet venenatis urna. Id faucibus nisl tincidunt eget nullam non nisi. In eu mi bibendum neque egestas congue. Cras pulvinar mattis nunc sed blandit libero.",
+      "courseId": 1,
+      "subjectId": 17,
       "categoryId": 1,
       "modalityId": 1,
-      "courseId": 1,
-      "details": [
-        {
-          "key": "start",
-          "label": "Início",
-          "value": "28 Agosto"
-        },
-        {
-          "key": "end",
-          "label": "Término",
-          "value": "12 Dezembro"
-        },
-        {
-          "key": "period",
-          "label": "",
-          "value": "19h - 22h"
-        },
-        {
-          "key": "educator",
-          "label": "",
-          "value": "Dr. John"
-        }
-      ]
+      "starts_at": "2022-08-28T00:00:00",
+      "ends_at": "2022-12-10T00:00:00",
+      "can_subscribe": true,
+      "vacancies": 90
     },
     {
       "id": 4,
-      "uuid": "13cba82f-fcd8-4011-88a8-9d7d36e3505c",
-      "name": "Banco de Dados",
+      "uuid": "544165c2-6586-4872-8782-9dea92e18b89",
+      "code": "104",
+      "name": "Fundamentos de Engenharia de Software",
+      "description": "Dictumst vestibulum rhoncus est pellentesque. Senectus et netus et malesuada fames ac turpis egestas. Tincidunt augue interdum velit euismod. Pellentesque dignissim enim sit amet venenatis urna. Id faucibus nisl tincidunt eget nullam non nisi. In eu mi bibendum neque egestas congue. Cras pulvinar mattis nunc sed blandit libero.",
+      "courseId": 1,
+      "subjectId": 5,
       "categoryId": 1,
       "modalityId": 1,
-      "courseId": 1,
-      "details": [
-        {
-          "key": "start",
-          "label": "Início",
-          "value": "28 Agosto"
-        },
-        {
-          "key": "end",
-          "label": "Término",
-          "value": "12 Dezembro"
-        },
-        {
-          "key": "period",
-          "label": "",
-          "value": "19h - 22h"
-        },
-        {
-          "key": "educator",
-          "label": "",
-          "value": "Dr. John"
-        }
-      ]
+      "starts_at": "2022-08-28T00:00:00",
+      "ends_at": "2022-12-10T00:00:00",
+      "can_subscribe": true,
+      "vacancies": 90
     },
     {
       "id": 5,
-      "uuid": "47294fdc-f8d8-4443-9f13-9b198a5b40fa",
-      "name": "Fundamentos de Engenharia de Software",
+      "uuid": "cc53573b-c377-4ce2-8d8b-465790267010",
+      "code": "106",
+      "name": "Filosofia da Ciência - Sistemas de Informação",
+      "description": "Dictumst vestibulum rhoncus est pellentesque. Senectus et netus et malesuada fames ac turpis egestas. Tincidunt augue interdum velit euismod. Pellentesque dignissim enim sit amet venenatis urna. Id faucibus nisl tincidunt eget nullam non nisi. In eu mi bibendum neque egestas congue. Cras pulvinar mattis nunc sed blandit libero.",
+      "courseId": 1,
+      "subjectId": 3,
+      "categoryId": 3,
+      "modalityId": 2,
+      "starts_at": "2022-08-28T00:00:00",
+      "ends_at": "2022-12-12T00:00:00",
+      "can_subscribe": true,
+      "vacancies": 90
+    },
+    {
+      "id": 6,
+      "uuid": "c85294cb-1bda-4dc6-bcfc-89f7af75a048",
+      "code": "105",
+      "name": "Fundamentos de Administração",
+      "description": "Dictumst vestibulum rhoncus est pellentesque. Senectus et netus et malesuada fames ac turpis egestas. Tincidunt augue interdum velit euismod. Pellentesque dignissim enim sit amet venenatis urna. Id faucibus nisl tincidunt eget nullam non nisi. In eu mi bibendum neque egestas congue. Cras pulvinar mattis nunc sed blandit libero.",
+      "courseId": 2,
+      "subjectId": 2,
       "categoryId": 1,
       "modalityId": 1,
-      "courseId": 1,
-      "details": [
-        {
-          "key": "start",
-          "label": "Início",
-          "value": "28 Agosto"
-        },
-        {
-          "key": "end",
-          "label": "Término",
-          "value": "12 Dezembro"
-        },
-        {
-          "key": "period",
-          "label": "",
-          "value": "19h - 22h"
-        },
-        {
-          "key": "educator",
-          "label": "",
-          "value": "Dr. John"
-        }
-      ]
+      "starts_at": "2022-08-28T00:00:00",
+      "ends_at": "2022-12-10T00:00:00",
+      "can_subscribe": true,
+      "vacancies": 90
+    },
+    {
+      "id": 7,
+      "uuid": "12d8350b-c190-4540-aa16-c22155928d37",
+      "code": "107",
+      "name": "Metodologia de Pesquisa - Administração Empresarial",
+      "description": "Dictumst vestibulum rhoncus est pellentesque. Senectus et netus et malesuada fames ac turpis egestas. Tincidunt augue interdum velit euismod. Pellentesque dignissim enim sit amet venenatis urna. Id faucibus nisl tincidunt eget nullam non nisi. In eu mi bibendum neque egestas congue. Cras pulvinar mattis nunc sed blandit libero.",
+      "courseId": 2,
+      "subjectId": 7,
+      "categoryId": 3,
+      "modalityId": 2,
+      "starts_at": "2022-08-28T00:00:00",
+      "ends_at": "2022-12-12T00:00:00",
+      "can_subscribe": true,
+      "vacancies": 90
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "uuid": "ab6e3010-538b-4c12-a4ec-b3177b0641ed",
+      "name": "Cálculo I",
+      "objective": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "code": "100"
+    },
+    {
+      "id": 2,
+      "name": "Fundamentos de Administração",
+      "uuid": "8313e968-e981-4cce-929b-809d2c50b3bb",
+      "code": "102",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 3,
+      "name": "Filosofia da Ciência",
+      "uuid": "c4ad326e-c0bc-45a5-82d3-219bd30ccf34",
+      "code": "103",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 4,
+      "name": "Arquitetura de Computadores",
+      "uuid": "2bc74160-0a9e-443c-9687-d46643dde4d0",
+      "code": "104",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 5,
+      "name": "Fundamentos de Engenharia de Software",
+      "uuid": "8ff9e5b7-c080-4931-b6e4-d6457d6afcc3",
+      "code": "105",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 6,
+      "name": "Álgebra Linear",
+      "uuid": "d1508fea-c728-488e-9d36-ff2ccf97ce4c",
+      "code": "106",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 7,
+      "name": "Metodologia de Pesquisa",
+      "uuid": "7718ebe5-3292-4f4f-90e9-eabd196379e8",
+      "code": "107",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 8,
+      "uuid": "ac7459ba-7096-4f4b-a23d-9faed99b98b2",
+      "name": "Algoritmo e Linguagem de Programação",
+      "code": "108",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 9,
+      "uuid": "4eed6ae2-57bd-438f-8f19-08cc22647e58",
+      "name": "Programação I",
+      "code": "109",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 10,
+      "uuid": "b975252c-f7be-4a20-9432-5afeffdae339",
+      "name": "Cálculo Diferencial e Integral",
+      "code": "110",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 11,
+      "uuid": "b70b87de-6841-40fc-8a40-d60704e145a6",
+      "name": "Matemática Financeira",
+      "code": "111",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 12,
+      "uuid": "75862a2c-7920-4ac0-9f60-3ad0edb8ce4f",
+      "name": "Matemática",
+      "code": "112",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 13,
+      "uuid": "3c5f4af7-01b5-41d5-9fbc-c69d82b43286",
+      "name": "Filosofia das Ciências",
+      "code": "113",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 14,
+      "uuid": "7d51b008-46fd-4ce4-ab27-d0b621e69997",
+      "name": "Marketing Aplicado",
+      "code": "114",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 15,
+      "uuid": "1ec8f558-0204-4db6-ad05-ad0cede765e1",
+      "name": "Estatística I",
+      "code": "115",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 16,
+      "uuid": "dbaa3f2d-bd7a-4275-ba80-2e66f4cf5517",
+      "name": "Gestão de Recursos Humanos",
+      "code": "116",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "id": 17,
+      "uuid": "746de791-e7cb-4923-9ac8-931b71cf7c51",
+      "name": "Banco de Dados",
+      "code": "117",
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+  ],
+  "subscriptions": [
+    {
+      "userId": 1,
+      "classroomId": 1,
+      "role": "",
+      "status": "inprogress"
+    },
+    {
+      "userId": 2,
+      "classroomId": 1,
+      "role": "",
+      "status": "subscribed"
+    },
+    {
+      "userId": 1,
+      "classroomId": 3,
+      "role": "",
+      "status": "inprogress"
     }
   ]
 }

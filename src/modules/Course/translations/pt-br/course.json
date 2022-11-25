@@ -1,0 +1,8 @@
+{
+  "classrooms": {
+    "subtitle": "Meu progresso na turma:",
+    "start": "Início",
+    "end": "Término",
+    "class_date": "{{val, datetime}}"
+  }
+}
