@@ -2,7 +2,7 @@ import React from 'react';
 import { RouteObject } from 'react-router-dom';
 
 import PageLayout from '../../../layouts/Container';
-import ClassroomView from '../containers/ClassroomView';
+import ClassroomView from '../containers/ClassroomOverview';
 import { pageLoader } from './loader';
 
 const routes: RouteObject[] = [
