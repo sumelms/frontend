@@ -1,8 +1,13 @@
 import { Button } from 'flowbite-react';
 import React from 'react';
+import {
+  HiOutlineAnnotation,
+  HiOutlineBookOpen,
+  HiOutlinePlay,
+} from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
 
-import AccordionLessons from '../../components/AccordionLessons';
+import AccordionLessons, { Lesson } from '../../components/AccordionLessons';
 import CardReminder, { CardReminderProps } from '../../components/CardReminder';
 
 type RouteParams = {
@@ -20,6 +25,123 @@ const ClassroomView: React.FC = () => {
     {
       title: 'Exames',
       reminderAt: '19/02/2022',
+    },
+  ];
+
+  const lessons: Lesson[] = [
+    {
+      name: 'Funções',
+      info: [
+        {
+          icon: HiOutlinePlay,
+          value: 10,
+          name: 'videos',
+        },
+        {
+          icon: HiOutlineBookOpen,
+          value: 8,
+          name: 'texts',
+        },
+        {
+          icon: HiOutlineAnnotation,
+          value: 5,
+          name: 'exercicies',
+        },
+      ],
+      activities: [
+        {
+          name: 'Matematica',
+          type: 'video',
+          status: 'completed',
+          progress: 100,
+          measurement: '15 min',
+        },
+        {
+          name: 'Lógica',
+          type: 'quiz',
+          status: 'started',
+          progress: 10,
+          measurement: '5 questões',
+        },
+        {
+          name: 'Matematica II',
+          type: 'video',
+          status: 'notstarted',
+          progress: 0,
+          measurement: '50 min',
+        },
+        {
+          name: 'Matematica II',
+          type: 'slide',
+          status: 'completed',
+          progress: 0,
+          measurement: '5 slides',
+        },
+        {
+          name: 'Lógica',
+          type: 'exam',
+          status: 'started',
+          progress: 10,
+          measurement: '50 questões',
+        },
+      ],
+    },
+    {
+      name: 'Derivadas',
+      info: [
+        {
+          icon: HiOutlinePlay,
+          value: 10,
+          name: 'videos',
+        },
+        {
+          icon: HiOutlineBookOpen,
+          value: 8,
+          name: 'texts',
+        },
+        {
+          icon: HiOutlineAnnotation,
+          value: 5,
+          name: 'exercicies',
+        },
+      ],
+      activities: [
+        {
+          name: 'Matematica',
+          type: 'video',
+          status: 'completed',
+          progress: 100,
+          measurement: '15 min',
+        },
+        {
+          name: 'Lógica',
+          type: 'quiz',
+          status: 'started',
+          progress: 10,
+          measurement: '5 questões',
+        },
+        {
+          name: 'Matematica II',
+          type: 'video',
+          status: 'notstarted',
+          progress: 0,
+          measurement: '50 min',
+        },
+        {
+          name: 'Matematica II',
+          type: 'slide',
+          status: 'completed',
+          progress: 0,
+          measurement: '5 slides',
+        },
+        {
+          name: 'Lógica',
+          type: 'exam',
+          status: 'started',
+          progress: 10,
+          measurement: '50 questões',
+        },
+      ],
     },
   ];
 
@@ -80,10 +202,7 @@ const ClassroomView: React.FC = () => {
 
         <div className="w-full space-y-6">
           <p className="text-lg font-semibold">Aulas</p>
-
-          <div>
-            <AccordionLessons />
-          </div>
+          <AccordionLessons lessons={lessons} />
         </div>
       </div>
     </div>
