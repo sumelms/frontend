@@ -37,7 +37,7 @@ const AccordionLessons: React.FC<AccordionLessonsProps> = ({ lessons }) => {
     >
       {lessons.map(({ name, info, activities }, key) => (
         <Accordion.Panel key={key}>
-          <Accordion.Title className="mb-3 text-gray-100 bg-gray-800 first:!rounded-t-lg rounded-lg hover:bg-gray-900 hover:text-white capitalize">
+          <Accordion.Title className="mb-3 text-gray-100 !bg-gray-800 first:!rounded-t-lg rounded-lg hover:bg-gray-900 hover:text-white capitalize">
             {name}
           </Accordion.Title>
           <Accordion.Content className="!px-0 !py-0 -mt-3 mb-3 rounded-lg  bg-white black:bg-gray-600">
