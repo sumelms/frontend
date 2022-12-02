@@ -156,7 +156,7 @@ const ClassroomView: React.FC = () => {
         <div className="space-y-6 text-lg font-semibold w-96 ">
           <p>Meu progresso</p>
 
-          <div className="h-32 space-y-3">
+          <div className="space-y-3">
             <CircleProgress progress={40} sqSize={100} />
             <span className="flex text-sm text-gray-700">
               Good work! Let’s finish all your progress!
