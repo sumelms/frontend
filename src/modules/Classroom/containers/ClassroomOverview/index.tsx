@@ -148,7 +148,7 @@ const ClassroomView: React.FC = () => {
   ];
 
   return (
-    <div className="h-screen py-12">
+    <div className="py-12 ">
       <p className="mb-5 text-3xl font-bold text-gray-700 capitalize lg:mb-10 dark:text-white">
         {params.classroom}
       </p>
