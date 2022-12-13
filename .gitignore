@@ -124,6 +124,10 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Yarn cache
+.yarn/
+.yarnrc.yml
+
 # dotenv environment variables file
 .env
 .env.test
