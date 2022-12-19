@@ -1,5 +1,3 @@
-import { HiCalendar, HiClock, HiInbox, HiTable, HiUser } from 'react-icons/hi';
-
 import Axios from '../../../services/axios';
 
 export interface IFilter {

@@ -1,4 +1,4 @@
-import React, { ComponentProps, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { HiCalendar, HiClock, HiInbox, HiTable, HiUser } from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
