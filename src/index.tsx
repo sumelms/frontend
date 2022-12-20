@@ -1,6 +1,6 @@
 import { ReactKeycloakProvider } from '@react-keycloak/web';
 import { Flowbite } from 'flowbite-react';
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
@@ -20,7 +20,9 @@ root.render(
   >
     <React.StrictMode>
       <Flowbite theme={{ theme }}>
-        <App />
+        <Suspense fallback="loading">
+          <App />
+        </Suspense>
       </Flowbite>
       <GlobalStyle />
     </React.StrictMode>
