@@ -15,7 +15,7 @@ const _filterResponse = (data, fields) => {
     });
   }
 
-  fields.forEach(field => {
+  fields.forEach((field) => {
     value[field] = data[field];
   });
 
@@ -44,12 +44,12 @@ const filterFieldMiddleware = (req, res, next) => {
 
   router.render = (req, res) => {
     const filterFields = fields.split(',');
-    
+
     res.locals.data = _filterResponse(res.locals.data, filterFields);
 
     router.render = oldRender;
     router.render(req, res);
-  }; 
+  };
 
   next();
 };

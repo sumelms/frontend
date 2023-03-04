@@ -65,9 +65,10 @@ Create an **.env** file on root directory
 ```.sh
 SKIP_PREFLIGHT_CHECK=true
 
-REACT_APP_KEYCLOAK_URL=http://sso.sumelms.sol
-REACT_APP_KEYCLOAK_REALM=sume
-REACT_APP_KEYCLOAK_CLIENT_ID=sume-app
+VITE_APP_KEYCLOAK_URL=http://sso.sumelms.sol
+VITE_APP_KEYCLOAK_REALM=sume
+VITE_APP_KEYCLOAK_CLIENT_ID=sume-app
+VITE_APP_BASE_SERVER_URL=http://localhost:9000/api
 ```
 
 > Note: Alternatively, you could also duplicate and rename the existing `.env.example` file.
@@ -116,12 +117,6 @@ Running the app
 $ yarn start
 ```
 
-Running the app with the Mock Server
-
-```.sh
-$ yarn start:dev
-```
-
 ## Commands
 
 Build the app
@@ -145,8 +140,11 @@ $ yarn storybook
 Run the Mock Server
 
 ```.sh
-$ yarn start:server
+$ yarn start:mock
 ```
+
+> **Note**
+> Mock servers runs when you execute `yarn start`
 
 ## Mocks and Docs
 

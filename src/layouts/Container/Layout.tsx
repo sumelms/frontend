@@ -16,23 +16,11 @@ export interface LayoutProps {
 }
 
 const Layout: React.FC = () => {
-  const {
-    title,
-    subtitle,
-    breadcrumb = true,
-    headerItems,
-    headerLinks,
-    navbarItems,
-  } = useLoaderData() as LayoutProps;
+  const { title, subtitle, breadcrumb = true, headerItems, headerLinks, navbarItems } = useLoaderData() as LayoutProps;
 
   return (
     <>
-      <Header
-        title={title}
-        subtitle={subtitle}
-        items={headerItems}
-        links={headerLinks}
-      />
+      <Header title={title} subtitle={subtitle} items={headerItems} links={headerLinks} />
       <div className="container flex-col px-5 mx-auto py-7 lg:py-14 lg:px-8 bg-neutral-100">
         {breadcrumb && (
           <div>

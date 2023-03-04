@@ -10,9 +10,7 @@ const CourseClassroomsSubscription: React.FC = () => {
       <Section title="Inscrição nas Turmas">
         <div className="w-full bg-white rounded-lg lg:p-4">
           <div className="flex justify-between m-5">
-            <p className="text-lg font-semibold text-gray-700">
-              Tumas em andamento
-            </p>
+            <p className="text-lg font-semibold text-gray-700">Tumas em andamento</p>
             <div className="flex items-center gap-x-5">
               <label className="relative block ">
                 <span className="sr-only">Search</span>
@@ -79,9 +77,7 @@ const CourseClassroomsSubscription: React.FC = () => {
             </Table.Body>
             <Table.Body>
               <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Álgebra
-                </Table.Cell>
+                <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">Álgebra</Table.Cell>
                 <Table.Cell>obrigatória</Table.Cell>
                 <Table.Cell>90</Table.Cell>
                 <Table.Cell>Remoto</Table.Cell>

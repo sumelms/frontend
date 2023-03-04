@@ -23,19 +23,13 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
     <div>
       <Card className="w-96">
         <div className="space-y-5 ">
-          <p className="text-lg font-bold text-gray-800 dark:text-white">
-            {subject.title}
-          </p>
+          <p className="text-lg font-bold text-gray-800 dark:text-white">{subject.title}</p>
           <div className="grid grid-cols-2 gap-2">
             {info.map(({ icon: Icon, name, text }, key) => (
               <div key={key} className="flex items-center text-center gap-x-2">
                 <Icon className="w-4 text-gray-300 " />
                 <div className="flex">
-                  {name && (
-                    <p className="mr-1 font-semibold text-gray-700 dark:text-white">
-                      {name}
-                    </p>
-                  )}
+                  {name && <p className="mr-1 font-semibold text-gray-700 dark:text-white">{name}</p>}
                   <p className="text-gray-700 dark:text-white">{text}</p>
                 </div>
               </div>
@@ -43,9 +37,7 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
           </div>
 
           <div>
-            <p className="font-semibold text-gray-700 dark:text-white">
-              {subject.subtitle}
-            </p>
+            <p className="font-semibold text-gray-700 dark:text-white">{subject.subtitle}</p>
             <Progress
               progress={80}
               label="todo: delet this label<"

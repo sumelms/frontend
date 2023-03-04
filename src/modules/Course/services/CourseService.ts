@@ -38,9 +38,7 @@ const CourseService = {
 
   async fetchCourse(slug: string, query?: string) {
     const formattedQuery = query ? `?${query}` : '';
-    const response = await Axios.get<ICourse>(
-      `/courses/${slug}${formattedQuery}`,
-    );
+    const response = await Axios.get<ICourse>(`/courses/${slug}${formattedQuery}`);
 
     return response.data;
   },

@@ -11,9 +11,7 @@ export interface ThemeProviderProps {
   children: ReactNode;
 }
 
-const ThemeProvider: React.FC<ThemeProviderProps> = (
-  args: ThemeProviderProps,
-) => {
+const ThemeProvider: React.FC<ThemeProviderProps> = (args: ThemeProviderProps) => {
   const [theme, setTheme] = useState('light');
 
   const root = window.document.documentElement;
@@ -25,11 +23,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = (
     setTheme,
   };
 
-  return (
-    <ThemeContext.Provider value={defaultContext}>
-      {args?.children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={defaultContext}>{args?.children}</ThemeContext.Provider>;
 };
 
 export function useTheme(): ThemeContextProps {

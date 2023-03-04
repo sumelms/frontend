@@ -5,10 +5,7 @@ export interface ContainerProps {
   spaced?: boolean;
 }
 
-const Container: React.FC<ContainerProps> = ({
-  children,
-  spaced = false,
-}: ContainerProps) => {
+const Container: React.FC<ContainerProps> = ({ children, spaced = false }: ContainerProps) => {
   return <div className={`${spaced ? 'm-10' : ''}`}>{children}</div>;
 };
 

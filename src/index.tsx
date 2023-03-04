@@ -9,15 +9,10 @@ import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './styles/global';
 import theme from './styles/theme';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement,
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
-  <ReactKeycloakProvider
-    authClient={keycloak}
-    initOptions={{ onLoad: 'login-required' }}
-  >
+  <ReactKeycloakProvider authClient={keycloak} initOptions={{ onLoad: 'login-required' }}>
     <React.StrictMode>
       <Flowbite theme={{ theme }}>
         <Suspense fallback="loading">

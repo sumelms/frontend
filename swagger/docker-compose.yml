@@ -1,7 +1,6 @@
 version: '3.3'
 
 services:
-
   gateway:
     image: nginx:alpine
     ports:
@@ -20,4 +19,3 @@ services:
       OPENAPI_MOCK_PORT: 8001
     ports:
       - 8001:8001
-    

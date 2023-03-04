@@ -1,5 +1,10 @@
-**/*.js
-node_modules
-build
+node_modules/
+build/
+tools/
+.prettierrc.js
+.eslintrc.js
+tailwind.config.js
+postcss.config.js
+env.d.ts
 *.spec.tsx
 *.spec.ts

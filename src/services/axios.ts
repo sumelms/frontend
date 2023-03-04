@@ -1,12 +1,7 @@
-import axios, {
-  AxiosError,
-  AxiosInstance,
-  AxiosRequestConfig,
-  AxiosResponse,
-} from 'axios';
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_BASE_SERVER_URL,
+  baseURL: import.meta.env.VITE_APP_BASE_SERVER_URL,
   timeout: 1000,
   headers: {
     'Content-type': 'application/json',

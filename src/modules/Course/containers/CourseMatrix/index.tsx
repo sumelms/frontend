@@ -10,38 +10,32 @@ const CourseMatrix: React.FC = () => {
       <Section title="Matriz Curricular">
         <div className="space-y-6 break-words whitespace-pre-wrap">
           <p className="indent-8">
-            Essa matriz curricular busca um equilíbrio que faça com que a
-            predominância do caráter formador do curso se harmonize com a
-            necessária extensão de informação fundamental, sobretudo ação
-            profissional do docente de Segundo Grau inclui-se de forma decisiva
-            entre os objetivos do curso.
+            Essa matriz curricular busca um equilíbrio que faça com que a predominância do caráter formador do curso se
+            harmonize com a necessária extensão de informação fundamental, sobretudo ação profissional do docente de
+            Segundo Grau inclui-se de forma decisiva entre os objetivos do curso.
           </p>
           <ol className="space-y-1 list-decimal list-inside">
             <li>
-              <strong>Disciplinas Obrigatórias:</strong> O curso possui 14
-              disciplinas obrigatórias, das quais 2 são de 12 créditos e 12 de 6
-              créditos. Estas disciplinas dividem-se em 3 grupos:
+              <strong>Disciplinas Obrigatórias:</strong> O curso possui 14 disciplinas obrigatórias, das quais 2 são de
+              12 créditos e 12 de 6 créditos. Estas disciplinas dividem-se em 3 grupos:
             </li>
 
             <p>
               1.1 <strong>Disciplinas introdutórias:</strong>
-              Introdução à Filosofia e Filosofia Geral. Ambas de 12 créditos,
-              uma em cada semestre. O aluno obrigatoriamente deve cursá-las
-              antes de todas as demais.
+              Introdução à Filosofia e Filosofia Geral. Ambas de 12 créditos, uma em cada semestre. O aluno
+              obrigatoriamente deve cursá-las antes de todas as demais.
             </p>
             <p>
-              a) Introdução à Filosofia I e Filosofia Geral I, ambas de 06
-              créditos, uma em cada semestre. O aluno as cursa no 1º ano; 1.2
+              a) Introdução à Filosofia I e Filosofia Geral I, ambas de 06 créditos, uma em cada semestre. O aluno as
+              cursa no 1º ano; 1.2
             </p>
             <p>
-              b) Introdução à Filosofia I e Filosofia Geral I, ambas de 06
-              créditos, uma em cada semestre. O aluno as cursa no 1º ano; 1.2
+              b) Introdução à Filosofia I e Filosofia Geral I, ambas de 06 créditos, uma em cada semestre. O aluno as
+              cursa no 1º ano; 1.2
             </p>
             <p>
-              1.2 <strong>Disciplinas históricas:</strong> Histórias da
-              Filosofia Antiga, Medieval, Moderna I e II, e Contemporânea.
-              Algumas das quais são ordenadas por pré-requisitos como adiante
-              será descrito.
+              1.2 <strong>Disciplinas históricas:</strong> Histórias da Filosofia Antiga, Medieval, Moderna I e II, e
+              Contemporânea. Algumas das quais são ordenadas por pré-requisitos como adiante será descrito.
             </p>
           </ol>
           <div className="flex content-center space-x-3">
@@ -55,10 +49,7 @@ const CourseMatrix: React.FC = () => {
           </Button>
         </div>
         <div className="flex w-full">
-          <Accordion
-            className="w-full space-y-3 border-none divide-y-0 divide-transparent"
-            alwaysOpen={true}
-          >
+          <Accordion className="w-full space-y-3 border-none divide-y-0 divide-transparent" alwaysOpen={true}>
             <Accordion.Panel>
               <div>
                 <Accordion.Title className="text-gray-100 !bg-gray-800 first:!rounded-t-lg rounded-lg hover:bg-gray-900 hover:text-white capitalize">
@@ -66,9 +57,7 @@ const CourseMatrix: React.FC = () => {
                 </Accordion.Title>
                 <Accordion.Content className="px-0 py-0 bg-white black:bg-gray-600">
                   <div className="flex justify-between w-full h-full px-6 py-3 rounded-lg bg-gray-200/75">
-                    <p className="font-semibold text-gray-700">
-                      Informações gerais do semestre
-                    </p>
+                    <p className="font-semibold text-gray-700">Informações gerais do semestre</p>
                     <div className="flex items-center gap-x-5">
                       <button>
                         <span className="text-gray-500 hover:text-blue-500 dark:text-white hover:underline hover:underline-offset-4">
@@ -80,27 +69,14 @@ const CourseMatrix: React.FC = () => {
                       </button>
                     </div>
                   </div>
-                  <Table
-                    hoverable={true}
-                    className="border-none rounded-none shadow-none sm:rounded-none"
-                  >
+                  <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
                     <Table.Head>
-                      <Table.HeadCell className="bg-white">
-                        Nome da Disciplina
-                      </Table.HeadCell>
-                      <Table.HeadCell className="bg-white">
-                        Descrição
-                      </Table.HeadCell>
-                      <Table.HeadCell className="bg-white">
-                        Category
-                      </Table.HeadCell>
-                      <Table.HeadCell className="bg-white">
-                        Pré-requisitos
-                      </Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Nome da Disciplina</Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Descrição</Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Category</Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Pré-requisitos</Table.HeadCell>
                       <Table.HeadCell className="bg-white">Tipo</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">
-                        Carga horária
-                      </Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Carga horária</Table.HeadCell>
                     </Table.Head>
                     <Table.Body className="">
                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
@@ -108,11 +84,9 @@ const CourseMatrix: React.FC = () => {
                           Cálculo
                         </Table.Cell>
                         <Table.Cell>
-                          O curso cobre o material básico sobre funções de
-                          várias varáveis, incluindo: curvas no plano e no
-                          espaço, continuidade, derivadas parciais,
-                          diferenciabilidade, máximos e mínimos, e extremos com
-                          vínculos (Multiplicadores de Lagrange)
+                          O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
+                          no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
+                          com vínculos (Multiplicadores de Lagrange)
                         </Table.Cell>
                         <Table.Cell>8</Table.Cell>
                         <Table.Cell>Não há</Table.Cell>
@@ -124,10 +98,9 @@ const CourseMatrix: React.FC = () => {
                           Integração Humano Computador (IHC)
                         </Table.Cell>
                         <Table.Cell>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Eaque, unde corrupti. Id asperiores beatae quos
-                          nemo voluptatem inventore, porro nostrum omnis hic,
-                          iusto odio nam animi? Voluptatibus quo neque alias.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde corrupti. Id asperiores
+                          beatae quos nemo voluptatem inventore, porro nostrum omnis hic, iusto odio nam animi?
+                          Voluptatibus quo neque alias.
                         </Table.Cell>
                         <Table.Cell>8</Table.Cell>
                         <Table.Cell>Não há</Table.Cell>
@@ -139,11 +112,9 @@ const CourseMatrix: React.FC = () => {
                           Cálculo
                         </Table.Cell>
                         <Table.Cell>
-                          O curso cobre o material básico sobre funções de
-                          várias varáveis, incluindo: curvas no plano e no
-                          espaço, continuidade, derivadas parciais,
-                          diferenciabilidade, máximos e mínimos, e extremos com
-                          vínculos (Multiplicadores de Lagrange)
+                          O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
+                          no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
+                          com vínculos (Multiplicadores de Lagrange)
                         </Table.Cell>
                         <Table.Cell>8</Table.Cell>
                         <Table.Cell>Não há</Table.Cell>
@@ -160,9 +131,7 @@ const CourseMatrix: React.FC = () => {
                 </Accordion.Title>
                 <Accordion.Content className="px-0 py-0 bg-white black:bg-gray-600">
                   <div className="flex justify-between w-full h-full px-6 py-3 rounded-lg bg-gray-200/75">
-                    <p className="font-semibold text-gray-700">
-                      Informações gerais do semestre
-                    </p>
+                    <p className="font-semibold text-gray-700">Informações gerais do semestre</p>
                     <div className="flex items-center gap-x-5">
                       <button>
                         <span className="text-gray-500 hover:text-blue-500 dark:text-white hover:underline hover:underline-offset-4">
@@ -174,27 +143,14 @@ const CourseMatrix: React.FC = () => {
                       </button>
                     </div>
                   </div>
-                  <Table
-                    hoverable={true}
-                    className="border-none rounded-none shadow-none sm:rounded-none"
-                  >
+                  <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
                     <Table.Head>
-                      <Table.HeadCell className="bg-white">
-                        Nome da Disciplina
-                      </Table.HeadCell>
-                      <Table.HeadCell className="bg-white">
-                        Descrição
-                      </Table.HeadCell>
-                      <Table.HeadCell className="bg-white">
-                        Category
-                      </Table.HeadCell>
-                      <Table.HeadCell className="bg-white">
-                        Pré-requisitos
-                      </Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Nome da Disciplina</Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Descrição</Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Category</Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Pré-requisitos</Table.HeadCell>
                       <Table.HeadCell className="bg-white">Tipo</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">
-                        Carga horária
-                      </Table.HeadCell>
+                      <Table.HeadCell className="bg-white">Carga horária</Table.HeadCell>
                     </Table.Head>
                     <Table.Body className="">
                       <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
@@ -202,11 +158,9 @@ const CourseMatrix: React.FC = () => {
                           Cálculo
                         </Table.Cell>
                         <Table.Cell>
-                          O curso cobre o material básico sobre funções de
-                          várias varáveis, incluindo: curvas no plano e no
-                          espaço, continuidade, derivadas parciais,
-                          diferenciabilidade, máximos e mínimos, e extremos com
-                          vínculos (Multiplicadores de Lagrange)
+                          O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
+                          no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
+                          com vínculos (Multiplicadores de Lagrange)
                         </Table.Cell>
                         <Table.Cell>8</Table.Cell>
                         <Table.Cell>Não há</Table.Cell>
@@ -218,10 +172,9 @@ const CourseMatrix: React.FC = () => {
                           Integração Humano Computador (IHC)
                         </Table.Cell>
                         <Table.Cell>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Eaque, unde corrupti. Id asperiores beatae quos
-                          nemo voluptatem inventore, porro nostrum omnis hic,
-                          iusto odio nam animi? Voluptatibus quo neque alias.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde corrupti. Id asperiores
+                          beatae quos nemo voluptatem inventore, porro nostrum omnis hic, iusto odio nam animi?
+                          Voluptatibus quo neque alias.
                         </Table.Cell>
                         <Table.Cell>8</Table.Cell>
                         <Table.Cell>Não há</Table.Cell>
@@ -233,11 +186,9 @@ const CourseMatrix: React.FC = () => {
                           Cálculo
                         </Table.Cell>
                         <Table.Cell>
-                          O curso cobre o material básico sobre funções de
-                          várias varáveis, incluindo: curvas no plano e no
-                          espaço, continuidade, derivadas parciais,
-                          diferenciabilidade, máximos e mínimos, e extremos com
-                          vínculos (Multiplicadores de Lagrange)
+                          O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
+                          no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
+                          com vínculos (Multiplicadores de Lagrange)
                         </Table.Cell>
                         <Table.Cell>8</Table.Cell>
                         <Table.Cell>Não há</Table.Cell>
