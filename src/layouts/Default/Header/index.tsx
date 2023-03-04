@@ -2,6 +2,7 @@ import { useKeycloak } from '@react-keycloak/web';
 import { Avatar, Button, DarkThemeToggle, Dropdown, Navbar } from 'flowbite-react';
 import React from 'react';
 import { HiLogout } from 'react-icons/hi';
+// eslint-disable-next-line import/no-unresolved
 import logoUrl from '~/assets/svg/sume-icon-dark.svg?url';
 
 const Header: React.FC = () => {

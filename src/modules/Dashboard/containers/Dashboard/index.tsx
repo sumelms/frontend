@@ -76,7 +76,7 @@ const Dashboard: React.FC = () => {
           <div className="my-4">
             <div className="flex justify-between mb-8">
               <h2 className="font-bold">Recent Activities</h2>
-              <a className="text-sm" href="#">
+              <a className="text-sm" href="/">
                 <div className="flex items-center justify-center px-2 py-1 m-1 text-base font-medium text-gray-700 bg-gray-200 border border-gray-300 rounded-full">
                   <div className="flex-initial max-w-full text-xs font-normal leading-none">See more</div>
                 </div>
@@ -101,7 +101,7 @@ const Dashboard: React.FC = () => {
             <div className="mb-8">
               <div className="flex justify-between">
                 <h2 className="font-bold">Upcoming Events</h2>
-                <a className="text-sm" href="#">
+                <a className="text-sm" href="/">
                   <div className="flex items-center justify-center px-2 py-1 m-1 text-base font-medium text-gray-700 bg-gray-200 border border-gray-300 rounded-full">
                     <div className="flex-initial max-w-full text-xs font-normal leading-none">See more</div>
                   </div>

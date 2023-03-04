@@ -1,5 +1,4 @@
-import { LoaderFunctionArgs } from 'react-router-dom';
-
+import type { LoaderFunctionArgs } from 'react-router-dom';
 import { LayoutProps } from '../../../layouts/Container';
 import { getHeaderItemsWithIcons } from '../../../layouts/Container/helpers';
 import ClassroomService from '../services/ClassroomService';

@@ -1,7 +1,7 @@
 import { Avatar, Button, Card } from 'flowbite-react';
 import AvatarGroup from 'flowbite-react/lib/esm/components/Avatar/AvatarGroup';
 import React from 'react';
-import { IconType } from 'react-icons/lib';
+import type { IconType } from 'react-icons/lib';
 
 interface Classroom {
   title: string;
@@ -30,10 +30,10 @@ const CardClassroom: React.FC<CardClassroomProps> = ({ classroom, info, students
     <div>
       <Card className="lg:w-96">
         <div className="p-2">
-          <p className="text-lg	font-bold text-gray-900 dark:text-white">{classroom.title}</p>
-          <div className="grid gap-x-3 gap-y-2 grid-cols-2 my-5">
+          <p className="text-lg font-bold text-gray-900 dark:text-white">{classroom.title}</p>
+          <div className="grid grid-cols-2 my-5 gap-x-3 gap-y-2">
             {info.map(({ icon: Icon, name }, key) => (
-              <div key={key} className="flex text-center items-center h-5 gap-x-2">
+              <div key={key} className="flex items-center h-5 text-center gap-x-2">
                 <Icon className="w-4 h-4 text-gray-300" />
                 <p className="text-xs text-stone-700 dark:text-white">{name}</p>
               </div>
@@ -42,7 +42,7 @@ const CardClassroom: React.FC<CardClassroomProps> = ({ classroom, info, students
 
           <p className="text-sm font-semibold text-stone-700 dark:text-white">{classroom.subtitle}</p>
 
-          <div className="flex my-2 items-center gap-x-2">
+          <div className="flex items-center my-2 gap-x-2">
             <AvatarGroup>
               {students.map(({ avatar }, key) => (
                 <Avatar key={key} img={avatar} rounded={true} />

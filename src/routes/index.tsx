@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteObject } from 'react-router-dom';
+import type { RouteObject } from 'react-router-dom';
 
 import DefaultLayout from '../layouts/Default';
 import Classroom from '../modules/Classroom/routes';
