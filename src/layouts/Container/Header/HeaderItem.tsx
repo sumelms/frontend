@@ -15,10 +15,10 @@ const HeaderItem: React.FC<HeaderItemProps> = ({
   value,
 }: HeaderItemProps): JSX.Element => {
   return (
-    <div className={className ?? 'inline-flex items-center h-9 -ml-3 tracking-wider'}>
-      {Icon && <Icon className="w-6 h-6 mx-2" />}
-      <span className="mx-1">{label}:</span>
-      <span className="font-semibold">{value}</span>
+    <div className={className ?? 'inline-flex items-center h-4 -ml-2 mt-2 tracking-wider'}>
+      {Icon && <Icon className="w-4 h-4 mx-2" />}
+      <span className="mx-1 text-xs">{label}:</span>
+      <span className="text-xs font-semibold">{value}</span>
     </div>
   );
 };
