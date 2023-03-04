@@ -131,12 +131,6 @@ Run code linter
 $ yarn lint
 ```
 
-Run Storybook components
-
-```.sh
-$ yarn storybook
-```
-
 Run the Mock Server
 
 ```.sh
