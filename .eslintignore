@@ -1,5 +1,8 @@
-**/*.js
-node_modules
-build
+node_modules/
+build/
+cypress/
+.prettierrc.js
+.eslintrc.js
+env.d.ts
 *.spec.tsx
 *.spec.ts
