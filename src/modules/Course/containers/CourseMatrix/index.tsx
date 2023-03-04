@@ -49,13 +49,11 @@ const CourseMatrix: React.FC = () => {
           </Button>
         </div>
         <div className="flex w-full">
-          <Accordion className="w-full space-y-3 border-none divide-y-0 divide-transparent" alwaysOpen={true}>
+          <Accordion alwaysOpen={true}>
             <Accordion.Panel>
               <div>
-                <Accordion.Title className="text-gray-100 !bg-gray-800 first:!rounded-t-lg rounded-lg hover:bg-gray-900 hover:text-white capitalize">
-                  Primeiro semestre
-                </Accordion.Title>
-                <Accordion.Content className="px-0 py-0 bg-white black:bg-gray-600">
+                <Accordion.Title>Primeiro semestre</Accordion.Title>
+                <Accordion.Content>
                   <div className="flex justify-between w-full h-full px-6 py-3 rounded-lg bg-gray-200/75">
                     <p className="font-semibold text-gray-700">Informações gerais do semestre</p>
                     <div className="flex items-center gap-x-5">
@@ -71,18 +69,16 @@ const CourseMatrix: React.FC = () => {
                   </div>
                   <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
                     <Table.Head>
-                      <Table.HeadCell className="bg-white">Nome da Disciplina</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Descrição</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Category</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Pré-requisitos</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Tipo</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Carga horária</Table.HeadCell>
+                      <Table.HeadCell>Nome da Disciplina</Table.HeadCell>
+                      <Table.HeadCell>Descrição</Table.HeadCell>
+                      <Table.HeadCell>Category</Table.HeadCell>
+                      <Table.HeadCell>Pré-requisitos</Table.HeadCell>
+                      <Table.HeadCell>Tipo</Table.HeadCell>
+                      <Table.HeadCell>Carga horária</Table.HeadCell>
                     </Table.Head>
-                    <Table.Body className="">
-                      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                        <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Cálculo
-                        </Table.Cell>
+                    <Table.Body>
+                      <Table.Row>
+                        <Table.Cell>Cálculo</Table.Cell>
                         <Table.Cell>
                           O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
                           no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
@@ -93,10 +89,8 @@ const CourseMatrix: React.FC = () => {
                         <Table.Cell>Obrigatória</Table.Cell>
                         <Table.Cell>90h</Table.Cell>
                       </Table.Row>
-                      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                        <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Integração Humano Computador (IHC)
-                        </Table.Cell>
+                      <Table.Row>
+                        <Table.Cell>Integração Humano Computador (IHC)</Table.Cell>
                         <Table.Cell>
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde corrupti. Id asperiores
                           beatae quos nemo voluptatem inventore, porro nostrum omnis hic, iusto odio nam animi?
@@ -107,10 +101,8 @@ const CourseMatrix: React.FC = () => {
                         <Table.Cell>Obrigatória</Table.Cell>
                         <Table.Cell>90h</Table.Cell>
                       </Table.Row>
-                      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                        <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Cálculo
-                        </Table.Cell>
+                      <Table.Row>
+                        <Table.Cell>Cálculo</Table.Cell>
                         <Table.Cell>
                           O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
                           no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
@@ -126,10 +118,8 @@ const CourseMatrix: React.FC = () => {
                 </Accordion.Content>
               </div>
               <div>
-                <Accordion.Title className="text-gray-100 !bg-gray-800 first:!rounded-t-lg rounded-lg hover:bg-gray-900 hover:text-white capitalize">
-                  Primeiro semestre
-                </Accordion.Title>
-                <Accordion.Content className="px-0 py-0 bg-white black:bg-gray-600">
+                <Accordion.Title>Primeiro semestre</Accordion.Title>
+                <Accordion.Content>
                   <div className="flex justify-between w-full h-full px-6 py-3 rounded-lg bg-gray-200/75">
                     <p className="font-semibold text-gray-700">Informações gerais do semestre</p>
                     <div className="flex items-center gap-x-5">
@@ -145,18 +135,16 @@ const CourseMatrix: React.FC = () => {
                   </div>
                   <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
                     <Table.Head>
-                      <Table.HeadCell className="bg-white">Nome da Disciplina</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Descrição</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Category</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Pré-requisitos</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Tipo</Table.HeadCell>
-                      <Table.HeadCell className="bg-white">Carga horária</Table.HeadCell>
+                      <Table.HeadCell>Nome da Disciplina</Table.HeadCell>
+                      <Table.HeadCell>Descrição</Table.HeadCell>
+                      <Table.HeadCell>Category</Table.HeadCell>
+                      <Table.HeadCell>Pré-requisitos</Table.HeadCell>
+                      <Table.HeadCell>Tipo</Table.HeadCell>
+                      <Table.HeadCell>Carga horária</Table.HeadCell>
                     </Table.Head>
-                    <Table.Body className="">
-                      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                        <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Cálculo
-                        </Table.Cell>
+                    <Table.Body>
+                      <Table.Row>
+                        <Table.Cell>Cálculo</Table.Cell>
                         <Table.Cell>
                           O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
                           no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
@@ -167,10 +155,8 @@ const CourseMatrix: React.FC = () => {
                         <Table.Cell>Obrigatória</Table.Cell>
                         <Table.Cell>90h</Table.Cell>
                       </Table.Row>
-                      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                        <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Integração Humano Computador (IHC)
-                        </Table.Cell>
+                      <Table.Row>
+                        <Table.Cell>Integração Humano Computador (IHC)</Table.Cell>
                         <Table.Cell>
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde corrupti. Id asperiores
                           beatae quos nemo voluptatem inventore, porro nostrum omnis hic, iusto odio nam animi?
@@ -181,10 +167,8 @@ const CourseMatrix: React.FC = () => {
                         <Table.Cell>Obrigatória</Table.Cell>
                         <Table.Cell>90h</Table.Cell>
                       </Table.Row>
-                      <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                        <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Cálculo
-                        </Table.Cell>
+                      <Table.Row>
+                        <Table.Cell>Cálculo</Table.Cell>
                         <Table.Cell>
                           O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
                           no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos

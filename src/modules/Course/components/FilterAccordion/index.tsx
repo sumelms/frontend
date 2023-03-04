@@ -4,7 +4,6 @@ import { HiX } from 'react-icons/hi';
 
 export interface FilterAccordionProps extends PropsWithChildren<ComponentProps<'div'>> {
   title: string;
-  titleClassName?: string;
   sections: FilterSectionProps[];
 }
 
@@ -20,7 +19,7 @@ export interface FilterSectionOptionProps {
   value: string;
 }
 
-const FilterAccordion: React.FC<FilterAccordionProps> = ({ title, titleClassName, sections, ...props }) => {
+const FilterAccordion: React.FC<FilterAccordionProps> = ({ title, sections, ...props }) => {
   return (
     <div {...props} className="w-64">
       <div className="flex items-center justify-between h-16 p-3 bg-white border-b border-gray-100 rounded-t-lg dark:bg-gray-900 ">
@@ -32,24 +31,16 @@ const FilterAccordion: React.FC<FilterAccordionProps> = ({ title, titleClassName
           </button>
         </Tooltip>
       </div>
-      <Accordion className="border-none divide-y divide-gray-100 dark:divide-gray-100" alwaysOpen={true}>
+      <Accordion alwaysOpen={true}>
         {sections.map(({ id, name, options }, key) => (
-          <Accordion.Panel className="px-2 py-2 last:rounded-none dark:bg-gray-900 first:rounded-none" key={key}>
-            <Accordion.Title className="capitalize" id={id}>
-              {name}
-            </Accordion.Title>
+          <Accordion.Panel key={key}>
+            <Accordion.Title id={id}>{name}</Accordion.Title>
             <Accordion.Content>
               <div className="space-y-8">
                 {options.map((option, okey) => (
                   <div className="flex items-center" key={okey}>
-                    <Checkbox
-                      className="w-5 h-5 mr-5 border-2 border-gray-500 dark:border-gray-100 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
-                      id={option.id}
-                      value={option.value}
-                    />
-                    <Label className="text-lg text-gray-600 capitalize" htmlFor={option.id}>
-                      {option.name}
-                    </Label>
+                    <Checkbox id={option.id} value={option.value} />
+                    <Label htmlFor={option.id}>{option.name}</Label>
                   </div>
                 ))}
               </div>
