@@ -6,7 +6,7 @@
     "clean": "rumraf dist",
     "start": "run-p start:*",
     "start:vite": "vite",
-    "start:mock": "node mock_server/server.js",
+    "start:mock": "node tools/mockserver/server.js",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vite test",
@@ -20,7 +20,7 @@
     "test:e2e:ci": "npm run generate:translations && start-server-and-test start http-get://localhost:3000 cy:run",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --quiet --fix",
-    "generate:translations": "node scripts/translations.js"
+    "generate:translations": "node tools/translations/index.js"
   },
   "browserslist": {
     "production": [
