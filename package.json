@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "start:dev": "yarn run start:server & react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "clean": "rumraf dist",
+    "start": "run-p start:*",
+    "start:vite": "vite",
+    "start:mock": "node mock_server/server.js",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vite test",
     "cy:info": "cypress info",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
@@ -17,8 +19,7 @@
     "test:e2e:open": "start-server-and-test start 3000 cy:open",
     "test:e2e:ci": "npm run generate:translations && start-server-and-test start http-get://localhost:3000 cy:run",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "generate:translations": "node scripts/translations.js",
-    "start:server": "node mock_server/server.js"
+    "generate:translations": "node scripts/translations.js"
   },
   "browserslist": {
     "production": [
@@ -43,6 +44,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@vitejs/plugin-react": "^3.1.0",
     "axios": "^1.1.3",
     "i18next": "^21.8.11",
     "i18next-browser-languagedetector": "^6.1.4",
@@ -54,8 +56,10 @@
     "react-icons": "^4.4.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.4.3",
-    "react-scripts": "^5.0.1",
     "typescript": "^4.7.4",
+    "vite": "^4.1.4",
+    "vite-plugin-svgr": "^2.4.0",
+    "vite-tsconfig-paths": "^4.0.5",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },
@@ -100,6 +104,7 @@
     "husky": "^4.2.5",
     "json-server": "^0.17.1",
     "lint-staged": "^10.2.11",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.19",
     "prettier": "^2.0.5",
     "start-server-and-test": "^1.11.2",

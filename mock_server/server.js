@@ -5,6 +5,7 @@ const jsonServer = require('json-server');
 
 const db_path = path.join(__dirname, 'db.json');
 const server = jsonServer.create();
+const port = 9000;
 
 const router = jsonServer.router(db_path);
 
@@ -14,6 +15,6 @@ server.use(FilterFieldMiddleware(router));
 server.use(CourseRouters(router));
 
 server.use('/api', router);
-server.listen(9000, () => {
-  console.log('JSON Server is running');
+server.listen(port, () => {
+  console.log(`JSON Server is running at port: ${port}`);
 });
