@@ -1,6 +1,6 @@
 import { Avatar, Button, Card } from 'flowbite-react';
 import React from 'react';
-import { IconType } from 'react-icons/lib';
+import type { IconType } from 'react-icons/lib';
 
 interface Educator {
   avatar?: string;

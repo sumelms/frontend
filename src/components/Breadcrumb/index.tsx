@@ -2,7 +2,8 @@ import type { BreadcrumbItemProps } from 'flowbite-react';
 import { Breadcrumb as FlowbiteBreadcrumb } from 'flowbite-react';
 import React from 'react';
 import { HiHome } from 'react-icons/hi';
-import { Params, useMatches } from 'react-router-dom';
+import { useMatches } from 'react-router-dom';
+import type { Params } from 'react-router-dom';
 
 type RouteWithBreadcrumbHandle = {
   id: string;
