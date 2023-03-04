@@ -11,12 +11,8 @@ const Dashboard: React.FC = () => {
       <div className="grid grid-cols-3 gap-12">
         <div className="col-span-2">
           <div className="my-8 mt-0">
-            <h1 className="mb-4 text-4xl font-bold">
-              Hi, {keycloak.tokenParsed?.given_name}.
-            </h1>
-            <span className="text-lg text-gray-400">
-              Let today be the start of something new.
-            </span>
+            <h1 className="mb-4 text-4xl font-bold">Hi, {keycloak.tokenParsed?.given_name}.</h1>
+            <span className="text-lg text-gray-400">Let today be the start of something new.</span>
           </div>
 
           <div className="grid grid-cols-2 gap-2 my-8">
@@ -37,9 +33,7 @@ const Dashboard: React.FC = () => {
           <div className="my-8">
             <div className="mb-4">
               <h3 className="mb-1 text-xl font-bold">My Courses</h3>
-              <span className="text-gray-400 text-md">
-                You can easily resume your last activities from here.
-              </span>
+              <span className="text-gray-400 text-md">You can easily resume your last activities from here.</span>
             </div>
             <div className="grid grid-cols-2 gap-2">
               <div className="flex w-full h-40 p-4 bg-white rounded-l-lg">
@@ -50,18 +44,14 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
             <div className="p-4 text-center">
-              <button className="px-2 py-1 bg-white border border-gray-800 border-solid">
-                Show more
-              </button>
+              <button className="px-2 py-1 bg-white border border-gray-800 border-solid">Show more</button>
             </div>
           </div>
 
           <div className="my-8">
             <div className="mb-4">
               <h3 className="mb-1 text-xl font-bold">Tasks Today</h3>
-              <span className="text-gray-400 text-md">
-                You can easily resume your last activities from here.
-              </span>
+              <span className="text-gray-400 text-md">You can easily resume your last activities from here.</span>
             </div>
             <div className="grid grid-cols-1 gap-2">
               {[1, 2].map((i) => (
@@ -71,9 +61,7 @@ const Dashboard: React.FC = () => {
               ))}
             </div>
             <div className="p-4 text-center">
-              <button className="px-2 py-1 bg-white border border-gray-800 border-solid">
-                Show more
-              </button>
+              <button className="px-2 py-1 bg-white border border-gray-800 border-solid">Show more</button>
             </div>
           </div>
         </div>
@@ -90,9 +78,7 @@ const Dashboard: React.FC = () => {
               <h2 className="font-bold">Recent Activities</h2>
               <a className="text-sm" href="#">
                 <div className="flex items-center justify-center px-2 py-1 m-1 text-base font-medium text-gray-700 bg-gray-200 border border-gray-300 rounded-full">
-                  <div className="flex-initial max-w-full text-xs font-normal leading-none">
-                    See more
-                  </div>
+                  <div className="flex-initial max-w-full text-xs font-normal leading-none">See more</div>
                 </div>
               </a>
             </div>
@@ -117,9 +103,7 @@ const Dashboard: React.FC = () => {
                 <h2 className="font-bold">Upcoming Events</h2>
                 <a className="text-sm" href="#">
                   <div className="flex items-center justify-center px-2 py-1 m-1 text-base font-medium text-gray-700 bg-gray-200 border border-gray-300 rounded-full">
-                    <div className="flex-initial max-w-full text-xs font-normal leading-none">
-                      See more
-                    </div>
+                    <div className="flex-initial max-w-full text-xs font-normal leading-none">See more</div>
                   </div>
                 </a>
               </div>

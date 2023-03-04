@@ -44,12 +44,8 @@ export interface IClassroomSubscriptions {
 
 const CourseClassroomsService = {
   async fetchFilters() {
-    const { data: categories } = await Axios.get<Array<IFilter>>(
-      '/categories?fields=uuid,name',
-    );
-    const { data: modalities } = await Axios.get<Array<IFilter>>(
-      '/modalities?fields=uuid,name',
-    );
+    const { data: categories } = await Axios.get<Array<IFilter>>('/categories?fields=uuid,name');
+    const { data: modalities } = await Axios.get<Array<IFilter>>('/modalities?fields=uuid,name');
 
     const filters: IFilterSection[] = [
       {
@@ -77,9 +73,7 @@ const CourseClassroomsService = {
 
   async fetchClassrooms(slug: string) {
     const query = '_expand=modality&_expand=category';
-    const { data } = await Axios.get<Array<IClassroom>>(
-      `/courses/${slug}/classrooms?${query}`,
-    );
+    const { data } = await Axios.get<Array<IClassroom>>(`/courses/${slug}/classrooms?${query}`);
 
     return data;
   },

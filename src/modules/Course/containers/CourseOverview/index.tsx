@@ -1,12 +1,6 @@
 import { countReset } from 'console';
 import React, { useEffect, useState } from 'react';
-import {
-  HiArrowNarrowUp,
-  HiOutlineChatAlt2,
-  HiOutlinePlay,
-  HiOutlineStar,
-  HiOutlineUsers,
-} from 'react-icons/hi';
+import { HiArrowNarrowUp, HiOutlineChatAlt2, HiOutlinePlay, HiOutlineStar, HiOutlineUsers } from 'react-icons/hi';
 import { useParams } from 'react-router-dom';
 
 import Markdown from '../../../../components/Markdown';
@@ -23,12 +17,11 @@ const CourseOverview: React.FC = () => {
   const [course, setCourse] = useState<ICourse>();
 
   const fetchCourse = (): void => {
-    CourseService.fetchCourse(
-      params.course as string,
-      'fields=description,educators,gallery',
-    ).then((response): void => {
-      setCourse(response);
-    });
+    CourseService.fetchCourse(params.course as string, 'fields=description,educators,gallery').then(
+      (response): void => {
+        setCourse(response);
+      },
+    );
   };
 
   useEffect(() => {
@@ -47,15 +40,9 @@ const CourseOverview: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-9">
             {course.gallery.map(({ img, text }, key) => (
               <div key={key}>
-                <img
-                  className="object-cover rounded-[28px] w-full h-64"
-                  src={img}
-                  alt=""
-                />
+                <img className="object-cover rounded-[28px] w-full h-64" src={img} alt="" />
                 <div className="px-6 mt-2 leading-tight">
-                  <em className="text-xs text-center text-gray-600 dark:text-white">
-                    {text}
-                  </em>
+                  <em className="text-xs text-center text-gray-600 dark:text-white">{text}</em>
                 </div>
               </div>
             ))}

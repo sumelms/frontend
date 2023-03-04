@@ -5,10 +5,7 @@ export interface NotificationProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
-const Notification: React.FC<NotificationProps> = ({
-  status,
-  size,
-}: NotificationProps) => {
+const Notification: React.FC<NotificationProps> = ({ status, size }: NotificationProps) => {
   return (
     <span
       className={`absolute inline-block bottom-0 right-0 
@@ -29,18 +26,11 @@ export interface AvatarProps extends NotificationProps {
   size: 'sm' | 'md' | 'lg' | 'xl';
 }
 
-const Avatar: React.FC<AvatarProps> = ({
-  url,
-  name,
-  size = 'md',
-  status = null,
-}: AvatarProps) => {
+const Avatar: React.FC<AvatarProps> = ({ url, name, size = 'md', status = null }: AvatarProps) => {
   return (
     <div
       role="img"
-      aria-label={`User avatar for ${name}. ${
-        status ? `Use is ${status} right now.` : ''
-      }`}
+      aria-label={`User avatar for ${name}. ${status ? `Use is ${status} right now.` : ''}`}
       className={`relative inline-block
       ${size === 'sm' ? 'w-12 h-12' : ''} 
       ${size === 'md' ? 'w-24 h-24' : ''}
@@ -48,11 +38,7 @@ const Avatar: React.FC<AvatarProps> = ({
       ${size === 'xl' ? 'w-52 h-52' : ''}
     `}
     >
-      <img
-        className="border border-gray-100 rounded-full shadow-sm"
-        src={url}
-        alt={name}
-      />
+      <img className="border border-gray-100 rounded-full shadow-sm" src={url} alt={name} />
       {status ? <Notification status={status} size={size} /> : ''}
     </div>
   );

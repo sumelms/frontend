@@ -125,8 +125,7 @@ const theme: DeepPartial<FlowbiteTheme> = {
   },
   progress: {
     base: 'w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700',
-    label:
-      'mb-1 flex justify-end font-medium text-xs text-gray-500 dark:text-white',
+    label: 'mb-1 flex justify-end font-medium text-xs text-gray-500 dark:text-white',
     bar: 'flex items-center justify-center rounded-full text-center font-medium leading-none text-blue-100',
     color: {
       dark: 'bg-gray-600/75 dark:bg-gray-300/75',

@@ -21,11 +21,7 @@ const hasBreadcrumbHandle = (
       }
     | RouteWithBreadcrumbHandle,
 ): route is RouteWithBreadcrumbHandle => {
-  return (
-    !!route.handle &&
-    typeof route.handle === 'object' &&
-    'crumb' in route.handle
-  );
+  return !!route.handle && typeof route.handle === 'object' && 'crumb' in route.handle;
 };
 
 const Breadcrumb: React.FC = () => {

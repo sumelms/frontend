@@ -1,10 +1,9 @@
 version: '3.3'
 
 services:
-
   frontend:
     stdin_open: true
-    build: 
+    build:
       context: .
       dockerfile: docker/Dockerfile.dev
     volumes:
@@ -17,11 +16,11 @@ services:
 
   sso:
     image: jboss/keycloak
-    ports: 
+    ports:
       - 8080:8080
-    environment: 
-      - KEYCLOAK_USER=admin 
-      - KEYCLOAK_PASSWORD=admin 
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
       - KEYCLOAK_IMPORT=/realm/sume.json
     volumes:
       - ./keycloak:/realm

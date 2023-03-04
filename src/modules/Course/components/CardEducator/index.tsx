@@ -25,23 +25,15 @@ interface CardEducatorProps {
   action: Action[];
 }
 
-const CardEducator: React.FC<CardEducatorProps> = ({
-  educator,
-  info,
-  action,
-}) => {
+const CardEducator: React.FC<CardEducatorProps> = ({ educator, info, action }) => {
   return (
     <Card className="max-w-xs">
       <div className="flex flex-col space-y-6">
         <div className="self-center justify-center space-y-2 ">
           <Avatar img={educator.avatar} size="xl" rounded={true} />
 
-          <p className="font-bold text-center text-gray-900 dark:text-white">
-            {educator.name}
-          </p>
-          <p className="text-sm font-bold text-center text-gray-600 dark:text-white">
-            {educator.title}
-          </p>
+          <p className="font-bold text-center text-gray-900 dark:text-white">{educator.name}</p>
+          <p className="text-sm font-bold text-center text-gray-600 dark:text-white">{educator.title}</p>
         </div>
 
         <div className="space-y-2">

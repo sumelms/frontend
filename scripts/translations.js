@@ -53,9 +53,7 @@ const generateFiles = () => {
 
     Object.keys(languages[lang]).map((module) => {
       const modulePath =
-        module === '__DEFAULT__'
-          ? path.join(langPath, 'translation.json')
-          : path.join(langPath, `${module}.json`);
+        module === '__DEFAULT__' ? path.join(langPath, 'translation.json') : path.join(langPath, `${module}.json`);
 
       const data = JSON.stringify(languages[lang][module]);
 
@@ -72,9 +70,7 @@ try {
 
   if (languages !== {}) {
     generateFiles();
-    console.log(
-      '\x1b[32m✔\x1b[0m All translation files successfully generated.',
-    );
+    console.log('\x1b[32m✔\x1b[0m All translation files successfully generated.');
   } else {
     console.warn('\x1b[31m✘\x1b[0m Unable to generate translation files.');
   }

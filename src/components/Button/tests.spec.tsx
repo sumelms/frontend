@@ -19,9 +19,7 @@ describe('Button component', () => {
   });
 
   it('should be clickable', (done) => {
-    const { getByTestId } = render(
-      <Button onClick={() => done()}>Click me</Button>,
-    );
+    const { getByTestId } = render(<Button onClick={() => done()}>Click me</Button>);
     userEvent.click(getByTestId('button-element'));
   });
 });

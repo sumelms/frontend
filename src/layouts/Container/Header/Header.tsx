@@ -16,13 +16,7 @@ export interface HeaderProps {
   links?: HeaderLinksProps[];
 }
 
-const Header: React.FC<HeaderProps> = ({
-  title,
-  subtitle,
-  items,
-  links,
-  ...props
-}: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({ title, subtitle, items, links, ...props }: HeaderProps) => {
   return (
     <header {...props}>
       <div className="flex text-white bg-zinc-800 min-h-fit h-80">

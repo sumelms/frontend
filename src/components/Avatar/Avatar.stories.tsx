@@ -14,8 +14,6 @@ export default {
   },
 } as Meta;
 
-const Template: Story<AvatarProps> = (args: AvatarProps) => (
-  <Avatar {...args} />
-);
+const Template: Story<AvatarProps> = (args: AvatarProps) => <Avatar {...args} />;
 
 export const AvatarComponent = Template.bind({});

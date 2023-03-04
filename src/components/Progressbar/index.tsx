@@ -5,10 +5,7 @@ export interface ProgressProps {
   bgColorClass: string;
 }
 
-const Progressbar: React.FC<ProgressProps> = ({
-  amount,
-  bgColorClass,
-}: ProgressProps) => {
+const Progressbar: React.FC<ProgressProps> = ({ amount, bgColorClass }: ProgressProps) => {
   return (
     <div
       role="progressbar"
