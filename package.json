@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clean": "rumraf dist",
+    "clean": "rimraf build",
     "start": "run-p start:*",
     "start:vite": "vite",
     "start:mock": "node tools/mockserver/server.js",
