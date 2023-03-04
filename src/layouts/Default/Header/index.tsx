@@ -2,6 +2,7 @@ import { useKeycloak } from '@react-keycloak/web';
 import { Avatar, Button, DarkThemeToggle, Dropdown, Navbar } from 'flowbite-react';
 import React from 'react';
 import { HiLogout } from 'react-icons/hi';
+import logoUrl from '~/assets/svg/sume-icon-dark.svg?url';
 
 const Header: React.FC = () => {
   const { keycloak } = useKeycloak();
@@ -40,7 +41,7 @@ const Header: React.FC = () => {
   return (
     <Navbar fluid={true} rounded={false}>
       <Navbar.Brand href="https://sumelms.com/">
-        <img src="../../../assets/svg/sume-icon-dark.svg" className="h-6 mr-3 sm:h-9" alt="Sume Logo" />
+        <img src={logoUrl} className="h-6 mr-3 sm:h-9" alt="Sume Logo" />
       </Navbar.Brand>
       <div className="flex bg-white md:order-2">
         <Dropdown arrowIcon={true} inline={true} label={<UserDetails />}>

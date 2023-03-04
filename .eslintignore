@@ -1,8 +1,11 @@
 node_modules/
 build/
 cypress/
+tools/
 .prettierrc.js
 .eslintrc.js
+tailwind.config.js
+postcss.config.js
 env.d.ts
 *.spec.tsx
 *.spec.ts
