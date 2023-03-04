@@ -68,6 +68,7 @@ SKIP_PREFLIGHT_CHECK=true
 VITE_APP_KEYCLOAK_URL=http://sso.sumelms.sol
 VITE_APP_KEYCLOAK_REALM=sume
 VITE_APP_KEYCLOAK_CLIENT_ID=sume-app
+VITE_APP_BASE_SERVER_URL=http://localhost:9000/api
 ```
 
 > Note: Alternatively, you could also duplicate and rename the existing `.env.example` file.

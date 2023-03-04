@@ -1,5 +1,4 @@
 node_modules/
 build/
-cypress/
 keycloak/
 .prettierrc.js

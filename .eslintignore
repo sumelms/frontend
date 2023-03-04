@@ -1,6 +1,5 @@
 node_modules/
 build/
-cypress/
 tools/
 .prettierrc.js
 .eslintrc.js
