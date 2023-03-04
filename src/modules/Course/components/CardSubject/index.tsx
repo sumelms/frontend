@@ -38,14 +38,7 @@ const CardSubject: React.FC<CardSubjectProps> = ({ subject, info }) => {
 
           <div>
             <p className="font-semibold text-gray-700 dark:text-white">{subject.subtitle}</p>
-            <Progress
-              progress={80}
-              label="todo: delet this label<"
-              labelPosition="outside"
-              labelProgress={true}
-              color="red"
-              size="sm"
-            />
+            <Progress progress={80} labelPosition="outside" labelProgress={true} color="red" size="sm" />
           </div>
 
           <div>

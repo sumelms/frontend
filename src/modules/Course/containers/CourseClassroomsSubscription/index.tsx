@@ -48,10 +48,8 @@ const CourseClassroomsSubscription: React.FC = () => {
               <Table.HeadCell>inscrição</Table.HeadCell>
             </Table.Head>
             <Table.Body>
-              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Cálculo I
-                </Table.Cell>
+              <Table.Row>
+                <Table.Cell>Cálculo I</Table.Cell>
                 <Table.Cell>obrigatória</Table.Cell>
                 <Table.Cell>90</Table.Cell>
                 <Table.Cell>Remoto</Table.Cell>
@@ -76,8 +74,8 @@ const CourseClassroomsSubscription: React.FC = () => {
               </Table.Row>
             </Table.Body>
             <Table.Body>
-              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">Álgebra</Table.Cell>
+              <Table.Row>
+                <Table.Cell>Álgebra</Table.Cell>
                 <Table.Cell>obrigatória</Table.Cell>
                 <Table.Cell>90</Table.Cell>
                 <Table.Cell>Remoto</Table.Cell>
@@ -102,10 +100,8 @@ const CourseClassroomsSubscription: React.FC = () => {
               </Table.Row>
             </Table.Body>
             <Table.Body>
-              <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                <Table.Cell className="font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  Geometria
-                </Table.Cell>
+              <Table.Row>
+                <Table.Cell>Geometria</Table.Cell>
                 <Table.Cell>obrigatória</Table.Cell>
                 <Table.Cell>90</Table.Cell>
                 <Table.Cell>Remoto</Table.Cell>
