@@ -1,6 +1,5 @@
 import React from 'react';
-import { RouteObject } from 'react-router-dom';
-
+import type { RouteObject } from 'react-router-dom';
 import PageLayout from '../../../layouts/Container';
 import CourseClassrooms from '../containers/CourseClassrooms';
 import CourseClassroomsSubscription from '../containers/CourseClassroomsSubscription';

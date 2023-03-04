@@ -1,6 +1,6 @@
 import { Button, Card, Progress } from 'flowbite-react';
 import React from 'react';
-import { IconType } from 'react-icons/lib';
+import type { IconType } from 'react-icons/lib';
 
 export interface Subject {
   title: string;
