@@ -19,11 +19,13 @@ export interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, subtitle, items, links, ...props }: HeaderProps) => {
   return (
     <header {...props}>
-      <div className="flex text-white bg-zinc-800 min-h-fit h-80">
-        <div className="container flex flex-col self-end px-5 mx-auto lg:px-10 pb-9 space-y-11">
+      <div className="flex justify-center  text-white bg-gray-900 min-h-fit h-56">
+        <div className="container self-center flex-col pl-8">
           <div className="space-y-6">
-            <p className="text-4xl font-bold">{title}</p>
-            <p className="text-xl font-semibold">{subtitle}</p>
+            <div className="space-y-2">
+              <p className="text-5xl font-extrabold">{title}</p>
+              <p className="text-xl font-medium">{subtitle}</p>
+            </div>
             {items && (
               <div className="space-x-2 divide-x">
                 {items.map((itemProps, index) => (
