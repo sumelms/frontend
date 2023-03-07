@@ -17,6 +17,7 @@ export interface IGallery {
   img: string;
   text: string;
 }
+
 export interface ICourse {
   id: number;
   uuid: string;
