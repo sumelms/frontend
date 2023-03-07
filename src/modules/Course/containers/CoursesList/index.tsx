@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
 import CourseService, { ICourse } from '../../services/CourseService';
+import CardCourse from '../../components/CardCourse';
 
 const CoursesList: React.FC = () => {
   const [courses, setCourseList] = useState<Array<ICourse>>([]);
@@ -17,18 +16,16 @@ const CoursesList: React.FC = () => {
   }, []);
 
   return (
-    <ul>
+    <div className="container flex gap-4">
       {courses &&
         courses.map((course) => {
           return (
-            <li key={course.slug}>
-              <Link key={course.slug} to={course.slug}>
-                {course.title}
-              </Link>
-            </li>
+            <CardCourse key={course.slug} course={course} imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg">
+              {course.description}
+            </CardCourse>
           );
         })}
-    </ul>
+    </div>
   );
 };
 
