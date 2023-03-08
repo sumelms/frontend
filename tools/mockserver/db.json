@@ -44,6 +44,7 @@
       "title": "Sistemas de Informação",
       "subtitle": "O caminho para a sua formação profissional e pessoal.",
       "description": "A área de **tecnologia da informação** está em constante crescimento, sempre com oportunidades para os profissionais do ramo. O curso de Sistemas de Informação da [USP](#) proporciona aos alunos uma formação sólida de desenvolvimento de software, com toda a estrutura necessária para o ensino. Como é uma área muito dinâmica, o curso também realiza palestras, cursos e demais eventos ao longo da graduação para manter os alunos atualizados com as novidades do mercado. A área de tecnologia da informação está em constante crescimento, sempre com oportunidades para os profissionais do ramo. \n\n O curso de Sistemas de Informação da USP proporciona aos alunos uma formação sólida de desenvolvimento de software, com toda a estrutura necessária para o ensino. Como é uma área muito dinâmica, o curso também realiza palestras, cursos e demais eventos ao longo da graduação para manter os alunos atualizados com as novidades do mercado. \n\n A região de _Ribeirão Preto_ é privilegiada porque abriga muitas empresas do ramo de TI, mas o profissional também pode atuar em praticamente todos os setores, oferecendo suporte e criando inovações digitais. A região de Ribeirão Preto é privilegiada porque abriga muitas empresas do ramo de TI, mas o profissional também pode atuar em praticamente todos os setores, oferecendo suporte e criando inovações digitais.",
+      "excerpt": "Curso de Sistemas de Informação oferece formação sólida em desenvolvimento de software e atualização constante para atuação na área de TI.",
       "slug": "sistemas-de-informacao",
       "syllabiId": 1,
       "details": [
@@ -128,8 +129,9 @@
       "uuid": "e64ba6f7-c915-4641-99bd-2a5754ca6839",
       "title": "Administração Empresarial",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-      "slug": "comunicacao-e-artes",
+      "description": "O curso de Administração Empresarial oferece aos alunos uma formação sólida em gestão de negócios, com toda a estrutura necessária para o ensino. Como o mercado empresarial é dinâmico, o curso realiza palestras, cursos e demais eventos ao longo da graduação para manter os alunos atualizados com as novidades do setor. A área de administração é ampla, oferecendo oportunidades em empresas de diversos segmentos, organizações governamentais e empreendedorismo. O profissional formado em Administração Empresarial pode atuar em diferentes áreas, como marketing, finanças, recursos humanos e logística, contribuindo para o sucesso das organizações.",
+      "excerpt": "O curso de Administração Empresarial oferece formação sólida em gestão de negócios, atualização constante e oportunidades em diversos setores.",
+      "slug": "administracao-empresarial",
       "syllabiId": 2,
       "details": [
         {
@@ -212,8 +214,9 @@
       "id": 3,
       "uuid": "143eb80f-d492-4de2-928c-c5d4a550eb5f",
       "title": "Bacharelado Em Ciências Contábeis",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "subtitle": "Formação em contabilidade, finanças e auditoria para atuação em diversos setores",
+      "description": "O curso de Ciências Contábeis oferece uma formação sólida em contabilidade, finanças e auditoria, preparando o aluno para atuar em empresas, órgãos públicos e ONGs. Durante a graduação, o aluno tem contato com teorias e práticas que abrangem desde a contabilidade básica até a análise financeira de grandes corporações. O mercado de trabalho para os profissionais formados em Ciências Contábeis é amplo, com oportunidades em diversos setores, como indústria, comércio, serviços, organizações governamentais, entre outros.",
+      "excerpt": "Formação sólida em contabilidade, finanças e auditoria para atuação em diversos setores.",
       "slug": "bacharelado-em-ciências-contábeis",
       "syllabiId": 3,
       "details": [
@@ -297,8 +300,9 @@
       "id": 4,
       "uuid": "9960026f-b253-4416-91c2-4e6f20227e3a",
       "title": "Licenciatura em Matemática",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "subtitle": "Formação de professores e fomento à pesquisa em Matemática",
+      "description": "O curso de Licenciatura em Matemática tem como objetivo formar profissionais para atuarem no ensino da Matemática, desde o Ensino Fundamental até o Ensino Médio. Durante a graduação, o aluno tem contato com diversas áreas da Matemática, como álgebra, análise, geometria e estatística, além de conteúdos pedagógicos. O profissional formado em Licenciatura em Matemática pode atuar em escolas públicas e privadas, além de instituições de pesquisa e órgãos governamentais. Além disso, o curso contribui para o desenvolvimento da pesquisa em Matemática, formando novos pesquisadores e fomentando a produção científica na área.",
+      "excerpt": "Formação para lecionar Matemática no Ensino Fundamental e Médio, além de contribuir para a pesquisa na área.",
       "slug": "licenciatura-em-matemática",
       "syllabiId": 4,
       "details": [

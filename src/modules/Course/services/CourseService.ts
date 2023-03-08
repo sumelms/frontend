@@ -25,6 +25,7 @@ export interface ICourse {
   subtitle: string;
   slug: string;
   description: string;
+  excerpt: string;
   educators: IEducator[];
   gallery: IGallery[];
   details: ICourseDetail[];

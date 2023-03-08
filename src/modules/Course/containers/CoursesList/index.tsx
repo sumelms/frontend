@@ -6,7 +6,7 @@ const CoursesList: React.FC = () => {
   const [courses, setCourseList] = useState<Array<ICourse>>([]);
 
   const fetchCourses = (): void => {
-    CourseService.fetchCourses('fields=title,slug').then((response): void => {
+    CourseService.fetchCourses('fields=title,slug,excerpt').then((response): void => {
       setCourseList(response);
     });
   };
@@ -19,9 +19,15 @@ const CoursesList: React.FC = () => {
     <div className="container flex gap-4">
       {courses &&
         courses.map((course) => {
+          console.log(course);
           return (
-            <CardCourse key={course.slug} course={course} imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg">
-              {course.description}
+            <CardCourse
+              className="w-1/2"
+              key={course.slug}
+              course={course}
+              imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg"
+            >
+              {course.excerpt}
             </CardCourse>
           );
         })}
