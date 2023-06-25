@@ -6,14 +6,14 @@ const theme: CustomFlowbiteTheme = {
       base: 'h-full',
       inner: 'flex justify-center h-full overflow-y-auto overflow-x-hidden bg-gray-800 py-4 dark:bg-gray-800',
       collapsed: {
-        on: 'w-14',
+        on: 'w-[60px]',
       },
     },
     items: 'w-full',
     item: {
-      base: 'flex items-center justify-center p-2 py-4 text-base font-normal text-white bg-gray-800 hover:bg-gray-700 dark:text-white dark:hover:bg-gray-700',
+      base: 'flex items-center justify-center py-3 text-base font-normal text-white bg-gray-800 hover:bg-gray-700 dark:text-white dark:hover:bg-gray-700',
       active:
-        'bg-gray-700 dark:bg-gray-700 relative before:absolute before:top-[10%] before:left-0 before:h-[80%] before:w-1.5 before:rounded-r before:bg-gray-300',
+        'bg-gray-700 dark:bg-gray-700 relative before:absolute before:top-[10%] before:left-0 before:h-[80%] before:w-1 before:rounded-r before:bg-gray-300',
       collapsed: {
         insideCollapse: 'group w-full pl-8 transition duration-75',
         noIcon: 'font-bold',
