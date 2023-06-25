@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react';
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import svgrPlugin from 'vite-plugin-svgr';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
@@ -19,17 +20,14 @@ export default defineConfig({
     setupFiles: './src/setupTests.ts',
     coverage: {
       reporter: ['text', 'html'],
-      exclude: [
-        'node_modules/',
-        'src/setupTests.ts',
-      ],
+      exclude: ['node_modules/', 'src/setupTests.ts'],
     },
   },
   resolve: {
     alias: {
-      '~': path.resolve(__dirname, 'src'),
-    }
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
   assetsInclude: ['**/*.svg'],
-  plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
+  plugins: [react(), viteTsconfigPaths(), svgrPlugin(), viteTsconfigPaths()],
 });
