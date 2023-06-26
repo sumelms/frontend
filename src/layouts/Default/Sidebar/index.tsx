@@ -7,7 +7,7 @@ import {
   HiOutlineFolderOpen,
   HiOutlineQuestionMarkCircle,
 } from 'react-icons/hi2';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useMatch } from 'react-router-dom';
 
 interface MenuListItemProps {
   label: string;
@@ -20,9 +20,19 @@ interface MenuListItemProps {
 // the customization isn't pass to the child components
 const SidebarTheme: CustomFlowbiteTheme['sidebar'] = {};
 
+const renderSidebarItems = (item: MenuListItemProps) => {
+  const { label, route, icon } = item;
+  const active = useMatch(route);
+  return (
+    <FlowbiteSidebar.Item as={NavLink} key={route} to={route} icon={icon} active={active}>
+      {label}
+    </FlowbiteSidebar.Item>
+  );
+};
+
 const Sidebar: React.FC = () => {
   const mainMenuItems: MenuListItemProps[] = [
-    { label: 'Dashboard', route: '/', icon: HiOutlineChartPie, active: true },
+    { label: 'Dashboard', route: '/', icon: HiOutlineChartPie },
     { label: 'Courses', route: '/courses', icon: HiOutlineFolderOpen },
     { label: 'My Calendar', route: '/my/calendar', icon: HiOutlineCalendar },
   ];
@@ -40,20 +50,8 @@ const Sidebar: React.FC = () => {
       aria-label="Sidebar navigation"
     >
       <FlowbiteSidebar.Items className="flex flex-col justify-between h-full -margin-[60px]">
-        <FlowbiteSidebar.ItemGroup>
-          {mainMenuItems.map(({ label, route, icon, active = false }: MenuListItemProps) => (
-            <FlowbiteSidebar.Item key={route} href={route} icon={icon} active={active}>
-              {label}
-            </FlowbiteSidebar.Item>
-          ))}
-        </FlowbiteSidebar.ItemGroup>
-        <FlowbiteSidebar.ItemGroup>
-          {settingsMenuItems.map(({ label, route, icon, active = false }: MenuListItemProps, key) => (
-            <FlowbiteSidebar.Item as={NavLink} key={key} href={route} icon={icon} active={active}>
-              {label}
-            </FlowbiteSidebar.Item>
-          ))}
-        </FlowbiteSidebar.ItemGroup>
+        <FlowbiteSidebar.ItemGroup>{mainMenuItems.map(renderSidebarItems)}</FlowbiteSidebar.ItemGroup>
+        <FlowbiteSidebar.ItemGroup>{settingsMenuItems.map(renderSidebarItems)}</FlowbiteSidebar.ItemGroup>
       </FlowbiteSidebar.Items>
     </FlowbiteSidebar>
   );
