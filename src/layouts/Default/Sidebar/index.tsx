@@ -1,6 +1,12 @@
 import { Sidebar as FlowbiteSidebar, type CustomFlowbiteTheme } from 'flowbite-react';
 import React, { type ComponentProps, type FC } from 'react';
-import { HiChat, HiCog, HiFolderOpen, HiHome, HiQuestionMarkCircle } from 'react-icons/hi';
+import {
+  HiOutlineCalendar,
+  HiOutlineChartPie,
+  HiOutlineCog,
+  HiOutlineFolderOpen,
+  HiOutlineQuestionMarkCircle,
+} from 'react-icons/hi2';
 import { NavLink } from 'react-router-dom';
 
 interface MenuListItemProps {
@@ -16,14 +22,14 @@ const SidebarTheme: CustomFlowbiteTheme['sidebar'] = {};
 
 const Sidebar: React.FC = () => {
   const mainMenuItems: MenuListItemProps[] = [
-    { label: 'Dashboard', route: '/', icon: HiHome, active: true },
-    { label: 'Courses', route: '/courses', icon: HiFolderOpen },
-    { label: 'Progress', route: '/analytics/my-progress', icon: HiChat },
+    { label: 'Dashboard', route: '/', icon: HiOutlineChartPie, active: true },
+    { label: 'Courses', route: '/courses', icon: HiOutlineFolderOpen },
+    { label: 'My Calendar', route: '/my/calendar', icon: HiOutlineCalendar },
   ];
 
   const settingsMenuItems = [
-    { label: 'Help', route: '/support', icon: HiQuestionMarkCircle },
-    { label: 'Settings', route: '/account/settings', icon: HiCog },
+    { label: 'Help', route: '/support', icon: HiOutlineQuestionMarkCircle },
+    { label: 'Settings', route: '/account/settings', icon: HiOutlineCog },
   ];
 
   return (
