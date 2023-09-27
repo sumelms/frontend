@@ -1,6 +1,6 @@
 import { Accordion, Button, Table } from 'flowbite-react';
 import React from 'react';
-import { HiDownload, HiViewGrid } from 'react-icons/hi';
+import { HiDocumentDownload } from 'react-icons/hi';
 
 import Section from '../../components/Section';
 
@@ -38,155 +38,117 @@ const CourseMatrix: React.FC = () => {
               Contemporânea. Algumas das quais são ordenadas por pré-requisitos como adiante será descrito.
             </p>
           </ol>
-          <div className="flex content-center space-x-3">
-            <HiDownload className="w-6 h-6" />
-            <span className="items-center font-semibold tracking-wider">
-              Clique no botão abaixo para download a Matriz Curricular do curso
-            </span>
-          </div>
-          <Button outline color="light">
-            Baixar matriz curricular
+          <Button outline color="primary">
+            <HiDocumentDownload /> Baixar matriz curricular
           </Button>
         </div>
-        <div className="flex w-full">
-          <Accordion alwaysOpen={true}>
-            <Accordion.Panel>
-              <div>
-                <Accordion.Title>Primeiro semestre</Accordion.Title>
-                <Accordion.Content>
-                  <div className="flex justify-between w-full h-full px-6 py-3 rounded-lg bg-gray-200/75">
-                    <p className="font-semibold text-gray-700">Informações gerais do semestre</p>
-                    <div className="flex items-center gap-x-5">
-                      <button>
-                        <span className="text-gray-500 hover:text-blue-500 dark:text-white hover:underline hover:underline-offset-4">
-                          Filtros
-                        </span>
-                      </button>
-                      <button>
-                        <HiViewGrid className="w-6 h-6 fill-gray-500 hover:fill-blue-500 dark:fill-white" />
-                      </button>
-                    </div>
-                  </div>
-                  <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
-                    <Table.Head>
-                      <Table.HeadCell>Nome da Disciplina</Table.HeadCell>
-                      <Table.HeadCell>Descrição</Table.HeadCell>
-                      <Table.HeadCell>Category</Table.HeadCell>
-                      <Table.HeadCell>Pré-requisitos</Table.HeadCell>
-                      <Table.HeadCell>Tipo</Table.HeadCell>
-                      <Table.HeadCell>Carga horária</Table.HeadCell>
-                    </Table.Head>
-                    <Table.Body>
-                      <Table.Row>
-                        <Table.Cell>Cálculo</Table.Cell>
-                        <Table.Cell>
-                          O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
-                          no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
-                          com vínculos (Multiplicadores de Lagrange)
-                        </Table.Cell>
-                        <Table.Cell>8</Table.Cell>
-                        <Table.Cell>Não há</Table.Cell>
-                        <Table.Cell>Obrigatória</Table.Cell>
-                        <Table.Cell>90h</Table.Cell>
-                      </Table.Row>
-                      <Table.Row>
-                        <Table.Cell>Integração Humano Computador (IHC)</Table.Cell>
-                        <Table.Cell>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde corrupti. Id asperiores
-                          beatae quos nemo voluptatem inventore, porro nostrum omnis hic, iusto odio nam animi?
-                          Voluptatibus quo neque alias.
-                        </Table.Cell>
-                        <Table.Cell>8</Table.Cell>
-                        <Table.Cell>Não há</Table.Cell>
-                        <Table.Cell>Obrigatória</Table.Cell>
-                        <Table.Cell>90h</Table.Cell>
-                      </Table.Row>
-                      <Table.Row>
-                        <Table.Cell>Cálculo</Table.Cell>
-                        <Table.Cell>
-                          O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
-                          no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
-                          com vínculos (Multiplicadores de Lagrange)
-                        </Table.Cell>
-                        <Table.Cell>8</Table.Cell>
-                        <Table.Cell>Não há</Table.Cell>
-                        <Table.Cell>Obrigatória</Table.Cell>
-                        <Table.Cell>90h</Table.Cell>
-                      </Table.Row>
-                    </Table.Body>
-                  </Table>
-                </Accordion.Content>
-              </div>
-              <div>
-                <Accordion.Title>Primeiro semestre</Accordion.Title>
-                <Accordion.Content>
-                  <div className="flex justify-between w-full h-full px-6 py-3 rounded-lg bg-gray-200/75">
-                    <p className="font-semibold text-gray-700">Informações gerais do semestre</p>
-                    <div className="flex items-center gap-x-5">
-                      <button>
-                        <span className="text-gray-500 hover:text-blue-500 dark:text-white hover:underline hover:underline-offset-4">
-                          Filtros
-                        </span>
-                      </button>
-                      <button>
-                        <HiViewGrid className="w-6 h-6 fill-gray-500 hover:fill-blue-500 dark:fill-white" />
-                      </button>
-                    </div>
-                  </div>
-                  <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
-                    <Table.Head>
-                      <Table.HeadCell>Nome da Disciplina</Table.HeadCell>
-                      <Table.HeadCell>Descrição</Table.HeadCell>
-                      <Table.HeadCell>Category</Table.HeadCell>
-                      <Table.HeadCell>Pré-requisitos</Table.HeadCell>
-                      <Table.HeadCell>Tipo</Table.HeadCell>
-                      <Table.HeadCell>Carga horária</Table.HeadCell>
-                    </Table.Head>
-                    <Table.Body>
-                      <Table.Row>
-                        <Table.Cell>Cálculo</Table.Cell>
-                        <Table.Cell>
-                          O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
-                          no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
-                          com vínculos (Multiplicadores de Lagrange)
-                        </Table.Cell>
-                        <Table.Cell>8</Table.Cell>
-                        <Table.Cell>Não há</Table.Cell>
-                        <Table.Cell>Obrigatória</Table.Cell>
-                        <Table.Cell>90h</Table.Cell>
-                      </Table.Row>
-                      <Table.Row>
-                        <Table.Cell>Integração Humano Computador (IHC)</Table.Cell>
-                        <Table.Cell>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde corrupti. Id asperiores
-                          beatae quos nemo voluptatem inventore, porro nostrum omnis hic, iusto odio nam animi?
-                          Voluptatibus quo neque alias.
-                        </Table.Cell>
-                        <Table.Cell>8</Table.Cell>
-                        <Table.Cell>Não há</Table.Cell>
-                        <Table.Cell>Obrigatória</Table.Cell>
-                        <Table.Cell>90h</Table.Cell>
-                      </Table.Row>
-                      <Table.Row>
-                        <Table.Cell>Cálculo</Table.Cell>
-                        <Table.Cell>
-                          O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e
-                          no espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos
-                          com vínculos (Multiplicadores de Lagrange)
-                        </Table.Cell>
-                        <Table.Cell>8</Table.Cell>
-                        <Table.Cell>Não há</Table.Cell>
-                        <Table.Cell>Obrigatória</Table.Cell>
-                        <Table.Cell>90h</Table.Cell>
-                      </Table.Row>
-                    </Table.Body>
-                  </Table>
-                </Accordion.Content>
-              </div>
-            </Accordion.Panel>
-          </Accordion>
-        </div>
       </Section>
+      <Accordion>
+        <Accordion.Panel>
+          <Accordion.Title>Primeiro semestre</Accordion.Title>
+          <Accordion.Content>
+            <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
+              <Table.Head>
+                <Table.HeadCell>Disciplina</Table.HeadCell>
+                <Table.HeadCell>Descrição</Table.HeadCell>
+                <Table.HeadCell>Créditos</Table.HeadCell>
+                <Table.HeadCell>Carga horária</Table.HeadCell>
+                <Table.HeadCell>Pré-requisitos</Table.HeadCell>
+                <Table.HeadCell>Tipo</Table.HeadCell>
+              </Table.Head>
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell>Cálculo</Table.Cell>
+                  <Table.Cell>
+                    O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e no
+                    espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos com
+                    vínculos (Multiplicadores de Lagrange)
+                  </Table.Cell>
+                  <Table.Cell>8</Table.Cell>
+                  <Table.Cell>90h</Table.Cell>
+                  <Table.Cell>Não há</Table.Cell>
+                  <Table.Cell>Obrigatória</Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell>Integração Humano Computador (IHC)</Table.Cell>
+                  <Table.Cell>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde corrupti. Id asperiores beatae
+                    quos nemo voluptatem inventore, porro nostrum omnis hic, iusto odio nam animi? Voluptatibus quo
+                    neque alias.
+                  </Table.Cell>
+                  <Table.Cell>8</Table.Cell>
+                  <Table.Cell>90h</Table.Cell>
+                  <Table.Cell>Não há</Table.Cell>
+                  <Table.Cell>Obrigatória</Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell>Cálculo</Table.Cell>
+                  <Table.Cell>
+                    O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e no
+                    espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos com
+                    vínculos (Multiplicadores de Lagrange)
+                  </Table.Cell>
+                  <Table.Cell>8</Table.Cell>
+                  <Table.Cell>90h</Table.Cell>
+                  <Table.Cell>Não há</Table.Cell>
+                  <Table.Cell>Obrigatória</Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            </Table>
+          </Accordion.Content>
+          <Accordion.Title>Segundo semestre</Accordion.Title>
+          <Accordion.Content>
+            <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
+              <Table.Head>
+                <Table.HeadCell>Disciplina</Table.HeadCell>
+                <Table.HeadCell>Descrição</Table.HeadCell>
+                <Table.HeadCell>Créditos</Table.HeadCell>
+                <Table.HeadCell>Carga horária</Table.HeadCell>
+                <Table.HeadCell>Pré-requisitos</Table.HeadCell>
+                <Table.HeadCell>Tipo</Table.HeadCell>
+              </Table.Head>
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell>Cálculo</Table.Cell>
+                  <Table.Cell>
+                    O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e no
+                    espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos com
+                    vínculos (Multiplicadores de Lagrange)
+                  </Table.Cell>
+                  <Table.Cell>8</Table.Cell>
+                  <Table.Cell>90h</Table.Cell>
+                  <Table.Cell>Não há</Table.Cell>
+                  <Table.Cell>Obrigatória</Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell>Integração Humano Computador (IHC)</Table.Cell>
+                  <Table.Cell>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, unde corrupti. Id asperiores beatae
+                    quos nemo voluptatem inventore, porro nostrum omnis hic, iusto odio nam animi? Voluptatibus quo
+                    neque alias.
+                  </Table.Cell>
+                  <Table.Cell>8</Table.Cell>
+                  <Table.Cell>90h</Table.Cell>
+                  <Table.Cell>Não há</Table.Cell>
+                  <Table.Cell>Obrigatória</Table.Cell>
+                </Table.Row>
+                <Table.Row>
+                  <Table.Cell>Cálculo</Table.Cell>
+                  <Table.Cell>
+                    O curso cobre o material básico sobre funções de várias varáveis, incluindo: curvas no plano e no
+                    espaço, continuidade, derivadas parciais, diferenciabilidade, máximos e mínimos, e extremos com
+                    vínculos (Multiplicadores de Lagrange)
+                  </Table.Cell>
+                  <Table.Cell>8</Table.Cell>
+                  <Table.Cell>90h</Table.Cell>
+                  <Table.Cell>Não há</Table.Cell>
+                  <Table.Cell>Obrigatória</Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            </Table>
+          </Accordion.Content>
+        </Accordion.Panel>
+      </Accordion>
     </>
   );
 };
