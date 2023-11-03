@@ -1,6 +1,16 @@
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 
 const theme: CustomFlowbiteTheme = {
+  button: {
+    color: {
+      primary: 'bg-primary-700 hover:bg-primary-800 text-white focus:bg-primary-800 focus:border-blue-200'
+    },
+    outline: {
+      color: {
+        primary: 'outline-primary-800 text-primary-800 hover:text-white focus:text-white'
+      }
+    }
+  },
   darkThemeToggle: {
     root: {
       base: 'group flex items-center justify-center p-0.5 text-center font-medium focus:z-10 text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-cyan-700 disabled:hover:bg-white focus:ring-cyan-700 focus:text-cyan-700 dark:bg-transparent dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:disabled:hover:bg-gray-800 rounded-lg focus:ring-2 w-12 h-12 border-none',

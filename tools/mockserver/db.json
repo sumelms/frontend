@@ -424,6 +424,60 @@
       "uuid": "9124f485-0657-44c2-9472-e0b0f3c77276"
     }
   ],
+  "matrices": [
+    {
+      "id": 1,
+      "uuid": "",
+      "code": "2020",
+      "name": "SIN 2020",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "courseId": 1
+    }
+  ],
+  "matrixSubjects": [
+    {
+      "id": 1,
+      "subjectId": 1,
+      "matrixId": 1,
+      "isRequired": true,
+      "group": "Primeiro Semestre"
+    },
+    {
+      "id": 2,
+      "subjectId": 2,
+      "matrixId": 1,
+      "isRequired": false,
+      "group": "Primeiro Semestre"
+    },
+    {
+      "id": 3,
+      "subjectId": 3,
+      "matrixId": 1,
+      "isRequired": true,
+      "group": "Primeiro Semestre"
+    },
+    {
+      "id": 4,
+      "subjectId": 4,
+      "matrixId": 1,
+      "isRequired": false,
+      "group": "Segundo Semestre"
+    },
+    {
+      "id": 5,
+      "subjectId": 5,
+      "matrixId": 1,
+      "isRequired": true,
+      "group": "Segundo Semestre"
+    },
+    {
+      "id": 6,
+      "subjectId": 6,
+      "matrixId": 1,
+      "isRequired": false,
+      "group": "Segundo Semestre"
+    }
+  ],
   "modalities": [
     {
       "id": 1,
@@ -554,119 +608,170 @@
       "uuid": "ab6e3010-538b-4c12-a4ec-b3177b0641ed",
       "name": "Cálculo I",
       "objective": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "code": "100"
+      "code": "100",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 2,
       "name": "Fundamentos de Administração",
       "uuid": "8313e968-e981-4cce-929b-809d2c50b3bb",
       "code": "102",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 3,
       "name": "Filosofia da Ciência",
       "uuid": "c4ad326e-c0bc-45a5-82d3-219bd30ccf34",
       "code": "103",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 4,
       "name": "Arquitetura de Computadores",
       "uuid": "2bc74160-0a9e-443c-9687-d46643dde4d0",
       "code": "104",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 5,
       "name": "Fundamentos de Engenharia de Software",
       "uuid": "8ff9e5b7-c080-4931-b6e4-d6457d6afcc3",
       "code": "105",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 6,
       "name": "Álgebra Linear",
       "uuid": "d1508fea-c728-488e-9d36-ff2ccf97ce4c",
       "code": "106",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 7,
       "name": "Metodologia de Pesquisa",
       "uuid": "7718ebe5-3292-4f4f-90e9-eabd196379e8",
       "code": "107",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 8,
       "uuid": "ac7459ba-7096-4f4b-a23d-9faed99b98b2",
       "name": "Algoritmo e Linguagem de Programação",
       "code": "108",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 9,
       "uuid": "4eed6ae2-57bd-438f-8f19-08cc22647e58",
       "name": "Programação I",
       "code": "109",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 10,
       "uuid": "b975252c-f7be-4a20-9432-5afeffdae339",
       "name": "Cálculo Diferencial e Integral",
       "code": "110",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 11,
       "uuid": "b70b87de-6841-40fc-8a40-d60704e145a6",
       "name": "Matemática Financeira",
       "code": "111",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 12,
       "uuid": "75862a2c-7920-4ac0-9f60-3ad0edb8ce4f",
       "name": "Matemática",
       "code": "112",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 13,
       "uuid": "3c5f4af7-01b5-41d5-9fbc-c69d82b43286",
       "name": "Filosofia das Ciências",
       "code": "113",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 14,
       "uuid": "7d51b008-46fd-4ce4-ab27-d0b621e69997",
       "name": "Marketing Aplicado",
       "code": "114",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 15,
       "uuid": "1ec8f558-0204-4db6-ad05-ad0cede765e1",
       "name": "Estatística I",
       "code": "115",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 16,
       "uuid": "dbaa3f2d-bd7a-4275-ba80-2e66f4cf5517",
       "name": "Gestão de Recursos Humanos",
       "code": "116",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     },
     {
       "id": 17,
       "uuid": "746de791-e7cb-4923-9ac8-931b71cf7c51",
       "name": "Banco de Dados",
       "code": "117",
-      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "objective": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "credit": 4,
+      "workload": 50,
+      "requirements": []
     }
   ],
   "subscriptions": [
