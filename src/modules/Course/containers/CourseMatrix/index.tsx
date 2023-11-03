@@ -1,50 +1,66 @@
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 import { Accordion, Button, Table } from 'flowbite-react';
-import React from 'react';
 import { HiDocumentDownload } from 'react-icons/hi';
+
+import CourseMatrixService, { IMatrix } from '../../services/CourseMatrixService';
 
 import Section from '../../components/Section';
 
+type RouteParams = {
+  course: string;
+};
+
 const CourseMatrix: React.FC = () => {
+  const params = useParams() as RouteParams;
+  const [matrix, setMatrix] = useState<IMatrix>();
+
+  const fetchMatrix = (): void => {
+    CourseMatrixService.fetchMatrix(params.course as string).then(
+      (response): void => {
+        setMatrix(response);
+      },
+    );
+  };
+
+  useEffect(() => {
+    fetchMatrix();
+
+    // TO DO: Remove Console Log
+    console.log(matrix);
+  }, []);
+
   return (
     <>
       <Section title="Matriz Curricular">
         <div className="space-y-6 break-words whitespace-pre-wrap">
           <p className="indent-8">
-            Essa matriz curricular busca um equilíbrio que faça com que a predominância do caráter formador do curso se
-            harmonize com a necessária extensão de informação fundamental, sobretudo ação profissional do docente de
-            Segundo Grau inclui-se de forma decisiva entre os objetivos do curso.
+            {/*
+              TO DO: Add Matrix Description
+              {matrix.description}
+            */}
+            Description
           </p>
-          <ol className="space-y-1 list-decimal list-inside">
-            <li>
-              <strong>Disciplinas Obrigatórias:</strong> O curso possui 14 disciplinas obrigatórias, das quais 2 são de
-              12 créditos e 12 de 6 créditos. Estas disciplinas dividem-se em 3 grupos:
-            </li>
-
-            <p>
-              1.1 <strong>Disciplinas introdutórias:</strong>
-              Introdução à Filosofia e Filosofia Geral. Ambas de 12 créditos, uma em cada semestre. O aluno
-              obrigatoriamente deve cursá-las antes de todas as demais.
-            </p>
-            <p>
-              a) Introdução à Filosofia I e Filosofia Geral I, ambas de 06 créditos, uma em cada semestre. O aluno as
-              cursa no 1º ano; 1.2
-            </p>
-            <p>
-              b) Introdução à Filosofia I e Filosofia Geral I, ambas de 06 créditos, uma em cada semestre. O aluno as
-              cursa no 1º ano; 1.2
-            </p>
-            <p>
-              1.2 <strong>Disciplinas históricas:</strong> Histórias da Filosofia Antiga, Medieval, Moderna I e II, e
-              Contemporânea. Algumas das quais são ordenadas por pré-requisitos como adiante será descrito.
-            </p>
-          </ol>
-          <Button outline color="primary">
+          <Button outline color="primary" onClick={() => console.log("Download Matrix")}>
             <HiDocumentDownload /> Baixar matriz curricular
           </Button>
         </div>
       </Section>
       <Accordion>
         <Accordion.Panel>
+          {/*
+            TO DO: Add Matrix Subjects
+            { matrix.groups.map((group: IMatrixGroup) =>
+              <Accordion>
+                <Table>
+                { group.subjects.map((subject: ISubjects) =>
+                  <Table.Row />
+                }
+                </Table>
+              </Accordion>
+            )}
+          */}
           <Accordion.Title>Primeiro semestre</Accordion.Title>
           <Accordion.Content>
             <Table hoverable={true} className="border-none rounded-none shadow-none sm:rounded-none">
